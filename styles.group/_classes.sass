@@ -90,7 +90,7 @@
 
 
 //--------------------//
-// $BTN FOR VIDEOS    // 
+// $PLAY VIDEOS       // 
 //--------------------//
 .play, .smallplay
 	position: absolute
@@ -116,6 +116,21 @@
 .glyph-lg
 	font-size: 33px
 	color: #333
+%img-
+	line-height: 1.428571429
+	display: inline-block
+	max-width: 100%
+	-webkit-transition: all .2s ease-in-out
+	transition: all .2s ease-in-out
+	padding: 4px
+	border-radius: 4px
+	background-color: #fff
+	border: 1px solid #ddd
+.img-border
+	@extend %img-
+	margin: 10px 0 20px 0
+.img-video
+	@extend %img-	
 .pad
 	padding: $padding
 .white
@@ -183,22 +198,6 @@ hr
 	margin: 0
 	text-transform: uppercase
 
-%img-
-	line-height: 1.428571429
-	display: inline-block
-	max-width: 100%
-	-webkit-transition: all .2s ease-in-out
-	transition: all .2s ease-in-out
-	padding: 4px
-	border-radius: 4px
-	background-color: #fff
-	border: 1px solid #ddd
-.img-border
-	@extend %img-
-	margin: 10px 0 20px 0
-.img-video
-	@extend %img-
-
 
 
 
@@ -238,16 +237,17 @@ hr
 .media:nth-of-type(odd),
 .videomedia:nth-of-type(4n+0)
 	clear: left
-.feedburnerFeedBlock ul
-	padding: 0
-.feedburnerFeedBlock ul li
-	margin-left: 15px
-	padding-bottom: 5px
-	list-style-type: disc
-.feedburnerFeedBlock ul li div
-	margin-bottom: 10px
-	padding-bottom: 10px
-	border-bottom: 1px dashed #eee
+.feedburnerFeedBlock 
+	ul
+		padding: 0
+		li
+			margin-left: 15px
+			padding-bottom: 5px
+			list-style-type: disc
+			div
+				margin-bottom: 10px
+				padding-bottom: 10px
+				border-bottom: 1px dashed #eee
 #creditfooter
 	display: none
 .headline,
@@ -269,3 +269,4 @@ hr
 	font-size: 15px
 .bmargin
 	margin-bottom: 10px
+
