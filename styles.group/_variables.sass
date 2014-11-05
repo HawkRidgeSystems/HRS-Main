@@ -1,0 +1,93 @@
+//$RESETS
+$margin: 0
+$background-color: #eaeaea
+$container-color : white
+$border-color: #545454
+$border: 1px solid #ddd
+$padding: 4%
+
+//$LINKS
+$a-color: #0089cf
+$a-color-visited: #545454
+
+//$FONTS
+$font: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif
+$font-alt: "Helvetica-Neue", Helvetica, Arial
+
+//$FONT SIZES
+$font-size: 11px
+$font-size-sm: $font-size + 1 
+$font-size-md: $font-size + 2
+$font-size-lg: $font-size + 3
+
+$line-height: 18px
+$line-height-sm: $line-height + 2
+$line-height-md: $line-height + 4
+$line-height-lg: $line-height + 6
+
+
+//$HEADING SIZES
+$font-h1: $font-size  + 13 
+$font-h1-sm: $font-h1 + 4  
+$font-h1-md: $font-h1 + 8  
+$font-h1-lg: $font-h1 + 12 
+
+$font-h2: $font-size  + 7  
+$font-h2-sm: $font-h2 + 4  
+$font-h2-md: $font-h2 + 8  
+$font-h2-lg: $font-h2 + 12 
+
+
+
+
+//$COLORS
+$primary-color: #333333
+$secondary-color: #545454
+$third-color: #222222
+$hrsblue-color: #0089cf
+
+
+
+//$HELPERS
+=border-radius($radius)
+	-webkit-border-radius: $radius
+	-moz-border-radius: $radius
+	-ms-border-radius: $radius
+	border-radius: $radius
+
+=background-clip($clip)
+	-webkit-background-clip: $clip
+	-moz-background-clip: $clip
+	background-clip: $clip
+
+=box-shadow($shadow)
+	-webkit-background-clip: $shadow
+	-moz-background-clip: $shadow
+	background-clip: $shadow
+	
+=transitions($length)
+	-webkit-transition: $length
+	-moz-transition: $length
+	transition: $length
+
+=bp($point)
+	@if $point == device-sm
+		@media (min-width: 768px)
+			@content
+	@else if $point == device-md
+		@media (min-width: 992px)
+			@content
+	@else if $point == device-lg
+		@media (min-width: 1200px)
+			@content
+
+=noborder-top($px)
+	border-right: $px
+	border-bottom: $px
+	border-left: $px
+
+=noborder-bottom($px)
+	border-right: $px
+	border-top: $px
+	border-left: $px
+
