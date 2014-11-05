@@ -1,0 +1,105 @@
+@import _variables
+
+//--------------------//
+//  $CONTAINERS       // 
+//--------------------//
+
+.container
+	.main,
+	.navbar
+		margin: 0 auto
+	+border-radius(0px)
+	+bp(device-sm)
+		width: 768px
+	+bp(device-md)
+		width: 80%
+	+bp(device-lg)
+		width: 1080px
+
+//--------------------//
+//  $SECTIONS         // 
+//--------------------//
+%section
+	padding: 4%
+	color: $border-color
+	background-color: $container-color
+%border
+	border: 1px solid #dddddd
+
+
+.section
+	@extend %section
+	@extend %border
+	margin: 20px 0
+	&-xs
+		margin: 20px 0 !important
+		+bp(device-sm)
+			margin: 0 !important
+	&-top
+		margin: 20px 0 0 0
+	&-mid
+		margin: 0
+		border-right: 1px solid #ddd
+		border-bottom: 1px solid #ddd
+		border-left: 1px solid #ddd
+
+.topsection
+	@extend %section
+	@extend %border
+	margin: 20px 0 0 0
+
+.midsection
+	@extend %section
+	margin: 0
+	border-right: 1px solid #ddd
+	border-bottom: 1px solid #ddd
+	border-left: 1px solid #ddd
+
+.bottomsection
+	@extend %section
+	margin: 0 0 20px 0
+	border-right: 1px solid #ddd
+	border-bottom: 1px solid #ddd
+	border-left: 1px solid #ddd
+
+.allsection
+	@extend %section
+	@extend %border
+	margin: 0
+
+.gsection
+	@extend %border
+	margin: 20px 0 0 0
+	padding: 2% 4%
+	color: $border-color
+	background-color: #e4e4e4
+	h3
+		font-weight: 900
+		margin: 0
+
+//--------------------//
+//  $CONTAINERS SUB   // 
+//--------------------//
+.no-bg
+	padding: 0
+	.breadcrumb
+		padding: 1% 0
+	.breadcrumb a
+		color: #333
+	h1
+		margin: 0 0 10px 0
+.sub-bg
+	padding: 0 0 4% 0
+	background-position: 50% 50%
+	background-size: cover
+
+.tag
+	h1
+		font-weight: bolder
+		color: white
+	h2
+		margin: 0 0 20px 0
+		color: white
+.tag-line,
+.tag-description
+	margin: 0 0 20px 0

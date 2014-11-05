@@ -1,0 +1,271 @@
+@import _variables
+
+
+//--------------------//
+// $BREADCRUMBS       // 
+//--------------------//
+.breadcrumb
+	margin-bottom: 0
+	padding: 1% 0 3% 0
+	text-transform: capitalize
+	border-radius: 0
+	background-color: transparent
+	a
+		color: white
+	li > a.active
+		text-decoration: underline
+
+
+
+//--------------------//
+// $BACK TO TOP BTN   // 
+//--------------------//
+.back-top
+	display: none
+	position: fixed
+	top: 10%
+	right: 3%
+	a
+		text-align: center
+		text-decoration: none
+		text-transform: uppercase
+		+transitions(1s)
+		&:hover
+			color: #000
+			span
+				background-color: #777
+	span
+		font-size: 30px
+		width: 40px
+		height: 40px
+		+transitions(1s)
+		background-color: #ddd
+
+
+
+
+//--------------------//
+// $BUTTONS CLASSES   // 
+//--------------------//
+.btn-darkblue
+	color: #fff
+	border: 1px solid #1e4e8c
+	background-color: #1e4e8c
+	&:hover
+		color: #fff
+		background-color: #1a4277
+
+.btn-gray
+	color: #333
+	border: 1px solid #e4e4e4
+	background-color: #f5f5f5
+	&:hover
+		color: #0089cf
+
+.btn-trans
+	color: white
+	border: 1px solid #e4e4e4
+	background-color: transparent
+	&:hover
+		color: #545454
+		background-color: white
+
+.btn > .glyphicon.glyphicon-chevron-right
+	max-width: 20px
+
+.btn-lg > .glyphicon.glyphicon-chevron-right
+	max-width: 27px
+
+.btn-lg, .btn-group-lg>.btn
+	padding: 5px 8px
+	font-size: 11px
+	line-height: 1.33
+	border-radius: 3px
+	+bp(device-md)
+		padding: 10px 16px
+		font-size: 18px
+		border-radius: 6px
+
+
+
+
+//--------------------//
+// $BTN FOR VIDEOS    // 
+//--------------------//
+.play, .smallplay
+	position: absolute
+	display: block
+	opacity: 1
+.smallplay
+	top: 25%
+	left: 42%
+	width: 50px
+	height: 32px
+	background: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAH8AAABRCAYAAAD7G3lVAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAATFJREFUeNrs22FtwkAYx+F2QcAkMAfgYBKQwBxMQh1MwiRQB+CgEoaDzkG5S1a+E5IF+n+e5D4ve3+7N0s4mgYAAAAAAAAAAAAA7jFN06cp5MavjuWsTSMzfjWWszORzPizQzmvJpMZ3xYIj28LiG8LpMeffdsCufGrn3LeTS0z/uzLFsiNbwuEx7cFxL9ugY1pZsafdSaaG78abIHc+LaA+MvbAi/+XG5Sww9L2QLtEm/+P/2oUzkfbduexc+LX51L/DdrP09fzvaZf4GVhjf7/Vv3vVFk/bfvMUhg/PoAZG+6efE9Aw+MP/oCSGZ8tz0wvtseGn9w2zPjdyaXF99n9aHx3fbA+G57aHy3PTC+N/mh8b3DD4zvtofGd9tD47vtAAAAAAAAAAAAADymiwADAOSj1JBfF8xMAAAAAElFTkSuQmCC) 50% 50% / 50px 32px no-repeat rgba(123, 121, 106, .8)
+
+
+
+
+//--------------------//
+// $CUSTOM CLASSES    // 
+//--------------------//
+.center
+	margin: 0 auto
+	text-align: center
+
+.glyph-lg
+	font-size: 33px
+	color: #333
+.pad
+	padding: $padding
+.white
+	color: white
+.grayscale
+	filter: url('data:image/svg+xml;utf8,<svg xmlns=\'http://www.w3.org/2000/svg\'><filter id=\'grayscale\'><feColorMatrix type=\'matrix\' values=\'0.3333 0.3333 0.3333 0 0 0.3333 0.3333 0.3333 0 0 0.3333 0.3333 0.3333 0 0 0 0 0 1 0\'/></filter></svg>#grayscale')
+	filter: gray
+	-webkit-filter: grayscale(100%)
+	&:hover
+		filter: url('data:image/svg+xml;utf8,<svg xmlns=\'http://www.w3.org/2000/svg\'><filter id=\'grayscale\'><feColorMatrix type=\'matrix\' values=\'1 0 0 0 0, 0 1 0 0 0, 0 0 1 0 0, 0 0 0 1 0\'/></filter></svg>#grayscale')
+		-webkit-filter: grayscale(0%)
+.bold
+	font-weight: bolder
+.blue
+	color: #0089cf
+.purple
+	color: #2f2e7a
+.lightblue
+	color: #5069a2
+.red
+	color: #c74232
+.white
+	color: #fff
+.darkgray
+	color: #545454
+.wrapper
+	position: relative
+.marg
+	margin: 1%
+.nomargin
+	margin: 0
+.pad
+	padding: 4%
+.nopad
+	padding: 0
+.lpad
+	padding-left: 4%
+.toppad
+	padding: 4% 0
+.tbpad
+	padding: 3% 0
+.bottompad
+	padding: 0 0 4% 0
+.sidepad
+	padding: 0 4%
+.label
+	font-weight: normal
+.uppercase
+	text-transform: uppercase
+.shaded
+	background-color: #f9f9f9
+.feature.well
+	background-color: #f5f5f5
+.shadow
+	box-shadow: 0 4px 29px black
+.delay
+	-webkit-animation-delay: .5s
+	animation-delay: .5s
+hr
+	margin-top: 10px
+	margin-bottom: 10px
+	
+.hsubtitle
+	font-weight: bolder
+	margin: 0
+	text-transform: uppercase
+
+%img-
+	line-height: 1.428571429
+	display: inline-block
+	max-width: 100%
+	-webkit-transition: all .2s ease-in-out
+	transition: all .2s ease-in-out
+	padding: 4px
+	border-radius: 4px
+	background-color: #fff
+	border: 1px solid #ddd
+.img-border
+	@extend %img-
+	margin: 10px 0 20px 0
+.img-video
+	@extend %img-
+
+
+
+
+//--------------------//
+// $MISC - FIGURE OUT // 
+//--------------------//
+.wcarousel
+	width: 5% !important
+	.icon-prev,
+	.icon-next,
+	.glyphicon-chevron-left,
+	.glyphicon-chevron-right
+		left: 30% !important
+	.windicator
+		bottom: 10px !important
+		li
+			border: 1px solid #545454 !important
+	.active
+		background-color: #545454 !important
+.videocaption
+	font-size: 14px
+	font-weight: bold
+	margin-top: 10px
+	padding-top: 10px
+	color: #1a6690
+	border-top: 1px solid #eee
+	p
+		font-size: 12px
+		font-weight: normal
+		line-height: 13px
+		color: #333
+
+/*bootstrap added margin, after first child */
+.media
+	margin-top: 0
+	margin-bottom: 15px
+.media:nth-of-type(odd),
+.videomedia:nth-of-type(4n+0)
+	clear: left
+.feedburnerFeedBlock ul
+	padding: 0
+.feedburnerFeedBlock ul li
+	margin-left: 15px
+	padding-bottom: 5px
+	list-style-type: disc
+.feedburnerFeedBlock ul li div
+	margin-bottom: 10px
+	padding-bottom: 10px
+	border-bottom: 1px dashed #eee
+#creditfooter
+	display: none
+.headline,
+.headline a
+	font-weight: 900
+	color: #555 !important
+.divider
+	overflow: hidden
+	height: 1px
+	margin: 9px 1px
+	border-bottom: 1px solid #fff
+	background-color: #e5e5e5
+.mbottom
+	min-height: 90px
+	margin-bottom: 10px
+.panel-heading
+	padding: 10px 3px
+.panel-title
+	font-size: 15px
+.bmargin
+	margin-bottom: 10px

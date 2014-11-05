@@ -1,0 +1,43 @@
+@import _variables
+
+//--------------------//
+// $IE FIXES          // 
+//--------------------//
+.ie 
+	.container
+		max-width: 1180px
+		border-radius: 0
+	.carousel-inner,
+	.carousel-control
+		max-height: 450px !important
+		// weird IE homepage height issue
+		float: left
+	.col-lg-1, .col-md-1
+		width: 8.333333333333332%
+	.col-lg-2,.col-md-2
+		width: 16.666666666666664%
+	.col-lg-3, .col-md-3
+		width: 25%
+	.col-lg-6, .col-md-6
+		width: 50%
+	.navbar-header
+		float: none
+	.nav-img
+		max-width: 168px
+	.navbar-header,
+	.navbar-header .row,
+	.navbar-header .row a
+		float: left
+		max-width: 322px
+	.navbar-collapse.collapse
+		display: block!important
+		overflow: visible!important
+		height: auto!important
+		padding-bottom: 0
+	.container.navbar
+		margin: 0 auto 0 auto
+		border-bottom: 0
+	.navbar-nav
+		clear: both
+		li
+			float: left

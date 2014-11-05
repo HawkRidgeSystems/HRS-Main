@@ -1,0 +1,72 @@
+@import _variables
+
+body
+	font-family: $font
+	color: $primary-color
+	line-height: $line-height
+	margin: $margin
+	background-color: $background-color
+	font-size: $font-size
+	+bp(device-sm)
+		font-size: $font-size-sm
+		line-height: $line-height-sm
+	+bp(device-md)
+		font-size: $font-size-md
+		line-height: $line-height-md
+	+bp(device-lg)
+		font-size: $font-size-lg
+		line-height: $line-height-lg
+
+h1, h2, h3, h4, h5, h6, .h1, .h2, .h3, .h4, .h5, .h6
+	font-family: $font
+
+h1, .h1, h2, .h2, h3, .h3
+	margin-top: 10px
+	margin-bottom: 5px
+	+bp(device-sm)
+		margin-top: 20px
+		margin-bottom: 10px
+
+h1
+	font-size: 24px
+	+bp(device-sm)
+		font-size: 28px
+	+bp(device-md)
+		font-size: 32px
+	+bp(device-lg)
+		font-size: 36px
+h2
+	font-size: 18px
+	+bp(device-sm)
+		font-size: 22px
+	+bp(device-md)
+		font-size: 26px
+	+bp(device-lg)
+		font-size: 30px	
+h3
+	font-size: 18px
+	+bp(device-sm)
+		font-size: 20px
+	+bp(device-md)
+		font-size: 22px
+	+bp(device-lg)
+		font-size: 24px	
+
+a
+	color: $a-color
+	text-decoration: none
+	&:hover
+		color: $a-color-visited
+		text-decoration: none
+
+p
+	+bp(device-s)
+		font-size: 12px
+		line-height: 22px
+	+bp(device-m)
+		font-size: 14px
+		line-height: 24px
+
+
+.inline
+	display: inline-block

@@ -1,0 +1,97 @@
+@import _variables
+
+.nav
+    margin-top: 10px
+    li > a 
+        font-size: $font-size-lg
+        padding: 6px 13px
+    .nav-pills
+        float: right
+.navbar
+    min-height: 36px
+    margin: 0
+    background-color: $container-color
+    border-bottom: 1px solid #ddd
+    +border-radius(0px)
+    .container 
+        padding: 8px 0 4px 0
+    .menu-main
+        margin: 0
+        +bp(device-sm)
+            margin: 0 -15px
+
+.navbar-collapse
+    padding: 0
+
+.navbar-nav
+    float: right
+
+.navbar-top
+    float: right
+    span
+        font-size: 12px
+        padding: 0
+    .search-bar
+        display: none
+        float: right
+        padding-left: 6px
+    button
+        color: $secondary-color
+
+.navbar-brand
+    float: none
+    margin: 0 0 10px 0
+    padding: 0
+    img
+        width: 200px
+
+.nav-img
+    max-width: 100px
+    margin: 4px 0
+    +bp(device-sm)
+        max-width: 168px
+
+.dropdown
+    .caret
+        margin-left: 2px
+
+.dropdown-menu
+    font-size: $font-size 
+    .pull-right
+        right: 0
+        left: auto
+    .divider
+        overflow:hidden
+        height: 1px 
+        margin: 9px 1px
+        border-bottom: 1px solid #fff
+        background-color: #e5e5e5
+    li > a
+        line-height: $line-height
+        color: $primary-color
+        font-weight:normal
+        display: block 
+        clear: both
+        padding: 3px 20px
+        white-space: nowrap
+        &:hover,
+        &:focus
+            text-decoration: none
+            color: white
+            background-color: #0081c2
+
+
+
+//Title For Product Dropdown -JP
+.dropdown-header
+    font-size: $font-size
+    font-weight: bold
+    line-height: $line-height
+    display:block
+    padding: 3px 15px 
+    text-transform: uppercase
+    color: #1a6690
+
+ul.nav li.dropdown:hover ul.dropdown-menu
+    display: block
+    margin: 0

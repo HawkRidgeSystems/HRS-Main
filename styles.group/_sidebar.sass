@@ -1,0 +1,36 @@
+@import _variables
+
+//--------------------//
+// $SIDEBAR LISTGROUP // 
+//--------------------//
+.list-group
+	margin-top: 20px
+	
+.list-group-item	
+	&:first-child
+		border-top-left-radius: 0
+		border-top-right-radius: 0
+	&:last-child
+		border-bottom-right-radius: 0
+		border-bottom-left-radius: 0
+	&.active
+		font-weight: 800
+		color: #545454
+		border-color: #ddd
+		background-color: #e4e4e4
+	.glyphicon
+		width: 14px
+
+
+
+		
+//--------------------//
+// $SIDEBAR AFFIX     // 
+//--------------------//
+.sidebar
+	&.affix
+		position: fixed
+		top: 10px
+		width: 155px
+	&.affix-bottom
+		position: absolute
