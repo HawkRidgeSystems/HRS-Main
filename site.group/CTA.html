@@ -1,4 +1,6 @@
-{!-- $IF/THANKYOU-PAGE--}
+{!-- - - - - - - - - - - --}
+{!-- $IF / THANK YOU PAGE--}
+{!-- - - - - - - - - - - --}
 {if last_segment == "thank-you"} 
 	{embed="/cta"}
 {if:else}
@@ -10,7 +12,9 @@
 {exp:stash:set name="bread-class"}sub-bg{/exp:stash:set}
 
 
-
+{!-- - - - - - - - - - - --}
+{!-- $CTA PAGE STASH 	 --}
+{!-- - - - - - - - - - - --}
     {exp:channel:entries channel="cta_new" dynamic="off" disable="member_data|categories|trackbacks|pagination"  url_title="{segment_1} | {segment_2} | {segment_3}"}
     	
 	{exp:stash:set parse_tags="yes" parse_conditionals="yes"}
@@ -99,11 +103,10 @@
 				{/if}
 			{/stash:extra-footer-data}
 	{/exp:stash:set}
- 	{!-- 
 
- 	$CALL TO ACTION
-
- 	--}
+{!-- - - - - - - - - - - --}
+{!-- $CALL TO ACTION PAGE--}
+{!-- - - - - - - - - - - --}
 	{if  "{structure:page:uri}" == "{page_uri}"}
 		<div  class="container main">
 			<div class="row" style=" margin-top:-10%;">
@@ -140,12 +143,9 @@
 			</div>
 		</div>
 
- 	{!-- 
-
- 	$THANK YOU PAGE
-
- 	--}
-
+{!-- - - - - - - - - - - --}
+{!-- $THANK YOU PAGE	 --}
+{!-- - - - - - - - - - - --}
 	{if:elseif last_segment == "thank-you" AND "/{segment_1}/{segment_2}/" == "{page_uri}"}
 		<div  class="container main">
 			<section class="section" >
