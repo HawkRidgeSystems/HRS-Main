@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	{if {exp:stash:not_empty name="alt-title"}}
+		<title>{exp:stash:alt-title}</title>
+		<meta name="description" content="{exp:stash:get name='alt-meta-desc'}">
+	{if:else}
+		<title>{exp:stash:title}</title>
+		<meta name="description" content="{exp:stash:get name='meta-desc'}">
+	{/if}
+
+	{embed="_/.conditionals"}
+    {exp:stash:extra-head-data}
+</head>
+<body>
+	{embed="_/.navigation"}
+	<div class="{exp:stash:bread-class}">
+		{breadcrumbs}
+			{if {exp:stash:not_empty name="info-cat"}}
+			<div class="container main">
+				<section class="allsection">
+					<p class="bold">{exp:stash:info-cat}</p>
+					<h1>{exp:stash:info-heading}</h1>
+					<p>{exp:stash:info-description}</p>
+				</section>
+			</div>
+			{if:else}
+				<div class="container main">
+				{exp:stash:info-heading}
+			</div>
+			{/if}
+	</div>
