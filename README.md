@@ -1,4 +1,4 @@
-Hawk Ridge Systems - Main Website Style
+Hawk Ridge Systems - Main Website
 ========
 Hawk Ridge Systems is the leading SOLIDWORKS reseller for 3D design software, analysis software, product data management software, and technical communication software.
 
