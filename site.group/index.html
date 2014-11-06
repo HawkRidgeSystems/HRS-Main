@@ -10,32 +10,27 @@
 	    {stash:extra-head-data}
 			<link href="//netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css" rel="stylesheet">
 			<style>
-			.item-1{background-image:url('http://www.hawkridgesys.com/image/temp/hawkvaluepack_test.jpg');}
-			.item-2{background-image:url('http://www.hawkridgesys.com/image/banners/hawk-ridge-systems-solidworks.jpg');}
-			.item-3{background-image:url('http://www.hawkridgesys.com/image/banners/swx-2015.jpg');}
-			.item-4{background-image:url('http://www.hawkridgesys.com/image/banners/composer-banner-new.jpg');}
-			.item-5{background-image:url('http://www.hawkridgesys.com/image/banners/3d-print-DML.jpg');}
-				.item-5 h1{text-shadow:0px 4px 9px black;}
-				.item-5 h2{text-shadow:0px 4px 9px black;}
-
-			.carousel-control{opacity:.90 !important;}
-			.carousel-control.left span, .carousel-control.right span{ font-size:30px;}
-			.swx-2015{
-				background-image:url('/image/solidworks-2015/2015-swx-sec1.jpg'); 
-				padding: 25% 2% 5% 0; 
-				text-align: center;
-				background-size:cover;
-			}
-			.swx-2015 h3{
-				color:white;
-				padding: 3% 23%;
-				line-height: 35px;
-			}
+			{exp:channel:entries channel="banners" disable="categories|category_fields|member_data|pagination|trackbacks" status="open" limit="5" dynamic="no"}
+					{if "{banner-order}" == 1}
+						.item-1{background-image:url('{banner-bg}');}
+					{/if}
+					{if "{banner-order}" == 2}
+						.item-2{background-image:url('{banner-bg}');}
+					{/if}
+					{if "{banner-order}" == 3}
+						.item-3{background-image:url('{banner-bg}');}
+					{/if}
+					{if "{banner-order}" == 4}
+						.item-4{background-image:url('{banner-bg}');}
+					{/if}
+					{if "{banner-order}" == 5}
+						.item-5{background-image:url('{banner-bg}');}
+					{/if}
+			{/exp:channel:entries}
 			</style>
 	    {/stash:extra-head-data}
 
-		{stash:index-body}
-
+{stash:index-body}
 	<!-- $SLIDES -->
 	<div id="carousel" class="h-carousel slide" data-ride="carousel">
 		<!-- $SLIDER-INDICATORS -->
@@ -48,153 +43,34 @@
 		</ol>
 		<!-- $SLIDES -->
 		<div class="carousel-inner">
-			<div class="item item-1 active">
-				<div class="container">
-					<div class="row">
-						<div class="col-md-8">
-							<h1 class='bold'>
-								Hawk Ridge Systems
-								<br/>
-								The year-end deals on SOLIDWORKS and CAMWorks are on!
-							</h1>
-							<h3 class="hidden-xs">
-								Save up to 30% on your 3D design and manufacturing needs.
-							</h3>
-							<br>
-							<p class="hidden-xs">
-								<a href="/promotions/solidworks-camworks-year-end-deals/" class="btn-lg btn-danger">
-									<span class="glyphicon glyphicon-chevron-right">&nbsp;</span>
-									Contact us today!
-								</a>
-							</p>
-							<p class="visible-xs">
-								<a href="/promotions/solidworks-camworks-year-end-deals/" class="btn btn-danger">
-									<span class="glyphicon glyphicon-chevron-right">&nbsp;</span>
-									Contact us today!
-								</a>
-							</p>
-						</div>
-						<div class="col-md-4 hidden-xs">
-							<a href="/promotions/solidworks-camworks-year-end-deals/">
-								<img class="img-responsive" style="margin-top: -25px"; src="/image/temp/HRS_value-pack.png"></a>
-						</div>
+			{exp:channel:entries channel="banners" disable="categories|category_fields|member_data|pagination|trackbacks" status="open" limit="5" dynamic="no"}
+				{if "{banner-order}" == 1}
+					<div class="item item-1 active">
+						<div class="container">{banner-content}</div>
 					</div>
-				</div>
-			</div>
-			<div class="item item-2">
-				<div class="container">
-					<div class="row">
-						<div class="col-md-8 col-xs-9 ">
-							<h1 >Hawk Ridge Systems</h1>
-							<h2>Your Source for Engineering Design Solutions</h2>
-							<h3 class="black hidden-xs">
-								We provide the leading technology solutions to help you create, design, prototype, and manufacture your products
-							</h3>
-							<p class="hidden-xs" style="padding-top:30px";>
-								<a  onclick="ga('send', 'event', 'Front-Banner', 'Click', 'About-HRS-Company');" href="/company/" class="btn-lg btn-primary">
-									<span class="glyphicon glyphicon-chevron-right">&nbsp;</span>
-									Learn About Our Company
-								</a>
-								&nbsp;&nbsp;
-								<a  onclick="ga('send', 'event', 'Front-Banner', 'Click', 'About-HRS-Products');" href="/products/" class="btn-lg btn-danger">
-									<span class="glyphicon glyphicon-chevron-right">&nbsp;</span>
-									Learn About Our Solutions
-								</a>
-							</p>
+				{/if}
+				{if "{banner-order}" == 2}
+					<div class="item item-2">
+						<div class="container">{banner-content}</div>
+					</div>
+				{/if}
 
-							<p class="visible-xs">
-								<a  onclick="ga('send', 'event', 'Front-Banner', 'Click', 'About-HRS-Products');" href="/products/" class="btn btn-danger">
-									<span class="glyphicon glyphicon-chevron-right">&nbsp;</span>
-									Learn About Our Solutions
-								</a>
-							</p>
-
-						</div>
+				{if "{banner-order}" == 3}
+					<div class="item item-3">
+						<div class="container">{banner-content}</div>
 					</div>
-				</div>
-			</div>
-			<div class="item item-3">
-				<div class="container">
-					<div class="row">
-						<div class="col-md-9 white">
-							<h1 class='bold'>SOLIDWORKS 2015</h1>
-							<h2>Solve More Design Challenges</h2>
-							<h3 class="hidden-xs">
-								From concept to manufacturing, SOLIDWORKS 2015 delivers 3D design tools that inspire innovation and drive your business forward. Join us for a Launch event this October – 12 locations in North America to choose from.
-							</h3>
-							<br>
-							<p class="hidden-xs">
-								<a href="/solidworks-2015" target="_blank" class="btn btn-default btn-lg">
-									<span class="glyphicon glyphicon-chevron-right">&nbsp;</span>
-									Explore SOLIDWORKS 2015
-								</a>
-							</p>
-							<p class="visible-xs">
-								<a href="/solidworks-2015" target="_blank" class="btn btn-default">
-									<span class="glyphicon glyphicon-chevron-right">&nbsp;</span>
-									Explore SOLIDWORKS 2015
-								</a>
-							</p>
-						</div>
+				{/if}
+				{if "{banner-order}" == 4}
+					<div class="item item-4">
+						<div class="container">{banner-content}</div>
 					</div>
-				</div>
-			</div>
-			<div class="item item-4">
-				<div class="container">
-					<div class="row">
-						<div class="col-md-7">
-							<h1 class='bold'>SOLIDWORKS Composer with Kvichak Marine</h1>
-							<h3 class="hidden-xs">
-								See how Kvichak Marine used SOLIDWORKS Solutions to implement a paperless shop floor.
-							</h3>
-							<br>
-							<p class="hidden-xs">
-								<a href="/products/solidworks-composer/" class="btn-lg btn-danger">
-									<span class="glyphicon glyphicon-chevron-right">&nbsp;</span>
-									Watch the Case Study Video
-								</a>
-							</p>
-							<p class="visible-xs">
-								<a href="/products/solidworks-composer/" class="btn btn-danger">
-									<span class="glyphicon glyphicon-chevron-right">&nbsp;</span>
-									Watch the Case Study Video
-								</a>
-							</p>
-						</div>
+				{/if}
+				{if "{banner-order}" == 5}
+					<div class="item item-5">
+						<div class="container">{banner-content}</div>
 					</div>
-				</div>
-			</div>
-			<div class="item item-5">
-				<div class="container">
-					<div class="row">
-						<div class="col-md-8">
-							<h1 class='bold white'>3D Printing Solutions</h1>
-							<h2 class="white">
-								From full-color parts to wax patterns, our professional 3D printers help you bring your ideas to life.
-							</h2>
-							<br>
-							<p class="hidden-xs">
-								<a href="/products/3d-printing/" class="btn-lg btn-danger">
-									<span class="glyphicon glyphicon-chevron-right">&nbsp;</span>
-									View 3D Printer Offerings
-								</a>
-								&nbsp;&nbsp;
-								<a href="/digital-manufacturing-lab/" class="btn-lg btn-primary">
-									<span class="glyphicon glyphicon-chevron-right">&nbsp;</span>
-									3D Printer Digital Manufacturing Lab
-								</a>
-							</p>
-							<p class="visible-xs">
-								<a href="/products/3d-printing/" class="btn btn-danger">
-									<span class="glyphicon glyphicon-chevron-right">&nbsp;</span>
-									View 3D Printer Offerings
-								</a>
-							</p>
-						</div>
-					</div>
-				</div>
-			</div>
-
+				{/if}
+			{/exp:channel:entries}
 		</div>
 		<!-- $SLIDER-CAROUSEL -->
 		<a class="left carousel-control hidden-xs" href="#carousel" data-slide="prev">
