@@ -43,7 +43,10 @@
 		</ol>
 		<!-- $SLIDES -->
 		<div class="carousel-inner">
-			{exp:channel:entries channel="banners" disable="categories|category_fields|member_data|pagination|trackbacks" status="open" limit="5" dynamic="no"}
+			{exp:channel:entries channel="banners" disable="categories|category_fields|member_data|pagination|trackbacks" 
+				orderby="banner-order"
+				sort="asc"
+				status="open" limit="5" dynamic="no"}
 				{if "{banner-order}" == 1}
 					<div class="item item-1 active">
 						<div class="container">{banner-content}</div>
