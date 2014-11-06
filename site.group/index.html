@@ -1,5 +1,14 @@
-{!-- $CHANNEL-INFO--}
+{!-- - - - - - - - - - - --}
+{!-- $HEADER 		 	 --}
+{!-- - - - - - - - - - - --}
 {embed="_/.header-index"}
+
+
+
+
+{!-- - - - - - - - - - - --}
+{!-- $GET TITLE 		 --}
+{!-- - - - - - - - - - - --}
 {exp:stash:set parse_tags="yes" parse_conditionals="yes"}
 		{stash:title}
 			3D Engineering & Manufacturing Solutions | Printers & 3D CAD
@@ -30,443 +39,492 @@
 			</style>
 	    {/stash:extra-head-data}
 
+
+
+
+{!-- - - - - - - - - - - --}
+{!-- $CAROUSEL 			 --}
+{!-- - - - - - - - - - - --}  
 {stash:index-body}
-	<!-- $SLIDES -->
-	<div id="carousel" class="h-carousel slide" data-ride="carousel">
-		<!-- $SLIDER-INDICATORS -->
-		<ol class="carousel-indicators">
-			<li data-target="#carousel" data-slide-to="0" class="active"></li>
-			<li data-target="#carousel" data-slide-to="1"></li>
-			<li data-target="#carousel" data-slide-to="2"></li>
-			<li data-target="#carousel" data-slide-to="3"></li>
-			<li data-target="#carousel" data-slide-to="4"></li>
-		</ol>
-		<!-- $SLIDES -->
-		<div class="carousel-inner">
-			{exp:channel:entries channel="banners" disable="categories|category_fields|member_data|pagination|trackbacks" 
-				orderby="banner-order"
-				sort="asc"
-				status="open" limit="5" dynamic="no"}
-				{if "{banner-order}" == 1}
-					<div class="item item-1 active">
-						<div class="container">{banner-content}</div>
-					</div>
-				{/if}
-				{if "{banner-order}" == 2}
-					<div class="item item-2">
-						<div class="container">{banner-content}</div>
-					</div>
-				{/if}
+<div id="carousel" class="h-carousel slide" data-ride="carousel">
+	{!--$SLIDER INDICATORS--}
+	<ol class="carousel-indicators">
+		<li data-target="#carousel" data-slide-to="0" class="active"></li>
+		<li data-target="#carousel" data-slide-to="1"></li>
+		<li data-target="#carousel" data-slide-to="2"></li>
+		<li data-target="#carousel" data-slide-to="3"></li>
+		<li data-target="#carousel" data-slide-to="4"></li>
+	</ol>
+	{!--$SLIDES--}
+	<div class="carousel-inner">
+		{exp:channel:entries channel="banners" disable="categories|category_fields|member_data|pagination|trackbacks" 
+			orderby="banner-order"
+			sort="asc"
+			status="open" limit="5" dynamic="no"}
+			{if "{banner-order}" == 1}
+				<div class="item item-1 active">
+					<div class="container">{banner-content}</div>
+				</div>
+			{/if}
+			{if "{banner-order}" == 2}
+				<div class="item item-2">
+					<div class="container">{banner-content}</div>
+				</div>
+			{/if}
 
-				{if "{banner-order}" == 3}
-					<div class="item item-3">
-						<div class="container">{banner-content}</div>
-					</div>
-				{/if}
-				{if "{banner-order}" == 4}
-					<div class="item item-4">
-						<div class="container">{banner-content}</div>
-					</div>
-				{/if}
-				{if "{banner-order}" == 5}
-					<div class="item item-5">
-						<div class="container">{banner-content}</div>
-					</div>
-				{/if}
-			{/exp:channel:entries}
-		</div>
-		<!-- $SLIDER-CAROUSEL -->
-		<a class="left carousel-control hidden-xs" href="#carousel" data-slide="prev">
-			<span class="glyphicon glyphicon-chevron-left"></span>
-		</a>
-		<a class="right carousel-control hidden-xs" href="#carousel" data-slide="next">
-			<span class="glyphicon glyphicon-chevron-right"></span>
-		</a>
+			{if "{banner-order}" == 3}
+				<div class="item item-3">
+					<div class="container">{banner-content}</div>
+				</div>
+			{/if}
+			{if "{banner-order}" == 4}
+				<div class="item item-4">
+					<div class="container">{banner-content}</div>
+				</div>
+			{/if}
+			{if "{banner-order}" == 5}
+				<div class="item item-5">
+					<div class="container">{banner-content}</div>
+				</div>
+			{/if}
+		{/exp:channel:entries}
 	</div>
-	<!--$CONTAINER -->
-	<div class="container main">
-		<!-- $MOBILE-HTB -->
-		<section class="section htb visible-xs row">
-			<h4 class="b-border">Contact Us</h4>
-			<a href="http://www.hawkridgesys.com/contact/" class="btn btn-primary btn-sm col-xs-3">
-				<span class="glyphicon glyphicon-envelope"></span>
-				Email
-			</a>
-			<a href="http://www.hawkridgesys.com/quote/" class="btn btn-primary btn-sm col-xs-3">
-				<span class="glyphicon glyphicon-comment"></span>
-				Quote
-			</a>
-			<a href="tel:8772664469" class="btn btn-primary btn-sm col-xs-3">
-				<span class="glyphicon glyphicon-earphone"></span>
-				US
-			</a>
-			<a href="tel:8665876803" class="btn btn-primary btn-sm col-xs-3">
-				<span class="glyphicon glyphicon-earphone"></span>
-				CAN
-			</a>
-		</section>
-		<!-- $INTRO-->
-		<section class="section home-cta">
-			<div class="row" >
-				<div class="col-md-3  col-xs-6 center">
-					<span class="glyphicon glyphicon-cog glyph-lg"></span>
-					<div>
-						<h4>SOLIDWORKS - And Beyond</h4>
-						<p>
-							Our solutions portfolio include all elements of 3D design through prototyping and production so you can reach business objectives faster and more cost-effectively.
-							<small>
-								<a href="http://www.hawkridgesys.com/products/">Read more</a>
-							</small>
-						</p>
-					</div>
-				</div>
-				<div class="col-md-3 col-xs-6 center">
-					<span class="center glyphicon glyphicon-user glyph-lg"></span>
-					<div>
-						<h4>Engineers Who Understand</h4>
-						<p>
-							Answers when you need them - from engineers with real-world experience - so you can stay ahead of the curve. Meet your team of SOLIDWORKS &amp; CAMWorks Engineers.
-							<small>
-								<a href="http://www.hawkridgesys.com/company/why-hawk-ridge-systems/">Read more</a>
-							</small>
-						</p>
-					</div>
-				</div>
-				<div class="col-md-3 hidden-xs center">
-					<span class="glyphicon glyphicon-book glyph-lg"></span>
-					<div>
-						<h4>Training You to Succeed</h4>
-						<p>
-							Whether you're online or in a classroom, our experts will teach you the best way to leverage your design tools so you get the most out of your engineering software.
-							<small>
-								<a href="http://www.hawkridgesys.com/training/">Read more</a>
-							</small>
-						</p>
-					</div>
-				</div>
-				<div class="col-md-3 hidden-xs center">
-					<span class="center glyphicon glyphicon-comment glyph-lg"></span>
-					<div>
-						<h4>Watch. Read. Learn.</h4>
-						<p>
-							The latest tech tips on SOLIDWORKS, Simulation, EPDM, Composer, Electrical, CAMWorks, 3D Printers and more.
-							<small>
-								<a href="http://www.hawkridgesys.com/blog/">Read the Blog.</a>
-								<a href="http://www.hawkridgesys.com/events/recorded-webinars/">View the Tutorials.</a>
-							</small>
-						</p>
-					</div>
-				</div>
-			</div>
-			<br/>
-			<div class="row hidden-xs">
-				<div class="col-md-3 col-md-offset-3">
-					<a href="#contact" class="col-md-12 scroll btn btn-primary btn-md">Contact Us</a>
-				</div>
-				<div class="col-md-3">
-					<a href="http://www.hawkridgesys.com/quote/" class="col-md-12 btn btn-primary btn-md">Request a Quote</a>
-				</div>
-			</div>
-		</section>
-		<!-- $SWX-2015 -->
-		<section class="section section-top hidden-xs home-2015">
-			<h3>SOLIDWORKS 2015 helps you speed through your designs with powerful new functionality, significant performance boosts, and an enhanced <br>user experience.</h3>
-			<div class="inline front-buttons">
-                <a href="http://www.hawkridgesys.com/solidworks-2015/" class="btn btn-default btn-lg" target="_blank"><span class="glyphicon glyphicon-chevron-right"> </span> Explore Now</a>
-                <a href="http://www.hawkridgesys.com/events/seminars-events/solidworks-2015-inspire-innovation/" class="btn btn-default btn-lg"><span class="glyphicon glyphicon-chevron-right"> </span> Register for Events</a>
-            </div>
-		</section>
-		<!-- $SOLUTIONS -->
-		<section class="midsection home-solutions">
-			<div class="row">
-				<div class="col-md-7 htitle pad">
-					<h3>3D Engineering & Manufacturing Solutions</h3>
-					<p>
-						Hawk Ridge Systems offers a full portfolio of SOLIDWORKS engineering design solutions for 3D design, analysis, product data management, technical communications, and electrical schematics. Move your designs to manufacturing with CAMWorks, and then use your 3D printer for prototyping or production. From design to print to the production floor, Hawk Ridge Systems has the solutions for you.
-					</p>
-					<div class="hidden-xs">
-						<a class="btn btn-primary" href="/products/">
-							<span class="glyphicon glyphicon-chevron-right"></span>
-							Learn More
-						</a>
-					</div>
-				</div>
-				<div class="col-md-5">
-					<div class="row">
-						<div class="col-md-6 col-xs-6">
-							<a href="http://www.hawkridgesys.com/products/solidworks/" style="display: block;" class="caption" data-toggle="tooltip" title="SOLIDWORKS software provides users with an intuitive development environment that maximizes the productivity of your design and engineering resources to create better products faster, and more cost-effectively." rel="tooltip">
-								<img class="img-thumbnail visible-desktop" class="img-thumbnail" src="http://www.hawkridgesys.com/images/solidworks-logo-btn.png"></a>
-						</div>
-						<div class="col-md-6 col-xs-6">
-							<a href="http://www.hawkridgesys.com/products/3d-printing/" style="display: block;" class="caption" data-toggle="tooltip" title="3D Printing is more than just prototyping. Get the competitive advantage at every phase of creation, from initial concept design to final production with 3D Systems professional and high production color 3D Printers." rel="tooltip">
-								<img class=" img-thumbnail visible-desktop" class="img-thumbnail" src="http://www.hawkridgesys.com/images/3dprinters-logo-btn.png"></a>
-						</div>
-					</div>
-					<br>
-					<div class="row">
-						<div class="col-md-6 col-xs-6">
-							<a href="http://www.hawkridgesys.com/products/camworks/" style="display: block;" class="caption" data-toggle="tooltip" title="CAMWorks is the revolutionary feature-based parametric CAM tool that automatically detects features in the geometry, associates operations, and generates toolpaths in a matter of minutes rather than hours. The software is easy to learn, and easy to use." rel="tooltip">
-								<img class="img-thumbnail visible-desktop" class="img-thumbnail" src="http://www.hawkridgesys.com/images/camworks-logo-btn.png"></a>
-						</div>
-						<div class="col-md-6 col-xs-6">
-							<a href="http://www.hawkridgesys.com/products/simulia/" style="display: block;" class="caption" data-toggle="tooltip" title="A powerful, complete solution for performing virtual tests with realistic simulation, so you can reduce product development time and costs while improving reliability." rel="tooltip">
-								<img class=" img-thumbnail visible-desktop" class="img-thumbnail" src="http://www.hawkridgesys.com/images/simulia-logo-btn.png"></a>
-						</div>
-					</div>
-					<br />
-					<div class="row">
-						<div class="col-md-6 col-xs-6">
-							<a href="http://www.hawkridgesys.com/products/hawkware/" style="display: block;" class="caption" data-toggle="tooltip" title="A suite of productivity tools which enhance, automate and optimize functionality in SOLIDWORKS 3D design products, developed by Hawk Ridge Systems exclusively for our customers and made available to all SOLIDWORKS users." rel="tooltip">
-								<img class="img-thumbnail visible-desktop" class="img-thumbnail" src="http://www.hawkridgesys.com/image/hawkware/hawkware_button.png"></a>
-						</div>
-						<div class="col-md-6 col-xs-6">
-							<a href="http://www.hawkridgesys.com/products/hp-workstation/" style="display: block;" class="caption" data-toggle="tooltip" title="SOLIDWORKS software combined with HP Workstations and an innovative program that provides balanced and optimized hardware configurations, you get the best of all worlds to maximize your SOLIDWORKS productivity." rel="tooltip">
-								<img class="img-thumbnail visible-desktop" class="img-thumbnail" src="http://www.hawkridgesys.com/image/hp-workstation/hp_button.png"></a>
-						</div>
+	{!--$CAROUSEL CONTROL--}
+	<a class="left carousel-control hidden-xs" href="#carousel" data-slide="prev">
+		<span class="glyphicon glyphicon-chevron-left"></span>
+	</a>
+	<a class="right carousel-control hidden-xs" href="#carousel" data-slide="next">
+		<span class="glyphicon glyphicon-chevron-right"></span>
+	</a>
+</div>
 
-					</div>
+
+{!-- - - - - - - - - - - --}
+{!-- $MOBILE CTA		 --}
+{!-- - - - - - - - - - - --}  
+<div class="container main">
+	<section class="section htb visible-xs row">
+		<h4 class="b-border">Contact Us</h4>
+		<a href="http://www.hawkridgesys.com/contact/" class="btn btn-primary btn-sm col-xs-3">
+			<span class="glyphicon glyphicon-envelope"></span>
+			Email
+		</a>
+		<a href="http://www.hawkridgesys.com/quote/" class="btn btn-primary btn-sm col-xs-3">
+			<span class="glyphicon glyphicon-comment"></span>
+			Quote
+		</a>
+		<a href="tel:8772664469" class="btn btn-primary btn-sm col-xs-3">
+			<span class="glyphicon glyphicon-earphone"></span>
+			US
+		</a>
+		<a href="tel:8665876803" class="btn btn-primary btn-sm col-xs-3">
+			<span class="glyphicon glyphicon-earphone"></span>
+			CAN
+		</a>
+	</section>
+
+
+
+	{!-- - - - - - - - - - - --}
+	{!-- $HOME CTA		     --}
+	{!-- - - - - - - - - - - --}  
+	<section class="section home-cta">
+		<div class="row" >
+			<div class="col-md-3  col-xs-6 center">
+				<span class="glyphicon glyphicon-cog glyph-lg"></span>
+				<div>
+					<h4>SOLIDWORKS - And Beyond</h4>
+					<p>
+						Our solutions portfolio include all elements of 3D design through prototyping and production so you can reach business objectives faster and more cost-effectively.
+						<small>
+							<a href="http://www.hawkridgesys.com/products/">Read more</a>
+						</small>
+					</p>
 				</div>
 			</div>
-		</section>
-		<!-- $TRAINING-MAP -->
-		<section class="bottomsection home-training section-xs">
-			<div class="row">
-				<div class="col-md-5">
-					<a class="smallmap" href="#" data-toggle="modal" data-target="#myModal" data-placement="top" title="CLICK FOR LARGER MAP" rel="tooltip">
-						<img class="img-responsive" src="http://www.hawkridgesys.com/image/training/maps.png"/>
+			<div class="col-md-3 col-xs-6 center">
+				<span class="center glyphicon glyphicon-user glyph-lg"></span>
+				<div>
+					<h4>Engineers Who Understand</h4>
+					<p>
+						Answers when you need them - from engineers with real-world experience - so you can stay ahead of the curve. Meet your team of SOLIDWORKS &amp; CAMWorks Engineers.
+						<small>
+							<a href="http://www.hawkridgesys.com/company/why-hawk-ridge-systems/">Read more</a>
+						</small>
+					</p>
+				</div>
+			</div>
+			<div class="col-md-3 hidden-xs center">
+				<span class="glyphicon glyphicon-book glyph-lg"></span>
+				<div>
+					<h4>Training You to Succeed</h4>
+					<p>
+						Whether you're online or in a classroom, our experts will teach you the best way to leverage your design tools so you get the most out of your engineering software.
+						<small>
+							<a href="http://www.hawkridgesys.com/training/">Read more</a>
+						</small>
+					</p>
+				</div>
+			</div>
+			<div class="col-md-3 hidden-xs center">
+				<span class="center glyphicon glyphicon-comment glyph-lg"></span>
+				<div>
+					<h4>Watch. Read. Learn.</h4>
+					<p>
+						The latest tech tips on SOLIDWORKS, Simulation, EPDM, Composer, Electrical, CAMWorks, 3D Printers and more.
+						<small>
+							<a href="http://www.hawkridgesys.com/blog/">Read the Blog.</a>
+							<a href="http://www.hawkridgesys.com/events/recorded-webinars/">View the Tutorials.</a>
+						</small>
+					</p>
+				</div>
+			</div>
+		</div>
+		<br/>
+		<div class="row hidden-xs">
+			<div class="col-md-3 col-md-offset-3">
+				<a href="#contact" class="col-md-12 scroll btn btn-primary btn-md">Contact Us</a>
+			</div>
+			<div class="col-md-3">
+				<a href="http://www.hawkridgesys.com/quote/" class="col-md-12 btn btn-primary btn-md">Request a Quote</a>
+			</div>
+		</div>
+	</section>
+
+
+
+
+	{!-- - - - - - - - - - - --}
+	{!-- $SWX 2015 			 --}
+	{!-- - - - - - - - - - - --}  
+	<section class="section section-top hidden-xs home-2015">
+		<h3>SOLIDWORKS 2015 helps you speed through your designs with powerful new functionality, significant performance boosts, and an enhanced <br>user experience.</h3>
+		<div class="inline front-buttons">
+            <a href="http://www.hawkridgesys.com/solidworks-2015/" class="btn btn-default btn-lg" target="_blank"><span class="glyphicon glyphicon-chevron-right"> </span> Explore Now</a>
+            <a href="http://www.hawkridgesys.com/events/seminars-events/solidworks-2015-inspire-innovation/" class="btn btn-default btn-lg"><span class="glyphicon glyphicon-chevron-right"> </span> Register for Events</a>
+        </div>
+	</section>
+
+
+
+
+	{!-- - - - - - - - - - - --}
+	{!-- $HRS SOLUTIONS	     --}
+	{!-- - - - - - - - - - - --}  
+	<section class="midsection home-solutions">
+		<div class="row">
+			<div class="col-md-7 htitle pad">
+				<h3>3D Engineering & Manufacturing Solutions</h3>
+				<p>
+					Hawk Ridge Systems offers a full portfolio of SOLIDWORKS engineering design solutions for 3D design, analysis, product data management, technical communications, and electrical schematics. Move your designs to manufacturing with CAMWorks, and then use your 3D printer for prototyping or production. From design to print to the production floor, Hawk Ridge Systems has the solutions for you.
+				</p>
+				<div class="hidden-xs">
+					<a class="btn btn-primary" href="/products/">
+						<span class="glyphicon glyphicon-chevron-right"></span>
+						Learn More
 					</a>
-					<!-- Modal -->
-					<div class="modal fade map" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
-						<div class="modal-dialog" style="width:1140px !important;">
-							<div class="modal-content">
-								<div class="modal-body">
-									<img class="trainingmap" id="hrs-locations" src="" style="width:1080px; height:886px;" usemap="#hrs-locations" alt="" />
-									<map name="hrs-locations" id="ImageMapsCom-image-maps-2014-04-01-181647">
-										<area  alt="" title="Portland, OR" href="/locations/portland/" shape="rect" coords="102,301,194,374" target="_self"     />
-										<area  alt="" title="Bothell, WA" href="/locations/bothell/" shape="rect" coords="122,211,214,275" target="_self"     />
-										<area  alt="" title="Richmond, BC" href="/locations/richmond/" shape="rect" coords="148,157,293,211" target="_self"     />
-										<area  alt="" title="Edmonton, AB" href="/locations/edmonton/" shape="rect" coords="312,118,423,181" target="_self"     />
-										<area  alt="" title="Calgary, AB" href="/locations/calgary/" shape="rect" coords="323,206,432,275" target="_self"     />
-										<area  alt="" title="Winnipeg, MB" href="/locations/winnipeg/" shape="rect" coords="587,200,696,280" target="_self"     />
-										<area  alt="" title="Toronto, ON" href="/locations/toronto/" shape="rect" coords="996,328,1074,411" target="_self"     />
-										<area  alt="" title="Rohnert Park, CA" href="/locations/rohnert_park/" shape="poly" coords="13,483,133,484,132,500,94,501,94,525,85,549,13,496" target="_self"     />
-										<area  alt="" title="Reno, NV" href="/locations/reno/" shape="poly" coords="155,495,184,489,233,493,231,503,188,507,171,530,158,527,151,506" target="_self"     />
-										<area  alt="" title="Orinda, CA" href="/locations/orinda/" shape="poly" coords="104,525,119,525,127,537,154,537,186,538,180,553,125,550,115,561,109,567,95,540" target="_self"     />
-										<area  alt="" title="Mountain View, CA" href="/locations/mountain_view/" shape="poly" coords="81,559,84,547,97,551,103,569,95,588,141,590,139,601,57,602,5,601,9,587" target="_self"     />
-										<area  alt="" title="Las Vegas, NV" href="/locations/las_vegas/" shape="poly" coords="192,572,210,564,229,576,288,575,313,576,311,589,223,594,208,608,190,601" target="_self"     />
-										<area  alt="" title="Ontario, CA" href="/locations/ontario/" shape="poly" coords="171,617,191,630,252,632,250,646,186,648,168,656,160,643,158,625,162,617" target="_self"     />
-										<area  alt="" title="Ventura, CA" href="/locations/ventura-office/" shape="poly" coords="35,635,102,636,112,621,131,619,134,635,123,656,39,650" target="_self"     />
-										<area  alt="" title="Woodland Hills, CA" href="/locations/woodland_hills/" shape="poly" coords="130,656,138,635,155,648,143,672,141,686,12,692,7,676" target="_self"     />
-										<area  alt="" title="Irvine, CA" href="/locations/irvine1/" shape="poly" coords="158,663,176,663,178,680,168,699,189,707,216,710,211,720,165,718,154,684,150,670" target="_self"     />
-									</map>
-								</div>
+				</div>
+			</div>
+			<div class="col-md-5">
+				<div class="row">
+					<div class="col-md-6 col-xs-6">
+						<a href="http://www.hawkridgesys.com/products/solidworks/" style="display: block;" class="caption" data-toggle="tooltip" title="SOLIDWORKS software provides users with an intuitive development environment that maximizes the productivity of your design and engineering resources to create better products faster, and more cost-effectively." rel="tooltip">
+							<img class="img-thumbnail visible-desktop" class="img-thumbnail" src="http://www.hawkridgesys.com/images/solidworks-logo-btn.png"></a>
+					</div>
+					<div class="col-md-6 col-xs-6">
+						<a href="http://www.hawkridgesys.com/products/3d-printing/" style="display: block;" class="caption" data-toggle="tooltip" title="3D Printing is more than just prototyping. Get the competitive advantage at every phase of creation, from initial concept design to final production with 3D Systems professional and high production color 3D Printers." rel="tooltip">
+							<img class=" img-thumbnail visible-desktop" class="img-thumbnail" src="http://www.hawkridgesys.com/images/3dprinters-logo-btn.png"></a>
+					</div>
+				</div>
+				<br>
+				<div class="row">
+					<div class="col-md-6 col-xs-6">
+						<a href="http://www.hawkridgesys.com/products/camworks/" style="display: block;" class="caption" data-toggle="tooltip" title="CAMWorks is the revolutionary feature-based parametric CAM tool that automatically detects features in the geometry, associates operations, and generates toolpaths in a matter of minutes rather than hours. The software is easy to learn, and easy to use." rel="tooltip">
+							<img class="img-thumbnail visible-desktop" class="img-thumbnail" src="http://www.hawkridgesys.com/images/camworks-logo-btn.png"></a>
+					</div>
+					<div class="col-md-6 col-xs-6">
+						<a href="http://www.hawkridgesys.com/products/simulia/" style="display: block;" class="caption" data-toggle="tooltip" title="A powerful, complete solution for performing virtual tests with realistic simulation, so you can reduce product development time and costs while improving reliability." rel="tooltip">
+							<img class=" img-thumbnail visible-desktop" class="img-thumbnail" src="http://www.hawkridgesys.com/images/simulia-logo-btn.png"></a>
+					</div>
+				</div>
+				<br />
+				<div class="row">
+					<div class="col-md-6 col-xs-6">
+						<a href="http://www.hawkridgesys.com/products/hawkware/" style="display: block;" class="caption" data-toggle="tooltip" title="A suite of productivity tools which enhance, automate and optimize functionality in SOLIDWORKS 3D design products, developed by Hawk Ridge Systems exclusively for our customers and made available to all SOLIDWORKS users." rel="tooltip">
+							<img class="img-thumbnail visible-desktop" class="img-thumbnail" src="http://www.hawkridgesys.com/image/hawkware/hawkware_button.png"></a>
+					</div>
+					<div class="col-md-6 col-xs-6">
+						<a href="http://www.hawkridgesys.com/products/hp-workstation/" style="display: block;" class="caption" data-toggle="tooltip" title="SOLIDWORKS software combined with HP Workstations and an innovative program that provides balanced and optimized hardware configurations, you get the best of all worlds to maximize your SOLIDWORKS productivity." rel="tooltip">
+							<img class="img-thumbnail visible-desktop" class="img-thumbnail" src="http://www.hawkridgesys.com/image/hp-workstation/hp_button.png"></a>
+					</div>
+
+				</div>
+			</div>
+		</div>
+	</section>
+
+
+
+
+	{!-- - - - - - - - - - - --}
+	{!-- $TRAINING MAP	     --}
+	{!-- - - - - - - - - - - --}  
+	<section class="bottomsection home-training section-xs">
+		<div class="row">
+			<div class="col-md-5">
+				<a class="smallmap" href="#" data-toggle="modal" data-target="#myModal" data-placement="top" title="CLICK FOR LARGER MAP" rel="tooltip">
+					<img class="img-responsive" src="http://www.hawkridgesys.com/image/training/maps.png"/>
+				</a>
+				<!-- Modal -->
+				<div class="modal fade map" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+					<div class="modal-dialog" style="width:1140px !important;">
+						<div class="modal-content">
+							<div class="modal-body">
+								<img class="trainingmap" id="hrs-locations" src="" style="width:1080px; height:886px;" usemap="#hrs-locations" alt="" />
+								<map name="hrs-locations" id="ImageMapsCom-image-maps-2014-04-01-181647">
+									<area  alt="" title="Portland, OR" href="/locations/portland/" shape="rect" coords="102,301,194,374" target="_self"     />
+									<area  alt="" title="Bothell, WA" href="/locations/bothell/" shape="rect" coords="122,211,214,275" target="_self"     />
+									<area  alt="" title="Richmond, BC" href="/locations/richmond/" shape="rect" coords="148,157,293,211" target="_self"     />
+									<area  alt="" title="Edmonton, AB" href="/locations/edmonton/" shape="rect" coords="312,118,423,181" target="_self"     />
+									<area  alt="" title="Calgary, AB" href="/locations/calgary/" shape="rect" coords="323,206,432,275" target="_self"     />
+									<area  alt="" title="Winnipeg, MB" href="/locations/winnipeg/" shape="rect" coords="587,200,696,280" target="_self"     />
+									<area  alt="" title="Toronto, ON" href="/locations/toronto/" shape="rect" coords="996,328,1074,411" target="_self"     />
+									<area  alt="" title="Rohnert Park, CA" href="/locations/rohnert_park/" shape="poly" coords="13,483,133,484,132,500,94,501,94,525,85,549,13,496" target="_self"     />
+									<area  alt="" title="Reno, NV" href="/locations/reno/" shape="poly" coords="155,495,184,489,233,493,231,503,188,507,171,530,158,527,151,506" target="_self"     />
+									<area  alt="" title="Orinda, CA" href="/locations/orinda/" shape="poly" coords="104,525,119,525,127,537,154,537,186,538,180,553,125,550,115,561,109,567,95,540" target="_self"     />
+									<area  alt="" title="Mountain View, CA" href="/locations/mountain_view/" shape="poly" coords="81,559,84,547,97,551,103,569,95,588,141,590,139,601,57,602,5,601,9,587" target="_self"     />
+									<area  alt="" title="Las Vegas, NV" href="/locations/las_vegas/" shape="poly" coords="192,572,210,564,229,576,288,575,313,576,311,589,223,594,208,608,190,601" target="_self"     />
+									<area  alt="" title="Ontario, CA" href="/locations/ontario/" shape="poly" coords="171,617,191,630,252,632,250,646,186,648,168,656,160,643,158,625,162,617" target="_self"     />
+									<area  alt="" title="Ventura, CA" href="/locations/ventura-office/" shape="poly" coords="35,635,102,636,112,621,131,619,134,635,123,656,39,650" target="_self"     />
+									<area  alt="" title="Woodland Hills, CA" href="/locations/woodland_hills/" shape="poly" coords="130,656,138,635,155,648,143,672,141,686,12,692,7,676" target="_self"     />
+									<area  alt="" title="Irvine, CA" href="/locations/irvine1/" shape="poly" coords="158,663,176,663,178,680,168,699,189,707,216,710,211,720,165,718,154,684,150,670" target="_self"     />
+								</map>
 							</div>
 						</div>
 					</div>
 				</div>
-				<div class="col-md-7 htitle pad">
-						<h3>World-Class Training for SOLIDWORKS and CAMWorks</h3>
-						<p>
-							Partner with our experienced, certified training team to create a roadmap for success. With 16 training centers and numerous online courses to choose from, our helpful Training Advisors can put together a plan tailored to fit your location and schedule. We’ll teach you the best way to leverage your engineering design and manufacturing tools so that you can make better decisions and get to market faster. Let’s talk about what you do – and how we can help you do it even better.
-						</p>
-						<a class="btn btn-primary sm" href="/training/schedule/">
-							<span class="glyphicon glyphicon-chevron-right"></span>
-							Schedules by Location
-						</a>
-						<a class="btn btn-primary sm" href="/training/#contact">
-							<span class="glyphicon glyphicon-chevron-right"></span>
-							Contact a Training Advisor
-						</a>
+			</div>
+			<div class="col-md-7 htitle pad">
+					<h3>World-Class Training for SOLIDWORKS and CAMWorks</h3>
+					<p>
+						Partner with our experienced, certified training team to create a roadmap for success. With 16 training centers and numerous online courses to choose from, our helpful Training Advisors can put together a plan tailored to fit your location and schedule. We’ll teach you the best way to leverage your engineering design and manufacturing tools so that you can make better decisions and get to market faster. Let’s talk about what you do – and how we can help you do it even better.
+					</p>
+					<a class="btn btn-primary sm" href="/training/schedule/">
+						<span class="glyphicon glyphicon-chevron-right"></span>
+						Schedules by Location
+					</a>
+					<a class="btn btn-primary sm" href="/training/#contact">
+						<span class="glyphicon glyphicon-chevron-right"></span>
+						Contact a Training Advisor
+					</a>
+			</div>
+		</div>
+	</section>
+	<!-- $BLOG -->
+	<section class="topsection home-blog hidden-xs">
+		<div class="row">
+			<div class="col-md-4">
+				<div class="white center">
+					<h2 class="bold">Watch Our Channel</h2>
+					<p > <i class="fa fa-youtube-square"></i>
+					</p>
+					<p>
+						Check out these videos from our engineering team, with expert tips and tricks for SolidWorks and CAMWorks.
+					</p>
+					<p>
+						<a href="https://www.youtube.com/user/hawkridgesystems" class="btn btn-trans">Find out More</a>
+					</p>
 				</div>
 			</div>
-		</section>
-		<!-- $BLOG -->
-		<section class="topsection home-blog hidden-xs">
-			<div class="row">
-				<div class="col-md-4">
-					<div class="white center">
-						<h2 class="bold">Watch Our Channel</h2>
-						<p > <i class="fa fa-youtube-square"></i>
-						</p>
-						<p>
-							Check out these videos from our engineering team, with expert tips and tricks for SolidWorks and CAMWorks.
-						</p>
-						<p>
-							<a href="https://www.youtube.com/user/hawkridgesystems" class="btn btn-trans">Find out More</a>
-						</p>
-					</div>
-				</div>
 
-				<div class="col-md-4">
-					<div class="white center">
-						<h2 class=" bold">Read Our Blog</h2>
-						<p > <i  class="fa fa-book"></i>
-						</p>
-						<p>
-							Advice on workarounds and best-practice techniques that can help you get through your toughest engineering challenges.
-						</p>
-						<p>
-							<a href="http://www.hawkridgesys.com/blog/" class="btn btn-trans">Find out More</a>
-						</p>
-					</div>
-				</div>
-
-				<div class="col-md-4">
-					<div class="white center">
-						<h2 class="bold">View Our Tutorials</h2>
-						<p>
-							<i class="fa fa-film"></i>
-						</p>
-						<p>
-							Watch a recorded webinar to get in-depth answers to commonly asked SOLIDWORKS, CAMWorks, and 3D printing questions.
-						</p>
-						<p>
-							<a href="http://www.hawkridgesys.com/events/recorded-webinars/" class="btn btn-trans">Find out More</a>
-						</p>
-					</div>
+			<div class="col-md-4">
+				<div class="white center">
+					<h2 class=" bold">Read Our Blog</h2>
+					<p > <i  class="fa fa-book"></i>
+					</p>
+					<p>
+						Advice on workarounds and best-practice techniques that can help you get through your toughest engineering challenges.
+					</p>
+					<p>
+						<a href="http://www.hawkridgesys.com/blog/" class="btn btn-trans">Find out More</a>
+					</p>
 				</div>
 			</div>
-		</section>
-		<!-- $TESTIMONIALS -->
-		<section class="midsection hidden-xs">
-			{exp:channel:entries channel="testimonials" limit="1" category="116" orderby="random"}
-			<div class="row">
-				<div class="col-md-7 htitle pad">
-						<h3>What Our Customers Are Saying</h3>
-						<p >{testimonial}</p>
-						<a class="btn btn-primary" href="/company/testimonials/">
-							<span class="glyphicon glyphicon-chevron-right"></span>
-							More Testimonials
-						</a>
-				</div>
-				<div class="col-md-5 toppad">
-					<div class="video">
-						{testimonial_vlink}
-						<script charset="ISO-8859-1" src="//fast.wistia.com/assets/external/popover-v1.js"></script>
-					</div>
+
+			<div class="col-md-4">
+				<div class="white center">
+					<h2 class="bold">View Our Tutorials</h2>
+					<p>
+						<i class="fa fa-film"></i>
+					</p>
+					<p>
+						Watch a recorded webinar to get in-depth answers to commonly asked SOLIDWORKS, CAMWorks, and 3D printing questions.
+					</p>
+					<p>
+						<a href="http://www.hawkridgesys.com/events/recorded-webinars/" class="btn btn-trans">Find out More</a>
+					</p>
 				</div>
 			</div>
-			{/exp:channel:entries}
-		</section>
-		<!-- $INDUSTRIES -->
-		<section class="bottomsection">
-			<div class="row">
-				<div class="col-md-5 ">
-					<!-- Tab panes -->
-					<div class="tab-content">
-						<div class="tab-pane active" id="hightech">
-							<img src="http://www.hawkridgesys.com/image/industries/hightech.png" class="img-responsive"></div>
-						<div class="tab-pane" id="services">
-							<img src="http://www.hawkridgesys.com/image/industries/engineering-services.png" class="img-responsive"></div>
-						<div class="tab-pane" id="equipment">
-							<img src="http://www.hawkridgesys.com/image/industries/industrial-equipment.png" class="img-responsive"></div>
-						<div class="tab-pane" id="tool">
-							<img src="http://www.hawkridgesys.com/image/industries/tool-die.png" class="img-responsive"></div>
-						<div class="tab-pane" id="consumer">
-							<img src="http://www.hawkridgesys.com/image/industries/consumer.png" class="img-responsive"></div>
-						<div class="tab-pane" id="oil">
-							<img src="http://www.hawkridgesys.com/image/industries/oil-gas.png" class="img-responsive"></div>
-						<div class="tab-pane" id="medical">
-							<img src="http://www.hawkridgesys.com/image/industries/medical.png" class="img-responsive"></div>
-						<div class="tab-pane" id="defense">
-							<img src="http://www.hawkridgesys.com/image/industries/defense.png" class="img-responsive"></div>
-						<div class="tab-pane" id="automotive">
-							<img src=" http://www.hawkridgesys.com/image/industries/automotive.png" class="img-responsive"></div>
-					</div>
-				</div>
+		</div>
+	</section>
 
-				<div class="col-md-7 htitle pad">
-						<h3>Serving Over 25,500 Customers</h3>
-						<p>
-							Hawk Ridge Systems helps engineers and designers create innovative products across multiple industries. From design to manufacture, we provide the  tools to save time and money with our proven 3D technologies.
+
+
+
+	{!-- - - - - - - - - - - --}
+	{!-- $TESTIMONIALS       --}
+	{!-- - - - - - - - - - - --}  
+	<section class="midsection hidden-xs">
+		{exp:channel:entries channel="testimonials" limit="1" category="116" orderby="random"}
+		<div class="row">
+			<div class="col-md-7 htitle pad">
+					<h3>What Our Customers Are Saying</h3>
+					<p >{testimonial}</p>
+					<a class="btn btn-primary" href="/company/testimonials/">
+						<span class="glyphicon glyphicon-chevron-right"></span>
+						More Testimonials
+					</a>
+			</div>
+			<div class="col-md-5 toppad">
+				<div class="video">
+					{testimonial_vlink}
+					<script charset="ISO-8859-1" src="//fast.wistia.com/assets/external/popover-v1.js"></script>
+				</div>
+			</div>
+		</div>
+		{/exp:channel:entries}
+	</section>
+
+
+
+
+	{!-- - - - - - - - - - - --}
+	{!-- $INDUSTRIES         --}
+	{!-- - - - - - - - - - - --}  
+	<section class="bottomsection">
+		<div class="row">
+			<div class="col-md-5 ">
+				<!-- Tab panes -->
+				<div class="tab-content">
+					<div class="tab-pane active" id="hightech">
+						<img src="http://www.hawkridgesys.com/image/industries/hightech.png" class="img-responsive"></div>
+					<div class="tab-pane" id="services">
+						<img src="http://www.hawkridgesys.com/image/industries/engineering-services.png" class="img-responsive"></div>
+					<div class="tab-pane" id="equipment">
+						<img src="http://www.hawkridgesys.com/image/industries/industrial-equipment.png" class="img-responsive"></div>
+					<div class="tab-pane" id="tool">
+						<img src="http://www.hawkridgesys.com/image/industries/tool-die.png" class="img-responsive"></div>
+					<div class="tab-pane" id="consumer">
+						<img src="http://www.hawkridgesys.com/image/industries/consumer.png" class="img-responsive"></div>
+					<div class="tab-pane" id="oil">
+						<img src="http://www.hawkridgesys.com/image/industries/oil-gas.png" class="img-responsive"></div>
+					<div class="tab-pane" id="medical">
+						<img src="http://www.hawkridgesys.com/image/industries/medical.png" class="img-responsive"></div>
+					<div class="tab-pane" id="defense">
+						<img src="http://www.hawkridgesys.com/image/industries/defense.png" class="img-responsive"></div>
+					<div class="tab-pane" id="automotive">
+						<img src=" http://www.hawkridgesys.com/image/industries/automotive.png" class="img-responsive"></div>
+				</div>
+			</div>
+
+			<div class="col-md-7 htitle pad">
+					<h3>Serving Over 25,500 Customers</h3>
+					<p>
+						Hawk Ridge Systems helps engineers and designers create innovative products across multiple industries. From design to manufacture, we provide the  tools to save time and money with our proven 3D technologies.
+					</p>
+					<ul class="nav nav-tabs industries row">
+						<li class="active col-md-4 col-xs-6">
+							<a href="#hightech" class="btn btn-md btn-gray" data-toggle="tab">High Technology</a>
+						</li>
+						<li class="col-md-4 col-xs-6">
+							<a href="#services" class="btn btn-md btn-gray" data-toggle="tab">Engineering Services</a>
+						</li>
+						<li class="col-md-4 col-xs-6">
+							<a href="#equipment" class="btn btn-md btn-gray"  data-toggle="tab">Industrial</a>
+						</li>
+						<li class="col-md-4 col-xs-6">
+							<a href="#tool" class="btn btn-md btn-gray"  data-toggle="tab">Mold, Tool & Die</a>
+						</li>
+						<li class="col-md-4 col-xs-6">
+							<a href="#consumer" class="btn btn-md btn-gray"  data-toggle="tab">Consumer Products</a>
+						</li>
+						<li class="col-md-4 col-xs-6">
+							<a href="#oil" class="btn btn-md btn-gray"  data-toggle="tab">Oil, Gas, & Energy</a>
+						</li>
+						<li class="col-md-4 col-xs-6">
+							<a href="#medical" class="btn btn-md btn-gray"  data-toggle="tab">Medical Devices</a>
+						</li>
+						<li class="col-md-4 col-xs-6">
+							<a href="#defense" class="btn btn-md btn-gray"  data-toggle="tab">Aerospace & Defense</a>
+						</li>
+						<li class="col-md-4 col-xs-6">
+							<a  href="#automotive" class="btn btn-md btn-gray"  data-toggle="tab">Automotive</a>
+						</li>
+					</ul>
+			</div>
+		</div>
+	</section>
+
+
+
+
+	{!-- - - - - - - - - - - --}
+	{!-- $CONTACT US FORM    --}
+	{!-- - - - - - - - - - - --}  
+	<section class="section hidden-xs" id="contact">
+		<div class="row">
+			<div class="col-md-5 htitle pad">
+					<h3>Contact Us</h3>
+					<p>
+						SOLIDWORKS 3D design products are easy to learn and use, and work together to help you design products better, faster, and more cost-efficiently. Hawk Ridge Systems also offers CAMWorks CNC software, 3D printers, and a range of analysis consulting, and training.</p>
+						<p>Complete this form and we will have the appropriate expert contact you to discuss your needs.</p>
+						<p style="color: rgb(26, 102, 144);"> <strong>US:</strong>
+							877.266.4469
 						</p>
-						<ul class="nav nav-tabs industries row">
-							<li class="active col-md-4 col-xs-6">
-								<a href="#hightech" class="btn btn-md btn-gray" data-toggle="tab">High Technology</a>
-							</li>
-							<li class="col-md-4 col-xs-6">
-								<a href="#services" class="btn btn-md btn-gray" data-toggle="tab">Engineering Services</a>
-							</li>
-							<li class="col-md-4 col-xs-6">
-								<a href="#equipment" class="btn btn-md btn-gray"  data-toggle="tab">Industrial</a>
-							</li>
-							<li class="col-md-4 col-xs-6">
-								<a href="#tool" class="btn btn-md btn-gray"  data-toggle="tab">Mold, Tool & Die</a>
-							</li>
-							<li class="col-md-4 col-xs-6">
-								<a href="#consumer" class="btn btn-md btn-gray"  data-toggle="tab">Consumer Products</a>
-							</li>
-							<li class="col-md-4 col-xs-6">
-								<a href="#oil" class="btn btn-md btn-gray"  data-toggle="tab">Oil, Gas, & Energy</a>
-							</li>
-							<li class="col-md-4 col-xs-6">
-								<a href="#medical" class="btn btn-md btn-gray"  data-toggle="tab">Medical Devices</a>
-							</li>
-							<li class="col-md-4 col-xs-6">
-								<a href="#defense" class="btn btn-md btn-gray"  data-toggle="tab">Aerospace & Defense</a>
-							</li>
-							<li class="col-md-4 col-xs-6">
-								<a  href="#automotive" class="btn btn-md btn-gray"  data-toggle="tab">Automotive</a>
-							</li>
-						</ul>
-				</div>
-			</div>
-		</section>
-		<!-- $CONTACTUS -->
-		<section class="section hidden-xs" id="contact">
-			<div class="row">
-				<div class="col-md-5 htitle pad">
-						<h3>Contact Us</h3>
-						<p>
-							SOLIDWORKS 3D design products are easy to learn and use, and work together to help you design products better, faster, and more cost-efficiently. Hawk Ridge Systems also offers CAMWorks CNC software, 3D printers, and a range of analysis consulting, and training.</p>
-							<p>Complete this form and we will have the appropriate expert contact you to discuss your needs.</p>
-							<p style="color: rgb(26, 102, 144);"> <strong>US:</strong>
-								877.266.4469
-							</p>
-							<p style="color: rgb(26, 102, 144);"> <strong>CAN:</strong>
-								866.587.6803
-							</p>
-							<p>
-								You can also email us at
-								<a href="mailto:info@hawkridgesys.com" target="_blank">info@hawkridgesys.com</a>.
-							</p>
+						<p style="color: rgb(26, 102, 144);"> <strong>CAN:</strong>
+							866.587.6803
 						</p>
-				</div>
-				<div class="col-md-7">
-					<script src="//app-ab02.marketo.com/js/forms2/js/forms2.js"></script>
-					<form id="mktoForm_1001"></form>
-					<script>MktoForms2.loadForm("//app-ab02.marketo.com", "499-VQL-975", 1001);</script>
-				</div>
+						<p>
+							You can also email us at
+							<a href="mailto:info@hawkridgesys.com" target="_blank">info@hawkridgesys.com</a>.
+						</p>
+					</p>
 			</div>
-		</section>
-	</div>
-		{/stash:index-body}
+			<div class="col-md-7">
+				<script src="//app-ab02.marketo.com/js/forms2/js/forms2.js"></script>
+				<form id="mktoForm_1001"></form>
+				<script>MktoForms2.loadForm("//app-ab02.marketo.com", "499-VQL-975", 1001);</script>
+			</div>
+		</div>
+	</section>
+</div>
+	{/stash:index-body}
 
-	    {stash:extra-footer-data}
-				<script type="text/javascript">
-					//On map click, replace the image
-					$('.smallmap').click(function(){
-						$('.trainingmap').attr("src", "http://www.hawkridgesys.com/image/training/hrs-map-lg.jpg")
-					});
-					//Tab Change
-					var tabChange = function () {
-					var tabs = $('.nav-tabs > li');
-					var active = tabs.filter('.active');
-					var next = active.next('li').length ? active.next('li').find('a') : tabs.filter(':first-child').find('a');
-					next.tab('show');
-					};
-					var tabCycle = setInterval(tabChange, 5000);
-					$('#myTab  a').on('click', function (e) {
-					event.preventDefault();
-					clearInterval(tabCycle);
-					$(this).tab('show');
-					setTimeout(function () {
-					tabCycle = setInterval(tabChange, 5000);
-					}, 10000);
-					});
-				</script>
+    {stash:extra-footer-data}
+			<script type="text/javascript">
+				//On map click, replace the image
+				$('.smallmap').click(function(){
+					$('.trainingmap').attr("src", "http://www.hawkridgesys.com/image/training/hrs-map-lg.jpg")
+				});
+				//Tab Change
+				var tabChange = function () {
+				var tabs = $('.nav-tabs > li');
+				var active = tabs.filter('.active');
+				var next = active.next('li').length ? active.next('li').find('a') : tabs.filter(':first-child').find('a');
+				next.tab('show');
+				};
+				var tabCycle = setInterval(tabChange, 5000);
+				$('#myTab  a').on('click', function (e) {
+				event.preventDefault();
+				clearInterval(tabCycle);
+				$(this).tab('show');
+				setTimeout(function () {
+				tabCycle = setInterval(tabChange, 5000);
+				}, 10000);
+				});
+			</script>
 
-	    {/stash:extra-footer-data}
+    {/stash:extra-footer-data}
 {/exp:stash:set}
 {last_segment}
 
