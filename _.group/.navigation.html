@@ -1,0 +1,348 @@
+<!-- $NAVIGATION -->
+<nav class="navbar navbar-default" role="navigation">
+	<div class="container">
+		<!-- Brand and toggle get grouped for better mobile display -->
+		<div class="row">
+			<div class="col-md-3 col-sm-3">
+				<div class="navbar-header">
+					<a class="col-xs-2 visible-xs btn btn-link" data-toggle="collapse" data-target=".navbar-ex2-collapse">
+						<span style="font-size:18px; margin-top:5px;" class="glyphicon glyphicon-search"></span>
+					</a>
+					<a class="col-md-12 col-xs-8 navigation center " href="{site_url}" id="logo">
+						<img class="nav-img" src="http://www.hawkridgesys.com/images/hrs-original.png" alt="Hawk Ridge Systems"/>
+					</a>
+					<a class="col-xs-2 visible-xs btn btn-link" data-toggle="collapse" data-target=".navbar-ex1-collapse">
+						<span style="font-size:18px; margin-top:5px;"  class="glyphicon glyphicon-list"></span>
+					</a>
+				</div>
+			</div>
+
+			<div class="col-md-9 col-sm-9">
+
+				<div class="row navigation pull-right hidden-sm hidden-xs">
+					<div class="col-md-12" style="text-align:right">
+						<span style="font-size:12px; padding:0; margin-top:5px;"><a href="{site_url}careers/" alt="HRS Careers">HRS is Hiring!</a> - US: 877.266.4469  CAN: 866.587.6803</span>
+						<a onclick="ga('send', 'event', 'Navigation', 'Click', 'CallUs')" class="btn btn-darkblue " href="{site_url}form/contact/">Contact Us</a>
+						<a onclick="ga('send', 'event', 'Navigation', 'Click', 'CallUs')" class="btn btn-darkblue" href="{site_url}form/quote/">Request a Quote</a>
+						<div class="search-bar col-md-4"  id="search" style="display:none; float: right; padding: 0 0 0 6px;">
+							{exp:low_search:form query="{segment_3}" require_all="category"}
+		    			{if error_message != ''}
+							<p class="error">{error_message}</p>
+							{/if}
+							<div class="input-group">
+								<input type="search" name="keywords" class="form-control" style="-webkit-appearance: none;" placeholder="Search" value="{low_search_keywords}" />
+								<span class="input-group-btn">
+									<button type="submit" class="btn btn-gray">
+										<span class="glyphicon glyphicon-search" style="color:#545454; border-left:0"></span>
+									</button>
+								</span>
+							</div>
+							{/exp:low_search:form}
+						</div>
+						<button class="btn btn-gray search">
+							<span class="glyphicon glyphicon-search" style="color:#545454;"></span>
+						</button>
+					</div>
+				</div>
+				<ul class="nav navbar-nav hidden-xs">
+					<!--Product Menu -->
+					<li class="dropdown">
+						<a onclick="ga('send', 'event', 'Navigation', 'Click', 'Products')"  href="{site_url}products/" class="dropdown-toggle" role="button" >
+							Products <b class="caret"></b>
+						</a>
+						<ul class="dropdown-menu" style="width:460px;">
+							<li class="pull-left list-unstyled">
+								<ul class="list-unstyled">
+									<li class="dropdown-header">3D CAD</li>
+									<li>
+										<a onclick="ga('send', 'event', 'Navigation', 'Dropdown', '3DCAD')" href="{site_url}products/solidworks/">SOLIDWORKS 3D CAD</a>
+							<a onclick="ga('send', 'event', 'Navigation', 'Dropdown', 'MC')" href="{site_url}products/solidworks-mechanical-conceptual/">SOLIDWORKS Mechanical Conceptual</a>
+									</li>
+									<li class="dropdown-header">Simulation</li>
+									<li>
+										<a onclick="ga('send', 'event', 'Navigation', 'Dropdown', 'Simulation')" href="{site_url}products/solidworks-simulation/">SOLIDWORKS Simulation</a>
+									</li>
+									<li>
+										<a onclick="ga('send', 'event', 'Navigation', 'Dropdown', 'Flow-Sim')" href="{site_url}products/solidworks-simulation-flow/">SOLIDWORKS Flow Simulation</a>
+									</li>
+									<li>
+										<a onclick="ga('send', 'event', 'Navigation', 'Dropdown', 'Plastics')" href="{site_url}products/solidworks-plastics/">SOLIDWORKS Plastics</a>
+									</li>
+									<li>
+										<a onclick="ga('send', 'event', 'Navigation', 'Dropdown', 'Sustainability')" href="{site_url}products/solidworks-sustainability/">SOLIDWORKS Sustainability</a>
+									</li>
+									<li>
+										<a onclick="ga('send', 'event', 'Navigation', 'Dropdown', 'Simulia')" href="{site_url}products/simulia/">SIMULIA Abaqus</a>
+									</li>
+									<li class="dropdown-header">Product Data Management</li>
+									<li>
+										<a onclick="ga('send', 'event', 'Navigation', 'Dropdown', 'EPDM')" href="{site_url}products/solidworks-enterprise-pdm/">SOLIDWORKS Enterprise PDM</a>
+									</li>
+									<li>
+										<a onclick="ga('send', 'event', 'Navigation', 'Dropdown', 'EXALEAD')" href="{site_url}products/exalead-onepart/">EXALEAD OnePart</a>
+									</li>
+									<li class="dropdown-header">Technical Communication</li>
+									<li>
+										<a onclick="ga('send', 'event', 'Navigation', 'Dropdown', 'Composer')" href="{site_url}products/solidworks-composer/">SOLIDWORKS Composer</a>
+									</li>
+									<li>
+										<a onclick="ga('send', 'event', 'Navigation', 'Dropdown', 'Inspection')" href="{site_url}products/solidworks-inspection/">SOLIDWORKS Inspection</a>
+									</li>
+									<li class="dropdown-header">Electrical Design</li>
+									<li>
+										<a onclick="ga('send', 'event', 'Navigation', 'Dropdown', 'Electrical')" href="{site_url}products/solidworks-electrical/">SOLIDWORKS Electrical</a>
+									</li>
+								</ul>
+							</li>
+							<li class="pull-right list-unstyled">
+								<ul class="list-unstyled">
+									<li class="dropdown-header">CNC Machining</li>
+									<li>
+										<a onclick="ga('send', 'event', 'Navigation', 'Dropdown', 'CAMWorks')" href="{site_url}products/camworks/">CAMWorks&reg;</a>
+									</li>
+									<li class="dropdown-header">3D Printing Solutions</li>
+									<li>
+										<a onclick="ga('send', 'event', 'Navigation', 'Dropdown', '3DPrinters')" href="{site_url}products/3d-printing/">3D Printers</a>
+									</li>
+									<li class="dropdown-header">Productivity Apps</li>
+									<li>
+										<a onclick="ga('send', 'event', 'Navigation', 'Dropdown', 'HawkWare')" href="{site_url}products/hawkware/">HawkWare&trade;</a>
+									</li>
+									<li>
+										<a onclick="ga('send', 'event', 'Navigation', 'Dropdown', 'CustomTools')" href="{site_url}products/hawkware/customtools/">CustomTools</a>
+									</li>
+									<li class="dropdown-header">Partners</li>
+									<li>
+										<a onclick="ga('send', 'event', 'Navigation', 'Dropdown', 'HPWorkstations')" href="{site_url}products/hp-workstation/">HP Workstation</a>
+									</li>
+									<li>
+										<a onclick="ga('send', 'event', 'Navigation', 'Dropdown', 'EpiGrid')" href="{site_url}products/epigrid/">The EpiGrid Solution</a>
+									</li>
+									<li class="dropdown-header">Free Tools</li>
+									<li>
+										<a onclick="ga('send', 'event', 'Navigation', 'Dropdown', 'DraftSight')" href="{site_url}products/free-cad-tools/draftsight/">DraftSight</a>
+									</li>
+									<li>
+										<a onclick="ga('send', 'event', 'Navigation', 'Dropdown', 'eDrawings')" href="{site_url}products/solidworks/capabilities/edrawings/">eDrawings</a>
+									</li>
+								</ul>
+							</li>
+						</ul>
+					</li>
+					<!--Training Menu-->
+					<li  class="dropdown">
+						<a onclick="ga('send', 'event', 'Navigation', 'Click', 'Training')" href="{site_url}training/" class="dropdown-toggle" role="button" >
+							Training <b class="caret"></b>
+						</a>
+						<ul class="dropdown-menu">
+							<li>
+								<a onclick="ga('send', 'event', 'Navigation', 'Dropdown', 'Training-Courses')" href="{site_url}training/courses/">Training Courses</a>
+							</li>
+							<li>
+								<a onclick="ga('send', 'event', 'Navigation', 'Dropdown', 'Training-Location')" href="{site_url}training/schedule/">Training Schedules</a>
+							</li>
+							<li>
+								<a onclick="ga('send', 'event', 'Navigation', 'Dropdown', 'Online-Training')" href="{site_url}training/solidworks-online-training/">Online Training</a>
+							</li>
+							<li>
+								<a onclick="ga('send', 'event', 'Navigation', 'Dropdown', 'Assessment-Test')" href="{site_url}training/solidworks-assessment/">Assessment Test</a>
+							</li>
+				<li>
+								<a onclick="ga('send', 'event', 'Navigation', 'Dropdown', 'Mentoring')" href="{site_url}training/solidworks-simulation-mentoring/">Mentoring</a>
+							</li>
+						</ul>
+					</li>
+					<!--Tutorials Menu-->
+					<li  class="dropdown">
+						<a onclick="ga('send', 'event', 'Navigation', 'Click', 'Tutorials')"  href="{site_url}tutorials/" class="dropdown-toggle" role="button">
+							Tutorials
+							<b class="caret"></b>
+						</a>
+						<ul class="dropdown-menu">
+							<li>
+								<a onclick="ga('send', 'event', 'Navigation', 'Dropdown', 'Tutorials-3DCAD')" href="{site_url}tutorials/solidworks/">3D CAD Tutorials</a>
+							</li>
+							<li>
+								<a onclick="ga('send', 'event', 'Navigation', 'Dropdown', 'Tutorials-Simulation')" href="{site_url}tutorials/solidworks-simulation/">Simulation Tutorials</a>
+							</li>
+							<li>
+								<a onclick="ga('send', 'event', 'Navigation', 'Dropdown', 'Tutorials-EPDM')" href="{site_url}tutorials/solidworks-enterprise-pdm/">EPDM Tutorials</a>
+							</li>
+							<li>
+								<a onclick="ga('send', 'event', 'Navigation', 'Dropdown', 'Tutorials-Composer')" href="{site_url}tutorials/solidworks-composer/">Composer Tutorials</a>
+							</li>
+							<li>
+								<a onclick="ga('send', 'event', 'Navigation', 'Dropdown', 'Tutorials-Electrical')" href="{site_url}tutorials/solidworks-electrical/">Electrical Tutorials</a>
+							</li>
+							<li>
+								<a onclick="ga('send', 'event', 'Navigation', 'Dropdown', 'Tutorials-CAMWorks')" href="{site_url}tutorials/camworks/">CAMWorks Tutorials</a>
+							</li>
+							<li>
+								<a onclick="ga('send', 'event', 'Navigation', 'Dropdown', 'Tutorials-HawkWare')" href="{site_url}tutorials/hawkware/">HawkWare Tutorials</a>
+							</li>
+							<li>
+								<a onclick="ga('send', 'event', 'Navigation', 'Dropdown', 'Tutorials-HP')" href="{site_url}tutorials/hp-workstation/">HP Workstation Tutorials</a>
+							</li>
+							<li>
+								<a onclick="ga('send', 'event', 'Navigation', 'Dropdown', 'Tutorials-NVIDIA')" href="{site_url}tutorials/nvidia-grid-vca/">NVIDIA GRID Tutorials</a>
+							</li>
+						</ul>
+					</li>
+					<!--Events Menu-->
+					<li  class="dropdown">
+						<a onclick="ga('send', 'event', 'Navigation', 'Click', 'Events')" href="{site_url}events/" class="dropdown-toggle" role="button" >
+							Events
+							<b class="caret"></b>
+						</a>
+						<ul class="dropdown-menu">
+							<li>
+								<a onclick="ga('send', 'event', 'Navigation', 'Dropdown', 'Events-Schedules')" href="{site_url}events/#/locations" >Event Schedules</a>
+							</li>
+							<li>
+								<a onclick="ga('send', 'event', 'Navigation', 'Dropdown', 'Seminars-Events')" href="{site_url}events/seminars-events/">Seminars &amp; Events</a>
+							</li>
+							<li>
+								<a onclick="ga('send', 'event', 'Navigation', 'Dropdown', 'Trade-Shows')" href="{site_url}events/trade-shows/">Trade Shows</a>
+							</li>
+							<li>
+								<a onclick="ga('send', 'event', 'Navigation', 'Dropdown', 'Hands-On')" href="{site_url}events/hands-on-sessions/">Hands-on Sessions</a>
+							</li>
+							<li>
+								<a onclick="ga('send', 'event', 'Navigation', 'Dropdown', 'Webinar-Wednesday')" href="{site_url}events/webinar-wednesdays/">Webinar Wednesday</a>
+							</li>
+							<li>
+								<a onclick="ga('send', 'event', 'Navigation', 'Dropdown', 'Live-Product')" href="{site_url}events/live-product-webinars/">Live Product Webinars</a>
+							</li>
+							<li>
+								<a onclick="ga('send', 'event', 'Navigation', 'Dropdown', 'User-Group')" href="{site_url}events/solidworks-user-group-meetings/">SOLIDWORKS User Group Meetings</a>
+							</li>
+						</ul>
+					</li>
+					<!--Service Menu-->
+					<li  class="dropdown">
+						<a onclick="ga('send', 'event', 'Navigation', 'Click', 'Services')"  href="{site_url}services/" class="dropdown-toggle" role="button">
+							Services
+							<b class="caret"></b>
+						</a>
+						<ul class="dropdown-menu">
+							<li>
+								<a onclick="ga('send', 'event', 'Navigation', 'Dropdown', 'CAD-Services')" href="{site_url}services/cad-services/">CAD Services</a>
+							</li>
+							<li>
+								<a onclick="ga('send', 'event', 'Navigation', 'Dropdown', 'Analysis-Consulting')" href="{site_url}services/analysis-consulting/">Analysis Consulting</a>
+							</li>
+							<li>
+								<a onclick="ga('send', 'event', 'Navigation', 'Dropdown', 'PDM-Services')" href="{site_url}services/product-data-management/">PDM Services</a>
+							</li>
+							<li>
+								<a onclick="ga('send', 'event', 'Navigation', 'Dropdown', 'Customized-APIs')" href="{site_url}services/customized-apis/">Customized APIs</a>
+							</li>
+							<li>
+								<a onclick="ga('send', 'event', 'Navigation', 'Dropdown', 'Subscription-Services')" href="{site_url}services/subscription-services/">Subscription Service</a>
+							</li>
+						</ul>
+					</li>
+					<!--Company -->
+					<li  class="dropdown">
+						<a onclick="ga('send', 'event', 'Navigation', 'Click', 'Company')" href="{site_url}company/" class="dropdown-toggle" role="button">
+							Company
+							<b class="caret"></b>
+						</a>
+						<ul class="dropdown-menu">
+							<li>
+								<a onclick="ga('send', 'event', 'Navigation', 'Dropdown', 'About-Us')" href="{site_url}company/">About Us</a>
+							</li>
+							<li>
+								<a onclick="ga('send', 'event', 'Navigation', 'Dropdown', 'Why-HRS')" href="{site_url}company/why-hawk-ridge-systems/">Why Hawk Ridge?</a>
+							</li>
+							<li>
+								<a onclick="ga('send', 'event', 'Navigation', 'Dropdown', 'HRS-in-CAN')" href="{site_url}company/hawk-ridge-systems-in-canada/">Hawk Ridge in Canada</a>
+							</li>
+							<li>
+								<a onclick="ga('send', 'event', 'Navigation', 'Dropdown', 'Locations')" href="{site_url}locations/">Locations</a>
+							</li>
+							<li>
+								<a onclick="ga('send', 'event', 'Navigation', 'Dropdown', 'Industries')" href="{site_url}company/industries/">Industries</a>
+							</li>
+							<li>
+								<a onclick="ga('send', 'event', 'Navigation', 'Dropdown', 'Testimonials')" href="{site_url}company/testimonials/">Testimonials</a>
+							</li>
+							<li>
+								<a onclick="ga('send', 'event', 'Navigation', 'Dropdown', 'Case-Studies')" href="{site_url}company/case-studies/">Case Studies</a>
+							</li>
+							<li>
+								<a onclick="ga('send', 'event', 'Navigation', 'Dropdown', 'Community')" href="{site_url}company/community/">Community</a>
+							</li>
+							<li>
+								<a onclick="ga('send', 'event', 'Navigation', 'Dropdown', 'News')" href="{site_url}news/">News</a>
+							</li>
+							<li>
+								<a onclick="ga('send', 'event', 'Navigation', 'Dropdown', 'Awards')" href="{site_url}company/awards/">Awards</a>
+							</li>
+							<li>
+								<a onclick="ga('send', 'event', 'Navigation', 'Dropdown', 'Careers')" href="{site_url}careers/">Careers</a>
+							</li>
+							<li>
+								<a onclick="ga('send', 'event', 'Navigation', 'Dropdown', 'Company-Contact')" href="{site_url}contact/">Contact Us</a>
+							</li>
+							<li>
+								<a onclick="ga('send', 'event', 'Navigation', 'Dropdown', 'Promotions')" href="{site_url}promotions/">Promotions</a>
+							</li>
+						</ul>
+					</li>
+					<!--Support -->
+					<li>
+						<a onclick="ga('send', 'event', 'Navigation', 'Click', 'Support-Landing')" class="" href="{site_url}support/">Support</a>
+					</li>
+					<!--Store -->
+					<li>
+						<a onclick="ga('send', 'event', 'Navigation', 'Click', 'Store')" class="" href="http://store.hawkridgesys.com">Store</a>
+					</li>
+					<!--Blog Menu-->
+					<li>
+						<a onclick="ga('send', 'event', 'Navigation', 'Click', 'Blog')" class="" href="{site_url}blog/">Blog</a>
+					</li>
+					<!--Mobile Menu (uses the class=) -->
+				</ul>
+				<div class="collapse navbar-collapse navbar-ex2-collapse ">
+					<div class="row visible-xs" style="margin: 0">
+						<div class=" col-xs-12 visible-xs" style="padding: 0; ">
+							{exp:low_search:form query="{segment_3}" require_all="category"}
+		{if error_message != ''}
+							<p class="error">{error_message}</p>
+							{/if}
+							<div class="input-group">
+								<input type="search" name="keywords" class="input-sm form-control" style="-webkit-appearance: none;" placeholder="Search" value="{low_search_keywords}" />
+								<span class="input-group-btn">
+									<button type="submit" class="btn btn-primary btn-sm">
+										<span class="glyphicon glyphicon-search"></span>
+									</button>
+								</span>
+							</div>
+							{/exp:low_search:form}
+						</div>
+					</div>
+				</div>
+				<div class="collapse navbar-collapse navbar-ex1-collapse">
+					<select class="col-lg-2 visible-xs form-control input-sm " onchange="location = this.options[this.selectedIndex].value;" >
+						<option class="" value="/">Home</option>
+						<option class="" value="/products/">Products</option>
+						<option class="" value="/training/">
+							<a class="btn btn-mini" href="{site_url}training/">Training</a>
+						</option>
+						<option class="" value="/services/">
+							<a class="btn btn-mini"  href="{site_url}services/">Services</a>
+						</option>
+						<option class="" value="/support/">Support</option>
+						<option class="" value="/company/">Company</option>
+						<option class="" value="/events/">
+							<a class="btn btn-mini"  href="{site_url}events/">Events</a>
+						</option>
+						<option class="" value="/blog/">Blog</option>
+						<option class="" value="http://store.hawkridgesys.com/">Store</option>
+					</select>
+				</div>
+			</div>
+		</div>
+	</div>
+</nav>
