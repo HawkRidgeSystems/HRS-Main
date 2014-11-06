@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<title>{exp:stash:title}</title>
+	<meta name="description" content="{exp:stash:get name='meta-desc'}">
+	{embed="_/.conditionals"}
+    <style>
+		{if {exp:stash:not_empty name="tag-bg"}}
+	    	.sub-bg{background-image: url({exp:stash:tag-bg}) !important;}
+	    {/if}
+    {exp:stash:extra-head-data}
+    </style>
+</head>
+<body>
+	{exp:switchee variable="{exp:stash:adwords}" parse="inward"}
+		{case value="No-Adwords" default="Yes"}
+			{embed="_/.navigation"}
+		{/case}
+		{case value="Adwords" }
+			{embed="_/.navigation-adwords"}
+		{/case}
+	{/exp:switchee}
+	<div class="{exp:stash:bread-class}">
+		{exp:switchee variable="{exp:stash:adwords}" parse="inward"}
+			{case value="No-Adwords" default="Yes"}
+				{breadcrumbs}
+			{/case}
+			{case value="Adwords"} {/case}
+		{/exp:switchee}
+		<div class="container main">
+			{exp:switchee variable="{exp:stash:heading-type}" parse="inward"}
+				 {case value="heading-1" default="Yes"}
+						<section class="allsection">
+							<div class="row">
+								<div class="col-md-{exp:stash:col-left}">
+									<p class="bold">{exp:stash:heading}</p>
+									<h1>{exp:stash:tag-title}</h1>
+									<p>{exp:stash:tag-line}</p>
+								</div>
+								<div class="col-md-{exp:stash:col-right}">
+									{exp:stash:tag-description}
+								</div>
+							</div>
+						</section>
+			    {/case}
+	    		{case value="heading-2"}
+					<div class="row">
+						<div class="tag col-md-{exp:stash:col-left}">
+							<h1>{exp:stash:tag-title}</h1>
+							<h3 class="white">{exp:stash:tag-line}</h3>
+						</div>
+						<div class="col-md-{exp:stash:col-right}">
+							<p>{exp:stash:tag-description}</p>
+						</div>
+					</div>
+			    {/case}
+			    {case value="heading-3"}
+					{exp:stash:heading}
+			    {/case}
+			{/exp:switchee}
+		</div>
+	</div>
