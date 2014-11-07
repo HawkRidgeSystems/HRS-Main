@@ -1,86 +1,170 @@
+{!-- - - - - - - - - - - --}
+{!-- $HEADER 		 	 --}
+{!-- - - - - - - - - - - --}
 <?php
 header("HTTP/1.0 404 Not Found");
 ?>
-<!DOCTYPE html>
-<head>
-<meta name="robots" content="noindex,nofollow">
-<title>Page Not Found | Hawk Ridge Systems</title>
-<meta name="keywords" content="{exp:xml_encode}{keywords}{/exp:xml_encode}" />
-<meta name="description" content="{exp:xml_encode}{description}{/exp:xml_encode}" />
-{embed="_includes/.html-head"}
-</head>
-<body>
-{embed="_includes/.nav"}
-<div class="container main">
-	<div class="page-header"><h2>Oops! Let us help you find what you are looking for</h2></div>
-<div> 
-<p>The page you were looking for cannot be found. If you were directed here from a link on the Hawk Ridge Systems site, please let our web team know. In the meantime, you can search our site with the search bar, or you can:</p>
-<script type="text/javascript">
-  var GOOG_FIXURL_LANG = 'en';
-  var GOOG_FIXURL_SITE = 'http://www.hawkridgesys.com'
-</script>
-<script type="text/javascript"
-  src="http://linkhelp.clients.google.com/tbproxy/lh/wm/fixurl.js">
-</script>
-<ul>
-	<li>Take a look at what’s new in SOLIDWORKS 2014</li>
-	<li>Check out local events in your area</li>
-	<li>Get the latest tips and tricks from the Hawk Ridge Systems Blog</li>
-	<li>Discover the Deal of the Day at the Hawk Ridge Systems Online Store</li>
-</ul>
+{embed="_/.header-index"}
 
-<h3> Popular Links</h3>
-<div class="row">
-	<div class="col-md-3 col-xs-12">
-		<h4>Products</h4>
-		<ul class="list-unstyled">
-			<li><a href="/products/solidworks/">3D CAD</a></li>
-			<li><a href="/products/solidworks-simulation/">Simulation and Analysis</a></li>
-			<li><a href="/products/solidworks-enterprise-pdm/">Product Data Management</a></li>
-			<li><a href="/products/solidworks-composer/">Technical Communication</a></li>
-			<li><a href="/products/solidworks-electrical/">Electrical Design</a></li>
-			<li><a href="/products/camworks/">CAMWorks</a></li>
-			<li><a href="/products/3d-printing/">3D Printers</a></li>
-			<li><a href="/products/nvidia/">NVDIA GRID VCA</a></li>
-			<li><a href="/products/hawkware/">Productivity Apps</a></li>
-			<li><a href="/products/draftsight/">Free Tools</a></li>
-		</ul>
+
+
+{exp:stash:set parse_tags="yes" parse_conditionals="yes"}
+{!-- - - - - - - - - - - --}
+{!-- $GET TITLE 		 --}
+{!-- - - - - - - - - - - --}
+{exp:stash:set parse_tags="yes" parse_conditionals="yes"}
+		{stash:title}
+			Page Not Found | Hawk Ridge Systems
+		{/stash:title}
+		{stash:meta-desc}
+			The page you were looking for cannot be found.
+		{/stash:meta-desc}
+	    {stash:extra-head-data}
+	    	<meta name="robots" content="noindex,nofollow">
+
+	    {/stash:extra-head-data}
+
+
+
+
+{!-- - - - - - - - - - - --}
+{!-- $404 CONTENT 	     --}
+{!-- - - - - - - - - - - --}  
+{stash:index-body}
+
+<div class="container main">
+	<div class="page-header">
+		<h2>Oops! Let us help you find what you are looking for</h2>
 	</div>
-	<div class="col-md-3 col-xs-12">
-		<h4>Support</h4>
-		<ul class="list-unstyled">
-			<li><a href="https://support.hawkridgesys.com/home">All Support Resources</a></li>
-			<li><a href="https://support.hawkridgesys.com/access/unauthenticated?return_to=https%3A%2F%2Fsupport.hawkridgesys.com%2Fforums">Log in for Premium Content</a></li>
-			<li><a href="https://support.hawkridgesys.com/entries/21814591-Contact-Support-877-266-4469-US-866-587-6803-Canada">Contact Support</a></li>
-			<li><a href="https://support.hawkridgesys.com/anonymous_requests/new">Submit a Support Request</a></li>
-			<li><a href="https://support.hawkridgesys.com/access/unauthenticated?return_to=https%3A%2F%2Fsupport.hawkridgesys.com%2Frequests">Check an Existing Request</a></li>
-			<li><a href="https://support.hawkridgesys.com/services/subscription-services/">Info on Subscription Service</a></li>
+	<div>
+		<p>
+			The page you were looking for cannot be found. If you were directed here from a link on the Hawk Ridge Systems site, please let our web team know. In the meantime, you can search our site with the search bar, or you can:
+		</p>
+		<script type="text/javascript">
+		  var GOOG_FIXURL_LANG = 'en';
+		  var GOOG_FIXURL_SITE = 'http://www.hawkridgesys.com'
+		</script>
+		<script type="text/javascript" src="http://linkhelp.clients.google.com/tbproxy/lh/wm/fixurl.js"></script>
+		<ul>
+			<li>Take a look at what’s new in SOLIDWORKS 2014</li>
+			<li>Check out local events in your area</li>
+			<li>
+				Get the latest tips and tricks from the Hawk Ridge Systems Blog
+			</li>
+			<li>
+				Discover the Deal of the Day at the Hawk Ridge Systems Online Store
+			</li>
 		</ul>
-	</div>
-	<div class="col-md-3 col-xs-12">
-		<h4>Training</h4>
-		<ul class="list-unstyled">
-			<li><a href="/training/">Training Curriculum</a></li>
-			<li><a href="/training/online-training/">Online Training</a></li>
-			<li><a href="/locations/">Training by Location</a></li>
-			<li><a href="/training/solidworks-assessment/">SOLIDWORKS Assessment Test</a></li>
-		</ul>
-	</div>
-	<div class="col-md-3 col-xs-12">
-		<h4>Company</h4>
-		<ul class="list-unstyled">
-			<li><a href="/locations/">Locations</a></li>
-			<li><a href="/company/about/">About Us</a></li>
-			<li><a href="/company/why-hawk-ridge-systems/">Why Hawk Ridge</a></li>
-			<li><a href="/news/">News</a></li>
-			<li><a href="/company/testimonials/">Customers</a></li>
-			<li><a href="/contact/">Contact Us</a></li>
-		</ul>
+
+		<h3>Popular Links</h3>
+		<div class="row">
+			<div class="col-md-3 col-xs-12">
+				<h4>Products</h4>
+				<ul class="list-unstyled">
+					<li>
+						<a href="/products/solidworks/">3D CAD</a>
+					</li>
+					<li>
+						<a href="/products/solidworks-simulation/">Simulation and Analysis</a>
+					</li>
+					<li>
+						<a href="/products/solidworks-enterprise-pdm/">Product Data Management</a>
+					</li>
+					<li>
+						<a href="/products/solidworks-composer/">Technical Communication</a>
+					</li>
+					<li>
+						<a href="/products/solidworks-electrical/">Electrical Design</a>
+					</li>
+					<li>
+						<a href="/products/camworks/">CAMWorks</a>
+					</li>
+					<li>
+						<a href="/products/3d-printing/">3D Printers</a>
+					</li>
+					<li>
+						<a href="/products/nvidia/">NVDIA GRID VCA</a>
+					</li>
+					<li>
+						<a href="/products/hawkware/">Productivity Apps</a>
+					</li>
+					<li>
+						<a href="/products/draftsight/">Free Tools</a>
+					</li>
+				</ul>
+			</div>
+			<div class="col-md-3 col-xs-12">
+				<h4>Support</h4>
+				<ul class="list-unstyled">
+					<li>
+						<a href="https://support.hawkridgesys.com/home">All Support Resources</a>
+					</li>
+					<li>
+						<a href="https://support.hawkridgesys.com/access/unauthenticated?return_to=https%3A%2F%2Fsupport.hawkridgesys.com%2Fforums">Log in for Premium Content</a>
+					</li>
+					<li>
+						<a href="https://support.hawkridgesys.com/entries/21814591-Contact-Support-877-266-4469-US-866-587-6803-Canada">Contact Support</a>
+					</li>
+					<li>
+						<a href="https://support.hawkridgesys.com/anonymous_requests/new">Submit a Support Request</a>
+					</li>
+					<li>
+						<a href="https://support.hawkridgesys.com/access/unauthenticated?return_to=https%3A%2F%2Fsupport.hawkridgesys.com%2Frequests">Check an Existing Request</a>
+					</li>
+					<li>
+						<a href="https://support.hawkridgesys.com/services/subscription-services/">Info on Subscription Service</a>
+					</li>
+				</ul>
+			</div>
+			<div class="col-md-3 col-xs-12">
+				<h4>Training</h4>
+				<ul class="list-unstyled">
+					<li>
+						<a href="/training/">Training Curriculum</a>
+					</li>
+					<li>
+						<a href="/training/online-training/">Online Training</a>
+					</li>
+					<li>
+						<a href="/locations/">Training by Location</a>
+					</li>
+					<li>
+						<a href="/training/solidworks-assessment/">SOLIDWORKS Assessment Test</a>
+					</li>
+				</ul>
+			</div>
+			<div class="col-md-3 col-xs-12">
+				<h4>Company</h4>
+				<ul class="list-unstyled">
+					<li>
+						<a href="/locations/">Locations</a>
+					</li>
+					<li>
+						<a href="/company/about/">About Us</a>
+					</li>
+					<li>
+						<a href="/company/why-hawk-ridge-systems/">Why Hawk Ridge</a>
+					</li>
+					<li>
+						<a href="/news/">News</a>
+					</li>
+					<li>
+						<a href="/company/testimonials/">Customers</a>
+					</li>
+					<li>
+						<a href="/contact/">Contact Us</a>
+					</li>
+				</ul>
+			</div>
+		</div>
 	</div>
 </div>
-</div>
-</div>
-{embed="_includes/.footer"}
-</div>
-</body>
-</html>
+{/stash:index-body}
+{/exp:stash:set}
+
+
+
+{!-- - - - - - - - - - - --}
+{!-- $FOOTER 		 	 --}
+{!-- - - - - - - - - - - --}
+{embed="_/.footer"}
