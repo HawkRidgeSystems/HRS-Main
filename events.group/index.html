@@ -1,0 +1,274 @@
+{preload_replace:my_channel="events"}
+<!DOCTYPE html>
+<html>
+<head>
+	<title>3D CAD Events | Hawk Ridge Systems</title>
+	<meta name="keywords" content="{exp:xml_encode}SOLIDWORKS events, Hawk Ridge Systems Events, 3D CAD Events{/exp:xml_encode}" />
+	<meta name="description" content="{exp:xml_encode}Hawk Ridge Systems' Events{/exp:xml_encode}" />
+	{embed="_includes/.html-head"}
+	<style>
+		.banner{
+			background: url('/image/events/hrs-events.jpg') 50% 0 repeat fixed;
+			position: relative; 
+			min-height: 500px;
+		}
+		.title{
+			color: white;
+			font-size: 69px;
+			text-transform: uppercase;
+			padding: 4% 0 17% 0;
+			letter-spacing: 6px;
+		}
+		.classes table{
+			margin:0;
+		}
+		.events h3 a, .classes strong a{
+			font-weight:bolder;
+			color:#333333;
+		}
+			.events h3 a:hover,.classes strong a:hover{
+				color:#0089cf;
+			}
+		tr td:first-child {width:19%;}
+		tr td:nth-child(2) {width:14%;}
+	</style>
+</head>
+<body>
+	{embed="_includes/.nav"}
+	<div class="banner" id="home" data-type="background" data-speed=".90" >
+		{breadcrumbs}
+		<div class="container main">
+			<h1 class="title">
+				Hawk Ridge Systems
+				<br>Events</h1>
+		</div>
+	</div>
+	<div  class="container main" id="home" data-type="background" data-speed="2" >
+		<section class="topsection events">
+			<div class="row">
+				<div class="col-md-3">
+					<img src="/image/events/swx-events-seminar.jpg" alt="" class="img-responsive"></div>
+				<div class="col-md-9">
+					<h3><a href="/events/seminars-events/">Seminars &amp; Events</a></h3>
+					<p>
+						This is where you'll find our semi-annual SOLIDWORKS Night Schools, yearly SOLIDWORKS  launch events, CAD/CAM and 3D printing lunch-and-learns, technical workshops, and more. All of our events are complimentary. If you have any questions about our seminars and events, get in touch with our marketing team: <a href="mailto:marketing@hawkridgesys.com?subject=event info" title="Get in contact with our events team">marketing@hawkridgesys.com</a>.</p>
+				</div>
+			</div>
+			<hr>
+			{exp:channel:entries  channel="edate" category="54"  show_future_entries="yes"  order_by="title"  sort="asc" show_expired="no" dynamic="off" }
+				
+
+				{!--/WEBLINK OR NOT--}					
+
+			<div class="classes">
+				{evevent}
+				<strong><a href="/events/seminars-events/{evevent}{evevent:url_title}{/evevent}">{evevent:title}</a></strong>
+				<table  class="table table-striped">
+					<tr>
+						
+						<td>
+							<a href="{if evweb == ""} {title_permalink=events/registration}{if:else} {evweb} {/if}">{event_date format='%l, %F %j, %Y'}</a>
+						</td>
+						<td>
+							<a href="{if evweb == ""} {title_permalink=events/registration}{if:else} {evweb} {/if}">{evtime}</a>
+						</td>
+						<td>
+							<a href="{if evweb == ""} {title_permalink=events/registration}{if:else} {evweb} {/if}">{evlocation} {evlocation:title}{/evlocation}</a>
+						</td>
+					</tr>
+				</table>
+				{/evevent}
+			</div>
+			{/exp:channel:entries}
+		</section>
+				<section class="midsection events">
+			<div class="row">
+				<div class="col-md-3">
+					<img src="/image/events/swx-events-livewebinar.jpg" class="img-responsive"></div>
+				<div class="col-md-9">
+					<h3><a href="/events/live-product-webinars/">Live Product Webinars</a>
+					</h3>
+					<p>
+						If you're interested in learning how Hawk Ridge Systems, SOLIDWORKS, CAMWorks, and 3D Systems  can help your business but you can’t get away from the office, attend one of our upcoming webinars. Ask questions and get immediate feedback from our Certified Engineers, and get to know our solutions portfolio. Webinar topics include CAD. CAM, design analysis, PDM, electrical schematics, technical communications,  3D printing, and more.</p>
+				</div>
+			</div>
+			<br>
+			{exp:channel:entries  channel="edate" category="44"  show_future_entries="yes"  order_by="title"  sort="asc" show_expired="no" dynamic="off" }
+			<div class="classes">
+				{evevent}
+				<strong><a href="/events/live-product-webinars/{evevent}{evevent:url_title}{/evevent}">{evevent:title}</a></strong>
+				<table  class="table table-striped">
+					<tr>
+						<td>
+							<a href="{evweb}" target="_blank" >{event_date format='%l, %F %j, %Y'}</a>
+						</td>
+						<td>
+							<a href="{evweb}" target="_blank" >{evtime}</a>
+						</td>
+						<td>
+							<a href="{evweb}" target="_blank" >{if long_title != ""} {long_title }{if:else} {title}{/if}</a>
+						</td>
+					</tr>
+				</table>
+				{/evevent}
+			</div>
+			{/exp:channel:entries}
+		</section>
+				<section class="midsection events">
+			<div class="row">
+				<div class="col-md-3">
+					<img src="/image/events/swx-events-ww.jpg" class="img-responsive"></div>
+				<div class="col-md-9">
+					<h3><a href="/events/webinar-wednesdays/">Webinar Wednesdays</a></h3>
+					<p>
+						Every Wednesday, our product experts present tips, tricks, and demonstrations of the solutions you need to drive your business forward. Sign up for an eLearning session to gain practical insight on leveraging your existing SOLIDWORKS and CAM tools, or join us for an eDemo session to see new tools in action. </p>
+				</div>
+			</div>
+			<br>		
+			<div class="borders">
+				<table class="table table-striped">
+					{exp:channel:entries  channel="edate" category="61"  show_future_entries="yes"  order_by="date"  sort="asc" show_expired="no" dynamic="off" }
+					{evevent}
+					<tr>
+						<td>
+							<a href="{evweb}" target="_blank" >{event_date format='%l, %F %j, %Y'}</a>
+						</td>
+						<td>
+							<a href="{evweb}" target="_blank" >{evtime}</a>
+						</td>
+						<td>
+							<a href="{evweb}" target="_blank" >{if long_title != ""} {long_title }{if:else} {title}{/if}</a>
+						</td>
+					</tr>
+					{/evevent}
+
+				{/exp:channel:entries}
+				</table>
+			</div>
+		</section>
+				<section class="midsection events">
+			<div class="row">
+				<div class="col-md-3">
+					<img src="/image/events/swx-events-live.jpg" class="img-responsive">
+				</div>
+				<div class="col-md-9">
+					<h3><a href="/events/hands-on-sessions/">
+						Hands-On Sessions
+					</a></h3>
+					<p>
+						Join us for an expert-led  hands-on session and see for yourself why SOLIDWORKS design tools are preferred by industry professionals. Experience the power and simplicity of SOLIDWORKS solutions for 3D design, analysis, product data management, technical communications, and electrical schematics.</p>
+				</div>
+			</div>
+			<br>
+				{exp:channel:entries  channel="edate" category="45"  show_future_entries="yes"  order_by="title"  sort="asc" show_expired="no" dynamic="off" }
+			<div class="classes">
+				{evevent}
+				<strong><a href="/events/hands-on-sessions/{evevent}{evevent:url_title}{/evevent}">{evevent:title}</a></strong>
+				<table  class="table table-striped">
+					<tr>
+						
+						<td>
+							<a href="{title_permalink=events/registration}">{event_date format='%l, %F %j, %Y'}</a>
+						</td>
+						<td>
+							<a href="{title_permalink=events/registration}">{evtime}</a>
+						</td>
+						<td>
+							<a href="{title_permalink=events/registration}">{evlocation} {evlocation:title}{/evlocation}</a>
+						</td>
+					</tr>
+				</table>
+				{/evevent}
+			</div>
+			{/exp:channel:entries}
+		</section>
+		<section class="midsection events">
+			<div class="row">
+				<div class="col-md-3">
+					<img src="/image/events/swx-events-trade.jpg" alt="Hawk Ridge Systems Trade Shows" class="img-responsive">
+				</div>
+				<div class="col-md-9">
+					<h3><a href="/events/trade-shows/">Trade Shows</a>
+					</h3>
+					<p>
+						Trade shows are a great way to get more information on the products and services that move your business forward. Get your questions answered by the Hawk Ridge Systems experts - our Certified SOLIDWORKS Sales Professionals and Applications Engineers are always on hand to demonstrate how you can gain the competitive advantage using tools that take you from design to prototype to manufacturing..
+					</p>
+				</div>
+			</div>
+			<br>
+			<div class="borders">
+				{exp:channel:entries channel="{my_channel}" category="63" } <strong>{title}</strong>
+				<br>
+				<table class="table table-striped">
+					<td>
+						<a href="{title_permalink=events/trade-shows}">{main_event_date format='%l, %F %j, %Y'}</a>
+					</td>
+					<td>
+						<a href="{title_permalink=events/trade-shows}">{main_event_time}</a>
+					</td>
+					<td>
+						<a href="{title_permalink=events/trade-shows}">{title}</a>
+					</td>
+				</table>
+				{/exp:channel:entries}
+			</div>
+		</section>
+		<section class="bottomsection events">
+			<div class="row">
+				<div class="col-md-3">
+					<img src="/image/events/swxug.jpg" class="img-responsive"></div>
+				<div class="col-md-9">
+					<h3><a href="/events/solidworks-user-group-meetings">SOLIDWORKS User Group Meetings</a>
+					</h3>
+					<p>
+						The SOLIDWORKS User Group Network (SWUGN) has one mission – bringing SOLIDWORKS users together to learn from each other. Get info on upcoming meetings and events for your local SWUG, and find out more about your local SOLIDWORKS community. 
+					</p>
+				</div>
+			</div>
+			<br>
+			<div class="borders">
+				{exp:channel:entries channel="{my_channel}"category="90" disable="member_data|pagination|trackbacks"}
+				<strong>{title}</strong>
+				<br>
+				<table class="table table-striped">
+					<td>
+						<a href="{title_permalink=events/solidworks-user-group-meetings}">{main_event_date format='%l, %F %j, %Y'}</a>
+					</td>
+					<td>
+						<a href="{title_permalink=events/solidworks-user-group-meetings}">{main_event_time}</a>
+					</td>
+					<td>
+						<a href="{title_permalink=events/solidworks-user-group-meetings}">{title}</a>
+					</td>
+				</table>
+				{/exp:channel:entries}
+			</div>
+		</section>
+	</div>
+	{embed="_includes/.footer"}
+	<script type="text/javascript">
+		//Erase the duplicate titles for strongs
+		var seen = {};
+		$('strong').each(function(){
+			var txt = $(this).text();
+			if (seen[txt]) {
+					$(this).remove();
+				}
+			else
+				seen[txt] = true;
+ 		});
+		//Parallax
+		var $window = $(window);
+		$('[data-type="background"]').each(function(){
+			var $bgobj = $(this); // assigning the object
+			$(window).scroll(function() {
+			var yPos = -($window.scrollTop() / $bgobj.data('speed'));
+			// Put together our final background position
+			var coords = '50%'+ yPos + 'px';
+			// Move the background
+			$bgobj.css({ backgroundPosition: coords });
+				});
+		});
+</script>
+</body>
+</html>
