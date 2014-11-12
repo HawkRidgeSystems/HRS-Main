@@ -1,14 +1,11 @@
-{!-- - - - - - - - - - - --}
-{!-- $HEADER 		 	 --}
-{!-- - - - - - - - - - - --}
+{!-- =====================
+$GET HEADER
+======================= --}
 {embed="_/.header-index"}
 
-
-
-
-{!-- - - - - - - - - - - --}
-{!-- $GET TITLE 		 --}
-{!-- - - - - - - - - - - --}
+{!-- =====================
+$SET TITLE
+======================= --}
 {exp:stash:set parse_tags="yes" parse_conditionals="yes"}
 		{stash:title}
 			3D Engineering & Manufacturing Solutions | Printers & 3D CAD
@@ -36,15 +33,16 @@
 						.item-5{background-image:url('{banner-bg}');}
 					{/if}
 			{/exp:channel:entries}
+			.home-blog{
+					padding: 3% 2%;
+			}
+
 			</style>
 	    {/stash:extra-head-data}
 
-
-
-
-{!-- - - - - - - - - - - --}
-{!-- $CAROUSEL 			 --}
-{!-- - - - - - - - - - - --}  
+{!-- =====================
+$CAROUSEL
+======================= --} 
 {stash:index-body}
 <div id="carousel" class="h-carousel slide" data-ride="carousel">
 	{!--$SLIDER INDICATORS--}
@@ -99,9 +97,9 @@
 </div>
 
 
-{!-- - - - - - - - - - - --}
-{!-- $MOBILE CTA		 --}
-{!-- - - - - - - - - - - --}  
+{!-- =====================
+$MOBILE CTA
+======================= --} 
 <div class="container main">
 	<section class="section htb visible-xs row">
 		<h4 class="b-border">Contact Us</h4>
@@ -123,11 +121,9 @@
 		</a>
 	</section>
 
-
-
-	{!-- - - - - - - - - - - --}
-	{!-- $HOME CTA		     --}
-	{!-- - - - - - - - - - - --}  
+{!-- =====================
+$HOME CTA
+======================= --} 
 	<section class="section home-cta">
 		<div class="row" >
 			<div class="col-md-3  col-xs-6 center">
@@ -191,12 +187,9 @@
 		</div>
 	</section>
 
-
-
-
-	{!-- - - - - - - - - - - --}
-	{!-- $SWX 2015 			 --}
-	{!-- - - - - - - - - - - --}  
+{!-- =====================
+$SWX 2015
+======================= --}  
 	<section class="section section-top hidden-xs home-2015">
 		<h3>SOLIDWORKS 2015 helps you speed through your designs with powerful new functionality, significant performance boosts, and an enhanced <br>user experience.</h3>
 		<div class="inline front-buttons">
@@ -204,12 +197,9 @@
         </div>
 	</section>
 
-
-
-
-	{!-- - - - - - - - - - - --}
-	{!-- $HRS SOLUTIONS	     --}
-	{!-- - - - - - - - - - - --}  
+{!-- =====================
+$HRS SOLUTIONS
+======================= --} 
 	<section class="midsection home-solutions">
 		<div class="row">
 			<div class="col-md-7 htitle pad">
@@ -262,12 +252,9 @@
 		</div>
 	</section>
 
-
-
-
-	{!-- - - - - - - - - - - --}
-	{!-- $TRAINING MAP	     --}
-	{!-- - - - - - - - - - - --}  
+{!-- =====================
+$TRAINING MAP
+======================= --} 
 	<section class="bottomsection home-training section-xs">
 		<div class="row">
 			<div class="col-md-5">
@@ -319,19 +306,25 @@
 			</div>
 		</div>
 	</section>
-	<!-- $BLOG -->
+
+{!-- =====================
+$BLOG SECTION
+======================= --}
 	<section class="topsection home-blog hidden-xs">
 		<div class="row">
 			<div class="col-md-4">
 				<div class="white center">
 					<h2 class="bold">Watch Our Channel</h2>
-					<p > <i class="fa fa-youtube-square"></i>
+					<p > <a href="https://www.youtube.com/user/hawkridgesystems" class="white"><i class="fa fa-youtube-square"></i></a>
 					</p>
 					<p>
-						Check out these videos from our engineering team, with expert tips and tricks for SolidWorks and CAMWorks.
+						Check out these videos from our engineering team, with expert tips and tricks for SOLIDWORKS and CAMWorks.
 					</p>
 					<p>
-						<a href="https://www.youtube.com/user/hawkridgesystems" class="btn btn-trans">Find out More</a>
+						<a href="https://www.youtube.com/user/hawkridgesystems" class="btn btn-trans bold">
+							<span class="glyphicon glyphicon-chevron-right"></span>
+							Youtube
+						</a>
 					</p>
 				</div>
 			</div>
@@ -339,13 +332,16 @@
 			<div class="col-md-4">
 				<div class="white center">
 					<h2 class=" bold">Read Our Blog</h2>
-					<p > <i  class="fa fa-book"></i>
+					<p > <a href="http://www.hawkridgesys.com/blog/" class="white"><i  class="fa fa-book"></i></a>
 					</p>
 					<p>
 						Advice on workarounds and best-practice techniques that can help you get through your toughest engineering challenges.
 					</p>
 					<p>
-						<a href="http://www.hawkridgesys.com/blog/" class="btn btn-trans">Find out More</a>
+						<a href="http://www.hawkridgesys.com/blog/" class="btn btn-trans bold">
+							<span class="glyphicon glyphicon-chevron-right"></span>
+							Blog
+						</a>
 					</p>
 				</div>
 			</div>
@@ -353,26 +349,27 @@
 			<div class="col-md-4">
 				<div class="white center">
 					<h2 class="bold">View Our Tutorials</h2>
-					<p>
+					<p><a href="http://www.hawkridgesys.com/events/recorded-webinars/" class="white">
 						<i class="fa fa-film"></i>
+						</a>
 					</p>
 					<p>
 						Watch a recorded webinar to get in-depth answers to commonly asked SOLIDWORKS, CAMWorks, and 3D printing questions.
 					</p>
 					<p>
-						<a href="http://www.hawkridgesys.com/events/recorded-webinars/" class="btn btn-trans">Find out More</a>
+						<a href="http://www.hawkridgesys.com/events/recorded-webinars/" class="btn btn-trans bold">
+							<span class="glyphicon glyphicon-chevron-right"></span>
+							Tutorials
+						</a>
 					</p>
 				</div>
 			</div>
 		</div>
 	</section>
 
-
-
-
-	{!-- - - - - - - - - - - --}
-	{!-- $TESTIMONIALS       --}
-	{!-- - - - - - - - - - - --}  
+{!-- - - - - - - - - - - --}
+{!-- $TESTIMONIALS       --}
+{!-- - - - - - - - - - - --}  
 	<section class="midsection hidden-xs">
 		{exp:channel:entries channel="testimonials" limit="1" category="116" orderby="random"}
 		<div class="row">
@@ -394,12 +391,9 @@
 		{/exp:channel:entries}
 	</section>
 
-
-
-
-	{!-- - - - - - - - - - - --}
-	{!-- $INDUSTRIES         --}
-	{!-- - - - - - - - - - - --}  
+{!-- - - - - - - - - - - --}
+{!-- $INDUSTRIES         --}
+{!-- - - - - - - - - - - --}  
 	<section class="bottomsection">
 		<div class="row">
 			<div class="col-md-5 ">
@@ -464,12 +458,9 @@
 		</div>
 	</section>
 
-
-
-
-	{!-- - - - - - - - - - - --}
-	{!-- $CONTACT US FORM    --}
-	{!-- - - - - - - - - - - --}  
+{!-- =====================
+$CONTACT FORM
+======================= --} 
 	<section class="section hidden-xs" id="contact">
 		<div class="row">
 			<div class="col-md-5 htitle pad">
