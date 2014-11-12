@@ -8,7 +8,6 @@
 		<title>{exp:stash:title}</title>
 		<meta name="description" content="{exp:stash:get name='meta-desc'}">
 	{/if}
-
 	{embed="_/.conditionals"}
     {exp:stash:extra-head-data}
 </head>
@@ -17,7 +16,7 @@
 	<div class="{exp:stash:bread-class}">
 		{breadcrumbs}
 			{if {exp:stash:not_empty name="info-cat"}}
-			<div class="container main">
+			<div class="container">
 				<section class="allsection">
 					<p class="bold">{exp:stash:info-cat}</p>
 					<h1>{exp:stash:info-heading}</h1>
@@ -25,8 +24,8 @@
 				</section>
 			</div>
 			{if:else}
-				<div class="container main">
-				{exp:stash:info-heading}
-			</div>
+				<div class="container">
+					{exp:stash:info-heading}
+				</div>
 			{/if}
 	</div>
