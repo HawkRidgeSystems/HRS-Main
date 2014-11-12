@@ -323,7 +323,7 @@ $BLOG SECTION
 					<p>
 						<a href="https://www.youtube.com/user/hawkridgesystems" class="btn btn-trans bold">
 							<span class="glyphicon glyphicon-chevron-right"></span>
-							Youtube
+							YouTube
 						</a>
 					</p>
 				</div>
@@ -460,6 +460,7 @@ $BLOG SECTION
 
 {!-- =====================
 $CONTACT FORM
+- Calling the Marketo form 
 ======================= --} 
 	<section class="section hidden-xs" id="contact">
 		<div class="row">
@@ -490,6 +491,11 @@ $CONTACT FORM
 </div>
 	{/stash:index-body}
 
+{!-- =====================
+$CUSTOM JAVASCRIPT
+- The map script is used to call the bigger map so it doesn't load until called
+- Tab change is for industries that uses the bootstrap tabs, but it rotates
+======================= --}
     {stash:extra-footer-data}
 			<script type="text/javascript">
 				//On map click, replace the image
