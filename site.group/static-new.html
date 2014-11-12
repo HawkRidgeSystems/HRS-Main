@@ -1,0 +1,26 @@
+
+{!-- $HEADER--}
+{embed="_/.header-products"}
+
+{exp:channel:entries channel="static | CTA | landing_pages | support" disable="member_data|categories|trackbacks|pagination" limit="1"}
+	{exp:stash:set parse_tags="yes" parse_conditionals="yes"}
+		{stash:title}{h1}{/stash:title}
+		{stash:meta-desc}{description}{/stash:meta-desc}
+		{stash:bread-class}{breadclass}{/stash:bread-class}
+		{stash:extra-head-data}{styles}{/stash:extra-head-data}
+		{stash:tag-bg}{tagbg}{/stash:tag-bg}
+		{stash:heading}{heading}{/stash:heading}
+		{stash:heading-type}{headingtype}{/stash:heading-type}
+		{stash:col-left}{colleft}{/stash:col-left}
+		{stash:col-right}{colright}{/stash:col-right}
+		{stash:tag-title}{tagtitle}{/stash:tag-title}
+		{stash:tag-line}{tagline}{/stash:tag-line}
+		{stash:tag-description}{tagdescription}{/stash:tag-description}
+		{stash:extra-footer-data}{scripts}{/stash:extra-footer-data}
+	{/exp:stash:set}
+	<div class="container">
+		{exp:allow_eecode embed="y"}{body}{/exp:allow_eecode}
+	</div>
+{/exp:channel:entries} 
+
+{embed="_/.footer"}
