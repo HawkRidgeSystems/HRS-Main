@@ -230,8 +230,6 @@ hr
 		font-weight: normal
 		line-height: 13px
 		color: #333
-
-/*bootstrap added margin, after first child */
 .media
 	margin-top: 0
 	margin-bottom: 15px
@@ -270,4 +268,8 @@ hr
 	font-size: 15px
 .bmargin
 	margin-bottom: 10px
-
+// Clearfix hack
+.group:after
+	content: ""
+	display: table
+	clear: both
