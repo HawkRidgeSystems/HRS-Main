@@ -92,6 +92,40 @@
 //--------------------//
 // $PLAY VIDEOS       // 
 //--------------------//
+.video-categories-wrapper > div:nth-child(5)
+	clear: left
+.video-categories 
+	padding: 24px 0
+	text-align: center
+	a
+		display:block							
+		color: #333
+		&:hover img
+			top: -10px
+			position: relative
+			+transitions(all 0.3s ease-in-out)
+		&:hover span
+			color: #545454
+	span
+		color: #0089cf
+	img
+		top: 0
+		position: relative
+		+transitions(all 0.3s ease-in-out)
+		display: block
+.video-player
+	margin-top: -20px !important
+	.col-md-10>section:first-child
+		margin: 21px 0 -7px 0
+		border: 0
+	.midsection
+		padding: 2% 4% 
+		margin: 0
+	h1
+		font-size: 25px
+.video-scroll
+	max-height: 600px 
+	overflow-y: scroll
 .play, .smallplay
 	position: absolute
 	display: block
