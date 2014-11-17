@@ -21,6 +21,14 @@
             margin: 0 -15px
     .row
         margin: 0
+.navigation
+    float: right
+    text-align: right
+    span
+        font-size: 12px
+        padding: 0
+        margin-top: 5px
+
 
 .navbar-collapse
     padding: 0
@@ -39,7 +47,6 @@
         padding-left: 6px
     button
         color: $secondary-color
-
 .navbar-brand
     float: none
     margin: 0 0 10px 0
@@ -47,11 +54,19 @@
     img
         width: 200px
 
+.nav-header 
+    span
+        font-size: 18px
+        margin-top: 5px
+
 .nav-img
     max-width: 100px
     margin: 4px 0
     +bp(device-sm)
         max-width: 168px
+
+.nav-products .dropdown-menu
+    width: 460px
 
 .dropdown
     .caret
@@ -82,8 +97,6 @@
             color: white
             background-color: #0081c2
 
-
-
 //Title For Product Dropdown -JP
 .dropdown-header
     font-size: $font-size
@@ -97,3 +110,19 @@
 ul.nav li.dropdown:hover ul.dropdown-menu
     display: block
     margin: 0
+
+.search input, .search-bar-xs input
+    -webkit-appearance: none
+.search-bar
+    display: none
+    float: right
+    padding: 0 0 0 6px
+    width: 33.3333%
+
+.search .glyphicon, 
+.search-bar .glyphicon
+    color: #545454 
+    border-left: 0
+.search-bar-xs
+    > div
+        padding: 0

@@ -1,56 +1,55 @@
-<!-- $NAVIGATION -->
+<!--=============== $NAVIGATION================-->
 <nav class="navbar navbar-default" role="navigation">
 	<div class="container">
-		<!-- Brand and toggle get grouped for better mobile display -->
 		<div class="row">
+		<!--=============== $HRS LOGO ================-->
 			<div class="col-md-3 col-sm-3">
 				<div class="navbar-header">
 					<a class="col-xs-2 visible-xs btn btn-link" data-toggle="collapse" data-target=".navbar-ex2-collapse">
-						<span style="font-size:18px; margin-top:5px;" class="glyphicon glyphicon-search"></span>
+						<span class="glyphicon glyphicon-search"></span>
 					</a>
-					<a class="col-md-12 col-xs-8 navigation center " href="{site_url}" id="logo">
+					<a class="col-md-12 col-xs-8" href="{site_url}" id="logo">
 						<img class="nav-img" src="http://www.hawkridgesys.com/images/hrs-original.png" alt="Hawk Ridge Systems"/>
 					</a>
 					<a class="col-xs-2 visible-xs btn btn-link" data-toggle="collapse" data-target=".navbar-ex1-collapse">
-						<span style="font-size:18px; margin-top:5px;"  class="glyphicon glyphicon-list"></span>
+						<span class="glyphicon glyphicon-list"></span>
 					</a>
 				</div>
 			</div>
-
 			<div class="col-md-9 col-sm-9">
-
-				<div class="row navigation pull-right hidden-sm hidden-xs">
-					<div class="col-md-12" style="text-align:right">
-						<span style="font-size:12px; padding:0; margin-top:5px;"><a href="{site_url}careers/" alt="HRS Careers">HRS is Hiring!</a> - US: 877.266.4469  CAN: 866.587.6803</span>
+			<!--=============== $TOP RIGHT NAV ================-->
+				<div class="navigation hidden-sm hidden-xs">
+						<span><a href="{site_url}careers/" alt="HRS Careers">HRS is Hiring!</a> - US: 877.266.4469  CAN: 866.587.6803</span>
 						<a onclick="ga('send', 'event', 'Navigation', 'Click', 'CallUs')" class="btn btn-darkblue " href="{site_url}form/contact/">Contact Us</a>
-						<a onclick="ga('send', 'event', 'Navigation', 'Click', 'CallUs')" class="btn btn-darkblue" href="{site_url}form/quote/">Request a Quote</a>
-						<div class="search-bar col-md-4"  id="search" style="display:none; float: right; padding: 0 0 0 6px;">
+						<a onclick="ga('send', 'event', 'Navigation', 'Click', 'Request a Quote')" class="btn btn-darkblue" href="{site_url}form/quote/">Request a Quote</a>
+						<div class="search-bar" id="search">
 							{exp:low_search:form query="{segment_3}" require_all="category"}
-		    			{if error_message != ''}
-							<p class="error">{error_message}</p>
-							{/if}
+		    					{if error_message != ''}
+									<p class="error">{error_message}</p>
+								{/if}
 							<div class="input-group">
-								<input type="search" name="keywords" class="form-control" style="-webkit-appearance: none;" placeholder="Search" value="{low_search_keywords}" />
+								<input type="search" name="keywords" class="form-control" placeholder="Search" value="{low_search_keywords}" />
 								<span class="input-group-btn">
 									<button type="submit" class="btn btn-gray">
-										<span class="glyphicon glyphicon-search" style="color:#545454; border-left:0"></span>
+										<span class="glyphicon glyphicon-search"></span>
 									</button>
 								</span>
 							</div>
 							{/exp:low_search:form}
 						</div>
 						<button class="btn btn-gray search">
-							<span class="glyphicon glyphicon-search" style="color:#545454;"></span>
+							<span class="glyphicon glyphicon-search"></span>
 						</button>
-					</div>
 				</div>
+
+			<!--=============== $BOTTOM RIGHT NAV ================-->
 				<ul class="nav navbar-nav hidden-xs">
 					<!--Product Menu -->
-					<li class="dropdown">
+					<li class="nav-products dropdown">
 						<a onclick="ga('send', 'event', 'Navigation', 'Click', 'Products')"  href="{site_url}products/" class="dropdown-toggle" role="button" >
 							Products <b class="caret"></b>
 						</a>
-						<ul class="dropdown-menu" style="width:460px;">
+						<ul class="dropdown-menu">
 							<li class="pull-left list-unstyled">
 								<ul class="list-unstyled">
 									<li class="dropdown-header">3D CAD</li>
@@ -302,17 +301,18 @@
 					<li>
 						<a onclick="ga('send', 'event', 'Navigation', 'Click', 'Blog')" class="" href="{site_url}blog/">Blog</a>
 					</li>
-					<!--Mobile Menu (uses the class=) -->
 				</ul>
-				<div class="collapse navbar-collapse navbar-ex2-collapse ">
-					<div class="row visible-xs" style="margin: 0">
-						<div class=" col-xs-12 visible-xs" style="padding: 0; ">
+
+				<!--=============== $MOBILE MENU ================-->
+				<div class="collapse navbar-collapse navbar-ex2-collapse">
+					<div class="search-bar-xs row visible-xs">
+						<div class="col-xs-12 visible-xs">
 							{exp:low_search:form query="{segment_3}" require_all="category"}
 		{if error_message != ''}
 							<p class="error">{error_message}</p>
 							{/if}
 							<div class="input-group">
-								<input type="search" name="keywords" class="input-sm form-control" style="-webkit-appearance: none;" placeholder="Search" value="{low_search_keywords}" />
+								<input type="search" name="keywords" class="input-sm form-control" placeholder="Search" value="{low_search_keywords}" />
 								<span class="input-group-btn">
 									<button type="submit" class="btn btn-primary btn-sm">
 										<span class="glyphicon glyphicon-search"></span>
@@ -325,20 +325,15 @@
 				</div>
 				<div class="collapse navbar-collapse navbar-ex1-collapse">
 					<select class="col-lg-2 visible-xs form-control input-sm " onchange="location = this.options[this.selectedIndex].value;" >
-						<option class="" value="/">Home</option>
-						<option class="" value="/products/">Products</option>
-						<option class="" value="/training/">
-							<a class="btn btn-mini" href="{site_url}training/">Training</a>
-						</option>
-						<option class="" value="/services/">
-							<a class="btn btn-mini"  href="{site_url}services/">Services</a>
-						</option>
-						<option class="" value="/support/">Support</option>
-						<option class="" value="/company/">Company</option>
-						<option class="" value="/events/">
-							<a class="btn btn-mini"  href="{site_url}events/">Events</a>
-						</option>
-						<option class="" value="/blog/">Blog</option>
+						<option class="" value="{site_url}">Home</option>
+						<option class="" value="{site_url}products/">Products</option>
+						<option class="" value="{site_url}training/">Training</option>
+						<option class="" value="{site_url}services/">Services</option>
+						<option class="" value="{site_url}support/">Support</option>
+						<option class="" value="{site_url}company/">Company</option>
+						<option class="" value="{site_url}locations/">Locations</option>
+						<option class="" value="{site_url}events/">Events</option>
+						<option class="" value="{site_url}blog/">Blog</option>
 						<option class="" value="http://store.hawkridgesys.com/">Store</option>
 					</select>
 				</div>
