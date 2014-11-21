@@ -1,0 +1,24 @@
+{exp:channel:entries channel="locations" category="{embed:ctg}" limit="5" disable="trackbacks" dynamic="off" search:list="Yes" orderby="title" sort="asc"}
+{if url_title != segment_2}
+<h4><a href="http://www.hawkridgesys.com/locations/{url_title}/">{if state == ""} {title}{if:else}{title}, {state}{/if}</a></h4>
+{if state != ""} 
+<div class="row">
+			<div class="col-md-6">
+				<p>
+				<strong>Address</strong>
+				<br>
+				{address}
+				</p>
+			</div>
+			<div class="col-md-6">
+				<p>
+				<strong>Phone Numbers</strong>
+				<br>
+				{phone}
+				</p>
+			</div>
+		</div>
+{/if}	
+	<hr>
+{/if}	
+{/exp:channel:entries}
