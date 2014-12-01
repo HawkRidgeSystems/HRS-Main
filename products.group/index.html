@@ -21,17 +21,13 @@
 {!-- - - - - - - - - - - --}
 {exp:stash:set parse_tags="yes" parse_conditionals="yes"}
 	{!-- $CHANNEL-INFO--}
-	{exp:channel:entries 
-		channel="products | static | cta_new" 
-		dynamic="on" 
-		require_entry="yes" 
-		}
+	{exp:channel:entries channel="products | static | cta_new" dynamic="on" require_entry="yes" }
 
 		{stash:title}{h1}{/stash:title}
 		{stash:meta-desc}{description}{/stash:meta-desc}
 		{stash:bread-class}{breadclass}{/stash:bread-class}
 		{stash:tag-title}{tagtitle}{/stash:tag-title}
-		{stash:tag-line}{tagline}{/stash:tag-line}
+		{stash:tag-line}{exp:allow_eecode embed="yes"}{tagline}{/exp:allow_eecode}{/stash:tag-line}
 		{stash:tag-description}{tagdescription}{/stash:tag-description}
 		{stash:heading}{heading}{/stash:heading}
 		{stash:tag-bg}{tagbg}{/stash:tag-bg}
