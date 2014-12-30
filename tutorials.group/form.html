@@ -1,0 +1,25 @@
+<script src="//app-ab02.marketo.com/js/forms2/js/forms2.js"></script>
+				<form id="mktoForm_1052"></form>
+				<script>
+					MktoForms2.loadForm("//app-ab02.marketo.com", "499-VQL-975", 1052, function(form){
+						//Set the Hidden Values
+						form.setValues({ 
+							"redirectURL":"{title}",
+
+						});
+						//Add an onSuccess handler
+						form.onSuccess(function(values, followUpUrl){
+							if($('.mktoRadioList > input:first-child').is(':checked') || $('.mktoRadioList > input:nth-child(3)').is(':checked')) {
+							    //Take the lead to a different page on successful submit, ignoring the form's configured followUpUrl.
+							    location.href = "http://store.hawkridgesys.com/product.asp?itemid={class_course}{class_course:cart_id}{/class_course}";
+							    //return false to prevent the submission handler continuing with its own processing
+							    return false;
+							}else{
+								 //Take the lead to a different page on successful submit, ignoring the form's configured followUpUrl.
+							    location.href = "http://www.hawkridgesys.com/training/registration-success/";
+							    //return false to prevent the submission handler continuing with its own processing
+							    return false;
+							}
+						});
+					});
+				</script>
