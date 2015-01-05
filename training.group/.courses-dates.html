@@ -35,7 +35,9 @@
               {event_start_date format="%D, %F %d"}
             </td>
             <td>
-              {class_location}{class_location:title}{/class_location}
+              {class_location}
+                {class_location:title}{if "{class_location:state}" != ""}, {class_location:state}{/if}
+              {/class_location}
             </td>
           </tr>
         {/if} 
@@ -83,7 +85,9 @@
               {event_start_date format="%D, %F %d"}
             </td>
             <td>
-              {class_location}{class_location:title}{/class_location}
+              {class_location}
+                {class_location:title}{if "{class_location:state}" != ""}, {class_location:state}{/if}
+              {/class_location}
             </td>
           </tr>
         {/if}
@@ -131,7 +135,9 @@
               {event_start_date format="%D, %F %d"}
             </td>
             <td>
-              {class_location}{class_location:title}{/class_location}
+              {class_location}
+                {class_location:title}{if "{class_location:state}" != ""}, {class_location:state}{/if}
+              {/class_location}
             </td>
           </tr>
         {/if}
