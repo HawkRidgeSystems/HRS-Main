@@ -61,7 +61,6 @@
 							transition: all 0.3s ease-in-out;
 							display: block;
 						}
-
 					.video-player{
 						margin-top:-20px !important;
 					}
@@ -80,6 +79,20 @@
 						max-height:600px; 
 						overflow-y:scroll;
 					}
+					.video-box{
+						border: 1px solid #dddddd;
+						margin-bottom: 10%;
+					}
+					.video-description{
+						padding: 4% 2%;
+					}
+						.video-description > a{
+							font-weight: bolder;
+							font-size: 16px;
+						}
+						.video-description > p{
+							margin: 0;
+						}
 					.page-header{
 						margin: 20px 0;
 					}
@@ -139,17 +152,17 @@
 						</section>
 					<!--$RELATED SECTION-->
 					<section class="section hidden-xs" style="padding:2%">
-					<div class="row">	
-						{exp:stash:get_list name="video-selection"}
-							<div class="col-md-3 video-categories">										
-								<a href="#{cat-url}">
-									<img src="{cat-img}" class="img-responsive center">
-									<span>{cat-name}</span>
-									<p id="{cat-url}-icon"></p>	
-								</a>
-							</div>
-						{/exp:stash:get_list}
-					</div>
+						<div class="row video-categories-wrapper">	
+							{exp:stash:get_list name="video-selection"}
+								<div class="col-md-3 video-categories">										
+									<a href="#{cat-url}">
+										<img src="{cat-img}" class="img-responsive center">
+										<span>{cat-name}</span>
+										<p id="{cat-url}-icon"></p>	
+									</a>
+								</div>
+							{/exp:stash:get_list}
+						</div>
 					</section>
 						<section class="section video-scroll" >
 					{exp:stash:get_list name="video-selection"} 
@@ -161,17 +174,16 @@
 							<div class="row video">
 								{exp:channel:entries channel="videos-{segment_2}" category="{cat-id}" dynamic="off"}
 									{if url_title != segment_4}	
-									<div class="col-md-4">
-										<div class="img-thumbnail">
+									<div class="col-md-6">
+										<div class="video-box">
 											<a alt="{title}" href="/products/{segment_2}/{segment_3}/{url_title}/">
 												<img class="img-responsive" src="{video_image}">
 												<span class="smallplay"></span>
 											</a>
-											<p style="margin: 10px 0 0 0; border-top: 1px solid #ddd; padding: 5px 0 0 0;">
-												<span class="bold">{segment_2_category_name}</span>
-												<br>
+											<div class="video-description">
 												<a alt="{title}" href="/products/{segment_2}/{segment_3}/{url_title}/">{title}</a>
-											</p>
+												<p> {exp:eehive_hacksaw chars = "150" append = "[...]" }{video_description} {/exp:eehive_hacksaw}</p>
+											</div>
 										</div>
 									</div>
 									{/if}	
@@ -219,7 +231,6 @@
 						{/exp:stash:get_list}
 					</div>
 					</section>
-
 					{exp:stash:get_list name="video-selection"} 
 						<section class="section video-selection" id="{cat-url}">
 							<div class="page-header">
@@ -229,14 +240,16 @@
 							<div class="row video">
 								{exp:channel:entries channel="videos-{segment_2}" category="{cat-id}" dynamic="off"}
 									<div class="col-md-6">
+										<div class="video-box">
 											<a alt="{title}" href="/products/{segment_2}/{segment_3}/{url_title}/">
-												<img class="img-thumbnail" src="{video_image}">
+												<img class="img-responsive" src="{video_image}">
 												<span class="smallplay"></span>
 											</a>
-											<div style="padding: 5px 0 0 0; min-height: 100px;border-bottom: 2px solid #333; margin-bottom: 8%; min-height:134px">
-												<a alt="{title}" href="/products/{segment_2}/{segment_3}/{url_title}/" style="font-weight:bolder; font-size:16px; display:block; margin:10px 0;">{title}</a>
-												<p class="vid-des"> {exp:eehive_hacksaw chars = "150" append = "[...]" }{video_description} {/exp:eehive_hacksaw}</p>
+											<div class="video-description">
+												<a alt="{title}" href="/products/{segment_2}/{segment_3}/{url_title}/">{title}</a>
+												<p> {exp:eehive_hacksaw chars = "150" append = "[...]" }{video_description} {/exp:eehive_hacksaw}</p>
 											</div>
+										</div>
 									</div>
 								{/exp:channel:entries}
 							</div>
