@@ -104,9 +104,6 @@
 				}
 			</style>
 {/exp:stash:set}
-
-
-
 {!-- $VIDEO CATEGORY--}
 {exp:stash:set_list name="video-selection" parse_tags="yes" parse_conditionals="yes" }
 	{exp:channel:category_archive channel="videos-{segment_2}" show="not {segment_2_category_id}" style="linear" show_empty="no"}
@@ -121,12 +118,9 @@
 		{/categories}
 	{/exp:channel:category_archive}
 {/exp:stash:set_list}
-
-
 {!--$VIDEO CONDITIONALS--}
 {exp:ifelse parse="inward"}  	
 	{if segment_4}
-
 		{!-- $VIDEO SELECTION --}
 	    {exp:stash:set parse_tags="yes"}
 				{exp:channel:entries channel="videos-{segment_2}" limit="1" disable="member_data|trackbacks|pagination" url_title="{segment_4}"}
