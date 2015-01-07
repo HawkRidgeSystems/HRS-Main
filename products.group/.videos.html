@@ -61,18 +61,18 @@
 							transition: all 0.3s ease-in-out;
 							display: block;
 						}
-					.video-player{
+					.video-frame{
 						margin-top:-20px !important;
 					}
-						.video-player .col-md-10>section:first-child{
+						.video-frame .col-md-10>section:first-child{
 							margin:21px 0 -7px 0;
 							border:0;
 						}
-						.video-player .midsection{
+						.video-frame .midsection{
 							padding:2% 4%; 
 							margin:0;
 						}
-						.video-player h1{
+						.video-frame h1{
 							font-size:25px;
 						}
 					.video-scroll{
@@ -129,74 +129,96 @@
 
 		{!-- $VIDEO SELECTION --}
 	    {exp:stash:set parse_tags="yes"}
-	        {exp:channel:entries channel="videos-{segment_2}" limit="1" disable="member_data|categories|trackbacks|pagination" url_title="{segment_4}"}
-			        {stash:title}{segment_2_category_name} - {title}{/stash:title}
-			        {stash:meta-desc}{video_description}{/stash:meta-desc}
-			        {stash:video-title}{title}{/stash:video-title}
-			        {stash:video-description}{video_description}{/stash:video-description}
-			        {stash:video-youtube}{youtube}{/stash:video-youtube}
-			        {stash:video-wistia}{wistia}{/stash:video-wistia}
-			{/exp:channel:entries}
+				{exp:channel:entries channel="videos-{segment_2}" limit="1" disable="member_data|trackbacks|pagination" url_title="{segment_4}"}
+					{stash:title}{segment_2_category_name} - {title}{/stash:title}
+					{stash:meta-desc}{video_description}{/stash:meta-desc}
+					{stash:video-title}{title}{/stash:video-title}
+					{stash:video-description}{video_description}{/stash:video-description}
+					{stash:video-transcription}{video_transcription}{/stash:video-transcription}
+					{stash:video-youtube}{youtube}{/stash:video-youtube}
+					{stash:video-wistia}{wistia}{/stash:video-wistia}
+					{stash:video-cat-id}{categories show="not {segment_2_category_id}"}{category_id}{/categories}{/stash:video-cat-id}
+					{stash:video-cat-name}{categories show="not {segment_2_category_id}"}{category_name}{/categories}{/stash:video-cat-name}
+					{stash:video-cat-description}{categories show="not {segment_2_category_id}"}{category_description}{/categories}{/stash:video-cat-description}
+				{/exp:channel:entries}
 	    {/exp:stash:set}
 
-		<div class="container main video-player">
-			<div class="row">
-				<div class="col-md-10">
-					<!--$VIDEO-SECTION-->
-						<section>
-							<iframe src="" allowtransparency="true" frameborder="0" scrolling="no" class="wistia_embed" name="wistia_embed" width="100%" allowfullscreen mozallowfullscreen webkitallowfullscreen oallowfullscreen msallowfullscreen></iframe>
-						</section>
-						<section class="midsection">
-							<h1>{exp:stash:video-title}</h1>
-							<p>{exp:stash:video-description}</p>
-						</section>
-					<!--$RELATED SECTION-->
-					<section class="section hidden-xs" style="padding:2%">
-						<div class="row video-categories-wrapper">	
+<div class="container main video-frame">
+	<div class="row">
+		<div class="col-md-10">
+			<section class="iframe-player">
+				<iframe src="" allowtransparency="true" frameborder="0" scrolling="no" class="wistia_embed" name="wistia_embed" width="100%" allowfullscreen mozallowfullscreen webkitallowfullscreen oallowfullscreen msallowfullscreen></iframe>
+			</section>
+			<section class="midsection iframe-description">
+				<h1><strong>{exp:stash:video-title}</strong></h1>
+				<p>{exp:stash:video-description}</p>
+			</section>
+			<section class="section video-tabs">
+				<ul class="nav nav-tabs" id="myTab">
+					<li class="active"><a href="#home" data-toggle="tab"><i class="fa fa-video-camera"></i> Related Videos</a></li>
+					<li><a href="#profile" data-toggle="tab"><i class="fa fa-th-large"></i> Video Categories</a></li>
+					{!--Only Show if Video Description is not empty--}
+					{exp:stash:parse process="end"}
+						{if "{stash:video-transcription}" != ""}
+							<li><a href="#messages" data-toggle="tab"><i class="fa fa-file-text"></i> Video Transcription</a></li>
+						{/if}
+					{/exp:stash:parse}
+				</ul>
+				<div class="tab-content">
+					<div class="tab-pane active" id="home">
+						<div class="page-header">
+							<h3 class="bold">{exp:stash:video-cat-name}</h3>
+							<p>{exp:stash:video-cat-description}</p>
+						</div>
+						{exp:stash:parse process="end"}
+							<div class="row video">
+								{exp:channel:entries channel="videos-{segment_2}" category="{stash:video-cat-id}" dynamic="off" parse="inward"  }
+									{if url_title != segment_4}
+										<div class="col-md-6">
+											<div class="video-box">
+												<a alt="{title}" href="{site_url}products/{segment_2}/{segment_3}/{url_title}/">
+													<img class="img-responsive" src="{video_image}">
+													<span class="smallplay"></span>
+												</a>
+												<div class="video-description">
+													<a alt="{title}" href="{site_url}products/{segment_2}/{segment_3}/{url_title}/">{title}</a>
+													<p>{exp:eehive_hacksaw chars = "150" append = "[...]" }{video_description} {/exp:eehive_hacksaw}</p>
+												</div>
+											</div>
+										</div>
+									{/if}	
+								{/exp:channel:entries}
+							</div>
+						{/exp:stash:parse}
+					</div> <!-- $END #home -->
+					<div class="tab-pane" id="profile">
+						<div class="page-header">
+							<h3 class="bold">{segment_2_category_name} Categories</h3>
+						</div>
+						<div class="row video-categories-wrapper">
 							{exp:stash:get_list name="video-selection"}
-								<div class="col-md-3 video-categories">										
-									<a href="#{cat-url}">
+								<div class="col-md-3 video-categories">
+									<a href="{site_url}products/{segment_2}/{segment_3}/#{cat-url}">
 										<img src="{cat-img}" class="img-responsive center">
 										<span>{cat-name}</span>
-										<p id="{cat-url}-icon"></p>	
+										<p id="{cat-url}-icon"></p>
 									</a>
 								</div>
 							{/exp:stash:get_list}
 						</div>
-					</section>
-						<section class="section video-scroll" >
-					{exp:stash:get_list name="video-selection"} 
-						<div class=" video-selection" id="{cat-url}">
+					</div> <!-- $END #profile -->
+					<div class="tab-pane" id="messages">
 						<div class="page-header">
-							<h3 class="bold">{cat-name}</h3>
-							<p>{cat-description}</p>
+							<h3 class="bold">{segment_2_category_name} Video Transcription</h3>
 						</div>
-							<div class="row video">
-								{exp:channel:entries channel="videos-{segment_2}" category="{cat-id}" dynamic="off"}
-									{if url_title != segment_4}	
-									<div class="col-md-6">
-										<div class="video-box">
-											<a alt="{title}" href="/products/{segment_2}/{segment_3}/{url_title}/">
-												<img class="img-responsive" src="{video_image}">
-												<span class="smallplay"></span>
-											</a>
-											<div class="video-description">
-												<a alt="{title}" href="/products/{segment_2}/{segment_3}/{url_title}/">{title}</a>
-												<p> {exp:eehive_hacksaw chars = "150" append = "[...]" }{video_description} {/exp:eehive_hacksaw}</p>
-											</div>
-										</div>
-									</div>
-									{/if}	
-								{/exp:channel:entries}
-							</div>
-						</div>
-					{/exp:stash:get_list}
-						</section>
-				</div>
-
-				{embed="_sidebar/.{segment_2}"}
-			</div>
-		</div>
+						{exp:stash:video-transcription}
+					</div> <!-- $END #messages -->
+				</div> <!-- $END .tab-content -->
+			</section> <!-- $END .video-tabs -->
+		</div> {!--$END div.col-md-10--}
+	{embed="_sidebar/.{segment_2}"}
+	</div> {!-- $END div.row--}
+</div> {!-- $END div.container--}
 
 {!-- $VIDEO SELECTION --}
 	{if:elseif segment_3 }
@@ -241,12 +263,12 @@
 								{exp:channel:entries channel="videos-{segment_2}" category="{cat-id}" dynamic="off"}
 									<div class="col-md-6">
 										<div class="video-box">
-											<a alt="{title}" href="/products/{segment_2}/{segment_3}/{url_title}/">
+											<a alt="{title}" href="{site_url}products/{segment_2}/{segment_3}/{url_title}/">
 												<img class="img-responsive" src="{video_image}">
 												<span class="smallplay"></span>
 											</a>
 											<div class="video-description">
-												<a alt="{title}" href="/products/{segment_2}/{segment_3}/{url_title}/">{title}</a>
+												<a alt="{title}" href="{site_url}products/{segment_2}/{segment_3}/{url_title}/">{title}</a>
 												<p> {exp:eehive_hacksaw chars = "150" append = "[...]" }{video_description} {/exp:eehive_hacksaw}</p>
 											</div>
 										</div>
@@ -276,6 +298,11 @@
 			     var videoLen = $("#" + videoSel + "> .row.video>div").length;
 			     $("#" + videoSel + "-icon").append(videoLen + " Videos");
 		    });
+			//Tabs
+			$('#myTab a').click(function(e) {
+			  e.preventDefault()
+			  $(this).tab('show')
+			})
 		{exp:ifelse parse="inward"}  	
 			{if segment_4}
 				//Wistia Loader if Youtube Blocked
