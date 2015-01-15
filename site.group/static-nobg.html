@@ -1,0 +1,48 @@
+{preload_replace:my_channel="static | CTA | landing_pages | support"}
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+	{exp:channel:entries channel="{my_channel}" disable="member_data|categories|trackbacks|pagination" rdf="off" limit="1" track_views="one"}
+		<title>{exp:xml_encode}{h1}{/exp:xml_encode}</title>
+		<meta name="keywords" content="{exp:xml_encode}{keywords}{/exp:xml_encode}" />
+		<meta name="description" content="{exp:xml_encode}{description}{/exp:xml_encode}" />
+	{/exp:channel:entries} 
+	{embed="_includes/.html-head"}
+	{exp:channel:entries channel="{my_channel}"}
+		{styles}
+	{/exp:channel:entries}
+	</head>
+	<body>
+		{embed="_includes/.nav"}
+		{exp:channel:entries channel="{my_channel}" disable="member_data|categories|trackbacks|pagination" rdf="off" limit="1" track_views="one"}	
+					<div class="no-bg">
+									{breadcrumbs}
+						<div class="container main">
+						<section class="allsection">
+							<div class="row">
+								{if tagdescription == ""}
+								<div class="col-md-12">
+								{if:else}
+								<div class="col-md-8">
+								{/if}
+									<p class="bold">{heading}</p>
+									<h1>{tagtitle}</h1>
+									<p>{tagline}</p>
+								</div>
+								{if tagdescription != ""}
+								<div class="col-md-3 col-md-offset-1">
+									{tagdescription}
+								</div>
+								{/if}
+							</div>
+							</section>
+						</div>
+					</div>
+				<div  class="container main">
+				{exp:allow_eecode embed="y"}
+					{body}
+				{/exp:allow_eecode}</div>
+	{/exp:channel:entries} 
+	{embed="_includes/.footer"}
+	</body>
+</html>

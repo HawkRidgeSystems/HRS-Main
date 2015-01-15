@@ -1,0 +1,56 @@
+{preload_replace:my_channel="static | CTA"}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	{exp:channel:entries channel="{my_channel}" disable="member_data|categories|trackbacks|pagination" rdf="off" limit="1" track_views="one"}
+	<title>{exp:xml_encode}{h1}{/exp:xml_encode}</title>
+	<meta name="keywords" content="{exp:xml_encode}{keywords}{/exp:xml_encode}" />
+	<meta name="description" content="{exp:xml_encode}{description}{/exp:xml_encode}" />
+	{/exp:channel:entries} 
+	{embed="_includes/.html-head"}
+	<meta name="robots" content="noindex"></head>
+<body>
+	{embed="_includes/.nav"}
+		{exp:channel:entries channel="{my_channel}" disable="member_data|categories|trackbacks|pagination" rdf="off" limit="1" track_views="one"}	
+
+		{if heading != ""}
+	<div class="no-bg">
+		{breadcrumbs}
+		<div class="container main">
+			<section class="allsection">
+				<div class="row">
+					<div class="col-md-12">
+						<p class="bold">{heading}</p>
+						<h1>{tagtitle}</h1>
+						{exp:allow_eecode embed='y'}
+						<p>{tagline}</p>
+						{/exp:allow_eecode}
+					</div>
+				</div>
+			</section>
+		</div>
+	</div>
+	{if:else}
+	<div class="sub-bg">
+		{breadcrumbs}
+		<div class="container main">
+			<style>.sub-bg{background-image: url({tagbg})}</style>
+			<div class="row">
+				<div class="tag col-md-6">
+					{if heading != ""}
+					<p>{heading}</p>
+					{/if}
+					<h1>{tagtitle}</h1>
+					<h2>{tagline}</h2>
+				</div>
+				<div class="col-md-6">{tagdescription}</div>
+			</div>
+		</div>
+	</div>
+	{/if}
+	<div  class="container main">{exp:allow_eecode embed="y"}{body}{/exp:allow_eecode}</div>
+	{embed="_includes/.footer"}
+{scripts}
+	{/exp:channel:entries}
+</body>
+</html>

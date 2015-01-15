@@ -1,0 +1,26 @@
+{preload_replace:my_channel="landing_pages | CTA"}
+<!DOCTYPE html>
+<html>
+	<head>
+	{exp:channel:entries channel="{my_channel}" disable="member_data|categories|trackbacks|pagination" rdf="off" limit="1" track_views="one"}
+		<title>{exp:xml_encode}{h1}{/exp:xml_encode}</title>
+		<meta name="keywords" content="{exp:xml_encode}{keywords}{/exp:xml_encode}" />
+		<meta name="description" content="{exp:xml_encode}{description}{/exp:xml_encode}" />
+	{embed="_includes/.html-head"}
+{styles}
+	{/exp:channel:entries} 
+	</head>
+	<body>
+		{embed="_includes/.nav-island"}
+		{exp:channel:entries channel="{my_channel}" disable="member_data|categories|trackbacks|pagination" rdf="off" limit="1" track_views="one"}
+{if no_results}
+  {redirect="404"}
+{/if}
+		{heading}		
+<div  class="container main">{exp:allow_eecode embed="y"}{body}{/exp:allow_eecode}</div>
+{embed="_includes/.footer-island"}
+{scripts}
+{/exp:channel:entries} 
+	
+	</body>
+</html>
