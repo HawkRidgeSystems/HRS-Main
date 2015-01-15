@@ -1,0 +1,1 @@
+{exp:query sql="SELECT entry_id as course FROM exp_channel_titles LEFT JOIN exp_relationships ON exp_channel_titles.entry_id = exp_relationships.rel_child_id WHERE exp_relationships.rel_id = '{embed:loc}'"}{embed="location/.title" lookup="{course}"}{/exp:query}

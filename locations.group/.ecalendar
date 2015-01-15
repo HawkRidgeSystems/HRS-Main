@@ -1,0 +1,58 @@
+{exp:channel:calendar switch="calendarToday|calendarCell" month="{current_time format="%m"}" year="2013" channel="edate" entry_id="{embed:event_ids}" show_future_entries="yes" show_expired="no" orderby="date" sort="asc"}
+<h4>{date format="%F %Y"}</h4>
+<table class="table table-bordered">
+<thead>
+<tr>
+<th>Event Name</th>
+<th>Type</th>
+<th>Time</th>
+<th>Date</th>
+</tr>
+</thead>
+<tbody>
+{calendar_rows }
+{if entries}
+
+{entries}
+{embed="/locations/.ecal_info" event="{entry_id}"}
+{/entries}
+
+{/if}
+{if not_entries}
+{/if}
+{if blank}
+{/if}
+{/calendar_rows}
+</tbody>
+</table>
+{/exp:channel:calendar}
+
+
+{exp:channel:calendar switch="calendarToday|calendarCell" month="<?php echo date("m", strtotime("+30 days")); ?>" year="2013" channel="edate" entry_id="{embed:event_ids}" show_future_entries="yes" show_expired="no" orderby="date" sort="asc"}
+<h4>{date format="%F %Y"}</h4>
+<table class="table table-bordered">
+<thead>
+<tr>
+<th>Event Name</th>
+<th>Type</th>
+<th>Time</th>
+<th>Date</th>
+</tr>
+</thead>
+<tbody>
+{calendar_rows }
+{if entries}
+
+{entries}
+{embed="/locations/.ecal_info" event="{entry_id}"}
+{/entries}
+
+{/if}
+{if not_entries}
+{/if}
+{if blank}
+{/if}
+{/calendar_rows}
+</tbody>
+</table>
+{/exp:channel:calendar}

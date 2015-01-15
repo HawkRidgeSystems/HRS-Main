@@ -1,0 +1,5 @@
+{exp:calendar:events event_id="{embed:class_ids}" date_range_start="today" limit="20" date_range_end="999 months"}
+{if calendar_no_results}<em>There are currently no classes scheduled for this location.</em>{/if} 
+<div class="{switch='upcoming1|upcoming2'}"><a href="{path=training/class}/{event_url_title}/"><strong>{class_course}{class_course:title}{/class_course}</strong><br />
+{event_start_date format='%l, %F %j, %Y'}</a></div>
+{/exp:calendar:events}

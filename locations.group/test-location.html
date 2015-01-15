@@ -1,0 +1,75 @@
+{preload_replace:my_channel="locations"}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+{exp:channel:entries channel="{my_channel}" disable="member_data|categories|trackbacks|pagination" rdf="off" limit="1" track_views="one"}
+<title>{if l-meta-title != ""}{exp:xml_encode}{l-meta-title}{/exp:xml_encode}{if:else}{exp:xml_encode}SolidWorks 3D CAD Software: {title}, {state}{/exp:xml_encode}{/if}</title>
+<meta name="description" content="{if l-meta-desc != ""}{exp:xml_encode}{l-meta-desc}{/exp:xml_encode}{if:else}{exp:xml_encode}Hawk Ridge Systems is the #1 Reseller of SolidWorks 3D CAD Software, providing sales, support and training in {title}, {state}.{/exp:xml_encode}{/if}" />
+{embed="_includes/.html-head"}
+</head>
+<body>
+{embed="_includes/.nav"}
+<div  class="container main">
+<div class="breadcrumbs">
+	<a href="{site_url}">Home</a> &raquo;
+	{if "{segment_2}" != ""}
+	<a href="{path={segment_1}}">{channel}</a> &raquo;
+	{title}, {state}
+	{if:elseif "{segment_3}" == ""}
+	{channel}
+	{/if}
+</div>
+<div class="page-header">
+<h1>SolidWorks Reseller: {title}, {state}</h1>
+	<p>Hawk Ridge Systems is the #1 Reseller of SolidWorks 3D CAD Software, providing sales, support and training. </p>
+</div>
+<div class="row">
+<div class="col-lg-4 pull-left well">
+<address>
+  <strong>Hawk Ridge Systems </strong><br>
+  {address}<br>
+  <abbr title="Phone"></abbr> {phone}
+</address>
+	{l-desc} 
+</div>
+	<div class="col-lg-8">
+       <div class="iframe-rwd">
+       <iframe width="500" height="100" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" src="{gmap}&amp;output=embed"></iframe>
+       </div>
+       <div class="row">
+       	<div class="col-lg-6"> 
+	       <h3>Upcoming Classes</h3>
+	       
+	       {embed="{segment_1}/.courses" class_ids="<?php 
+	       $result ="";
+	       $segs = explode("/", $_SERVER['PATH_INFO']);
+	       $seg3 = $segs[3];
+	       $query = $this->EE->db->query("SELECT rel_parent_id AS entry FROM exp_relationships WHERE rel_child_id = (SELECT entry_id AS entry FROM exp_channel_titles WHERE url_title = '$seg3')");
+	       foreach ($query->result() as $row)
+	       {
+	          $result .= $row->entry;
+	          $result .= '|';
+	       }
+	       echo substr($result,0,-1); ?>"}
+       </div>
+       
+	       <div class="col-lg-6">
+	       <h3>Upcoming Events</h3>
+	       {parents channel="edate" status="open" limit="10" }
+	       {if parents:no_results}
+	       <em>There are currently no events scheduled for this location.</em>
+	       {/if}
+	       {if '{entry_date format="%U"}' >= '{current_time format="%U"}'}
+	       <div class="{switch='upcoming1|upcoming2'}"><a href="{title_permalink=events/registration}/"><strong>{embed="contact/.course" loc="{parents:evevent}"}</strong><br />
+	       {entry_date format='%l, %F %j, %Y'}</a></div>
+	       {/if}
+	       {/parents}
+	       </div>
+       </div>
+	</div>
+</div>
+	  {/exp:channel:entries}
+</div>
+{embed="_includes/.footer"}
+</body>
+</html>
