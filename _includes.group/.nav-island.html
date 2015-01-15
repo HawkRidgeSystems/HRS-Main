@@ -1,0 +1,153 @@
+<header class="navbar navbar-fixed-top">
+<div class="container">
+<!-- $HEADER -->
+	<div class="navbar-header " >
+	<div class="row" style="margin-right:-6px; margin-left: -6px;">
+			<a class="col-xs-2 visible-xs btn btn-link" data-toggle="collapse" data-target=".navbar-ex2-collapse"><span class="glyphicon glyphicon-search"></span></a>
+			<a class="col-xs-8 col-lg-8 " href="/"><img style="width:300px; max-width:400px !important;" class="nav-img" src="http://www.hawkridgesys.com/images/HRS-Logo_1.png" alt="Hawk Ridge Systems"/></a>
+			<a class="col-xs-2 visible-xs btn btn-link" data-toggle="collapse" data-target=".navbar-ex1-collapse">	<span class="glyphicon glyphicon-list"></span></a>
+</div>
+	</div>				
+	<nav>
+	<!--
+		<ul class="nav navbar-nav hidden-xs">
+			<!--Product Menu
+			<li class="dropdown  {if segment_1 == 'products'}active{/if} ">
+				<a onclick="_gaq.push(['_trackEvent', 'Navigation', 'Click', 'Products',1,true])"  href="/products/" class="dropdown-toggle" role="button" >Products <b class="caret"></b></a>
+				<ul class="dropdown-menu" style="width:460px;">
+					<li class="pull-left list-unstyled">
+						<ul class="list-unstyled">
+							<li class="dropdown-header">3D CAD </li>
+							<li><a onclick="_gaq.push(['_trackEvent', 'Navigation', 'Dropdown', '3DCAD',1,true])" href="/products/solidworks/">SolidWorks 3D CAD</a></li>	
+							<li class="dropdown-header">Simulation</li>
+							<li><a onclick="_gaq.push(['_trackEvent', 'Navigation', 'Dropdown', 'Simulation',1,true])" href="/products/solidworks-simulation/">SolidWorks Simulation</a></li>
+							<li><a onclick="_gaq.push(['_trackEvent', 'Navigation', 'Dropdown', 'Flow-Sim',1,true])" href="/products/solidworks-simulation-flow/">SolidWorks Flow Simulation</a></li>
+							<li><a onclick="_gaq.push(['_trackEvent', 'Navigation', 'Dropdown', 'Plastics',1,true])" href="/products/solidworks-plastics/">SolidWorks Plastics</a></li>
+							<li><a onclick="_gaq.push(['_trackEvent', 'Navigation', 'Dropdown', 'Sustainability',1,true])" href="/products/solidworks-sustainability/">SolidWorks Sustainability</a></li>
+							<li><a onclick="_gaq.push(['_trackEvent', 'Navigation', 'Dropdown', 'Simulia',1,true])" href="/products/simulia/">SIMULIA Abaqus</a></li>
+							<li class="dropdown-header">Product Data Management</li>
+							<li><a onclick="_gaq.push(['_trackEvent', 'Navigation', 'Dropdown', 'EPDM',1,true])" href="/products/solidworks-enterprise-pdm/">SolidWorks Enterprise PDM</a></li>
+							<li class="dropdown-header">Technical Communication</li>
+							<li><a onclick="_gaq.push(['_trackEvent', 'Navigation', 'Dropdown', 'Composer',1,true])" href="/products/solidworks-composer/">SolidWorks Composer</a> </li>
+	<li class="dropdown-header">Electrical Design</li>
+							<li><a onclick="_gaq.push(['_trackEvent', 'Navigation', 'Dropdown', 'Electrical',1,true])" href="/products/solidworks-electrical/">SolidWorks Electrical</a></li>	
+						</ul>
+					</li>	
+					<li class="pull-right list-unstyled">
+						<ul class="list-unstyled">					
+							<li class="dropdown-header">CNC Machining</li>
+							<li><a onclick="_gaq.push(['_trackEvent', 'Navigation', 'Dropdown', 'CAMWorks',1,true])" href="/products/camworks/">CAMWorks&reg;</a> </li>
+							<li class="dropdown-header">3D Printing Solutions</li>
+							<li><a onclick="_gaq.push(['_trackEvent', 'Navigation', 'Dropdown', '3DPrinters',1,true])" href="/products/3d-printing/">3D Printers</a> </li>
+							<li class="dropdown-header">Virtualization</li>
+							<li><a onclick="_gaq.push(['_trackEvent', 'Navigation', 'Dropdown', 'NVIDIA',1,true])" href="/products/nvidia/">NVIDIA GRID VCA</a> </li>
+							<li class="dropdown-header">Productivity Apps</li>
+							<li><a onclick="_gaq.push(['_trackEvent', 'Navigation', 'Dropdown', 'HawkWare',1,true])" href="/products/hawkware/">HawkWare&trade;</a></li>
+							<li class="dropdown-header">Partners</li>
+							<li><a onclick="_gaq.push(['_trackEvent', 'Navigation', 'Dropdown', 'HPWorkstations',1,true])" href="/products/hp-workstation/">HP Workstation</a></li>
+							<li><a onclick="_gaq.push(['_trackEvent', 'Navigation', 'Dropdown', 'EpiGrid',1,true])" href="/products/epigrid/">The EpiGrid Solution</a></li>	
+							<li class="dropdown-header">Free Tools</li>
+							<li><a onclick="_gaq.push(['_trackEvent', 'Navigation', 'Dropdown', 'FreeCAD',1,true])" href="/products/draftsight/">Free CAD Tools</a></li>				
+							<li><a onclick="_gaq.push(['_trackEvent', 'Navigation', 'Dropdown', 'Recorded-Webinars',1,true])" href="/events/recorded-webinars/">Recorded Product Webinars</a></li>
+						</ul>
+					</li>
+							</ul>
+			</li>
+			<!--Training Menu
+			<li  class="dropdown  {if segment_1 == "training"}active{/if}">
+			<a onclick="_gaq.push(['_trackEvent', 'Navigation', 'Click', 'Training',1,true])" href="/training/" class="dropdown-toggle" role="button" >Training <b class="caret"></b></a>
+			<ul class="dropdown-menu">
+			<li><a onclick="_gaq.push(['_trackEvent', 'Navigation', 'Dropdown', 'Training-Courses',1,true])" href="/training/courses/">Training Courses </a></li>
+			<li><a onclick="_gaq.push(['_trackEvent', 'Navigation', 'Dropdown', 'Training-Location',1,true])" href="/training/schedule/">Training Schedules </a></li>
+			<li><a onclick="_gaq.push(['_trackEvent', 'Navigation', 'Dropdown', 'Online-Training',1,true])" href="/training/online-training/">Online Training</a></li>
+			<li><a onclick="_gaq.push(['_trackEvent', 'Navigation', 'Dropdown', 'Assessment-Test',1,true])" href="/training/solidworks-assessment/">Assessment Test</a></li>
+			</ul>
+			</li>
+			<!--Service Menu
+			<li  class="dropdown  {if segment_1 == "services"}active{/if}">
+			<a onclick="_gaq.push(['_trackEvent', 'Navigation', 'Click', 'Services',1,true])"  href="/services/" class="dropdown-toggle" role="button">Services <b class="caret"></b></a>
+			<ul class="dropdown-menu">
+			<li><a onclick="_gaq.push(['_trackEvent', 'Navigation', 'Dropdown', 'CAD-Services',1,true])" href="/services/cad-services/">CAD Services</a></li>
+			<li><a onclick="_gaq.push(['_trackEvent', 'Navigation', 'Dropdown', 'Analysis-Consulting',1,true])" href="/services/analysis-consulting/">Analysis Consulting</a></li>
+			<li><a onclick="_gaq.push(['_trackEvent', 'Navigation', 'Dropdown', 'PDM-Services',1,true])" href="/services/product-data-management/">PDM Services</a></li>
+			<li><a onclick="_gaq.push(['_trackEvent', 'Navigation', 'Dropdown', 'Customized-APIs',1,true])" href="/services/customized-apis/">Customized APIs</a></li>
+			<li><a onclick="_gaq.push(['_trackEvent', 'Navigation', 'Dropdown', 'Subscription-Services',1,true])" href="/services/subscription-services/">Subscription Service</a></li>
+			</ul>
+			</li>
+
+			<!--Events Menu
+			<li  class="dropdown  {if segment_1 == "events"}active{/if}">
+			<a onclick="_gaq.push(['_trackEvent', 'Navigation', 'Click', 'Events',1,true])" href="/events/" class="dropdown-toggle" role="button" >Events <b class="caret"></b></a>	
+			<ul class="dropdown-menu">
+			<li><a onclick="_gaq.push(['_trackEvent', 'Navigation', 'Dropdown', 'Events-Schedules',1,true])" href="/events/#/locations" >Event Schedules</a></li>
+			<li><a onclick="_gaq.push(['_trackEvent', 'Navigation', 'Dropdown', 'Seminars-Events',1,true])" href="/events/seminars-events/">Seminars &amp; Events</a></li> 
+			<li><a onclick="_gaq.push(['_trackEvent', 'Navigation', 'Dropdown', 'Trade-Shows',1,true])" href="/events/trade-shows/">Trade Shows</a></li>
+			<li><a onclick="_gaq.push(['_trackEvent', 'Navigation', 'Dropdown', 'Hands-On',1,true])" href="/events/hands-on-sessions/">Hands-On Sessions</a></li>
+			<li><a onclick="_gaq.push(['_trackEvent', 'Navigation', 'Dropdown', 'Webinar-Wednesday',1,true])" href="/events/webinar-wednesdays/">Webinar Wednesday</a></li>
+			<li><a onclick="_gaq.push(['_trackEvent', 'Navigation', 'Dropdown', 'Live-Product',1,true])" href="/events/live-product-webinars/">Live Product Webinars</a></li>
+			<li><a onclick="_gaq.push(['_trackEvent', 'Navigation', 'Dropdown', 'User-Group',1,true])" href="/events/solidworks-user-group-meetings/">SolidWorks User Group Meetings </a></li>
+			<li><a onclick="_gaq.push(['_trackEvent', 'Navigation', 'Dropdown', 'Events-Recorded-Webinars',1,true])" href="/events/recorded-webinars/">Recorded Product Webinars</a></li>
+			</ul>
+			</li>
+
+			<!--Company
+			<li  class="dropdown  {if segment_1 == "company"}active{/if}">
+			<a onclick="_gaq.push(['_trackEvent', 'Navigation', 'Click', 'Company',1,true])" href="/company/" class="dropdown-toggle" role="button">Company <b class="caret"></b></a>
+			<ul class="dropdown-menu">
+			<li><a onclick="_gaq.push(['_trackEvent', 'Navigation', 'Dropdown', 'About-Us',1,true])" href="/company/">About Us</a></li>
+			<li><a onclick="_gaq.push(['_trackEvent', 'Navigation', 'Dropdown', 'Why-HRS',1,true])" href="/company/why-hawk-ridge-systems/">Why HRS?</a></li>
+			<li><a onclick="_gaq.push(['_trackEvent', 'Navigation', 'Dropdown', 'Locations',1,true])" href="/locations/">Locations</a></li>
+			<li><a onclick="_gaq.push(['_trackEvent', 'Navigation', 'Dropdown', 'Industries',1,true])" href="/company/industries/">Industries</a></li>
+			<li><a onclick="_gaq.push(['_trackEvent', 'Navigation', 'Dropdown', 'Testimonials',1,true])" href="/company/testimonials/">Testimonials</a></li>							
+			<li><a onclick="_gaq.push(['_trackEvent', 'Navigation', 'Dropdown', 'Case-Studies',1,true])" href="/company/case-studies/">Case Studies</a></li>
+			<li><a onclick="_gaq.push(['_trackEvent', 'Navigation', 'Dropdown', 'Community',1,true])" href="/company/community/">Community</a></li>
+			<li><a onclick="_gaq.push(['_trackEvent', 'Navigation', 'Dropdown', 'News',1,true])" href="/news/">News</a></li>
+			<li><a onclick="_gaq.push(['_trackEvent', 'Navigation', 'Dropdown', 'Awards',1,true])" href="/company/awards/">Awards</a></li>
+			<li><a onclick="_gaq.push(['_trackEvent', 'Navigation', 'Dropdown', 'Careers',1,true])" href="/employment/">Careers</a></li>
+			<li><a onclick="_gaq.push(['_trackEvent', 'Navigation', 'Dropdown', 'Company-Contact',1,true])" href="/contact/">Contact Us</a></li>
+			<li><a onclick="_gaq.push(['_trackEvent', 'Navigation', 'Dropdown', 'Promotions',1,true])" href="/promotions/">Promotions</a></li>
+			</ul>
+			</li>
+			<!--Support 
+			<li><a onclick="_gaq.push(['_trackEvent', 'Navigation', 'Click', 'Support',1,true])" class="" href="http://support.hawkridgesys.com">Support</a></li>
+			<!--Store 
+			<li><a onclick="_gaq.push(['_trackEvent', 'Navigation', 'Click', 'Store',1,true])" class="" href="http://store.hawkridgesys.com">Store</a></li>
+			<!--Blog Menu
+			<li><a onclick="_gaq.push(['_trackEvent', 'Navigation', 'Click', 'Blog',1,true])" class="" href="/blog/">Blog</a></li>
+			<!--Call Us Menu
+			<li><a onclick="_gaq.push(['_trackEvent', 'Navigation', 'Click', 'CallUs',1,true])" class="label label-primary" href="/contact/" style="color:white">Call Us</a></li>
+			<!--Mobile Menu (uses the class=) -->
+		</ul>
+	</nav>
+	<div class="collapse navbar-collapse navbar-ex2-collapse ">
+	<div class="row visible-xs" style="margin: 0">
+		<div class=" col-xs-12 visible-xs" style="padding: 0; ">	
+		{exp:low_search:form query="{segment_3}" require_all="category"}
+		{if error_message != ''}
+			<p class="error">{error_message}</p>
+		{/if}
+			<div class="input-group">
+				<input type="search" name="keywords" class="input-sm form-control" style="-webkit-appearance: none;" placeholder="Search" value="{low_search_keywords}" />
+				<span class="input-group-btn">
+				<button type="submit" class="btn btn-primary btn-sm"><span class="glyphicon glyphicon-search"></span></button>
+				</span>
+			</div>
+		{/exp:low_search:form}	
+					</div>
+		</div>
+	</div>
+	<div class="collapse navbar-collapse navbar-ex1-collapse">
+	<select class="col-lg-2 visible-xs form-control input-sm " onchange="location = this.options[this.selectedIndex].value;" >
+		<option class="" value="/"> Home</option>
+		<option class="" value="/products/"> Products</option>
+		<option class="" value="/training/"> <a class="btn btn-mini" href="/training/">Training</a></option>
+		<option class="" value="/services/"> <a class="btn btn-mini"  href="/services/">Services</a></option>
+		<option class="" value="https://support.hawkridgesys.com/home/"> Support</option>
+		<option class="" value="/company/">Company</option>				
+		<option class="" value="/events/"> <a class="btn btn-mini"  href="/events/">Events</a></option>
+		<option class="" value="/blog/"> Blog</option>					
+		<option class="" value="http://store.hawkridgesys.com/"> Store</option>	
+	</select>	
+	</div>
+</div>
+</header>
