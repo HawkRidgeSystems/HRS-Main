@@ -1,0 +1,7 @@
+{!-- $IF/THANKYOU-PAGE--}
+{if last_segment == "thank-you"} 
+	{embed="form/cta"}
+{!-- $LANDING PAGE INDEX ISN'T A PAGE--}
+{if:else}
+	{redirect = "404"}
+{/if}
