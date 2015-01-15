@@ -1,0 +1,70 @@
+<?php if ('{segment_4}' - '{current_time format="%Y"}' <= 1){ //so the calendar doesn't go over 1 year ?> 
+{preload_replace:my_channel="edate"}
+{preload_replace:my_template_group="{segment_1}/schedule"}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<title>Hawk Ridge Systems Events Schedule | SOLIDWORKS Events Schedule</title>
+<meta name="keywords" content="{exp:xml_encode}Hawk Ridge Systems Events Schedule, SOLIDWORKS Training Events{/exp:xml_encode}" />
+<meta name="description" content="Hawk Ridge Systems&apos; SOLIDWORKS Events Schedule" />
+<meta name="robots" content="noindex, nofollow">
+{embed="_includes/.html-head"}
+</head>
+<body>
+{embed="_includes/.nav"}
+<div  class="container main">
+{breadcrumbs}
+<div class="page-header">
+<h1>Events Schedule: <em>{exp:channel:entries channel="locations" disable="categories|member_data|pagination|trackbacks" limit="1" dynamic="off" url_title="{segment_3}"}{title}, {state}{/exp:channel:entries}</em></h1>
+<p>Click on a calendar month below and select a class/date. You will be directed to a registration form which will allow you to register for the event online.</p>
+        <p>If you have any questions about events, please contact Event Registration at 510-482-6110 or by e-mail at <a href="mailto:events@hawkridgesys.com">events@hawkridgesys.com</a>.</p>
+</div>
+{if segment_3 != ''}
+{embed="events/.calendar" event_ids="<?php
+$result ="";
+$segs = explode("/", $_SERVER['PATH_INFO']);
+$seg3 = $segs[3];
+$query = $this->EE->db->query("SELECT entry_id AS entry FROM exp_channel_data WHERE field_id_78 = '$seg3' OR field_id_78 = 'webinar'");
+foreach ($query->result() as $row)
+{
+   $result .= $row->entry;
+   $result .= '|';
+}
+$result = substr($result,0,-1);
+
+if ($result == ""){
+echo "none";
+}else{
+echo $result;
+} ?>"}
+{if:else}
+{redirect="{segment_1}/schedule/oakland_headquarters"}{/if}
+
+</div>
+</div>
+{embed="_includes/.footer"}
+<script type="text/javascript">
+$(document).ready(function() 
+{
+   $('.container a[href][title]').qtip({
+      content: {
+         text: false
+      },
+position: {
+      corner: {
+         target: 'topMiddle',
+         tooltip: 'bottomMiddle'
+      }
+   },
+      style: 'dark'
+   });
+});
+</script>
+<script type="text/javascript" src="/javascript/jquery.qtip-1.0.0-rc3.min.js"></script>
+</script>
+</body>
+</html>
+<?php } ?>
+<?php if ('{segment_4}' - '{current_time format="%Y"}' > 1){ //so the calendar redirects to training page after 1 year ?>
+ {redirect="{segment_1}"}
+ <?php }?>

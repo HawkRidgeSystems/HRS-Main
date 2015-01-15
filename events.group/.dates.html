@@ -1,0 +1,40 @@
+{exp:channel:entries  channel="edate" category="{embed:ctgs}"  show_future_entries="yes"  order_by="date"  sort="asc" show_expired="no" dynamic="off" limit="{embed:lim}"}
+
+	{if evweb !=""}
+	<tr>
+	{evevent}{if evevent:title == "{embed:ev_title}"}       
+	<td>
+		<a href="{evweb}" target="_blank" >{event_date format='%l, %F %j, %Y'}</a>
+	</td>
+	<td>
+		<a href="{evweb}" target="_blank" >{evtime}</a>
+	</td>
+	<td>
+		<a href="{evweb}" target="_blank" >
+		{if long_title != ""} {long_title }{if:else} {title}{/if}	
+		</a>
+	</td>
+		{/if}
+	</tr>
+	{/evevent}
+	{if:else}
+
+{evevent}{if evevent:title == "{embed:ev_title}"}   
+	<tr>    
+	<td>
+		<a href="{title_permalink=events/registration}">{event_date format='%l, %F %j, %Y'}</a>
+	</td>
+	<td>
+		<a href="{title_permalink=events/registration}">{evtime}</a>
+	</td>
+	<td>
+		<a href="{title_permalink=events/registration}">
+			{evlocation} {evlocation:title}{/evlocation}
+		</a>
+	</td>
+	{/if}
+	</tr>
+	{/evevent}
+{/if}
+
+{/exp:channel:entries}

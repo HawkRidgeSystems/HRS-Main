@@ -1,0 +1,110 @@
+{preload_replace:my_channel="events"}
+{preload_replace:my_template_group="{segment_1}/live-product-webinars"}
+<!DOCTYPE html> 
+<html lang="en">
+	<head>
+	{if segment_3}
+	{exp:channel:entries channel="{my_channel}" limit="1" disable="member_data|categories|trackbacks|pagination" url_title="{segment_3}"}
+	{if no_results}
+	{redirect="{my_template_group}"}
+	{/if}
+	<title>{eh1} | Hawk Ridge Systems</title>
+	<meta name="keywords" content="{exp:xml_encode}{ekeywords}{/exp:xml_encode}" />
+	<meta name="description" content="{exp:xml_encode}{edescription}{/exp:xml_encode}" />
+	{/exp:channel:entries}
+	{if:else}
+	<title>Live Product Webinars | Hawk Ridge Systems</title>
+	<meta name="keywords" content="{exp:xml_encode}Hawk Ridge Systems Live Product Webinars{/exp:xml_encode}" />
+	<meta name="description" content="{exp:xml_encode}Hawk Ridge Systems Live Product Webinars{/exp:xml_encode}" />
+	{/if}
+	{embed="_includes/.html-head"}
+	</head>
+	<body>
+	{embed="_includes/.nav"}
+	{if segment_3}
+	{exp:channel:entries channel="{my_channel}" limit="1" disable="trackbacks" track_views="one" url_title="{segment_3}"}
+		{if no_results}
+			{redirect="{my_template_group}"}
+		{/if}
+		<div class="no-bg">
+						{breadcrumbs}
+			<div class="container main">
+			<section class="allsection">
+				<div class="row">							
+					<div class="col-md-12">
+						<p class="bold">Live Product Webinars</p>
+						<h1>{title}</h1>
+					</div>
+					</div>
+				</section>
+			</div>
+		</div>
+		<div class="container main">	
+			<div class="row">
+				<div class="col-md-10">	
+					<section class="section">
+						{edesc}
+					</section>
+					<section class="section">
+						<h3>Upcoming Dates</h3>
+						<table class="table table-striped">
+						<thead>
+						<tr>
+						<th>Date</th>
+						<th>Time</th>
+						<th>Name</th>
+						</tr>
+						</thead>
+						{embed="events/.dates" ctgs="{categories limit='1'}{category_id}{/categories}" ev_title="{title}"}
+						</table>
+					</section>
+				</div>
+			{embed="_sidebar/.events"}
+			</div>
+		</div>
+	{/exp:channel:entries}
+	{if:else}
+	<div class="no-bg">
+					{breadcrumbs}
+		<div class="container main">		
+			<section class="allsection">		
+					<p class="bold">Hawk Ridge Systems Events</p>
+					<h1>Live Product Webinars</h1>
+					<p>If you are interested in learning how SOLIDWORKS 3D design, simulation and analysis, product data management, technical communication, electrical design, and CAM products  can help your business but you can’t get away from the office, attend one of our upcoming webinars. </p>
+			</section>
+		</div>
+	</div>
+		<div class="container main">
+			<div class="row">
+				<div class="col-md-10">
+					<!-- <h3>Upcoming Events</h3> -->
+ 					{exp:channel:entries channel="{my_channel}"  category="44"}
+					{if no_results}
+					<li><em>There are currently no Seminars &amp; Events scheduled. Please check back again soon.</em></li>
+					{/if}
+
+					<section class="section">
+					<div class="row">
+						<div class="col-lg-3 col-md-3 col-sm-3" style="margin: 20px 0">
+							<div class="thumbnail">
+								<img class="img-responsive" src="{thumbnails}"></div>
+						</div>
+						<div class="col-xs-9 col-sm-9 col-md-9 col-lg-9">
+							<h3>{title}</h3>
+							<p>{edescription}</p>
+							<a href="{if url_title == 'webinar-wednesdays'} /{segment_1}/{url_title} {if:else} /{segment_1}/{segment_2}/{url_title}/{/if}" type="button" class="btn btn-default">
+								<span class="glyphicon glyphicon-chevron-right"></span>
+								Learn More
+							</a>
+						</div>
+					</div>
+					</section>
+					{/exp:channel:entries}
+				</div>
+			{embed="_sidebar/.events"}
+			</div>
+		</div>
+	{/if}
+	{embed="_includes/.footer"}
+	</body>
+</html>

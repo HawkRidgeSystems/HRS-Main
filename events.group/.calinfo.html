@@ -1,0 +1,22 @@
+{exp:channel:entries channel="edate" entry_id="{embed:event}" dynamic="off" show_future_entries="yes" show_expired="no"}
+{if evweb == ""}
+<div style="font-size:10px; color:#fff; padding: 2px; margin: 3px 0 0 0; background:#C90919;"> 
+<a href="{title_permalink={segment_1}/registration}">
+{evevent}{evevent:title}{/evevent}
+</a><br />
+{evlocation}{evlocation:title}, {evlocation:state}{/evlocation}
+</div>
+{if:else}
+<div style="font-size:10px; color:#fff; padding: 2px; margin: 3px 0 0 0; background:#005DC4;"> 
+<a href="{evweb}" target="_blank">
+{evevent}{evevent:eh1}{/evevent}
+ <?php
+if ("{evevent}{evevent:eh1}{/evevent}" == "Webinar Wednesdays"){
+echo "<br />{title}";
+}
+?>
+</a><br />
+Online Webinar
+</div>
+{/if}
+{/exp:channel:entries}

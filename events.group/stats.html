@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<title>Events Stats| Hawk Ridge Systems</title>
+	<meta name="keywords" content="{exp:xml_encode}{ekeywords}{/exp:xml_encode}" />
+	<meta name="description" content="{exp:xml_encode}{edescription}{/exp:xml_encode}" />
+	{embed="_includes/.html-head"}
+</head>
+<body>
+	{embed="_includes/.nav"}
+	<div class="container main">
+	<div class="row">
+		<div class="col-md-6">
+			<section class="section">
+			<h3>Events Stats</h3>
+				<ul>
+					{exp:freeform:form_info}
+					<li style="color:{freeform:switch='black|grey'};">
+						<a href="{path='/events/stats'}/{freeform:form_name}">{freeform:form_label}</a>
+						({freeform:total_entries} entries)
+					</li>
+					{/exp:freeform:form_info}
+				</ul>
+				
+			</section>
+		</div>
+		<div class="col-md-6">
+			<section class="section">
+				{if segment_3}
+					{exp:freeform:form_info form_name="{segment_3}"}
+					<h3>{freeform:form_label}</h3>
+					{/exp:freeform:form_info}
+				
+
+
+<table class="table table-striped">
+      <thead>
+        <tr>
+          <th>#</th>
+          <th>First Name</th>
+          <th>Sign-Up Date</th>
+        </tr>
+      </thead>
+      <tbody>
+      {exp:freeform:entries form_name="{segment_3}" orderby="entry_date" sort="desc" }
+        <tr>
+          <td>{freeform:absolute_count}</td>
+          <td>{freeform:field:first_name}</td>
+          <td>{freeform:entry_date format='%l, %F %j, %Y'}</td>
+        </tr>
+{/exp:freeform:entries}
+      </tbody>
+    </table>
+
+				{if:elseif segment_2}
+					<h3>Nothing here yet</h3>
+				{/if}
+
+
+			</section>
+		</div>
+	</div>
+	</div>
+	{embed="_includes/.footer"}
+</body>
+</html>

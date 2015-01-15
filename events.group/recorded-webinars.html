@@ -1,0 +1,193 @@
+{preload_replace:my_channel="recorded"}
+{preload_replace:my_template_group="{segment_1}/recorded-webinars/"}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+{if segment_3}
+{exp:channel:entries channel="{my_channel}" limit="1" disable="member_data|categories|trackbacks|pagination" rdf="off" url_title="{segment_3}"}
+{if no_results}
+{redirect="{my_template_group}"}
+{/if}
+{if rlink != ""}
+{redirect="{rlink}"}
+{/if}
+<title>{exp:xml_encode}{eh1}{/exp:xml_encode}</title>
+{/exp:channel:entries}
+{if:else}
+<title>Hawk Ridge Systems Video Tutorials</title>
+<meta name="keywords" content="{exp:xml_encode}Hawk Ridge Systems Recorded Product Webinars{/exp:xml_encode}" />
+<meta name="description" content="{exp:xml_encode}Hawk Ridge Systems Recorded Product Webinars{/exp:xml_encode}" />
+{/if}
+{embed="_includes/.html-head"}
+</head>
+<body>
+{embed="_includes/.nav"}
+{if segment_3}
+{exp:channel:entries channel="{my_channel}" limit="1" disable="trackbacks" track_views="one" url_title="{segment_3}"}
+		<div class="no-bg">
+						{breadcrumbs}
+			<div class="container main">	
+				<section class="allsection">						
+						<p class="bold">Video Tutorials</p>
+						<h1>{title}</h1>
+						<p>Create, communicate, and be more productive.  Learn how the full range of SolidWorks solutions for design, simulation, data management, technical communication, electrical design, and CNC automation can help you create better products, faster and more cost-effectively.</p>
+				</section>
+			</div>
+		</div>
+		<div class="container main">
+			<section class="section">
+				{rbody}
+			</section>
+		</div>
+{/exp:channel:entries}
+{if:else}
+		<div class="no-bg">
+						{breadcrumbs}
+			<div class="container main">							
+				<section class="allsection">
+						<p class="bold"> Hawk Ridge Systems Events</p>
+						<h1>Video Tutorials</h1>
+						<p>Hawk Ridge Systems regularly presents informational webinars to demonstrate the power of SolidWorks, Simulation, Enterprise PDM, SolidWorks Composer, and CAMWorks to provide tips and tricks for users. Click the links below to access webinars recorded from previous presentations.
+						</p>
+				</section>
+			</div>
+		</div>
+	<div class="container main">
+		<div class="row">
+			<div class="col-md-10">
+				<section class="section">
+					<div id="navbar">
+					<ul class="nav nav-tabs" id="myTab">
+					<li class="active">
+					<a data-toggle="tab" href="#solidworks"><i class="icon-th-large"></i> SolidWorks</a></li>
+					<li>
+					<a data-toggle="tab" href="#simulation"><i class="icon-film"></i> SolidWorks Simulation</a></li>
+					<li>
+					<a data-toggle="tab" href="#epdm"><i class=" icon-lock"></i> SolidWorks EPDM</a></li>
+					
+					<li>
+					<a data-toggle="tab" href="#composer"><i class="icon-cog"></i> SolidWorks Composer</a></li>
+					<li>
+					<a data-toggle="tab" href="#electrical"><i class="icon-user"></i> SolidWorks Electrical</a></li>
+					<li>
+					<a data-toggle="tab" href="#camworks"><i class="icon-off"></i> CAMWorks</a></li>
+					<li>
+					<a data-toggle="tab" href="#hawkware"><i class="icon-off"></i> HawkWare</a></li>
+					<li>
+					<a data-toggle="tab" href="#nvidia"><i class="icon-off"></i> NVIDIA GRID VCA</a></li>
+					<li>
+					<a data-toggle="tab" href="#hp-workstation"><i class="icon-off"></i> HP Workstation</a></li>
+					</ul>
+					</div>
+					<div class="tab-content">
+					<div class="tab-pane fade in active" id="solidworks">
+					
+					<ul>
+					<h3>SolidWorks Night School</h3>
+					{exp:channel:entries channel="{my_channel}" disable="categories|member_data|pagination|trackbacks" category="108" orderby="w-sort" sort="asc"}
+					<li style="padding-bottom:7px;"><a href="http://go.hawkridgesys.com/l/3602/2012-05-04/22s8lx?Webinar_Requested={exp:xml_encode}{title}{/exp:xml_encode}&Redirect_URL={if rlink==""}{url_title_path='events/recorded-webinars'}{if:else}{rlink}{/if}" rel="shadowbox;width=455;height=420;">{title}</a></li>
+					{/exp:channel:entries}
+					</ul>
+					<ul>
+					<h3>eLearning</h3>
+					{exp:channel:entries channel="{my_channel}" disable="categories|member_data|pagination|trackbacks" category="65" orderby="w-sort" sort="asc"}
+					<li style="padding-bottom:7px;"><a href="http://go.hawkridgesys.com/l/3602/2012-05-04/22s8lx?Webinar_Requested={exp:xml_encode}{title}{/exp:xml_encode}&Redirect_URL={if rlink==""}{url_title_path='events/recorded-webinars'}{if:else}{rlink}{/if}" rel="shadowbox;width=455;height=420;">{title}</a></li>
+					{/exp:channel:entries}
+					</ul>
+					
+					</div>
+					
+					<div class="tab-pane fade in" id="simulation">
+					
+					<ul>
+					<h3>SolidWorks Simulation</h3>
+					{exp:channel:entries channel="{my_channel}" disable="categories|member_data|pagination|trackbacks" category="58" orderby="w-sort" sort="asc"}
+					<li style="padding-bottom:7px;"><a   href="http://go.hawkridgesys.com/l/3602/2012-05-04/22s8lx?Webinar_Requested={exp:xml_encode}{title}{/exp:xml_encode}&Redirect_URL={if rlink==""}{url_title_path='events/recorded-webinars'}{if:else}{rlink}{/if}" rel="shadowbox;width=455;height=420;">{title}</a></li>
+					{/exp:channel:entries}
+					</ul>
+					
+					</div>
+					
+					<div class="tab-pane fade in" id="epdm">
+					
+					<ul>
+					<h3>eLearning</h3>
+					{exp:channel:entries channel="{my_channel}" disable="categories|member_data|pagination|trackbacks" category="57" orderby="w-sort" sort="asc"}
+					<li style="padding-bottom:7px;"><a  href="http://go.hawkridgesys.com/l/3602/2012-05-04/22s8lx?Webinar_Requested={exp:xml_encode}{title}{/exp:xml_encode}&Redirect_URL={if rlink==""}{url_title_path='events/recorded-webinars'}{if:else}{rlink}{/if}" rel="shadowbox;width=455;height=420;">{title}</a></li>
+					{/exp:channel:entries}
+					</ul>
+					
+					</div>
+					
+					<div class="tab-pane fade in" id="composer">
+					<ul>
+					<h3>On Target Tuesdays with Scott Woods</h3>
+					{exp:channel:entries channel="{my_channel}" disable="categories|member_data|pagination|trackbacks" category="75" orderby="w-sort" sort="asc"}
+					<li style="padding-bottom:7px;"><a   href="http://go.hawkridgesys.com/l/3602/2012-05-04/22s8lx?Webinar_Requested={exp:xml_encode}{title}{/exp:xml_encode}&Redirect_URL={if rlink==""}{url_title_path='events/recorded-webinars'}{if:else}{rlink}{/if}" rel="shadowbox;width=455;height=420;">{title}</a></li>
+					{/exp:channel:entries}
+					<br>
+					<h3>eLearning</h3>
+					{exp:channel:entries channel="{my_channel}" disable="categories|member_data|pagination|trackbacks" category="71|72" orderby="w-sort" sort="asc"}
+					<li style="padding-bottom:7px;"><a   href="http://go.hawkridgesys.com/l/3602/2012-05-04/22s8lx?Webinar_Requested={exp:xml_encode}{title}{/exp:xml_encode}&Redirect_URL={if rlink==""}{url_title_path='events/recorded-webinars'}{if:else}{rlink}{/if}" rel="shadowbox;width=455;height=420;">{title}</a></li>
+					{/exp:channel:entries}
+					</ul>
+					</div>
+					
+					<div class="tab-pane fade in" id="electrical">
+					<ul>
+					<h3>SolidWorks Electrical</h3>
+					{exp:channel:entries channel="{my_channel}" disable="categories|member_data|pagination|trackbacks" category="76" orderby="w-sort" sort="asc"}
+					<li style="padding-bottom:7px;"><a   href="http://go.hawkridgesys.com/l/3602/2012-05-04/22s8lx?Webinar_Requested={exp:xml_encode}{title}{/exp:xml_encode}&Redirect_URL={if rlink==""}{url_title_path='events/recorded-webinars'}{if:else}{rlink}{/if}" rel="shadowbox;width=455;height=420;">{title}</a></li>
+					{/exp:channel:entries}
+					</ul>
+					</div>
+					
+					<div class="tab-pane fade in" id="camworks">
+					<ul>
+					<h3>CAMWorks</h3>
+					{exp:channel:entries channel="{my_channel}" disable="categories|member_data|pagination|trackbacks" category="81" orderby="w-sort" sort="asc"}
+					<li style="padding-bottom:7px;"><a   href="http://go.hawkridgesys.com/l/3602/2012-05-04/22s8lx?Webinar_Requested={exp:xml_encode}{title}{/exp:xml_encode}&Redirect_URL={if rlink==""}{url_title_path='events/recorded-webinars'}{if:else}{rlink}{/if}" rel="shadowbox;width=455;height=420;">{title}</a></li>
+					{/exp:channel:entries}
+					</ul>
+					</div>
+<div class="tab-pane fade in" id="hawkware">
+<ul>
+<h3>HawkWare</h3>
+{exp:channel:entries channel="{my_channel}" disable="categories|member_data|pagination|trackbacks" category="126" orderby="w-sort" sort="asc"}
+<li style="padding-bottom:7px;"><a   href="http://go.hawkridgesys.com/l/3602/2012-05-04/22s8lx?Webinar_Requested={exp:xml_encode}{title}{/exp:xml_encode}&Redirect_URL={if rlink==""}{url_title_path='events/recorded-webinars'}{if:else}{rlink}{/if}" rel="shadowbox;width=455;height=420;">{title}</a></li>
+{/exp:channel:entries}
+</ul>
+</div>
+					<div class="tab-pane fade in" id="nvidia">
+					<ul>
+					<h3>NVIDIA GRID VCA</h3>
+					{exp:channel:entries channel="{my_channel}" disable="categories|member_data|pagination|trackbacks" category="117" orderby="w-sort" sort="asc"}
+					<li style="padding-bottom:7px;"><a   href="http://go.hawkridgesys.com/l/3602/2012-05-04/22s8lx?Webinar_Requested={exp:xml_encode}{title}{/exp:xml_encode}&Redirect_URL={if rlink==""}{url_title_path='events/recorded-webinars'}{if:else}{rlink}{/if}" rel="shadowbox;width=455;height=420;">{title}</a></li>
+					{/exp:channel:entries}
+					</ul>
+					</div>
+					<div class="tab-pane fade in" id="hp-workstation">
+					<ul>
+					<h3>HP Workstation</h3>
+					{exp:channel:entries channel="{my_channel}" disable="categories|member_data|pagination|trackbacks" category="127" orderby="w-sort" sort="asc"}
+					<li style="padding-bottom:7px;"><a   href="http://go.hawkridgesys.com/l/3602/2012-05-04/22s8lx?Webinar_Requested={exp:xml_encode}{title}{/exp:xml_encode}&Redirect_URL={if rlink==""}{url_title_path='events/recorded-webinars'}{if:else}{rlink}{/if}" rel="shadowbox;width=455;height=420;">{title}</a></li>
+					{/exp:channel:entries}
+					</ul>
+					</div>
+					{/if}
+					</div>
+				</section>
+			</div>
+				{embed="_sidebar/.events"}
+		</div>
+	</div>
+{embed="_includes/.footer"}
+<!-- $SHADOWBOX -->
+<script type="text/javascript" src="/Scripts/shadowbox.js"></script>
+<script type="text/javascript">
+Shadowbox.init({
+enableKeys: false
+});
+</script>
+</body>
+</html>

@@ -1,0 +1,185 @@
+{preload_replace:my_channel="edate"}
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+	<title>Hawk Ridge Systems: Event Registration</title>
+	<meta name="keywords" content="SOLIDWORKS events, Hawk Ridge Systems Events, 3D CAD Events" />
+	<meta name="description" content="Hawk Ridge Systems&apos; Events" />
+	{embed="_includes/.html-head"}
+	<meta name="robots" content="noindex,nofollow">
+	</head>
+<body>
+{embed="_includes/.nav"}
+	{exp:channel:entries channel="{my_channel}" limit="1" disable="trackbacks" track_views="one" show_future_entries="yes" show_expired="no"}
+			<div class="no-bg">
+							{breadcrumbs}
+<div class="container main">
+			<section class="allsection">
+				<div class="row">							
+					<div class="col-md-12">
+						<p class="bold">Event Registration</p>
+						<h1>{title}</h1>
+					</div>
+					</div>
+				</section>
+			</div>
+			
+			</div>
+	<div class="container main">
+<div class="row">
+<div class="col-md-10">
+		<section class="section">
+			<dl class="dl">
+				<div class="form-horizontal well col-lg-5 col-xs-12" role="form" style="float:right; margin: 0 0 20px 20px">
+				<!--Registration Link-->
+				{if evweb != ""}<strong>Registration Link:</strong> <a href="{evweb}" target="_blank">{evweb}</a>{if:else}
+				<!--Registration Form -->
+				{exp:freeform:form  
+					form_name="{event_form_name}" 
+					required="first_name|last_name|company|email|phone_number|zip_code"
+					return="{path=/event-thankyou}"
+					inline_errors="yes" }    
+				<input type="hidden" name="event_name" id="event_name" value="{title}" />
+				<input type="hidden" name="event_location" id="event_location" value="{evlocation}{evlocation:title}{/evlocation}" />
+				<input type="hidden" name="event_address" id="event_address" value="{evlocation}{evlocation:address}{/evlocation}" />
+				<input type="hidden" name="event_count" id="event_count" value="{exp:freeform:entries form_name='events' limit='1' }  {freeform:absolute_results}  {/exp:freeform:entries}"  />
+				<input type="hidden" name="event_map" id="event_map" value="{evlocation}{evlocation:gmap}{/evlocation}" />
+				<input type="hidden" name="event_date" id="event_date" value="{event_date format="%l, %F %d, %Y "}" />
+				<input type="hidden" name="event_time" id="event_time" value="{evtime}" />
+ {if freeform:general_errors}
+        <h2>There were some error(s) with your submission:</h2>
+        <ul>
+            {freeform:general_errors}
+            <li>{freeform:error_message}</li>
+            {/freeform:general_errors}
+        </ul>
+    {/if}
+
+				<div class="form-group">
+				<label class="col-lg-5 control-label">First Name *</label>
+				<div class="col-lg-7">
+				<input type="text" class="form-control" name="first_name" id="first_name" value="" placeholder="First Name" />
+{if freeform:error:first_name}
+            <span class="error">
+                {freeform:error:first_name}
+            </span>
+        {/if}
+				</div>
+				</div>
+				<div class="form-group">
+				<label class="col-lg-5 control-label" >Last Name *</label>
+				<div class="col-lg-7">
+				<input type="text" class="form-control" name="last_name" id="last_name" value="" placeholder="Last Name"/>
+{if freeform:error:last_name}
+            <span class="error">
+                {freeform:error:last_name}
+            </span>
+        {/if}
+				</div>
+				</div>
+				<div class="form-group">
+				<label class="col-lg-5 control-label" >Company *</label>
+				<div class="col-lg-7">
+				<input type="text" class="form-control" name="company" id="company" value="" placeholder="Company" />
+{if freeform:error:company}
+            <span class="error">
+                {freeform:error:company}
+            </span>
+        {/if}
+				</div>
+				</div>
+				<div class="form-group">
+				<label class="col-lg-5 control-label" >Phone # *</label>
+				<div class="col-lg-7">
+				<input type="text" class="form-control" name="phone_number" id="phone_number" value="" placeholder="Phone #" />
+{if freeform:error:phone_number}
+            <span class="error">
+                {freeform:error:phone_number}
+            </span>
+        {/if}
+				</div>
+				</div>
+				<div class="form-group">
+				<label class="col-lg-5 control-label" >Email *</label>
+				<div class="col-lg-7">
+				<input type="text" class="form-control" name="email" id="email" value="" placeholder="Email"/>
+{if freeform:error:email}
+            <span class="error">
+                {freeform:error:email}
+            </span>
+        {/if}
+				</div>
+				</div>
+				<div class="form-group">
+				<label class="col-lg-5 control-label" >Zip Code *</label>
+				<div class="col-lg-7">
+				
+				{freeform:field:zip_code
+				    attr:id="zip_code"
+				    attr:placeholder="Zip Code"
+				    attr:class="form-control"
+				    attr:maxlength="7"
+				    attr:onclick="myFunction();"
+				}
+{if freeform:error:zip_code}
+            <span class="error">
+                {freeform:error:zip_code}
+            </span>
+        {/if}
+				</div>
+				</div>
+				<div class="form-group">
+				<label class="col-lg-5 control-label" >Comments</label>
+				<div class="col-lg-7">
+				<textarea rows="5" class="form-control" name="user_message" id="user_message" ></textarea>
+				</div>
+				</div>
+				<div class="form-group">
+				<div class="col-lg-offset-5 col-lg-7">
+				<input type='submit' name="Submit" class="btn btn-primary" value="Submit">
+				<input type="reset" value="Reset " class="btn btn-primary" name="Reset">
+<br>
+<p>* Required</p>
+				</div>
+				</div>
+				{/exp:freeform:form}
+				{/if}
+				</div>
+				
+				<dt> Date:</dt> 
+				<dd>{event_date format=' %l, %F %d, %Y '}</dd>
+				<dt>Time:</dt> 
+				<dd>{evtime}</dd>
+				<dt>Location:</dt>
+				<dd>{evlocation}{evlocation:title}<br /><a href="{evlocation:gmap}" target="_blank">{evlocation:address}</a>{/evlocation}</dd>
+				<dt>Description:</dt>
+				<dd>{if evdesc}{evdesc}{/if}</dd>
+			</dl>
+		</section>
+</div>
+{embed="_sidebar/.events"}</div>
+		</div>
+	{/exp:channel:entries}
+{embed="_includes/.footer"}
+<script src="http://www.hawkridgesys.com/js/jquery.formatter.js"></script>
+<script type="text/javascript">
+$( document ).ready(function() {
+	//Remove break from hidden address value
+	$("#event_address").val(function(i, v){ 
+		return v.replace("<br />","");
+	});
+	//.CA redirect because of form validation
+	var pathname = window.location.hostname;
+	if (pathname == "www.hawkridgesys.ca"){
+		 $('form').attr('action', 'http://www.hawkridgesys.ca/?ACT=71');
+	}
+	//Clean phone fill
+	//$('#phone_number').formatter({
+	//  'pattern': '{{999}}-{{999}}-{{9999}} x{{9999}}',
+	//  'persistent': false
+	//});
+
+});
+</script>
+</body>
+</html>

@@ -1,0 +1,579 @@
+{preload_replace:my_channel="events"}
+{preload_replace:my_template_group="{segment_1}/solidworks-user-group-meetings"}
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+	{if segment_3}
+	{exp:channel:entries channel="{my_channel}" limit="1" disable="member_data|categories|trackbacks|pagination" rdf="off" url_title="{segment_3}"}
+	{if no_results}
+	{redirect="{my_template_group}"}
+	{/if}
+	<title>{eh1}</title>
+	<meta name="keywords" content="{exp:xml_encode}{ekeywords}{/exp:xml_encode}" />
+	<meta name="description" content="{exp:xml_encode}{edescription}{/exp:xml_encode}" />
+	{/exp:channel:entries}
+	{if:else}
+	<title>SOLIDWORKS User Group Meetings | Hawk Ridge Systems</title>
+	<meta name="keywords" content="{exp:xml_encode}Hawk Ridge Systems SOLIDWORKS User Group Meetings{/exp:xml_encode}" />
+	<meta name="description" content="{exp:xml_encode}Hawk Ridge Systems SOLIDWORKS User Group Meetings{/exp:xml_encode}" />
+	{/if}
+	{embed="_includes/.html-head"}
+	</head>
+<body>
+{embed="_includes/.nav"}
+{if segment_3}
+	{exp:channel:entries channel="{my_channel}" limit="1" disable="trackbacks" track_views="one" url_title="{segment_3}"}
+	{if no_results}
+	{redirect="{my_template_group}"}
+	{/if}
+	<style>.sub-bg{background-image: url('/images/banners/subpage/events.png');}</style>
+			<div class="sub-bg">
+							{breadcrumbs}
+				<div class="container main">							
+						<div class="tag col-md-6">
+							<h1>SOLIDWORKS User Group Meetings: <em>{title}</em></h1>
+						</div>
+				</div>
+			</div>
+	<div class="container main">
+		<section class="section">
+			{edesc}
+		</section>
+	</div>
+	{/exp:channel:entries}
+{if:else}
+	<div class="no-bg">
+	{breadcrumbs}
+		<div class="container main">
+			<section class="allsection">							
+				<p class="bold"> Hawk Ridge Systems Events</p>
+				<h1>SOLIDWORKS User Group Meetings</h1>
+				<p>The SOLIDWORKS User Group Network (SWUGN) has one mission – bringing SOLIDWORKS users together to learn from each other. Get info on upcoming meetings and events for your local SWUG, and find out more about your local SOLIDWORKS community.</p>
+			</section>
+		</div>
+	</div>
+	<div class="container main">		
+		<div class="row">
+			<div class="col-md-10">
+					<section class="section">
+						<div class="row">
+							<div class="col-md-9">
+							<p>
+							<strong>User groups are a valuable resource for all members of the SOLIDWORKS community. The ability to network with peers and partners helps your company become more productive.</strong></p>
+							<p>
+							<ul>
+							<li>
+							Learn more about SOLIDWORKS and SOLIDWORKS related products</li>
+							<li>
+							Better educate yourself on how SOLIDWORKS can be used</li>
+							<li>
+							Network with your peers</li>
+							<li>
+							Share experiences and technical presentations that can help provide you and your company with valuable, real-world techniques and methodologies</li>
+							<li>
+							Give-aways, food, and refreshments usually provided for each meeting</li>
+							</ul>
+							</div>
+							<div class="col-md-3">
+							<img alt="SOLIDWORKS User Group" class="img-responsive" src="/image/events/solidworks-user-group.jpg" /></div>
+						</div>
+					</section>
+					<section class="section">
+						<h3>Upcoming Events</h3>
+						<div class="row">
+						{exp:channel:entries channel="{my_channel}" disable="categories|member_data|pagination|trackbacks" category="90"}
+						{if no_results}
+							<li><em>There are currently no SOLIDWORKS User Group Meetings scheduled. Please check back again soon.</em></li>
+						{/if}
+							<div class="col-md-12">
+								<section class="section media ">
+									<div class="media-body">
+									<h4 class="media-heading">
+									<a href="{url_title_path={my_template_group}}">{title}</a></h4>
+									{edescription}<br />
+									<a href="{url_title_path={my_template_group}}"><i class="icon-chevron-right">&nbsp;</i> Learn More</a></div>
+								</section>
+							</div>
+						{/exp:channel:entries}
+						</div>
+					</section>
+
+					<section class="section">
+					<div class="page-header">
+					<h3>
+					SOLIDWORKS User Groups - by location:</h3>
+					</div>
+					<div class="panel-group" id="accordion">
+					<div class="panel panel-default">
+					<div class="panel-heading">
+					<h3 class="panel-title" style="font-size:18px;">
+					<a data-parent="#accordion" data-toggle="collapse" href="#collapseOne" style="color:#0089CF">Northwest</a></h3>
+					</div>
+					<div class="panel-collapse collapse in " id="collapseOne">
+					<table class="table table-condensed mxcolor" id="mxcolor" style="width: 100%;">
+					<tbody>
+					<tr>
+					<td>
+					<strong class="visible-desktop" style="padding-right:55px">Location</strong></td>
+					<td>
+					<strong class="visible-desktop">User Group</strong></td>
+					<td>
+					<strong class="visible-desktop">Contacts</strong></td>
+					<td>
+					<strong class="visible-desktop">Info</strong></td>
+					</tr>
+					
+					<tr>
+					<td>
+					Portland, OR</td>
+					<td>
+					<a href="http://www.swugn.org/swugn/calendar/ugdetails.htm?id=339" target="_blank">Portland Area SOLIDWORKS User Group</a></td>
+					<td>
+					<a href="mailto:cory.derico@gmail.com">Cory Derico</a></td>
+					<td>
+					Serving Southern Washington and Oregon. Meets quarterly.</td>
+					</tr>
+					<tr>
+					<td>
+					Tigard, OR</td>
+					<td>
+					<a href="http://www.swugn.org/swugn/calendar/ugdetails.htm?id=527" target="_blank">Greater Portland / Vancouver Composer User Group</a></td>
+					<td>
+					<a href="mailto:gbanksto@celestica.com">Gary Bankston</a></td>
+					<td>
+					Group founded in 2014. Open to all Composer users in the Greater Portland / Vancouver area.</td>
+					</tr>
+					<tr>
+					<td>
+					Pasco, WA</td>
+					<td>
+					<a href="http://www.swugn.org/swugn/calendar/ugdetails.htm?id=474" target="_blank">Columbia Basin SOLIDWORKS User Group</a></td>
+					<td>
+					<a href="mailto:lanewinsor@gmail.com">Lane Winsor</a></td>
+					<td>
+					For industry, students and users dedicated to sharing resources and networking.</td>
+					</tr>
+					<tr>
+					<td>
+					Renton, WA</td>
+					<td>
+					Seattle Area SOLIDWORKS Power User Group – South</td>
+					<td>
+					<a href="mailto:fmartinez@rtc.edu">Francisco Martinez</a></td>
+					<td>
+					Serves the south Puget Sound area (Renton, Kent, Tukwila).</td>
+					</tr>
+					<tr>
+					<td>
+					Seattle, WA</td>
+					<td>
+					<a href="http://www.swugn.org/swugn/calendar/ugdetails.htm?id=127" target="_blank">Seattle Area SOLIDWORKS Power Users Group</a></td>
+					<td>
+					<a href="mailto:rsvp@saspug.com">Jeff Mirisola</a></td>
+					<td>
+					One of the oldest SWUGN groups and serves Seattle and the greater Eastside</td>
+					</tr>
+					<tr>
+					<td>
+					Seattle, WA</td>
+					<td>
+					Seattle Area Simulation User Group</td>
+					<td>
+					<a href="mailto:daniel@nordeen.net">Daniel Nordeen</a></td>
+					<td>
+					Intended to discuss success, tips and Q&amp;A.</td>
+					</tr>
+					<tr>
+					<td>
+					Spokane, WA</td>
+					<td>
+					<a href="http://www.swugn.org/swugn/calendar/ugdetails.htm?id=458" target="_blank">Spokane Area SOLIDWORKS User Group</a></td>
+					<td>
+					<a href="mailto:joshua_burns@remfg.com">Joshua Burns</a></td>
+					<td>
+					Serving Spokane and Post Falls. Sponsored by Quest Integration.</td>
+					</tr>
+					<tr>
+					<td>
+					Yakima, WA</td>
+					<td>
+					<a href="http://www.swugn.org/swugn/calendar/ugdetails.htm?id=415" target="_blank">Yakima SOLIDWORKS User Group</a></td>
+					<td>
+					<a href="mailto:johnw@designservicecorp.com">John Walden</a></td>
+					<td>
+					Sponsored by Rapid Sheet Metal. Meets quarterly.</td>
+					</tr>
+					</tbody>
+					</table>
+					</div>
+					</div>
+					<div class="panel panel-default">
+					<div class="panel-heading">
+					<h3 class="panel-title" style="font-size:18px;">
+					<a data-parent="#accordion" data-toggle="collapse" href="#collapseTwo" style="color:#0089CF">Northern California</a></h3>
+					</div>
+					<div class="panel-collapse collapse" id="collapseTwo">
+					<table class="table table-condensed mxcolor" id="mxcolor" style="width: 100%;">
+					<tbody>
+					<tr>
+					<td>
+					<strong class="visible-desktop" style="padding-right:55px">Location</strong></td>
+					<td>
+					<strong class="visible-desktop">User Group</strong></td>
+					<td>
+					<strong class="visible-desktop">Contacts</strong></td>
+					<td>
+					<strong class="visible-desktop">Info</strong></td>
+					</tr>
+					<tr>
+					<td>
+					Dublin, CA</td>
+					<td>
+					<a href="http://www.swugn.org/swugn/calendar/ugdetails.htm?id=394" target="_blank">Tri-Valley SOLIDWORKS User Group</a></td>
+					<td>
+					<a href="mailto:kennethbarrentine@comcast.net">Kenneth Barrentine</a></td>
+					<td>
+					Non-profit and independent. Serving Pleasanton, Livermore, Dublin, San Ramon and Danville.</td>
+					</tr>
+					<tr>
+					<td>
+					Fresno, CA</td>
+					<td>
+					<a href="http://www.swugn.org/swugn/calendar/ugdetails.htm?id=451" target="_blank">SOLIDWORKS User Group of Fresno</a></td>
+					<td>
+					<a href="mailto:jose@m2inc.com">Jose Saldana</a></td>
+					<td>
+					Complements diverse industry in Fresno area. Free meetings. All skill levels welcome.</td>
+					</tr>
+					<tr>
+					<td>
+					Livermore, CA</td>
+					<td>
+					Bay Area Simulation User Group</td>
+					<td>
+					<a href="mailto:rlarder@formfactor.com">Richard Larder</a></td>
+					<td>
+					SOLIDWORKS Simulation User Group. Serving the Bay Area and Silicon Valley.</td>
+					</tr>
+					<tr>
+					<td>
+					Oakland, CA</td>
+					<td>
+					<a href="http://www.swugn.org/swugn/calendar/ugdetails.htm?id=427" target="_blank">Laney SOLIDWORKS User Group</a></td>
+					<td>
+					<a href="mailto:elise_moss@mossdesigns.com">Elise Moss</a></td>
+					<td>
+					College user group. Meets once per semester.</td>
+					</tr>
+					<tr>
+					<td>
+					Rohnert Park, CA</td>
+					<td>
+					<a href="http://www.swugn.org/swugn/calendar/ugdetails.htm?id=311" target="_blank">Redwood Empire SOLIDWORKS User Group</a></td>
+					<td>
+			Vincent Bunker</td>
+					<td>
+					Serving Ukiah, Santa Rosa, Rohnert Park, Petaluma and Novato.</td>
+					</tr>
+					<tr>
+					<td>
+					Sacramento, CA</td>
+					<td>
+					<a href="http://www.swugn.org/swugn/calendar/ugdetails.htm?id=396" target="_blank">Sacramento Area SOLIDWORKS User Group</a></td>
+					<td>
+					<a href="mailto:sacsolidworksusergroup@gmail.com">Tom Davis</a></td>
+					<td>
+					Independent group: by users, for users - non sales.</td>
+					</tr>
+					<tr>
+					<td>
+					San Jose, CA</td>
+					<td>
+					<a href="http://www.swugn.org/swugn/calendar/ugdetails.htm?id=293" target="_blank">Silicon Valley SOLIDWORKS User Group</a></td>
+					<td>
+					<a href="mailto:info@svswug.com">Brian Titus</a></td>
+					<td>
+					Serving the South Bay - San Jose, Sunnyvale, Santa Clara and Cupertino. Sponsored by Solopoint Solutions.</td>
+					</tr>
+					
+					</tbody>
+					</table>
+					</div>
+					</div>
+					<div class="panel panel-default">
+					<div class="panel-heading">
+					<h3 class="panel-title" style="font-size:18px;">
+					<a data-parent="#accordion" data-toggle="collapse" href="#collapseThree" style="color:#0089CF">Southern California</a></h3>
+					</div>
+					<div class="panel-collapse collapse" id="collapseThree">
+					<table class="table table-condensed mxcolor" id="mxcolor" style="width: 100%;">
+					<tbody>
+					<tr>
+					<td>
+					<strong class="visible-desktop" style="padding-right:55px">Location</strong></td>
+					<td>
+					<strong class="visible-desktop">User Group</strong></td>
+					<td>
+					<strong class="visible-desktop">Contacts</strong></td>
+					<td>
+					<strong class="visible-desktop">Info</strong></td>
+					</tr>
+					<tr>
+					<td>
+					Anaheim, CA</td>
+					<td>
+					<a href="http://www.swugn.org/swugn/calendar/ugdetails.htm?id=422" target="_blank">Orange County SOLIDWORKS User Group</a></td>
+					<td>
+					<a href="mailto:info@ocswug.org">Gabriel Corbett</a></td>
+					<td>
+					Casual atmosphere. Serving Orange County and area. Meets quarterly.</td>
+					</tr>
+					<tr>
+					<td>
+					Bakersfield, CA</td>
+					<td>
+					<a href="http://www.swugn.org/swugn/calendar/ugdetails.htm?id=518" target="_blank">Kern County SOLIDWORKS User Group</a></td>
+					<td>
+					<a href="mailto:kcswug@gmail.com">Matthew Stevenson</a></td>
+					<td>
+					A newly formed and fun user group in the Southern Central Valley.</td>
+					</tr>
+					<tr>
+					<td>
+					Carlsbad, CA</td>
+					<td>
+					MiraCosta College SOLIDWORKS User Group</td>
+					<td>
+					<a href="mailto:dtsowell@3-ddesignsolutions.com">Devon Sowell</a></td>
+					<td>
+					&nbsp;</td>
+					</tr>
+					<tr>
+					<td>
+					Edwards AFB, CA</td>
+					<td>
+					<a href="http://www.swugn.org/swugn/calendar/ugdetails.htm?id=324" target="_blank">SOLIDWORKS Antelope Valley Experts User Support</a></td>
+					<td>
+					<a href="mailto:claudia.heflin.ctr@edwards.af.mil">Claudia Heflin</a></td>
+					<td>
+					Q&amp;A sessions. Professional users group.</td>
+					</tr>
+					<tr>
+					<td>
+					Los Angeles, CA</td>
+					<td>
+					<a href="http://www.swugn.org/swugn/calendar/ugdetails.htm?id=369" target="_blank">Los Angeles SOLIDWORKS User Group</a></td>
+					<td>
+					<a href="mailto:gerardom3@Verizon.net">Gerardo Miranda</a></td>
+					<td>
+					All skill levels welcome. Focused on networking.</td>
+					</tr>
+					<tr>
+					<td>
+					San Diego, CA</td>
+					<td>
+					<a href="http://www.swugn.org/swugn/calendar/ugdetails.htm?id=131" target="_blank">San Diego SOLIDWORKS User Group</a></td>
+					<td>
+					<a href="mailto:sluder@triaxialdesign.com">Phil Sluder</a></td>
+					<td>
+					Monthly meetings on the second Wednesday at 7pm.</td>
+					</tr>
+					<tr>
+					<td>
+					Temecula, CA</td>
+					<td>
+					<a href="http://www.swugn.org/swugn/calendar/ugdetails.htm?id=377" target="_blank">Temecula Valley SOLIDWORKS User Group</a></td>
+					<td>
+					<a href="mailto:brian@wixomengineering.com">Brian Wixom</a></td>
+					<td>
+					Sponsored by Wixom Engineering. Rapid Sheet Metal.</td>
+					</tr>
+					<tr>
+					<td>
+					Ventura, CA</td>
+					<td>
+					<a href="http://www.swugn.org/swugn/calendar/ugdetails.htm?id=445" target="_blank">Channel Islands SOLIDWORKS User Group</a></td>
+					<td>
+					<a href="mailto:cisug@msn.com">Ryan Gomez</a></td>
+					<td>
+					All skill levels welcome. Tips and tricks.</td>
+					</tr>
+					<tr>
+					<td>
+					Walnut, CA</td>
+					<td>
+					<a href="http://www.swugn.org/swugn/calendar/ugdetails.htm?id=513" target="_blank">Mount San Antonio College SOLIDWORKS User Group</a></td>
+					<td>
+					<a href="mailto:msacswugn@gmail.com">Rhiannon Britney</a></td>
+					<td>
+					&nbsp;</td>
+					</tr>
+					</tbody>
+					</table>
+					</div>
+					</div>
+					<div class="panel panel-default">
+					<div class="panel-heading">
+					<h3 class="panel-title" style="font-size:18px;">
+					<a data-parent="#accordion" data-toggle="collapse" href="#collapseFour" style="color:#0089CF">Nevada</a></h3>
+					</div>
+					<div class="panel-collapse collapse" id="collapseFour">
+					<table class="table table-condensed mxcolor" id="mxcolor" style="width: 100%;">
+					<tbody>
+					<tr>
+					<td>
+					<strong class="visible-desktop" style="padding-right:55px">Location</strong></td>
+					<td>
+					<strong class="visible-desktop">User Group</strong></td>
+					<td>
+					<strong class="visible-desktop">Contacts</strong></td>
+					<td>
+					<strong class="visible-desktop">Info</strong></td>
+					</tr>
+					<tr>
+					<td>
+					Las Vegas, NV</td>
+					<td>
+					<a href="http://www.swugn.org/swugn/calendar/ugdetails.htm?id=447" target="_blank">Las Vegas SOLIDWORKS User Group</a></td>
+					<td>
+					<a href="mailto:Stuart.Solomon@csn.edu">Stuart Solomon</a></td>
+					<td>
+					Meets quarterly. Free exchange of information. Serving the Las Vegas Valley.</td>
+					</tr>
+					<tr>
+					<td>
+					Northern NV</td>
+					<td>
+					<a href="http://www.swugn.org/swugn/calendar/ugdetails.htm?id=468" target="_blank">Great Basin SOLIDWORKS User Group</a></td>
+					<td>
+					<a href="mailto:mfisher@trakker.com">Matt Fisher</a></td>
+					<td>
+					Discussions and demonstrations. Sponsored by Inertia Machinery.</td>
+					</tr>
+					</tbody>
+					</table>
+					</div>
+					</div>
+					<div class="panel panel-default">
+					<div class="panel-heading">
+					<h3 class="panel-title" style="font-size:18px;">
+					<a data-parent="#accordion" data-toggle="collapse" href="#collapseFive" style="color:#0089CF">Canada</a></h3>
+					</div>
+					<div class="panel-collapse collapse" id="collapseFive">
+					<table class="table table-condensed mxcolor" id="mxcolor" style="width: 100%;">
+					<tbody>
+					<tr>
+					<td>
+					<strong class="visible-desktop" style="padding-right:55px">Location</strong></td>
+					<td>
+					<strong class="visible-desktop">User Group</strong></td>
+					<td>
+					<strong class="visible-desktop">Contacts</strong></td>
+					<td>
+					<strong class="visible-desktop">Info</strong></td>
+					</tr>
+					<tr>
+					<td>
+					Calgary, AB</td>
+					<td>
+					<a href="http://www.swugn.org/swugn/calendar/ugdetails.htm?id=321" target="_blank">Calgary SOLIDWORKS User Group</a></td>
+					<td>
+					<a href="mailto:vd_yun@yahoo.com">Vladimir Yun</a></td>
+					<td>
+					&nbsp;</td>
+					</tr>
+					<tr>
+					<td>
+					Edmonton, AB</td>
+					<td>
+					<a href="http://www.swugn.org/swugn/calendar/ugdetails.htm?id=251" target="_blank">Edmonton SOLIDWORKS User Group</a></td>
+					<td>
+					<a href="mailto:Adrian.Jaramillo@blackcatblades.com">Adrian Jaramillo</a></td>
+					<td>
+					&nbsp;</td>
+					</tr>
+					<tr>
+					<td>
+					Red Deer, AB</td>
+					<td>
+					<a href="http://www.swugn.org/swugn/calendar/ugdetails.htm?id=521" target="_blank">Central Alberta SOLIDWORKS User Group</a></td>
+					<td>
+					<a href="mailto:robin.mccaffrey@mclevinindustries.ca">Robin Mccaffrey</a></td>
+					<td>
+					&nbsp;</td>
+					</tr>
+					<tr>
+					<td>
+					Vancouver, BC</td>
+					<td>
+					<a href="http://www.swugn.org/swugn/calendar/ugdetails.htm?id=323" target="_blank">SOLIDWORKS Users of Vancouver</a></td>
+					<td>
+					<a href="mailto:doug.lapointe@msn.com">Doug LaPointe</a></td>
+					<td>
+					Networking, Q&amp;A, tips and tricks, non-sales. Sponsored by Wesgar Ind.</td>
+					</tr>
+					<tr>
+					<td>
+					Winnipeg, MB</td>
+					<td>
+					<a href="http://www.swugn.org/swugn/calendar/ugdetails.htm?id=500" target="_blank">Manitoba SOLIDWORKS User Group</a></td>
+					<td>
+					<a href="mailto:lshaw@tempeffnorthamerica.com">Lance Shaw</a></td>
+					<td>
+					&nbsp;</td>
+					</tr>
+					<tr>
+					<td>
+					Barrie, ON</td>
+					<td>
+					<a href="http://www.swugn.org/swugn/calendar/ugdetails.htm?id=496" target="_blank">SOLIDWORKS User Group Simcoe</a></td>
+					<td>
+					<a href="mailto:SWUG.Simcoe@gmail.com">Michael Fernando</a></td>
+					<td>
+					General SOLIDWORKS for Simcoe County.</td>
+					</tr>
+					<tr>
+					<td>
+					Toronto, ON</td>
+					<td>
+					<a href="http://www.swugn.org/swugn/calendar/ugdetails.htm?id=227" target="_blank">Ontario Simulation User Group</a></td>
+					<td>
+					<a href="mailto:steven.jia@litens.com">Steve Jia</a></td>
+					<td>
+					&nbsp;</td>
+					</tr>
+					<tr>
+					<td>
+					Waterloo, ON</td>
+					<td>
+					<a href="http://www.swugn.org/swugn/calendar/ugdetails.htm?id=470" target="_blank">Western Ontario SOLIDWORKS Group</a></td>
+					<td>
+					<a href="mailto:chris@sunrisepower.ca">Chris White</a></td>
+					<td>
+					Meets four times a year. Open to anyone. For learning and networking.</td>
+					</tr>
+					<tr>
+					<td>
+					Saskatoon, SK</td>
+					<td>
+					<a href="http://www.swugn.org/swugn/calendar/ugdetails.htm?id=484" target="_blank">Saskatoon SOLIDWORKS User Group</a></td>
+					<td>
+					<a href="mailto:brant@ajplastics.com">Brant Friesen</a></td>
+					<td>
+					&nbsp;</td>
+					</tr>
+					
+					</tbody>
+					</table>
+					</div>
+					</div>
+					</div>
+					</section>
+			</div>
+		{embed="_sidebar/.events"}
+		</div>
+	</div>
+	{/if}
+{embed="_includes/.footer"}
+</body>
+</html>

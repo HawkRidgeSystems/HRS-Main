@@ -1,0 +1,63 @@
+<table class="table table-bordered">  
+ <thead>
+ <tr>
+   <th style="text-align: center !important;">
+   <select class="form-control" style="margin: 0 !important;" class="col-lg-1" onChange="document.location = this.value" value="GO">
+   <option value="#">Go to Month</option>   
+   {exp:calendar:month_list
+       date_range_start="{segment_2}-{segment_3}-01"
+       date_range_end="{segment_2}-{segment_3}-last" 
+       limit="8"
+   }
+  
+ <option value="{path='{segment_1}/schedule/{segment_3}/'}/{month format="%Y/%m"}">{month format="%F, %Y"}</option>
+ 
+    {/exp:calendar:month_list}
+   
+ 
+   </select>
+    </th>
+{exp:channel:calendar switch="calendarToday|calendarCell" channel="edate" entry_id="{embed:event_ids}" show_future_entries="yes" show_expired="no" orderby="date" sort="asc"}
+
+
+
+   <th colspan="5" style="text-align: center!important; border-left: 1px solid white !important;"><h4>{date format="%F %Y"}</h4></th>
+   
+	  <th style="text-align:center !important; border-left: 1px solid white !important;">
+   <a class="calendarMonthLinks" href="{previous_path={segment_1}/schedule/{segment_3}}"><button type="button" class="btn btn-default"><span class="glyphicon glyphicon-chevron-left"></span></button></a>
+   <a class="calendarMonthLinks" href="{next_path={segment_1}/schedule/{segment_3}}">
+   <button type="button" class="btn btn-default"><span class="glyphicon glyphicon-chevron-right"></span></button>
+   </a>
+</th>
+   </tr>
+   </thead>
+
+<tr>
+{calendar_heading}
+<td class="calendarDayHeading">{lang:weekday_abrev}</td>
+
+{/calendar_heading}</tr>
+
+{calendar_rows }
+{row_start}<tr>{/row_start}
+
+{if entries}
+<td class='{switch}' valign="top" align='center' width='14%'>
+{day_number}
+{entries}
+{embed="/events/.calinfo" event="{entry_id}"}
+{/entries}</td>
+{/if}
+
+{if not_entries}
+<td class='{switch}' valign="top" align='center' width='14%'>{day_number}</td>
+{/if}
+
+{if blank}
+<td class='calendarBlank' width='14%'> </td>
+{/if}
+
+{row_end}</tr>{/row_end}
+{/calendar_rows}
+</table>
+{/exp:channel:calendar}

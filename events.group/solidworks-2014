@@ -1,0 +1,175 @@
+{preload_replace:my_channel="events"}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<title>Hawk Ridge Systems Events</title>
+<meta name="keywords" content="{exp:xml_encode}SOLIDWORKS events, Hawk Ridge Systems Events, 3D CAD Events{/exp:xml_encode}" />
+<meta name="description" content="{exp:xml_encode}Hawk Ridge Systems' Events{/exp:xml_encode}" />
+{embed="_includes/.html-head"}
+</head>
+<body>
+{embed="_includes/.nav"}
+<div  class="container main">
+{breadcrumbs}
+<div class="page-header">
+<h1>Hawk Ridge Systems Events</h1>
+<p>Create, communicate, and be more productive. At a Hawk Ridge Systems event, you'll learn how the full range of SOLIDWORKS solutions for design, simulation, data management, technical communication, electrical design, and CNC automation can help you create better products, faster and more cost-effectively. Our experts are here to demonstrate, answer questions, and offer suggestions to optimize your workflow, leverage your data, and improve collaboration. Sign up to attend a live event, or watch a webinar from the office. Check back often, as we are constantly adding new events to meet the needs of our customers. </p>
+</div>
+
+<div class="row">
+<div class="col-lg-10 col-md-10 col-sm-10">
+<div id="navbar">
+<ul class="nav nav-tabs">
+<li>
+<a href="/events/"><span class="glyphicon glyphicon-th-large"></span> Overview</a></li>
+<li i class="active">
+<a href="/events/solidworks-2014/"><span class="glyphicon glyphicon-cog"></span> SOLIDWORKS 2014</a></li>								
+</ul>
+</div>	
+<div class="tab-content">	
+<div class="tab-pane active" id="schedules">
+<div class="page-header">
+<h3>SolidWorks 2014 is Coming to a City Near You!</h3>
+</div>
+<div >
+<p>
+	<img alt="SOLIDWORKS 2014 - Design without Limits" src="http://www.hawkridgesys.com/images/SolidWorks-2014/SolidWorks2014LaunchImage.medium.jpg" style="width: 260px; height: 245px; border-width: 0px; border-style: solid; margin: 5px 15px; float: right;" /><span style="font-size:14px;">Delivering powerful new tools that shorten and simplify your design processes, enhance collaboration, and make you stand out from the competition, SOLIDWORKS 2014 gives you the power to design without limits.</span></p>
+<p>
+	<strong><span style="font-size:14px;">SOLIDWORKS 2014 includes new solutions like:</span></strong></p>
+<p>
+	<span style="color:#1a6690;"><span style="font-size: 14px;"><strong>Advanced Shape Control&nbsp;</strong></span></span><span style="line-height: 1.428571429;">New Style Spline functionality and Conic Fillet controls help you create complex surfaces and organic shapes faster, easier, and with more precision.</span></p>
+<p>
+	<span style="color:#1a6690;"><span style="font-size: 14px;"><strong>Sketch Enhancements&nbsp;</strong></span></span><span style="line-height: 1.428571429;">More robust and powerful Sketch capabilities means you can conceptualize and design swiftly and easily, quickly bringing your ideas to life.</span></p>
+<p>
+	<span style="color:#1a6690;"><span style="font-size: 14px;"><strong>Enhanced Assembly Performance and Visualization&nbsp;</strong></span></span><span style="line-height: 1.428571429;">Quick Mate toobar, Section View performance, the all new Slot mate, and rotation in Explode Steps help you create and view assemblies faster than ever before.</span></p>
+<p>
+	<span style="color:#1a6690;"><span style="font-size: 14px;"><strong>New Sheet Metal Features&nbsp;</strong></span></span><span style="line-height: 1.428571429;">Improved control over sheet metal corner treatments and the new Sheet Metal Gusset feature gives you faster&nbsp;</span><span style="line-height: 1.428571429;">sheet metal geometry creation</span><span style="line-height: 1.428571429;">, with improved data output for manufacturing.</span></p>
+<p>
+	<span style="color:#1a6690;"><span style="font-size: 14px;"><strong>Faster Drawing Detailing&nbsp;</strong></span></span><span style="line-height: 1.428571429;">New enhancements like angular running dimensions, automatic limits for rows in tables, and slot callout notes help you to perform faster and more automated drawing detailing.</span></p>
+<p>
+	<strong style="line-height: 1.428571429;"><span style="font-size: 14px;">Attend a SOLIDWORKS 2014 Launch event to see these new enhancements - and many more - in action.&nbsp;Here&#39;s just some of what you can expect:</span></strong></p>
+<ul>
+	<li>
+		Talk one-on-one with the SOLIDWORKS engineers and experts from Hawk Ridge Systems</li>
+	<li>
+		See cutting-edge technology working with SOLIDWORKS, Simulation, Enterprise PDM and more</li>
+	<li>
+		Be heard - ask your questions and get them answered</li>
+	<li>
+		Meet other SOLIDWORKS users in your area and network with industry professionals</li>
+	<li>
+		Drawings for raffle prizes, including gift cards, a SpacePilot Pro from 3Dconnexion!</li>
+		<li>Drawings for raffle prizes, including the Quadro K4000 from NVIDIA, a SpacePilot Pro from 3Dconnexion, a Slate 7 tablet, Visa gift cards, and more</li>
+	<li>
+		Explore new offerings from Hawk Ridge Systems that take you from design to production&nbsp;including professional 3D printers&nbsp;</li>
+	<li>
+		See NVIDIA GRID VCA,&nbsp;the only platform certified and supported by Dassault Syst&egrave;mes to virtualize and remotely deliver SOLIDWORKS over the network</li>
+</ul>
+<p>
+	<strong>All SOLIDWORKS 2014 Launch attendees will be entered to win the grand prize: an&nbsp;</strong><strong>HP EliteBook Folio 9470m Ultrabook</strong><strong>&nbsp;- a $1499 value!&nbsp;</strong></p>
+<p>
+	<span style="font-size:14px;"><span style="color: rgb(26, 102, 144);"><strong>Agenda</strong></span></span></p>
+	<img alt="Sponsored by Hewlett-Packard and Intel" src="http://www.hawkridgesys.com/images/SolidWorks-2014/sponsored.hp.png" style="width: 112px; height: 112px; float: right;" />
+<p>
+	<strong>12:45PM - </strong>Registration Check-in Begins<strong>&nbsp;</strong></p>
+<p>
+	<strong>&nbsp;1:00PM - </strong>SOLIDWORKS 2014 LIVE: Let the Hawk Ridge Systems experts show you how SOLIDWORKS 2014 lets you design without limits</p>
+<p>
+	<strong>&nbsp;4:00PM - </strong>SOLIDWORKS 2014 Networking Reception: Join us for food and drinks and check out all of your favorite new features in SOLIDWORKS 2014; meet your local HRS team and explore NVIDIA GRID VCA, 3D Printing Solutions, and CAMWorks<strong>&nbsp;</strong></p>
+
+<p>
+	<br />
+	<strong style="font-size: 14px; line-height: 1.428571429;">Space is limited&mdash; Reserve Your Seat Today!</strong></p>
+	
+</div>
+
+<div class="row">
+
+    {exp:channel:entries channel="{my_channel}" limit="1" entry_id="6378"  disable="trackbacks" track_views="one"}
+<div class="col-lg-6 col-md-6 col-sm-6">
+<div class="page-header" >
+<h3>Canada</h3>
+</div>
+<table class="table table-striped noshow">
+<thead>
+  <tr>
+    <th>Date</th>
+    <th>Time</th>
+    <th>Location</th>
+  </tr>
+</thead>
+{parents channel="edate" status="open" limit="100" }
+		{if parents:no_results}
+		<em>Please <a href="mailto:events@hawkridgesys.com?subject=Upcoming Events">email us</a> or call 877-266-4469 in the US or 866-587-6803 in Canada for more information about this event schedule.</em>
+		{/if}
+	{if '{expiration_date format="%U"}' >= '{current_time format="%U"}'}
+	                <tr>
+	                  {if evweb !=""}          
+	                
+	              
+	                  	<td> <a href="{parents:evweb}" target="_blank">{entry_date format='%l, %F %j, %Y'}</a></td>
+	                  	<td><a href="{parents:evweb}" target="_blank">{parents:evtime}</a> </td>
+	                  	<td><a href="{parents:evweb}" target="_blank">Online</a></td>
+	                  {if:else}     
+	                  	<td> <a href="{title_permalink=events/registration}">{entry_date format='%l, %F %j, %Y'}  </a></td>
+	                  	<td><a href="{title_permalink=events/registration}">{parents:evtime}</a></td>
+	                  	<td><a href="{title_permalink=events/registration}">{embed="events/.location" loc="{parents:evlocation}"}</a></td>
+	                   {/if} 
+	                                                  
+	                  </tr>
+	                  {/if}
+{/parents}
+            </table>
+            </div>
+{/exp:channel:entries}
+    {exp:channel:entries channel="{my_channel}" limit="1" entry_id="6344"  disable="trackbacks" track_views="one"}
+<div class="col-lg-6 col-md-6 col-sm-6">
+<div class="page-header" >
+<h3>US &amp; Canada</h3>
+</div>
+<table class="table table-striped noshow">
+<thead>
+  <tr>
+    <th>Date</th>
+    <th>Time</th>
+    <th>Location</th>
+  </tr>
+</thead>
+{parents channel="edate" status="open" limit="100" }
+		{if parents:no_results}
+		<em>Please <a href="mailto:events@hawkridgesys.com?subject=Upcoming Events">email us</a> or call 877-266-4469 in the US or 866-587-6803 in Canada for more information about this event schedule.</em>
+		{/if}
+	{if '{expiration_date format="%U"}' >= '{current_time format="%U"}'}
+	                <tr>
+	                  {if evweb !=""}          
+	                
+	              
+	                  	<td> <a href="{parents:evweb}" target="_blank">{entry_date format='%l, %F %j, %Y'}</a></td>
+	                  	<td><a href="{parents:evweb}" target="_blank">{parents:evtime}</a> </td>
+	                  	<td><a href="{parents:evweb}" target="_blank">Online</a></td>
+	                  {if:else}     
+	                  	<td> <a href="{title_permalink=events/registration}">{entry_date format='%l, %F %j, %Y'}  </a></td>
+	                  	<td><a href="{title_permalink=events/registration}">{parents:evtime}</a></td>
+	                  	<td><a href="{title_permalink=events/registration}">{embed="events/.location" loc="{parents:evlocation}"}</a></td>
+	                   {/if} 
+	                                                  
+	                  </tr>
+	                  {/if}
+{/parents}
+            </table>
+            </div>
+{/exp:channel:entries}
+</div>
+</div>
+
+</div>
+</div>
+<div class="col-lg-2 col-md-2 col-sm-2">
+{embed="_sidebar/.locations"}
+</div>
+</div>
+</div>
+</div>
+{embed="_includes/.footer"}
+</body>
+</html>
