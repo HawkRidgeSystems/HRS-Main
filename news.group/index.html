@@ -1,0 +1,45 @@
+{preload_replace:my_channel="news"}
+{preload_replace:my_template_group="news/post"}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<title>{exp:xml_encode}SOLIDWORKS News | Hawk Ridge Systems{/exp:xml_encode}</title>
+<meta name="keywords" content="What is Solid Works, Engineering Software, 3D CAD, SolidWorks 2012, Solid Works, CAD Software, Simulation Software" />
+<meta name="description" content="Hawk Ridge Systems and SOLIDWORKS News" />
+{embed="_includes/.html-head"}
+</head>
+<body>
+	{embed="_includes/.nav"}
+		<div class="no-bg">
+						{breadcrumbs}
+			<div class="container main">							
+				<section class="allsection">
+						<p class="bold">Hawk Ridge Systems</p>
+						<h1>News</h1>
+				</section>
+			</div>
+		</div>
+		<div class="container main">
+			<div class="row">
+				<div class="col-lg-10">
+					<section class="section">
+					<table width="100%" cellspacing="0" cellpadding="0">
+					<tr>
+					<td width="50%" valign="top"><h2>Partner News</h2>
+					<div style="padding:0 15px 0 15px">{exp:channel:entries channel="{my_channel}" limit="1000" disable="trackbacks" category="14"}<strong>{entry_date format=' %F %d, %Y '}</strong><br />
+					{description} <a href="{url_title_path="{my_template_group}"}/">More</a><br />
+					<br />{/exp:channel:entries}</div></td>
+					<td width="50%" valign="top"><h2>Hawk Ridge Systems News</h2>
+					<div style="padding:0 15px 0 15px">{exp:channel:entries channel="{my_channel}" limit="1000" disable="trackbacks" category="13"}<strong>{entry_date format=' %F %d, %Y '}</strong><br />
+					{description} <a href="{url_title_path="{my_template_group}"}/">More</a><br />
+					<br />{/exp:channel:entries}</div></td>
+					</tr>
+					</table>
+					</section>
+				</div>
+			{embed="_sidebar/.company"}
+			</div>	
+		</div>
+{embed="_includes/.footer"}
+</body>
+</html>
