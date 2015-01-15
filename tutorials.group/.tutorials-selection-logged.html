@@ -1,0 +1,23 @@
+{exp:stash:get_list name="tutorial-selection"}
+<h3 class="page-header" id="{cat-url}">{cat-name}</h3>
+{exp:channel:entries channel="recorded" category="{cat-id}" dynamic="off" sort="asc"}
+{if url_title != segment_3}
+<div class="row">
+<div class="col-md-4">
+<a href="http://www.hawkridgesys.com/tutorials/{segment_2}/{url_title}/"  rel="nofollow">
+<img class="img-responsive" src="{video_thumbnail}">	
+<span class="smallplay"></span>
+</a>
+</div>
+<div class="col-md-8">
+<a href="http://www.hawkridgesys.com/tutorials/{segment_2}/{url_title}/"  rel="nofollow">{title}</a>
+<p>{rbody}</p>
+
+</div>
+</div>
+<br>	
+<hr>	
+<br>	
+{/if}						
+{/exp:channel:entries}
+{/exp:stash:get_list}

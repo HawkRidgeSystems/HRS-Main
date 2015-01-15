@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Hawk Ridge Systems | Search</title>
+<meta name="robots" content="noindex">
+{embed="_includes/.html-head"}
+</head>
+
+<body>
+	{embed="_includes/.nav"}
+	<div  class="container main">
+	<div class="no-bg">
+	{breadcrumbs}
+		<div class="container main">
+			<section class="allsection">
+				<div class="row">
+					<div class="col-md-7">
+					<h1>Search</h1>
+					</div>
+				</div>
+			</section>
+		</div>
+	</div>
+<div class="container main">      	
+	<section class="section">		
+      	<div class="input-append">
+      			{exp:low_search:form query="{segment_3}" require_all="category"}
+      		  		  <fieldset>
+      		  		    {if error_message != ''}
+      		  		      <p class="error">{error_message}</p>
+      		  		    {/if}
+      		  		    <input type="search" name="keywords" placeholder="Keywords" class="span2" id="appendedInputButton"  value="{low_search_keywords}" />
+      		  		    <button class="btn btn-primary" type="button"  type="submit">Search</button>
+      		  		  </fieldset>
+      		  		{/exp:low_search:form}	
+      	</div>	</div>  
+      
+      </section>
+</div>
+{embed="_includes/.footer"}
+</body>
+</html>

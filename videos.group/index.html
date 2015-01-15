@@ -1,0 +1,33 @@
+{preload_replace:my_channel="videos"}
+<!DOCTYPE html>
+<html>
+<head>
+{exp:channel:entries channel="{my_channel}" disable="member_data|categories|trackbacks|pagination" rdf="off" limit="1" track_views="one"}
+<title>{exp:xml_encode}{h1}{/exp:xml_encode}</title>
+<meta name="keywords" content="{exp:xml_encode}{keywords}{/exp:xml_encode}" />
+<meta name="description" content="{exp:xml_encode}{description}{/exp:xml_encode}" />
+{embed="_includes/.html-head"}
+</head>
+<body>
+	{embed="_includes/.nav"}
+	<div  class="container" id="container">
+		<div class="breadcrumbs">
+		<a href="{site_url}">Home</a> &raquo;
+		{if "{segment_2}" != ""}
+		<a href="{path={segment_1}}">{segment_1}</a> &raquo; {segment_2}
+		{if:elseif "{segment_3}" == ""}
+		{segment_1}
+		{/if}
+		</div>
+		<div class="page-header">
+			<h1 class="inline">{tagtitle}</h1><div class="tagline">{tagline}</div>
+		<p class="visible-desktop">{tagdescription}</p>
+		</div>
+
+	{exp:allow_eecode embed="y"}{body}{/exp:allow_eecode}
+	  {/exp:channel:entries} 
+	</div>
+
+{embed="_includes/.footer"}
+</body>
+</html>

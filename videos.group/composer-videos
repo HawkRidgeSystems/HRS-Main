@@ -1,0 +1,125 @@
+{preload_replace:my_channel="videos"}
+{preload_replace:my_template_group="/products/{segment_2}/videos"}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+{if segment_4}
+{exp:channel:entries channel="{my_channel}" limit="1" disable="member_data|trackbacks|pagination" rdf="off" url_title="{segment_4}"}
+    {if no_results}
+{redirect="{my_template_group}"}
+{/if}
+<title>{h1}</title>
+<meta name="keywords" content="{exp:xml_encode}{ekeywords}{/exp:xml_encode}" />
+<meta name="description" content="{exp:xml_encode}{edescription}{/exp:xml_encode}" />
+{/exp:channel:entries}
+{if:else}
+<title>SolidWorks Composer Videos | Hawk Ridge Systems</title>
+<meta name="description" content="{exp:xml_encode}SolidWorks Videos | Hawk Ridge Systems{/exp:xml_encode}" />
+{/if}
+{embed="_includes/.html-head"}
+</head>
+<body>
+{embed="_includes/.nav"}
+{if segment_2=="" AND segment_3==""}
+{exp:channel:categories channel="{my_channel}"}
+    {category_name}</a>11</p>
+    {body}
+        <p><a href="{path="products/{category_url_title}"}"></a></p>
+{/exp:channel:categories}
+{if:elseif segment_2 !="" AND segment_3==""}
+		<div class="sub-bg">
+						{breadcrumbs}
+			<div class="container main">
+				<div class="row">
+					<div class="tag col-md-7">
+						<h1>SolidWorks Composer</h1>
+						<h2>Videos</h2>
+					</div>
+				</div>
+			</div>
+		</div>
+<div class="row">
+	<div class="col-lg-10">
+				<h3 class="bdashed"> SolidWorks Composer</h3>
+				<ul class="thumbnails bdashed">				        			
+					{exp:query sql="SELECT cat_id FROM exp_categories WHERE 
+					cat_url_title = '{segment_2}'"}
+					{exp:channel:entries channel="videos" category="96"} 
+					<li class="wrapper" style="padding: 0 20px 10px 0; margin: 0px;">
+					<a class="video-overlay" href="{title_permalink={segment_1}/{segment_2}}"><col-lg->&nbsp;</col-lg-> <img alt="{title}" class="img-thumbnail" data-="" src="{vid_thumbnails}" style="width: 193px; height: 120px;"></a>
+					<div class="videocaption">
+					{title}
+					</div>
+					</li>
+					{/exp:channel:entries}
+					{/exp:query} 
+					</ul>
+					<h3 class="bdashed"> SolidWorks Composer</h3>
+					<ul class="thumbnails bdashed">
+					{exp:query sql="SELECT cat_id FROM exp_categories WHERE 
+					cat_url_title = '{segment_2}'"}
+					{exp:channel:entries channel="videos" category="{cat_id}"} 
+					<li class="wrapper" style="padding: 0 20px 10px 0; margin: 0px;">
+					<a class="video-overlay" href="{title_permalink={segment_1}/{segment_2}}"><col-lg->&nbsp;</col-lg-> <img alt="{title}" class="img-thumbnail" data-="" src="{vid_thumbnails}" style="width: 193px; height: 120px;"></a>
+					<div class="videocaption">
+					{title}
+					</div>
+					</li>
+					{/exp:channel:entries}
+					{/exp:query} 
+				</ul>
+	</div>
+	{embed="_sidebar/.composer"}
+</div>
+{if:elseif segment_4 !=""}
+{exp:channel:entries channel="videos" url_title="{segment_4}"}
+		<div class="sub-bg">
+						{breadcrumbs}
+			<div class="container main">
+				<div class="row">
+					<div class="tag col-md-7">
+						<h1>SolidWorks Composer</h1>
+						<h2>Videos</h2>
+					</div>
+				</div>
+			</div>
+		</div>
+<div class="container main">
+<div class="row">
+	<section class="section col-lg-10">
+		<div class="row">
+			<div class="col-lg-7">
+			<h2 >{tagtitle}</h2>
+			<p>{vid_description}</p>
+			</div>
+			<div class="col-lg-5">
+			<br/>
+			<a href="//fast.wistia.net/embed/iframe/{video_url}?popover=trueplatformPreference=html5" class="wistia-popover[height=506,playerColor=7b796a,width=900]">Watch Now</a>
+			</div>
+		</div>
+		<br>
+		<div class="row">
+			<div class="col-lg-7">
+			<h3 style="padding-bottom: 0;" class="bdashed">Related Videos</h3>
+			<ul class="list-unstyled">
+			{exp:channel:entries channel="videos" category="101|102|103|104" limit="2"}  {/exp:channel:entries}
+			{exp:channel:entries channel="videos" category="101|102|103|104" limit="2" show_future_entries="yes" sort="asc" orderby="random" show_expired="no" dynamic="off"}
+			<li class="col-lg-6 wrapper">
+			<a class="video-overlay" href="{page_url}"><col-lg->&nbsp;</col-lg-> <img alt="{title}" class="img-thumbnail" data-="" src="{vid_thumbnails}" style="width: 200px; height: 113px;"></a>
+			<div class="videocaption">
+			{title}
+			</div>
+			</li>
+			{/exp:channel:entries}
+			</ul>
+			</div>
+		</div>
+	</section>
+		{embed="_sidebar/.composer"}
+</div>
+</div>
+{/exp:channel:entries}
+{/if}
+{embed="_includes/.footer"}
+</body>
+</html>

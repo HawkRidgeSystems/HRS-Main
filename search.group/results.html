@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Hawk Ridge Systems | Search</title>
+<meta name="robots" content="noindex">
+{embed="_includes/.html-head"}
+</head>
+
+<body>
+	{embed="_includes/.nav"}
+	<div  class="container main">
+		<div class="no-bg">
+		{breadcrumbs}
+			<div class="container main">
+				<section class="allsection">
+					<div class="row">
+						<div class="col-md-7">
+						<h1>Search</h1>
+						</div>
+					</div>
+				</section>
+			</div>
+		</div>
+		<section class="section">
+				<div class="row">
+				<div class="col-lg-4">
+		<h3 class="tdashed">Products</h3>
+		{exp:low_search:results query="{segment_3}" limit="5" collection="products" channel="products" }
+			  {if count ==  1}
+			  <ul class="list-unstyled">{/if}
+			    <li><a href="{page_uri}"><strong>{title}</strong></a></li>
+				{exp:channel:entries channel="products" limit="1" disable="trackbacks" track_views="one"}
+					<p >{description}</p>
+				{/exp:channel:entries}
+			  {if count == total_results}</ul>{/if}
+			  {if no_results}No search results{/if}
+		{/exp:low_search:results}
+		</div>
+			
+		<div class="col-lg-4">
+		<h3 class="tdashed">Events</h3>
+		      	{exp:low_search:results query="{segment_3}" limit="5" collection="events" channel="events"}
+		  {if count ==  1}
+		  <ul class="list-unstyled">{/if}
+		    <li><a href="/{channel_short_name}/{categories limit='1'}{category_url_title}{/categories}/{url_title}"><strong>{title}</strong></a></li>    
+		   {exp:channel:entries channel="events" events limit="1" orderby="random" disable="member_data|pagination|trackbacks" search:evhome="Yes" dynamic="off"}
+		   		
+		   							<p class="">{home}</p>
+		   					{/exp:channel:entries}  
+		  {if count == total_results}</ul>{/if}
+		  {if no_results}No search results{/if}
+		{/exp:low_search:results}
+		</div>
+		<div class="col-lg-4">
+		<h3 class="tdashed">Training</h3>
+		{exp:low_search:results query="{segment_3}" limit="5" channel="courses"}
+		  {if count ==  1}
+		  <ul class="list-unstyled">{/if}
+		    <li><a href="/training/{channel_short_name}/{url_title}"><strong>{title}</strong></a></li>
+		  {exp:channel:entries channel="courses" limit="1" disable="trackbacks" track_views="one" url_title="{segment_3}"}
+			<p>{cdescription}</p>
+			{/exp:channel:entries}
+		  {if count == total_results}</ul>{/if}
+		  {if no_results}No search results{/if}
+		{/exp:low_search:results}
+		</div>
+		</div>
+		</section>
+	</div>  
+{embed="_includes/.footer"}
+</body>
+</html>

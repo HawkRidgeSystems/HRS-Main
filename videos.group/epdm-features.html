@@ -1,0 +1,81 @@
+{preload_replace:my_channel="videos"}
+{preload_replace:my_template_group="/products/{segment_2}/features"}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+{if segment_4}
+{exp:channel:entries channel="{my_channel}" limit="1" disable="member_data|trackbacks|pagination" rdf="off" url_title="{segment_4}"}
+{if no_results}
+{redirect="{my_template_group}"}
+{/if}
+<title>{h1}</title>
+<meta name="keywords" content="{exp:xml_encode}{ekeywords}{/exp:xml_encode}" />
+<meta name="description" content="{exp:xml_encode}{edescription}{/exp:xml_encode}" />
+{/exp:channel:entries}
+{if:else}
+<title>SolidWorks Enterprise PDM Features | Hawk Ridge Systems</title>
+<meta name="description" content="{exp:xml_encode}SolidWorks Videos | Hawk Ridge Systems{/exp:xml_encode}" />
+{/if}
+{embed="_includes/.html-head"}
+</head>
+<body>
+{embed="_includes/.nav"}
+{if segment_2=="" AND segment_3==""}
+{exp:channel:categories channel="{my_channel}"}
+{category_name}</a>11</p>
+{body}
+<p><a href="{path="products/{category_url_title}"}"></a></p>
+{/exp:channel:categories}
+{if:elseif segment_2 !="" AND segment_3==""}
+{if:elseif segment_4 !=""}
+{exp:channel:entries channel="videos" url_title="{segment_4}"}
+		<div class="sub-bg">
+						{breadcrumbs}
+			<div class="container main">
+				<div class="row">
+					<div class="tag col-md-7">
+						<h1>SolidWorks EPDM</h1>
+						<h2>Features</h2>
+					</div>
+				</div>
+			</div>
+		</div>
+<div class="container main">
+	<div class="row">
+		<section class="section col-lg-10">
+				<div class="row">
+					<div class="col-lg-5">
+								<h2>{tagtitle}</h2>
+					<p>{vid_description}</p>
+					</div>
+					<div class="col-lg-7">
+					<iframe allowfullscreen="" class="img-video" frameborder="0" height="279" mozallowfullscreen="" src="http://player.vimeo.com/video/{video_url}" webkitallowfullscreen="" width="489"></iframe>
+					</div>
+				</div>
+			<br>
+				<div class="row">
+				<div class="col-lg-7">
+				<h3 style="padding-bottom: 0;" class="bdashed">Related Videos</h3>
+				<ul class="thumbnails bdashed">
+				{exp:channel:entries channel="videos" category="110" limit="2"}  {/exp:channel:entries}
+				{exp:channel:entries channel="videos" category="110" limit="2" show_future_entries="yes" sort="asc" orderby="random" show_expired="no" dynamic="off"}
+				<li class="col-lg-6 wrapper list-unstyled">
+				<a class="video-overlay" href="{page_url}"><col-lg->&nbsp;</col-lg-> <img alt="{title}" class="img-thumbnail" data-="" src="{vid_thumbnails}" style="width: 193px; height: 120px;"></a>
+				<div class="videocaption">
+				{title}
+				</div>
+				</li>
+				{/exp:channel:entries}
+				</ul>
+				</div>
+				</div>
+		</section>
+		{embed="_sidebar/.epdm"}
+	</div>
+</div>
+{/exp:channel:entries}
+{/if}
+</div>
+{embed="_includes/.footer"}
+</body>
+</html>
