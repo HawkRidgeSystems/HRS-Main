@@ -1,0 +1,178 @@
+{!-- $HEADER--}
+{embed="_/.header-products"}
+
+{!-- $BREAD CLASS --}
+{exp:stash:set name="bread-class"}sub-bg{/exp:stash:set}
+
+
+
+    {exp:channel:entries channel="cta_new" dynamic="off" disable="member_data|categories|trackbacks|pagination"  url_title="{segment_1} | {segment_2} | {segment_3} | {segment_4}"}
+    	
+	{exp:stash:set parse_tags="yes" parse_conditionals="yes"}
+			{stash:title} 
+				{if last_segment == "thank-you"}
+					{cta-title} - Thank You
+				{if:else}
+					{cta-title}
+				{/if}
+			{/stash:title}
+			{stash:meta-desc}
+				{if last_segment == "thank-you"}
+					{cta-description} - Thank You
+				{if:else}
+					{cta-description}
+				{/if}
+			{/stash:meta-desc}
+			{stash:heading-type}heading-3{/stash:heading-type}
+			{stash:tag-bg}
+				{if last_segment == "thank-you"}
+					{ty-bg}
+				{if:else}
+					{header-bg}
+				{/if}
+			{/stash:tag-bg}
+			{stash:heading}
+				{if last_segment == "thank-you"}
+					<h1 class="white bold">	{ty-title}</h1>
+				{if:else}
+					<div class="center">
+						
+					<h1 class="white bold">	{header}</h1>
+					<h3 class="white"> {header-sub}</h3>
+					</div>
+				{/if}
+			{/stash:heading}
+			{stash:extra-head-data}
+				{if last_segment == "thank-you"}
+					{ty-style}
+				{if:else}
+				.sub-bg {
+					padding: 0 0 8% 0;
+				}
+				.container.main.cta{
+				background-color:white;
+				padding: 0 2% 2% 2%;
+				}
+				.bubble {
+					position: relative;
+					padding: 8px;
+					margin: 0 10px;
+					background: #035B81;
+					-webkit-border-radius: 5px;
+					-moz-border-radius: 5px;
+					border-radius: 5px;
+					color: white;
+				}
+				.bubble:after {
+					content: "";
+					position: absolute;
+					bottom: -18px;
+					left: 400px;
+					border-style: solid;
+					border-width: 18px 15px 0;
+					border-color: #035B81 transparent;
+					display: block;
+					width: 0;
+					z-index: 1;
+				}
+				.testimonial > .row:nth-child(2) img{
+					margin:19px;
+				}
+				.testimonial > .row:nth-child(2) p{
+					text-align: right; 
+					display: inline; 
+					float: right; 
+					padding: 25px 0;
+				}
+				{cta-style}
+				{/if}
+			{/stash:extra-head-data}
+			{stash:extra-footer-data}
+				{if last_segment == "thank-you"}
+					{exp:switchee variable="{adwords}" parse="inward"}
+							{case value="No-Adwords" default="Yes"}{/case}
+							{case value="Adwords" default="Yes"}
+								<!-- Google Code for AdWords Conversion Conversion Page -->
+								<script type="text/javascript">
+									/* <![CDATA[ */
+									var google_conversion_id = 1059028909;
+									var google_conversion_language = "en";
+									var google_conversion_format = "3";
+									var google_conversion_color = "ffffff";
+									var google_conversion_label = "A5j_CJOt-AEQrf_9-AM";
+									var google_conversion_value = 200;
+									/* ]]> */
+									</script><script type="text/javascript" src="//www.googleadservices.com/pagead/conversion.js">
+									</script><noscript>
+									<div style="display:inline;">
+									<img height="1" width="1" style="border-style:none;" alt="" src="//www.googleadservices.com/pagead/conversion/1059028909/?value=200&amp;label=A5j_CJOt-AEQrf_9-AM&amp;guid=ON&amp;script=0"/>
+									</div>
+									</noscript><!-- Adcenter Conversion Code --><script type="text/javascript"> if (!window.mstag) mstag = {loadTag : function(){},time : (new Date()).getTime()};</script><script id="mstag_tops" type="text/javascript" src="//flex.atdmt.com/mstag/site/7a8d5ea4-f98e-431e-a77e-24e82dae3ad3/mstag.js"></script><script type="text/javascript"> mstag.loadTag("analytics", {dedup:"1",domainId:"550623",type:"1",actionid:"126345"})</script><noscript> <iframe src="//flex.atdmt.com/mstag/tag/7a8d5ea4-f98e-431e-a77e-24e82dae3ad3/analytics.html?dedup=1&domainId=550623&type=1&actionid=126345" frameborder="0" scrolling="no" width="1" height="1" style="visibility:hidden;display:none"> </iframe> </noscript>
+							{/case}
+					{/exp:switchee}
+				{if:else}
+					<script>MktoForms2.loadForm("//app-ab02.marketo.com", "499-VQL-975", {form-id});</script>
+				{/if}
+			{/stash:extra-footer-data}
+	{/exp:stash:set}
+ 	{!-- 
+
+ 	$THANK YOU PAGE 
+
+ 	--}
+	{if  "{structure:page:uri}" == "{page_uri}"}
+		<div  class="container main cta">
+			<div class="row" style=" margin-top:-10%;">
+			<section class="col-md-6" >
+				{content}	
+			</section>
+				<section class="col-md-6">
+					<div style="padding-bottom:20px;">
+						<script src="//app-ab02.marketo.com/js/forms2/js/forms2.js"></script>
+						<form id="mktoForm_{form-id}"></form>
+					</div>
+					{testimonials}
+					<div class="testimonial">
+						<div class="row">
+								<p class="bubble bubble2 inline">
+								{testimonials:testimonial}
+								</p>
+						</div>
+						<div class="row">
+								<img class="img-circle pull-right" src="{testimonials:testimonial_circle}">
+								<p>
+									<strong>{testimonials:byline}</strong>
+									<br>
+									{testimonials:company}
+								</p>
+							
+						</div>
+					</div>
+					{/testimonials}
+				</section>
+			</div>
+			<div class="center">
+				<h1>Hawk Ridge Systems helps engineers and designers create innovative products across multiple industries, including: </h1>
+				{customer-logo}
+					<img src="{customer-logo:logo}" class="img-responsive" alt="">
+				{/customer-logo}
+			</div>
+		</div>
+
+ 	{!-- 
+
+ 	$CALL TO ACTION
+
+ 	--}
+
+	{if:elseif last_segment == "thank-you" AND "/{segment_1}/{segment_2}/" == "{page_uri}"}
+		<div  class="container main">
+			<section class="section" >
+				{content-thankyou}	
+			</section>
+		</div>
+		
+	{/if}
+	{/exp:channel:entries}
+{!-- $FOOTER--}
+{embed="_/.footer"}

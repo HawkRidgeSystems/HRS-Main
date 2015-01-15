@@ -1,0 +1,541 @@
+{exp:calendar:cal event_id="{embed:class_ids}" date_range_start="2014-month-01" show_months="1" } 
+      {display_each_month}
+<table class="section table table-bordered">  
+ <thead>
+ <tr>
+   <th style="text-align: center !important;">
+      </th>
+      
+      <th colspan="5" style="text-align: center!important; border-left: 1px solid white !important;"><h4><strong>{month format="%F %Y"}</strong></h4></th>
+      
+      <th style="text-align:center !important; border-left: 1px solid white !important;">
+    </th>
+      </tr>
+      </thead>
+     <tbody>       
+            <tr>
+                           {display_each_day_of_week}
+                           <td class="calendarDayHeading" width="14%">{day_of_week}</td>
+                           {/display_each_day_of_week}
+                        </tr>
+                        {display_each_week}
+                           <tr>
+                              {display_each_day}
+                              {if day_in_current_month}
+                                 <td class="calendarCell">{day format="%j"}
+                              {if:else}
+                                 <td class="calendarCell calendarBlank">{day format="%j"}
+                              {/if}
+                              {display_each_hour}
+                                 {events}
+
+                                 <div id="{url_title}" class="cal-event {categories}{category_url_title}{/categories}">
+                                   
+
+                                   <a href="{path='{segment_1}/class'}/{url_title}/" >{class_course}{class_course:title}{/class_course}</a>
+  
+                                 </div>
+                                 {/events}
+                              {/display_each_hour}
+                           </td>
+                           {/display_each_day}
+                        </tr>
+                        {/display_each_week}
+                  </tbody>      
+      </table>
+   {/display_each_month}   
+   {/exp:calendar:cal}
+{exp:calendar:cal event_id="{embed:class_ids}"date_range_start="+1 month begin"  date_range_end="+1 month end"  show_months="1"}
+      {display_each_month}
+<table class="section table table-bordered">  
+ <thead>
+ <tr>
+   <th style="text-align: center !important;">
+      </th>
+      
+      <th colspan="5" style="text-align: center!important; border-left: 1px solid white !important;"><h4><strong>{month format="%F %Y"}</strong></h4></th>
+      
+      <th style="text-align:center !important; border-left: 1px solid white !important;">
+    </th>
+      </tr>
+      </thead>
+     <tbody>       
+            <tr>
+                           {display_each_day_of_week}
+                           <td class="calendarDayHeading" width="14%">{day_of_week}</td>
+                           {/display_each_day_of_week}
+                        </tr>
+                        {display_each_week}
+                           <tr>
+                              {display_each_day}
+                              {if day_in_current_month}
+                                 <td class="calendarCell">{day format="%j"}
+                              {if:else}
+                                 <td class="calendarCell calendarBlank">{day format="%j"}
+                              {/if}
+                              {display_each_hour}
+                                 {events}
+
+                                 <div id="{url_title}" class="cal-event {categories}{category_url_title}{/categories}" >
+                                   
+
+                                   <a href="{path='{segment_1}/class'}/{url_title}/" >{class_course}{class_course:title}{/class_course}</a>
+                                   
+                                   <p>
+                                     
+                                   
+                                   </p>
+                                 </div>
+                                 {/events}
+                              {/display_each_hour}
+                           </td>
+                           {/display_each_day}
+                        </tr>
+                        {/display_each_week}
+                  </tbody>      
+      </table>
+   {/display_each_month}   
+   {/exp:calendar:cal}
+   {exp:calendar:cal event_id="{embed:class_ids}" date_range_start="+2 month begin"  date_range_end="+2 month end" show_months="1"}
+      {display_each_month}
+<table class="section table table-bordered">  
+ <thead>
+ <tr>
+   <th style="text-align: center !important;">
+      </th>
+      
+      <th colspan="5" style="text-align: center!important; border-left: 1px solid white !important;"><h4><strong>{month format="%F %Y"}</strong></h4></th>
+      
+      <th style="text-align:center !important; border-left: 1px solid white !important;">
+    </th>
+      </tr>
+      </thead>
+     <tbody>       
+            <tr>
+                           {display_each_day_of_week}
+                           <td class="calendarDayHeading" width="14%">{day_of_week}</td>
+                           {/display_each_day_of_week}
+                        </tr>
+                        {display_each_week}
+                           <tr>
+                              {display_each_day}
+                              {if day_in_current_month}
+                                 <td class="calendarCell">{day format="%j"}
+                              {if:else}
+                                 <td class="calendarCell calendarBlank">{day format="%j"}
+                              {/if}
+                              {display_each_hour}
+                                 {events}
+
+                                <div id="{url_title}" class="cal-event {categories}{category_url_title}{/categories}">
+                                   
+
+
+                                   <a href="{path='{segment_1}/class'}/{url_title}/" >{class_course}{class_course:title}{/class_course}</a>
+                                   
+                                  
+
+
+                                   <p>
+                                     
+                                   
+                                   </p>
+                                 </div>
+                                 {/events}
+                              {/display_each_hour}
+                           </td>
+                           {/display_each_day}
+                        </tr>
+                        {/display_each_week}
+                  </tbody>      
+      </table>
+   {/display_each_month}   
+   {/exp:calendar:cal}
+     {exp:calendar:cal event_id="{embed:class_ids}" date_range_start="+3 month begin"  date_range_end="+3 month end" show_months="1"}
+      {display_each_month}
+<table class="section table table-bordered">  
+ <thead>
+ <tr>
+   <th style="text-align: center !important;">
+      </th>
+      
+      <th colspan="5" style="text-align: center!important; border-left: 1px solid white !important;"><h4><strong>{month format="%F %Y"}</strong></h4></th>
+      
+      <th style="text-align:center !important; border-left: 1px solid white !important;">
+    </th>
+      </tr>
+      </thead>
+     <tbody>       
+            <tr>
+                           {display_each_day_of_week}
+                           <td class="calendarDayHeading" width="14%">{day_of_week}</td>
+                           {/display_each_day_of_week}
+                        </tr>
+                        {display_each_week}
+                           <tr>
+                              {display_each_day}
+                              {if day_in_current_month}
+                                 <td class="calendarCell">{day format="%j"}
+                              {if:else}
+                                 <td class="calendarCell calendarBlank">{day format="%j"}
+                              {/if}
+                              {display_each_hour}
+                                 {events}
+
+                                <div id="{url_title}" class="cal-event {categories}{category_url_title}{/categories}">
+                                   
+
+
+                                   <a href="{path='{segment_1}/class'}/{url_title}/" >{class_course}{class_course:title}{/class_course}</a>
+                                   
+                                  
+
+
+                                   <p>
+                                     
+                                   
+                                   </p>
+                                 </div>
+                                 {/events}
+                              {/display_each_hour}
+                           </td>
+                           {/display_each_day}
+                        </tr>
+                        {/display_each_week}
+                  </tbody>      
+      </table>
+   {/display_each_month}   
+   {/exp:calendar:cal}
+     {exp:calendar:cal event_id="{embed:class_ids}" date_range_start="+4 month begin"  date_range_end="+4 month end" show_months="1"}
+      {display_each_month}
+<table class="section table table-bordered">  
+ <thead>
+ <tr>
+   <th style="text-align: center !important;">
+      </th>
+      
+      <th colspan="5" style="text-align: center!important; border-left: 1px solid white !important;"><h4><strong>{month format="%F %Y"}</strong></h4></th>
+      
+      <th style="text-align:center !important; border-left: 1px solid white !important;">
+    </th>
+      </tr>
+      </thead>
+     <tbody>       
+            <tr>
+                           {display_each_day_of_week}
+                           <td class="calendarDayHeading" width="14%">{day_of_week}</td>
+                           {/display_each_day_of_week}
+                        </tr>
+                        {display_each_week}
+                           <tr>
+                              {display_each_day}
+                              {if day_in_current_month}
+                                 <td class="calendarCell">{day format="%j"}
+                              {if:else}
+                                 <td class="calendarCell calendarBlank">{day format="%j"}
+                              {/if}
+                              {display_each_hour}
+                                 {events}
+
+                                <div id="{url_title}" class="cal-event {categories}{category_url_title}{/categories}">
+                                   
+
+
+                                   <a href="{path='{segment_1}/class'}/{url_title}/" >{class_course}{class_course:title}{/class_course}</a>
+                                   
+                                  
+
+
+                                   <p>
+                                     
+                                   
+                                   </p>
+                                 </div>
+                                 {/events}
+                              {/display_each_hour}
+                           </td>
+                           {/display_each_day}
+                        </tr>
+                        {/display_each_week}
+                  </tbody>      
+      </table>
+   {/display_each_month}   
+   {/exp:calendar:cal}
+     {exp:calendar:cal event_id="{embed:class_ids}" date_range_start="+5 month begin"  date_range_end="+5 month end" show_months="1"}
+      {display_each_month}
+<table class="section table table-bordered">  
+ <thead>
+ <tr>
+   <th style="text-align: center !important;">
+      </th>
+      
+      <th colspan="5" style="text-align: center!important; border-left: 1px solid white !important;"><h4><strong>{month format="%F %Y"}</strong></h4></th>
+      
+      <th style="text-align:center !important; border-left: 1px solid white !important;">
+    </th>
+      </tr>
+      </thead>
+     <tbody>       
+            <tr>
+                           {display_each_day_of_week}
+                           <td class="calendarDayHeading" width="14%">{day_of_week}</td>
+                           {/display_each_day_of_week}
+                        </tr>
+                        {display_each_week}
+                           <tr>
+                              {display_each_day}
+                              {if day_in_current_month}
+                                 <td class="calendarCell">{day format="%j"}
+                              {if:else}
+                                 <td class="calendarCell calendarBlank">{day format="%j"}
+                              {/if}
+                              {display_each_hour}
+                                 {events}
+
+                                <div id="{url_title}" class="cal-event {categories}{category_url_title}{/categories}">
+                                   
+
+
+                                   <a href="{path='{segment_1}/class'}/{url_title}/" >{class_course}{class_course:title}{/class_course}</a>
+                                   
+                                  
+
+
+                                   <p>
+                                     
+                                   
+                                   </p>
+                                 </div>
+                                 {/events}
+                              {/display_each_hour}
+                           </td>
+                           {/display_each_day}
+                        </tr>
+                        {/display_each_week}
+                  </tbody>      
+      </table>
+   {/display_each_month}   
+   {/exp:calendar:cal}
+     {exp:calendar:cal event_id="{embed:class_ids}" date_range_start="+6 month begin"  date_range_end="+6 month end" show_months="1"}
+      {display_each_month}
+<table class="section table table-bordered">  
+ <thead>
+ <tr>
+   <th style="text-align: center !important;">
+      </th>
+      
+      <th colspan="5" style="text-align: center!important; border-left: 1px solid white !important;"><h4><strong>{month format="%F %Y"}</strong></h4></th>
+      
+      <th style="text-align:center !important; border-left: 1px solid white !important;">
+    </th>
+      </tr>
+      </thead>
+     <tbody>       
+            <tr>
+                           {display_each_day_of_week}
+                           <td class="calendarDayHeading" width="14%">{day_of_week}</td>
+                           {/display_each_day_of_week}
+                        </tr>
+                        {display_each_week}
+                           <tr>
+                              {display_each_day}
+                              {if day_in_current_month}
+                                 <td class="calendarCell">{day format="%j"}
+                              {if:else}
+                                 <td class="calendarCell calendarBlank">{day format="%j"}
+                              {/if}
+                              {display_each_hour}
+                                 {events}
+
+                                <div id="{url_title}" class="cal-event {categories}{category_url_title}{/categories}">
+                                   
+
+
+                                   <a href="{path='{segment_1}/class'}/{url_title}/" >{class_course}{class_course:title}{/class_course}</a>
+                                   
+                                  
+
+
+                                   <p>
+                                     
+                                   
+                                   </p>
+                                 </div>
+                                 {/events}
+                              {/display_each_hour}
+                           </td>
+                           {/display_each_day}
+                        </tr>
+                        {/display_each_week}
+                  </tbody>      
+      </table>
+   {/display_each_month}   
+   {/exp:calendar:cal}
+     {exp:calendar:cal event_id="{embed:class_ids}" date_range_start="+7 month begin"  date_range_end="+7 month end" show_months="1"}
+      {display_each_month}
+<table class="section table table-bordered">  
+ <thead>
+ <tr>
+   <th style="text-align: center !important;">
+      </th>
+      
+      <th colspan="5" style="text-align: center!important; border-left: 1px solid white !important;"><h4><strong>{month format="%F %Y"}</strong></h4></th>
+      
+      <th style="text-align:center !important; border-left: 1px solid white !important;">
+    </th>
+      </tr>
+      </thead>
+     <tbody>       
+            <tr>
+                           {display_each_day_of_week}
+                           <td class="calendarDayHeading" width="14%">{day_of_week}</td>
+                           {/display_each_day_of_week}
+                        </tr>
+                        {display_each_week}
+                           <tr>
+                              {display_each_day}
+                              {if day_in_current_month}
+                                 <td class="calendarCell">{day format="%j"}
+                              {if:else}
+                                 <td class="calendarCell calendarBlank">{day format="%j"}
+                              {/if}
+                              {display_each_hour}
+                                 {events}
+
+                                <div id="{url_title}" class="cal-event {categories}{category_url_title}{/categories}">
+                                   
+
+
+                                   <a href="{path='{segment_1}/class'}/{url_title}/" >{class_course}{class_course:title}{/class_course}</a>
+                                   
+                                  
+
+
+                                   <p>
+                                     
+                                   
+                                   </p>
+                                 </div>
+                                 {/events}
+                              {/display_each_hour}
+                           </td>
+                           {/display_each_day}
+                        </tr>
+                        {/display_each_week}
+                  </tbody>      
+      </table>
+   {/display_each_month}   
+   {/exp:calendar:cal}
+     {exp:calendar:cal event_id="{embed:class_ids}" date_range_start="+8 month begin"  date_range_end="+8 month end" show_months="1"}
+      {display_each_month}
+<table class="section table table-bordered">  
+ <thead>
+ <tr>
+   <th style="text-align: center !important;">
+      </th>
+      
+      <th colspan="5" style="text-align: center!important; border-left: 1px solid white !important;"><h4><strong>{month format="%F %Y"}</strong></h4></th>
+      
+      <th style="text-align:center !important; border-left: 1px solid white !important;">
+    </th>
+      </tr>
+      </thead>
+     <tbody>       
+            <tr>
+                           {display_each_day_of_week}
+                           <td class="calendarDayHeading" width="14%">{day_of_week}</td>
+                           {/display_each_day_of_week}
+                        </tr>
+                        {display_each_week}
+                           <tr>
+                              {display_each_day}
+                              {if day_in_current_month}
+                                 <td class="calendarCell">{day format="%j"}
+                              {if:else}
+                                 <td class="calendarCell calendarBlank">{day format="%j"}
+                              {/if}
+                              {display_each_hour}
+                                 {events}
+
+                                <div id="{url_title}" class="cal-event {categories}{category_url_title}{/categories}">
+                                   
+
+
+                                   <a href="{path='{segment_1}/class'}/{url_title}/" >{class_course}{class_course:title}{/class_course}</a>
+                                   
+                                  
+
+
+                                   <p>
+                                     
+                                   
+                                   </p>
+                                 </div>
+                                 {/events}
+                              {/display_each_hour}
+                           </td>
+                           {/display_each_day}
+                        </tr>
+                        {/display_each_week}
+                  </tbody>      
+      </table>
+   {/display_each_month}   
+   {/exp:calendar:cal}
+     {exp:calendar:cal event_id="{embed:class_ids}" date_range_start="+9 month begin"  date_range_end="+9 month end" show_months="1"}
+      {display_each_month}
+<table class="section table table-bordered">  
+ <thead>
+ <tr>
+   <th style="text-align: center !important;">
+      </th>
+      
+      <th colspan="5" style="text-align: center!important; border-left: 1px solid white !important;"><h4><strong>{month format="%F %Y"}</strong></h4></th>
+      
+      <th style="text-align:center !important; border-left: 1px solid white !important;">
+    </th>
+      </tr>
+      </thead>
+     <tbody>       
+            <tr>
+                           {display_each_day_of_week}
+                           <td class="calendarDayHeading" width="14%">{day_of_week}</td>
+                           {/display_each_day_of_week}
+                        </tr>
+                        {display_each_week}
+                           <tr>
+                              {display_each_day}
+                              {if day_in_current_month}
+                                 <td class="calendarCell">{day format="%j"}
+                              {if:else}
+                                 <td class="calendarCell calendarBlank">{day format="%j"}
+                              {/if}
+                              {display_each_hour}
+                                 {events}
+
+                                <div id="{url_title}" class="cal-event {categories}{category_url_title}{/categories}">
+                                   
+
+
+                                   <a href="{path='{segment_1}/class'}/{url_title}/" >{class_course}{class_course:title}{/class_course}</a>
+                                   
+                                  
+
+
+                                   <p>
+                                     
+                                   
+                                   </p>
+                                 </div>
+                                 {/events}
+                              {/display_each_hour}
+                           </td>
+                           {/display_each_day}
+                        </tr>
+                        {/display_each_week}
+                  </tbody>      
+      </table>
+   {/display_each_month}   
+   {/exp:calendar:cal}
+
+
+

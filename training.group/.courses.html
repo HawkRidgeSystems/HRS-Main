@@ -1,0 +1,16 @@
+{exp:calendar:events event_id="{embed:class_ids}" date_range_start="today" limit="8" date_range_end="4 months"}
+{if calendar_no_results}<em>There are currently no dates scheduled for this class.  Please contact us to schedule a class for you: <a href="mailto:training@hawkridgesys.com">training@hawkridgesys.com</a>; in the US 877-266-4469, in Canada 866-587-6803  .</em>{/if} 
+
+
+<div itemscope itemtype="http://schema.org/Event" class="{switch='upcoming1|upcoming2'}">
+<dl>
+<dt itemprop="name">{title}</dd>
+<dd><a itemprop="url" href="{path=training/class}/{event_url_title}/">
+
+
+<span itemprop="startdate">{event_start_date format='%l, %F %j, %Y'}:</span> 
+
+{class_location}<span  itemprop="location" >{class_location:title}</span>{/class_location}</a></dd></dt>
+</dl>
+</div>
+{/exp:calendar:events}

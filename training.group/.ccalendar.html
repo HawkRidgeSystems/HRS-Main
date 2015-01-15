@@ -1,0 +1,105 @@
+{exp:calendar:cal date_range_start="2014-month-01"  show_months="1"  }
+{display_each_month}  
+<h4>{month format="%F %Y"}</h4>                         
+                       <table class="table table-bordered">
+                               <thead>
+                                 <tr>
+                                   <th>Class Name</th>
+                                   <th>Session(s)</th>
+                                   <th>Start Date</th>
+                                   <th>Location</th>
+                                 </tr>
+                               </thead>
+                               <tbody>
+{exp:calendar:occurrences event_id="{embed:class_ids}" occurrences_limit="1"  date_range_start="2014-month-01"  show_months="1"  } 
+                        {if current_time < '{occurrence_end_date format="%U"}'}
+                              <tr>
+                                      <td><a href="/training/class/{url_title}/" >{class_course}{class_course:title}{/class_course} </a></td>
+                                        <td>{if "{occurrence_total}" == 1}
+                                                    {occurrence_total} Session
+                                                {/if}
+                                                {if "{occurrence_total} " > 1}
+                                                {occurrence_total} Sessions
+                                                {/if}</td>
+                                        <td>{event_start_date format="%D, %F %d"}</td>
+                                        <td>{class_location}{class_location:title}{/class_location}</td>
+                                    </tr>
+                        {/if}
+                          {/exp:calendar:occurrences} 
+                        </tbody>
+                        </table>
+{/display_each_month}
+{/exp:calendar:cal}
+
+{exp:calendar:cal date_range_start="+1 month begin"  date_range_end="+1 month end"  show_months="1"  }
+     {display_each_month}  
+      <h4>{month format="%F %Y"}</h4>                         
+                               <table class="table table-bordered">
+                                       <thead>
+                                         <tr>
+                                           <th>Class Name</th>
+                                           <th>Session(s)</th>
+                                           <th>Start Date</th>
+                                           <th>Location</th>
+                                         </tr>
+                                       </thead>
+                                       <tbody>
+                              
+                                  {exp:calendar:occurrences event_id="{embed:class_ids}" occurrences_limit="1" date_range_start="+1 month begin"  date_range_end="+1 month end"  show_months="1"   } 
+                                   {if current_time < '{occurrence_end_date format="%U"}'}
+                                      <tr>
+                                      <td><a href="/training/class/{url_title}/" >{class_course}{class_course:title}{/class_course} </a></td>
+                                        <td>{if "{occurrence_total}" == 1}
+                                                    {occurrence_total} Session
+                                                {/if}
+                                                {if "{occurrence_total} " > 1}
+                                                {occurrence_total} Sessions
+                                                {/if}</td>
+                                        <td>{event_start_date format="%D, %F %d"}</td>
+                                        
+                                        <td>{class_location}{class_location:title}{/class_location}</td>
+                                    </tr>
+
+{/if}
+                                  {/exp:calendar:occurrences} 
+                                </tbody>
+                                </table>
+  {/display_each_month}
+  {/exp:calendar:cal}
+
+{exp:calendar:cal date_range_start="+2 month begin"  date_range_end="+2 month end"   show_months="1"  }
+     {display_each_month}  
+      <h4>{month format="%F %Y"}</h4>                         
+                               <table class="table table-bordered">
+                                       <thead>
+                                         <tr>
+                                           <th>Class Name</th>
+                                           <th>Session(s)</th>
+                                           <th>Start Date</th>
+                                           <th>Location</th>
+                                         </tr>
+                                       </thead>
+                                       <tbody>
+                              
+                                  {exp:calendar:occurrences event_id="{embed:class_ids}" occurrences_limit="1" date_range_start="+2 month begin"  date_range_end="+2 month end" show_months="1"   } 
+                                        {if current_time < '{occurrence_end_date format="%U"}'}
+                                      <tr>
+                                      <td><a href="/training/class/{url_title}/" >{class_course}{class_course:title}{/class_course} </a></td>
+                                        <td>{if "{occurrence_total}" == 1}
+                                                    {occurrence_total} Session
+                                                {/if}
+                                                {if "{occurrence_total} " > 1}
+                                                {occurrence_total} Sessions
+                                                {/if}</td>
+                                        <td>{event_start_date format="%D, %F %d"}</td>
+                                        
+                                        <td>{class_location}{class_location:title}{/class_location}</td>
+                                    </tr>
+                                    {/if}
+                                  {/exp:calendar:occurrences} 
+                                </tbody>
+                                </table>
+  {/display_each_month}
+  {/exp:calendar:cal}
+
+

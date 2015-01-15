@@ -1,0 +1,101 @@
+{preload_replace:my_channel="calendar_events"}
+<!DOCTYPE html>
+<html>
+<head>
+<title>Hawk Ridge Systems: Training</title>
+<meta name="keywords" content="solidworks training, solidworks 2012 training, 3d cad training, flow simulation training, cad training, epdm training" />
+<meta name="description" content="SolidWorks Training: We provide an unrivaled expertise of the SolidWorks and offer over 20 different courses for 3D CAD, Simulation, PDM, and 3DVIA suite of products." />
+<meta name="robots" content="noindex, nofollow">
+{embed="_includes/.html-head"}
+</head>
+<body>
+{embed="_includes/.nav"}
+	{exp:channel:entries channel="calendar_events" limit="1" show_future_entries="yes" show_expired="no"}	
+				<div class="no-bg">
+								{breadcrumbs}
+							{exp:allow_eecode embed='y'}
+					<div class="container main">
+						<section class="allsection">
+						<div class="row">
+							<div class="col-md-8">
+									<p class="bold">Training Registration</p>
+									<h1>{if sh1}{sh1}{if:else}{class_course}		{class_course:title}{/class_course}{/if}</h1>
+									<p >{class_course}{class_course:cdesc}{/class_course}</p>
+							</div>
+<div class="col-md-3 col-md-offset-1">
+								<img src="{class_course}{class_course:course_image}{/class_course}" class="img-responsive">
+							</div>
+						</div>
+						</section>
+					</div>
+				</div>
+		<div class="container main">		
+		
+		<section class="section row">
+			<div class="col-lg-5 col-md-5 col-sm-5 col-xs-12">
+				<dl>
+				<dt>Dates:</dt>
+				<dd>{exp:calendar:occurrences event_id="{entry_id}"}{occurrence_start_date format="%l, %F %j, %Y"}<br/>{/exp:calendar:occurrences}</dd>
+				<dt>Time:</dt>
+				<dd>{if class_time !=""}{class_time}{if:else}{class_course}{class_course:ctime}{/class_course}{/if}</dd>
+				<dt>Location:</dt>
+				<dd>{class_location}{class_location:title}<br /><a href="{class_location:gmap}" target="_blank">{class_location:address}</a>{/class_location}</dd>
+				{if class_sesdesc}<dt>Session Description</dt>
+				<dd>{class_sesdesc}</dd>{/if}
+				{class_course}{if prerequisites}<dt>Pre-Requisites:</dt>
+				<dd>{class_course:prerequisites}</dd>{/if}
+				</dl>
+				<p class="bold">Space is limited. Sending the following form submits a request for a spot in the class, and <span style="color:red">DOES NOT</span> necessarily guarantee you will receive one.</p>
+				<p>If you prefer to submit this form via fax, fill out the form, print and fax to 510-482-6225, Attn: Training Registration.</p>
+			</div>
+			<div class="col-lg-7 col-md-7 col-sm-7 col-xs-12">
+			{exp:calendar:events event_id="{entry_id}"}
+			{if current_time < '{event_start_date format="%U"}'}
+				
+				<script src="//app-ab02.marketo.com/js/forms2/js/forms2.js"></script>
+				
+				<form id="mktoForm_1028"></form>
+				<script>
+					MktoForms2.loadForm("//app-ab02.marketo.com", "499-VQL-975", 1028, function(form){
+						//Set the Hidden Values
+						form.setValues({ 
+							"training3DCart":"{class_course}{class_course:cart_id}{/class_course}",
+							"trainingClassID":"{class_course}{class_course:entry_id}{/class_course}",
+							"trainingCourse":"{class_course}{class_course:title}{/class_course}",
+							"trainingDate":"{exp:calendar:occurrences event_id='{entry_id}'}{occurrence_start_date format='%l, %F %j, %Y'}<br />{/exp:calendar:occurrences}",
+							"trainingLocation":"{class_location}{class_location:title}, {class_location:state}{/class_location}"
+						});
+						//Add an onSuccess handler
+						form.onSuccess(function(values, followUpUrl){
+							if($('.mktoRadioList > input:first-child').is(':checked')) {
+							    //Take the lead to a different page on successful submit, ignoring the form's configured followUpUrl.
+							    location.href = "http://store.hawkridgesys.com/product.asp?itemid={class_course}{class_course:cart_id}{/class_course}";
+							    //return false to prevent the submission handler continuing with its own processing
+							    return false;
+							}else{
+								 //Take the lead to a different page on successful submit, ignoring the form's configured followUpUrl.
+							    location.href = "http://www.hawkridgesys.com/training/registration-success/";
+							    //return false to prevent the submission handler continuing with its own processing
+							    return false;
+							}
+						});
+					});
+					</script>
+
+			{if:elseif current_time < '{event_last_date format="%U"}'}
+				<div style="background:#838383;color:#fff;font-weight:bold;padding:15px;text-align:center;">
+				This class has already started and registration is closed.
+				</div>
+			{if:else}
+				<div style="background:#838383;color:#fff;font-weight:bold;padding:15px;text-align:center;">
+				This class is over.
+				</div>
+			{/if}
+			{/exp:calendar:events}
+			{/exp:channel:entries}
+			</div>
+		</section>
+		</div>
+{embed="_includes/.footer"}
+</body>
+</html>

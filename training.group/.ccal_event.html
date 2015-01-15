@@ -1,0 +1,29 @@
+{exp:calendar:events event_id="{embed:event_id}" }
+	{if current_time < '{event_last_date format="%U"}'}
+		{occurrences}
+	          {if "{occurrence_start_date format='%Y%m%d'}" == "{embed:cal_date}"}      
+	         <tr  class="{if '{occurrence_count}' == 1}{if:else}hide{/if}">
+	          {/if}
+	      {/occurrences}
+		<td><a class="qtip" href="/training/class/{url_title}/" title="{exp:xml_encode}{exp:eehive_hacksaw}{class_course} {class_course:cdesc}{/class_course}{/exp:eehive_hacksaw}{/exp:xml_encode}">
+		{class_course}{class_course:title}{/class_course}			      
+		</a></td>
+		<td>
+			{occurrences}
+		      {if "{occurrence_start_date format='%Y%m%d'}" == "{embed:cal_date}"}            
+				{if "{occurrence_total}" == 1}
+					{occurrence_total} Session
+				{/if}
+				{if "{occurrence_total} " > 1}
+				{occurrence_total} Sessions
+				{/if}
+		      {/if}
+		      {/occurrences}</td>
+			<td>
+			{event_start_date format="%D, %F %d"}</td>
+			<td>
+				{class_location}{class_location:title}{/class_location}
+		</td>
+		</tr> 
+		{/if}
+{/exp:calendar:events}

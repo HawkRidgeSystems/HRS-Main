@@ -1,0 +1,81 @@
+{preload_replace:my_channel="static"}
+{preload_replace:my_template_group="{segment_1}/static"}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+{if segment_3}
+{exp:channel:entries channel="{my_channel}" limit="1" disable="member_data|categories|trackbacks|pagination" rdf="off"}
+    {if no_results}
+{redirect="{my_template_group}"}
+{/if}
+<title>{h1}</title>
+<meta name="keywords" content="{exp:xml_encode}{keywords}{/exp:xml_encode}" />
+<meta name="description" content="{exp:xml_encode}{description}{/exp:xml_encode}" />
+{if:else}
+<title>{h1}</title>
+<meta name="keywords" content="{exp:xml_encode}{keywords}{/exp:xml_encode}" />
+<meta name="description" content="{exp:xml_encode}{description}{/exp:xml_encode}" />
+{/if}
+{/exp:channel:entries}
+{embed="_includes/.html-head"}
+</head>
+<body>
+{embed="_includes/.nav"}
+{if segment_3}
+    {exp:channel:entries channel="{my_channel}" limit="1" disable="trackbacks" track_views="one"}
+    {if no_results}
+{redirect="{my_template_group}"}
+{/if}
+{exp:channel:entries channel="static" limit="1" disable="trackbacks" track_views="one"}
+			<div class="no-bg">
+							{breadcrumbs}
+<div class="container main">
+	<div class="allsection">
+	<div class="row">
+	<div class="col-md-8"> 
+         <p class="bold">{heading}</p>
+	<h1>{tagtitle}</h1>
+	<p>{tagline}</p>
+	</div>
+	<div class="col-md-4">
+	{tagdescription}
+	</div>
+	</div>
+	</div>
+</div>
+			</div>
+			<div  class="container main">
+{exp:allow_eecode embed='y'}
+{body}
+{/exp:allow_eecode}
+</div>
+{/exp:channel:entries}
+{if:else}
+{exp:channel:entries channel="static" limit="1" disable="trackbacks" track_views="one"}
+			<div class="no-bg">
+										{breadcrumbs}
+			<div class="container main">
+				<div class="allsection">
+				<div class="row">
+				<div class="col-md-8"> 
+                                <p class="bold">{heading}</p>
+				<h1>{tagtitle}</h1>
+				<p>{tagline}</p>
+				</div>
+				<div class="col-md-3 col-md-offset-1">
+				{tagdescription}
+				</div>
+				</div>
+				</div>
+			</div>
+						</div>
+			<div  class="container main">
+	{exp:allow_eecode embed='y'}
+		{body}
+	{/exp:allow_eecode}
+	</div>
+{/exp:channel:entries}
+{/if}
+{embed="_includes/.footer"}
+</body>
+</html>

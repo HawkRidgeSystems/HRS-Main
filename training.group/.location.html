@@ -1,0 +1,1 @@
+{exp:query sql="SELECT title as location FROM exp_channel_titles LEFT JOIN exp_relationships ON exp_channel_titles.entry_id = exp_relationships.child_id WHERE exp_relationships.relationship_id = '{embed:loc}'"}{location}{/exp:query}

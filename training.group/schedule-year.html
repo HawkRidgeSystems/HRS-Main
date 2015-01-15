@@ -1,0 +1,198 @@
+{preload_replace:my_channel="training"}
+{preload_replace:my_template_group="{segment_1}/schedule"}
+{if segment_4}
+    <!-- Redirect if Schedule goes to dates (/bothell/2014) -->
+    {redirect='training/schedule/{segment_3}' status_code="301"}
+{/if}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+{exp:channel:entries channel="locations" url_title="{segment_3}"}
+<title>SOLIDWORKS {if segment_3}{title} Training Schedules{if:else} Training Schedules{/if} | SOLIDWORKS {categories}{category_name}{/categories}</title>
+<meta name="description" content="The #1 SOLIDWORKS Reseller of SOLIDWORKS 3D CAD Software in training in the {title} area. Check out what our {title}, {state} location has to offer." />
+{/exp:channel:entries}
+{embed="_includes/.html-head"}
+<meta name="robots" content="noindex, nofollow">
+</head>
+<body>
+{embed="_includes/.nav"}
+    {if segment_3 != ''}
+        <div class="no-bg">
+                        {breadcrumbs}
+            <div class="container main">
+                <div class="allsection">
+                        <p class="bold"> Training Schedules</p>
+                        <h1>SOLIDWORKS {exp:channel:entries channel="locations" url_title="{segment_3}"}{title}, {state}{/exp:channel:entries}</h1>
+                        <p>Click on a calendar month below and select a class/date. You will be directed to a registration form which will allow you to register for training online. After registration, the Training Coordinator will contact you  with a quote and arrange payment.</p>  
+                </div>
+            </div>
+        </div>  
+    <div class="container main">
+    <div class="row">
+        <div class="col-md-10">
+            <section class="section">
+
+            {embed="{segment_1}/.calendar-year" class_ids="<?php 
+            $result ="";
+            $query = $this->EE->db->query("SELECT parent_id AS entry FROM exp_relationships WHERE child_id = (SELECT entry_id AS entry FROM exp_channel_titles WHERE url_title = '{segment_3}')");
+            foreach ($query->result() as $row)
+            {
+               $result .= $row->entry;
+               $result .= '|';
+            }
+            $result = substr($result,0,-1);
+            if ($result == ""){
+            echo "0";
+            }else{
+            echo $result;
+            } ?>"}
+            </section>
+        </div>
+        {embed="_sidebar/.training"}
+    </div>
+</div>
+    {if:else}
+        <div class="no-bg">
+                                {breadcrumbs}
+            <div class="container main">
+                <section class="allsection">
+                        <p class="bold">Engineering Training</p>
+                        <h1> Training Schedules</h1>
+                </section>
+            </div>
+        </div>  
+<div class="container main">
+    <div class="row">
+        <div class="col-md-10">
+            <div class="row">
+                <div class="panel-group col-md-6" id="accordion">
+                    <div class="section panel panel-default">
+                            <h2 >
+                                <a class="accordion-toggle" data-parent="#accordion" data-toggle="collapse" href="#collapseOne">Canada </a>
+                                <br>
+                                <small>Calgary, Edmonton, Richmond, Toronto, Winnipeg</small>
+                                </h2>
+                        <div class="panel-collapse collapse in" id="collapseOne">
+                                    <div class="row">
+                                    {exp:channel:entries channel="locations" category="32"  disable="trackbacks" dynamic="off" search:list="Yes" orderby="title" sort="asc"}
+                                                <div class="col-lg-6">
+                                                    <div class="well well-sm thumbnail">
+                                                        <strong> <a href="http://www.hawkridgesys.com/training/schedule/{url_title}/">{title}, {state}</a></strong>
+                                                        <p>{address}</p>
+                                                        <p><abbr title="Phone"></abbr> {phone}</p>
+                                                    </div>
+                                                </div>
+                                        {/exp:channel:entries}
+                                    </div>
+                        </div>
+                    </div>
+                </div>  
+                <div class="panel-group col-md-6" id="accordion">
+                    <div class="section panel panel-default">
+                        <h2 >
+                            <a class="accordion-toggle" data-parent="#accordion" data-toggle="collapse" href="#collapseTwo">Southern California</a>
+                            <br>
+                            <small>Irvine, Ontario, Ventura, Woodland Hills</small>
+                            </h2>
+                        <div class="panel-collapse collapse in" id="collapseTwo">
+                                <div class="row">
+                                {exp:channel:entries channel="locations" category="114"  disable="trackbacks" dynamic="off" search:list="Yes" orderby="title" sort="asc"}
+                                <div class="col-lg-6 media">
+                                    <div class="well well-sm thumbnail">
+                                        <strong> <a href="http://www.hawkridgesys.com/training/schedule/{url_title}/">{title}, {state}</a></strong>
+                                        <p>{address}</p>
+                                        <p><abbr title="Phone"></abbr> {phone}</p>
+                                    </div>
+                                </div>{/exp:channel:entries}
+                                </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="panel-group col-md-6" id="accordion">
+                    <div class="section panel panel-default">
+                            <h2 >
+                                <a class="accordion-toggle" data-parent="#accordion" data-toggle="collapse" href="#collapseThree">Northwest</a>
+                                <br>
+                                <small>Seattle, Portland</small>
+                                </h2>
+                        <div class="panel-collapse collapse in" id="collapseThree">
+                                    <div class="row">
+                                    {exp:channel:entries channel="locations" category="112"  disable="trackbacks" dynamic="off" search:list="Yes" orderby="title" sort="asc"}
+                                                <div class="col-lg-6"><div class="well well-sm thumbnail">
+                                                <strong> <a href="http://www.hawkridgesys.com/training/schedule/{url_title}/">{title}, {state}</a></strong>
+                                                <p>{address}</p>
+                                                <p><abbr title="Phone"></abbr> {phone}</p>
+                                                </div>
+                                                </div>{/exp:channel:entries}
+                                    </div>
+                        </div>
+                    </div>
+                </div>  
+                <div class="panel-group col-md-6" id="accordion">
+                    <div class="section panel panel-default">
+                        <h2 >
+                            <a class="accordion-toggle" data-parent="#accordion" data-toggle="collapse" href="#collapseFour">Nevada</a>
+                            <br>
+                            <small>Las Vegas, Reno</small>
+                            </h2>
+                        <div class="panel-collapse collapse in" id="collapseFour">
+                                <div class="row">
+                                    {exp:channel:entries channel="locations" category="29"  disable="trackbacks" dynamic="off" search:list="Yes" orderby="title" sort="asc"}
+                                                <div class="col-lg-6"><div class="well well-sm thumbnail">
+                                                <strong> <a href="http://www.hawkridgesys.com/training/schedule/{url_title}/">{title}, {state}</a></strong>
+                                                <p>{address}</p>
+                                                <p><abbr title="Phone"></abbr> {phone}</p>
+                                                </div>
+                                                </div>{/exp:channel:entries}
+                                </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="panel-group col-md-6" id="accordion">
+                    <div class="section panel panel-default">
+                            <h2 >
+                                <a class="accordion-toggle" data-parent="#accordion" data-toggle="collapse" href="#collapseFive">Northern California</a>
+                                <br>
+                                <small>Mountain View, Orinda, Rohnert Park</small>
+                                </h2>
+                        <div class="panel-collapse collapse in" id="collapseFive">
+                                    <div class="row">
+                                        {exp:channel:entries channel="locations" category="113"  disable="trackbacks" dynamic="off" search:list="Yes" orderby="title" sort="asc"}
+                                                    <div class="col-lg-6"><div class="well well-sm thumbnail">
+                                                    <strong> <a href="http://www.hawkridgesys.com/training/schedule/{url_title}/">{title}, {state}</a></strong>
+                                                    <p>{address}</p>
+                                                    <p><abbr title="Phone"></abbr> {phone}</p>
+                                                    </div>
+                                                    </div>{/exp:channel:entries}
+                                    </div>
+                        </div>
+                    </div>
+                </div>  
+                <div class="panel-group col-md-6" id="accordion">
+                    <div class="section panel panel-default">
+                        <h2 >
+                            <a class="accordion-toggle" href="/training/schedule/online-training/">Online Training</a>
+                            <br>
+                            <small>Anywhere</small>
+                            </h2>
+                        <div class="panel-collapse collapse" id="collapseSix">
+                            <div class="panel-body">
+                                
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        {embed="_sidebar/.training"}
+    </div>
+</div>
+{/if}
+{embed="_includes/.footer"}
+
+</body>
+</html>
