@@ -220,3 +220,58 @@
 	{/exp:switchee}
 	{/exp:channel:entries}
 
+	<script type="text/javascript">
+      var getUrlParameter = function getUrlParameter(sParam) {
+          var sPageURL = decodeURIComponent(window.location.search.substring(1)),
+              sURLVariables = sPageURL.split('&'),
+              sParameterName,
+              indexy;
+
+          for (indexy = 0; indexy < sURLVariables.length; indexy++) {
+              sParameterName = sURLVariables[indexy].split('=');
+
+              if (sParameterName[0] === sParam) {
+                  return sParameterName[1] === undefined ? true : sParameterName[1];
+              }
+          }
+      };
+
+
+
+      
+    </script>
+    <script>
+
+
+      $( document ).ready(function() {
+          console.log( "ready!" );
+
+          var Path = getUrlParameter('Path');
+          var Stream = getUrlParameter('Stream');
+          var Content = decodeURI(location.pathname);
+          var UTM_Other = getUrlParameter('UTM_Other');
+          var UTM_Desc = getUrlParameter('UTM_Desc');
+          var leadId = getUrlParameter('leadId');
+          var UTM_Program = getUrlParameter('UTM_Program');
+          var leadSource = getUrlParameter('leadSource');
+          var activityDate = getUrlParameter('activityDate');
+
+
+          jQuery(function() {
+
+              $('input#Path').val(Path);
+              $('input#Stream').val(Stream);
+              $('input#Content').val(Content);
+              $('input#UTM_Other').val(UTM_Other);
+              $('input#UTM_Desc').val(UTM_Desc);
+              $('input#leadId').val(leadId);
+
+              $('input#UTM_Program').val(UTM_Program);
+              $('input#LeadSource').val(leadSource);
+              $('input#activityDate').val(activityDate);
+              $('#eddieForm').submit();
+          });
+
+          // document.getElementById("eddieForm").submit()
+      });
+    </script>
