@@ -272,3 +272,10 @@
       });
     </script>
     <script src="http://fast.wistia.net/labs/fresh-url/v1.js" async></script>
+    <script>
+    	FreshUrl.waitsFor(function(){freshUrl.allReady()}).then(function(){
+    	  // This will fire once all analytics platforms are ready
+    	  // Scrub everything in the query string, not just utm_*
+    	  window.history.replaceState({}, '', window.location.pathname + window.location.hash);
+    	});
+    </script>
