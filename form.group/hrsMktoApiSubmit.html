@@ -113,7 +113,7 @@
           {/exp:switchee}
         {if:else}
           <script>MktoForms2.loadForm("//app-ab02.marketo.com", "499-VQL-975", {form-id});</script>
-          <script type="text/javascript" charset="utf-8">
+          <!-- <script type="text/javascript" charset="utf-8">
 
             function getParameterByName(name) {
               name = name.replace(/[\[]/, "\\\[").replace(/[\]]/, "\\\]");
@@ -147,7 +147,7 @@
                 addFormElem(param, utmParams[param]);
               }
             });
-          </script>
+          </script> -->
 
         {/if}
         {cta-script}
@@ -256,7 +256,7 @@
 
           jQuery(function() {
 
-              $('input#UTM_Path').val(Path);
+              $('input#UTM_Path').val(UTM_Path);
               $('input#Stream').val(Stream);
               $('input#Content').val(Content);
               $('input#UTM_Other').val(UTM_Other);
@@ -270,7 +270,6 @@
               $('#mktoForm_1696').submit();
           });
 
-          // document.getElementById("eddieForm").submit()
       });
     </script>
     <script>history.replaceState("", "", window.location.pathname);</script>
