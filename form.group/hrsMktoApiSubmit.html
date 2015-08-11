@@ -236,3 +236,39 @@
 
       
     </script>
+    <script>
+
+
+      $( document ).ready(function() {
+          console.log( "ready!" );
+
+          var UTM_Path = getUrlParameter('UTM_Path');
+          var Stream = getUrlParameter('Stream');
+          var Content = decodeURI(location.pathname);
+          var UTM_Other = getUrlParameter('UTM_Other');
+          var UTM_Desc = getUrlParameter('UTM_Desc');
+          var leadId = getUrlParameter('leadId');
+          var UTM_Program = getUrlParameter('UTM_Program');
+          var leadSource = getUrlParameter('leadSource');
+          var activityDate = getUrlParameter('activityDate');
+          var email = getUrlParameter('Email');
+
+
+          jQuery(function() {
+
+              $('input#UTM_Path').val(UTM_Path);
+              $('input#Stream').val(Stream);
+              $('input#Content').val(Content);
+              $('input#UTM_Other').val(UTM_Other);
+              $('input#UTM_Desc').val(UTM_Desc);
+              $('input#Email').val(email);
+
+              $('input#UTM_Program').val(UTM_Program);
+              $('input#leadSource').val(leadSource);
+              $('input#activityDate').val(activityDate);
+              $('input#Email').val(email);
+              $('.mktoButton').click();
+          });
+
+      });
+    </script>
