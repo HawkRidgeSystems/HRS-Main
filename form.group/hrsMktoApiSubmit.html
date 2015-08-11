@@ -242,7 +242,7 @@
       $( document ).ready(function() {
           console.log( "ready!" );
 
-          var Path = getUrlParameter('Path');
+          var UTM_Path = getUrlParameter('UTM_Path');
           var Stream = getUrlParameter('Stream');
           var Content = decodeURI(location.pathname);
           var UTM_Other = getUrlParameter('UTM_Other');
@@ -251,6 +251,7 @@
           var UTM_Program = getUrlParameter('UTM_Program');
           var leadSource = getUrlParameter('leadSource');
           var activityDate = getUrlParameter('activityDate');
+          var email = getUrlParameter('Email');
 
 
           jQuery(function() {
@@ -265,6 +266,7 @@
               $('input#UTM_Program').val(UTM_Program);
               $('input#leadSource').val(leadSource);
               $('input#activityDate').val(activityDate);
+              $('input#Email').val(email);
               $('#mktoForm_1696').submit();
           });
 
