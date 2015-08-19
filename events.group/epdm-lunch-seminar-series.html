@@ -1,0 +1,285 @@
+{preload_replace:my_channel="events"} {preload_replace:my_template_group="{segment_1}/solidworks-user-group-meetings"}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    {if segment_3} {exp:channel:entries channel="{my_channel}" limit="1" disable="member_data|categories|trackbacks|pagination" rdf="off" url_title="{segment_3}"} {if no_results} {redirect="{my_template_group}"} {/if}
+    <title>{eh1}</title>
+    <meta name="keywords" content="{exp:xml_encode}{ekeywords}{/exp:xml_encode}" />
+    <meta name="description" content="{exp:xml_encode}{edescription}{/exp:xml_encode}" /> {/exp:channel:entries} {if:else}
+    <title>EP | Hawk Ridge Systems</title>
+    <meta name="keywords" content="{exp:xml_encode}Hawk Ridge Systems EPDM Lunch Seminar Series{/exp:xml_encode}" />
+    <meta name="description" content="{exp:xml_encode}Hawk Ridge Systems EPDM Lunch Seminar Series{/exp:xml_encode}" /> {/if} {embed="_includes/.html-head"}
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+    <!-- Optional theme -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap-theme.min.css">
+    <script src="https://code.jquery.com/jquery-1.11.3.js"></script>
+    <!-- Latest compiled and minified JavaScript -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+</head>
+
+<body>
+    {embed="_includes/.nav"} {if segment_3} {exp:channel:entries channel="{my_channel}" limit="1" disable="trackbacks" track_views="one" url_title="{segment_3}"} {if no_results} {redirect="{my_template_group}"} {/if}
+    <style>
+    .sub-bg {
+        background-image: url('/images/banners/subpage/events.png');
+    }
+    </style>
+    <div class="sub-bg">
+        {breadcrumbs}
+        <div class="container main">
+            <div class="tag col-md-6">
+                <h1>Hawk Ridge Systems EPDM Lunch Seminar Series: <em>{title}</em></h1>
+            </div>
+        </div>
+    </div>
+    <div class="container main">
+        <section class="section">
+            {edesc}
+        </section>
+    </div>
+    {/exp:channel:entries} {if:else}
+    <div class="no-bg">
+        {breadcrumbs}
+        <div class="container main">
+            <section class="allsection">
+                <p class="bold"> Hawk Ridge Systems Events</p>
+                <h1>Hawk Ridge Systems EPDM Lunch Seminar Series</h1>
+                <p>Bacon ipsum dolor amet filet mignon ham sirloin bresaola. Meatball strip steak venison tongue rump flank. Tail pancetta ribeye tenderloin, bresaola ham biltong spare ribs pig capicola ground round turducken frankfurter chuck. Frankfurter tenderloin sirloin beef ribs strip steak ham pancetta. Pork chop capicola hamburger, pork belly turducken venison tongue filet mignon spare ribs meatball kielbasa picanha sirloin. Flank tail ham hock beef ribs cupim strip steak. Bresaola shoulder tongue, capicola swine prosciutto frankfurter corned beef beef shank.</p>
+            </section>
+        </div>
+    </div>
+    <div class="container main">
+        <div class="row">
+            <div class="col-md-12">
+                <section class="section">
+                    <div class="page-header">
+                        <h3>
+					SOLIDWORKS EPDM Seminars - by location:</h3>
+                    </div>
+                    <div class="panel-group" id="accordion">
+                        <div class="panel panel-default">
+                            <div class="panel-heading">
+                                <h3 class="panel-title" style="font-size:18px;">
+					<a data-parent="#accordion" data-toggle="collapse" href="#collapseOne" style="color:#0089CF">Orinda</a></h3>
+                            </div>
+                            <div class="accordion-body collapse" id="collapseOne">
+                                <table class="table table-condensed mxcolor" id="mxcolor" style="width: 100%;">
+                                    <tbody>
+                                        <tr>
+                                            <td>
+                                                <strong class="visible-desktop" style="padding-right:55px">Location</strong></td>
+                                            <td>
+                                                <strong class="visible-desktop">Date / Time</strong></td>
+                                            <td>
+                                                <strong class="visible-desktop">Host</strong></td>
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                                4 Orinda Way
+                                                <br> Suite 100
+                                                <br> Orinda, CA 94563
+                                            </td>
+                                            <td>
+                                                Tuesday, September 8, 2015
+                                                <br>
+                                            </td>
+                                            <td>Jon Toews</td>
+                                        </tr>
+                                        <tr>
+                                            <td colspan="3" width="100%">
+                                                <table>
+                                                    <tr>
+                                                        <td align="center" class="text-center">
+                                                            <form id="mktoForm_1707"></form>
+                                                        </td>
+                                                    </tr>
+                                                </table>
+                                            </td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                        <div class="panel panel-default">
+                            <div class="panel-heading">
+                                <h3 class="panel-title" style="font-size:18px;">
+					<a data-parent="#accordion" data-toggle="collapse" href="#collapseTwo" style="color:#0089CF">Bothell</a></h3>
+                            </div>
+                            <div class="accordion-body collapse" id="collapseTwo">
+                                <table class="table table-condensed mxcolor" id="mxcolor" style="width: 100%;">
+                                    <tbody>
+                                        <tr>
+                                            <td>
+                                                <strong class="visible-desktop" style="padding-right:55px">Location</strong></td>
+                                            <td>
+                                                <strong class="visible-desktop">Date / Time</strong></td>
+                                            <td>
+                                                <strong class="visible-desktop">Host</strong></td>
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                                18939 120th Ave
+                                                <br> Suite 112
+                                                <br> Bothell, WA 98011
+                                                <br>
+                                            </td>
+                                            <td>Monday, September 14, 2015</td>
+                                            <td>Jon Toews</td>
+                                        </tr>
+                                        <tr>
+                                            <td colspan="3" width="100%">
+                                                <table>
+                                                    <tr>
+                                                        <td align="center" class="text-center">
+                                                            <form id="mktoForm_1707"></form>
+                                                        </td>
+                                                    </tr>
+                                                </table>
+                                            </td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                        <div class="panel panel-default">
+                            <div class="panel-heading">
+                                <h3 class="panel-title" style="font-size:18px;">
+					<a data-parent="#accordion" data-toggle="collapse" href="#collapseThree" style="color:#0089CF">Beaverton</a></h3>
+                            </div>
+                            <div class="accordion-body collapse" id="collapseThree">
+                                <table class="table table-condensed mxcolor" id="mxcolor" style="width: 100%;">
+                                    <tbody>
+                                        <tr>
+                                            <td>
+                                                <strong class="visible-desktop" style="padding-right:55px">Location</strong></td>
+                                            <td>
+                                                <strong class="visible-desktop">Date / Time</strong></td>
+                                            <td>
+                                                <strong class="visible-desktop">Host</strong></td>
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                                15220 NW Greenbrier Pkwy
+                                                <br> Suite 270
+                                                <br> Beaverton, OR 97006
+                                                <br>
+                                            </td>
+                                            <td>Tuesday, September 15, 2015
+                                                <br>
+                                            <td>Jon Toews</td>
+                                        </tr>
+                                        <tr>
+                                            <td colspan="3" width="100%">
+                                                <table>
+                                                    <tr>
+                                                        <td align="center" class="text-center">
+                                                            <form id="mktoForm_1707"></form>
+                                                        </td>
+                                                    </tr>
+                                                </table>
+                                            </td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                        <div class="panel panel-default">
+                            <div class="panel-heading">
+                                <h3 class="panel-title" style="font-size:18px;">
+					<a data-parent="#accordion" data-toggle="collapse" href="#collapseFour" style="color:#0089CF">Irvine</a></h3>
+                            </div>
+                            <div class="accordion-body collapse" id="collapseFour">
+                                <table class="table table-condensed mxcolor" id="mxcolor" style="width: 100%;">
+                                    <tbody>
+                                        <tr>
+                                            <td>
+                                                <strong class="visible-desktop" style="padding-right:55px">Location</strong></td>
+                                            <td>
+                                                <strong class="visible-desktop">Date / Time</strong></td>
+                                            <td>
+                                                <strong class="visible-desktop">Host</strong></td>
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                                16735 Von Karman Ave.
+                                                <br> Suite 200
+                                                <br> Irvine, CA 92606
+                                                <br>
+                                            </td>
+                                            <td>Monday, September 16, 2015
+                                                <br>
+                                            <td>Jon Toews</td>
+                                        </tr>
+                                        <tr>
+                                            <td colspan="3" width="100%">
+                                                <table>
+                                                    <tr>
+                                                        <td align="center" class="text-center">
+                                                            <form id="mktoForm_1707"></form>
+                                                        </td>
+                                                    </tr>
+                                                </table>
+                                            </td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                        <div class="panel panel-default">
+                            <div class="panel-heading">
+                                <h3 class="panel-title" style="font-size:18px;">
+					<a data-parent="#accordion" data-toggle="collapse" href="#collapseFive" style="color:#0089CF">Richmond</a></h3>
+                            </div>
+                            <div class="accordion-body collapse" id="collapseFive">
+                                <table class="table table-condensed mxcolor" id="mxcolor" style="width: 100%;">
+                                    <tbody>
+                                        <tr>
+                                            <td>
+                                                <strong class="visible-desktop" style="padding-right:55px">Location</strong></td>
+                                            <td>
+                                                <strong class="visible-desktop">Date / Time</strong></td>
+                                            <td>
+                                                <strong class="visible-desktop">Host</strong></td>
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                                10451 Shellbridge Way
+                                                <br> Suite 204
+                                                <br> Richmond, BC V6X 2W8
+                                                <br>
+                                            </td>
+                                            <td>Friday, September 18, 2015
+                                                <br>
+                                            <td>Scott Killen</td>
+                                        </tr>
+                                        <tr>
+                                            <td colspan="3" width="100%">
+                                                <table>
+                                                    <tr>
+                                                        <td align="center" class="text-center">
+                                                            <form id="mktoForm_1707"></form>
+                                                        </td>
+                                                    </tr>
+                                                </table>
+                                            </td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+            </div>
+            {embed="_sidebar/.events"}
+        </div>
+    </div>
+    {/if} {embed="_includes/.footer"}
+    <script src="http://app-ab02.marketo.com/js/forms2/js/forms2.min.js"></script>
+    <script>
+    MktoForms2.loadForm("http://app-ab02.marketo.com", "499-VQL-975", 1707);
+    </script>
+</body>
+
+</html>
