@@ -374,7 +374,7 @@ footer .row{
 
 @media screen and (min-width: 1500px){
     .sec-bg .part{
-        margin-top: 14% !important;
+        margin-top: 22% !important;
     }
 }
 @media screen and (min-width: 1280px){
@@ -405,8 +405,8 @@ footer .row{
     .sec-bg .part{
        -webkit-background-size: 350px;
         -moz-background-size: 350px;
-        background-size: 350px;
-        height: 309px;
+        background-size: 600px;
+        height: 338px;
     }
     .sec-bg .swx-logo{
         width: 600px;
