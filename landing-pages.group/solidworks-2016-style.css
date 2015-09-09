@@ -87,7 +87,10 @@ footer .row{
         margin-bottom: 5px;
     }
 
-
+/*TEXT*/
+.readable{
+    background-color: rgba(79,128,158,.7);
+}
 
 /*------------------------------------*\
     $FADES
@@ -374,7 +377,7 @@ footer .row{
 
 @media screen and (min-width: 1500px){
     .sec-bg .part{
-        margin-top: 22% !important;
+        margin-top: 10% !important;
     }
 }
 @media screen and (min-width: 1280px){
