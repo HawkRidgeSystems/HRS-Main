@@ -1,5 +1,5 @@
 body{
-    background-image:url(http://www.hawkridgesys.com/image/solidworks-2015/swx2015-bg.jpg);
+    background-image:url(http://www.hawkridgesys.com/image/solidworks-2016/swx2016-bg.jpg);
     background-repeat: repeat;
     background-attachment: fixed;
     background-size: cover !important;
@@ -114,7 +114,7 @@ footer .row{
 
 /*----- $FRONT-SECTION BACKGROUND -----*/
 .sec-bg {
-    background-image:url(http://www.hawkridgesys.com/image/solidworks-2015/swx2015-bg.jpg);
+    background-image:url(http://www.hawkridgesys.com/image/solidworks-2016/swx2016-bg.jpg);
     background-repeat: repeat;
     background-attachment: fixed;
     background-size: cover !important;
@@ -133,7 +133,7 @@ footer .row{
         text-align:center;
     }*/
     .sec-bg .part{
-        background-image:url(/image/solidworks-2015/swx-2015-part.png);
+        background-image:url(/image/solidworks-2016/swx-2016-part.png);
         height:150px;
         margin-top: 80px;
         position: relative;
@@ -240,12 +240,12 @@ footer .row{
     position:relative;
     z-index: 999;
 }
-    .sec-prods .prods-1{background-image:url('http://www.hawkridgesys.com/image/solidworks-2015/swx-prods-1.jpg');}
-    .sec-prods .prods-2{background-image:url('http://www.hawkridgesys.com/image/solidworks-2015/swx-products-2.jpg');}
-    .sec-prods .prods-3{background-image:url('http://www.hawkridgesys.com/image/solidworks-2015/swx-products-3.jpg');}
-    .sec-prods .prods-4{background-image:url('http://www.hawkridgesys.com/image/solidworks-2015/swx-products-4.jpg');}
-    .sec-prods .prods-5{background-image:url('http://www.hawkridgesys.com/image/solidworks-2015/swx-products-5.jpg');}
-    .sec-prods .prods-6{background-image:url('http://www.hawkridgesys.com/image/solidworks-2015/swx-products-6.jpg');}
+    .sec-prods .prods-1{background-image:url('http://www.hawkridgesys.com/image/solidworks-2016/swx-prods-1.jpg');}
+    .sec-prods .prods-2{background-image:url('http://www.hawkridgesys.com/image/solidworks-2016/swx-products-2.jpg');}
+    .sec-prods .prods-3{background-image:url('http://www.hawkridgesys.com/image/solidworks-2016/swx-products-3.jpg');}
+    .sec-prods .prods-4{background-image:url('http://www.hawkridgesys.com/image/solidworks-2016/swx-products-4.jpg');}
+    .sec-prods .prods-5{background-image:url('http://www.hawkridgesys.com/image/solidworks-2016/swx-products-5.jpg');}
+    .sec-prods .prods-6{background-image:url('http://www.hawkridgesys.com/image/solidworks-2016/swx-products-6.jpg');}
 
     .sec-prods a{
         
