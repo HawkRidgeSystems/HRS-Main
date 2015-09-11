@@ -49,15 +49,15 @@ body{
 }
 
 nav{
-	position: absolute;
-	right: 0;
-	left: 0;
-	z-index: 1030;
+    position: absolute;
+    right: 0;
+    left: 0;
+    z-index: 1030;
     padding: 2% !important;
 }
     .navigation{
         margin:0;
-	float:none;
+    float:none;
     }
     .front-page.navigation{
         -webkit-animation: fade 5000ms ease;
@@ -76,9 +76,7 @@ footer .row{
         text-align:right;
         font-weight:bolder;
     }
-    footer .row div:nth-child(3) a{
-        color:white;
-    }
+    footer .row div:nth-child(3) a{color:white;}
     footer .row div:nth-child(2) p{
         font-size:11px;
         line-height:13px;
@@ -91,6 +89,9 @@ footer .row{
 .readable{
     background-color: rgba(79,128,158,.7);
     padding: 10px;
+}
+.panel-default > .panel-heading {
+  background-color: background-color: rgba(79,128,158,.7);
 }
 
 /*------------------------------------*\
@@ -133,13 +134,11 @@ footer .row{
         text-align: center;
     }
    /* .sec-bg .container,
-    .sec-prods .container{
-        text-align:center;
-    }*/
+    .sec-prods .container{text-align:center;}*/
     .sec-bg .part{
-        background-image:url(/image/solidworks-2016/swx-2016-part.png);
+        background-image:url(/images/solidworks-2016/swx-2016-part.png);
         height:150px;
-        margin-top: 80px;
+        margin-top: 25%;
         position: relative;
         z-index:1;
         -webkit-background-size:59%;
@@ -164,8 +163,8 @@ footer .row{
         width:250px;
         height:50px;
         
-        margin-top:-50%;
-        margin-left:-39%;
+        margin-top:-45%;
+        margin-left:-20%;
         
 
         z-index:999;
@@ -244,34 +243,31 @@ footer .row{
     position:relative;
     z-index: 999;
 }
-   /* .sec-prods .prods-1{background-image:url('http://www.hawkridgesys.com/image/solidworks-2016/swx-prods-1.jpg');}
-    .sec-prods .prods-2{background-image:url('http://www.hawkridgesys.com/image/solidworks-2016/swx-products-2.jpg');}
-    .sec-prods .prods-3{background-image:url('http://www.hawkridgesys.com/image/solidworks-2016/swx-products-3.jpg');}
-    .sec-prods .prods-4{background-image:url('http://www.hawkridgesys.com/image/solidworks-2016/swx-products-4.jpg');}
-    .sec-prods .prods-5{background-image:url('http://www.hawkridgesys.com/image/solidworks-2016/swx-products-5.jpg');}
-    .sec-prods .prods-6{background-image:url('http://www.hawkridgesys.com/image/solidworks-2016/swx-products-6.jpg');}*/
+/*    .sec-prods .prods-1{background-image:url('http://www.hawkridgesys.com/images/solidworks-2016/swx-prods-1.jpg');}
+    .sec-prods .prods-2{background-image:url('http://www.hawkridgesys.com/images/solidworks-2016/swx-products-2.jpg');}
+    .sec-prods .prods-3{background-image:url('http://www.hawkridgesys.com/images/solidworks-2016/swx-products-3.jpg');}
+    .sec-prods .prods-4{background-image:url('http://www.hawkridgesys.com/images/solidworks-2016/swx-products-4.jpg');}
+    .sec-prods .prods-5{background-image:url('http://www.hawkridgesys.com/images/solidworks-2016/swx-products-5.jpg');}
+    .sec-prods .prods-6{background-image:url('http://www.hawkridgesys.com/images/solidworks-2016/swx-products-6.jpg');}*/
 
-    .sec-prods .prods-1{background-image:url('http://www.hawkridgesys.com/image/solidworks-2016/prods-1.jpg');}
-    .sec-prods .prods-2{background-image:url('http://www.hawkridgesys.com/image/solidworks-2016/prods-2.jpg');}
-    .sec-prods .prods-3{background-image:url('http://www.hawkridgesys.com/image/solidworks-2016/prods-3.jpg');}
-    .sec-prods .prods-4{background-image:url('http://www.hawkridgesys.com/image/solidworks-2016/prods-4.jpg');}
-    .sec-prods .prods-5{background-image:url('http://www.hawkridgesys.com/image/solidworks-2016/prods-5.jpg');}
-    .sec-prods .prods-6{background-image:url('http://www.hawkridgesys.com/image/solidworks-2016/prods-6.jpg');}
+    .sec-prods .prods-1{background-image:url('../images/solidworks-2016/prods-1.jpg');}
+    .sec-prods .prods-2{background-image:url('../images/solidworks-2016/prods-2.jpg');}
+    .sec-prods .prods-3{background-image:url('../images/solidworks-2016/prods-3.jpg');}
+    .sec-prods .prods-4{background-image:url('../images/solidworks-2016/prods-4.jpg');}
+    .sec-prods .prods-5{background-image:url('../images/solidworks-2016/prods-5.jpg');}
+    .sec-prods .prods-6{background-image:url('../images/solidworks-2016/prods-6.jpg');}
+
     .sec-prods a{
         
     }
-        .sec-prods a:hover{
-            color:black;
-        }
+        .sec-prods a:hover{color:black;}
     .sec-prods h2, .sec-subprods h2{
         padding-top: 86%;
         font-family: '3dsbold' !important;
         margin: 0;
         text-transform: uppercase;
     }
-    .sec-prods h2{
-        font-size:9px;
-    }
+    .sec-prods h2{font-size:9px;}
 /*    .sec-subprods{
         font-size: 30px;
     }*/
@@ -342,9 +338,7 @@ footer .row{
     background-color:white;
     padding:4% 0;
 }
-    .sec-hawk h2{
-        font-size:15px;
-    }
+    .sec-hawk h2{font-size:15px;}
 
 .sec-subprods .row{
     padding:4% 0;
@@ -355,8 +349,8 @@ footer .row{
     }
 
 .sec-features,
-.sec-prods,
-.sec-subprods{
+/*.sec-prods,*/
+.sec-subprods*/{
     padding: 6% 0;
 }
 
@@ -365,12 +359,8 @@ footer .row{
     line-height: 18px;
     font-size:15px;
 }
-    .sec-new a{
-        color:white;
-    }
-    .sec-new a:hover{
-        color:#545454;
-    }
+    .sec-new a{color:white;}
+    .sec-new a:hover{color:#545454;}
     .sec-new h5{
         font-weight: bolder;
     }
@@ -384,12 +374,12 @@ footer .row{
 
 @media screen and (min-width: 1500px){
     .sec-bg .part{
-        margin-top: 18% !important;
+        margin-top: 15% !important;
     }
 }
 @media screen and (min-width: 1280px){
     .sec-bg .part{
-        margin-top: 80px;
+        margin-top: 15%;
     }
 }
 @media screen and (min-width: 768px){
@@ -404,9 +394,7 @@ footer .row{
             font-size: 27px;
             line-height: 35px;
         }
-        .sec-intro h1{
-            font-size:50px;
-        }
+        .sec-intro h1{font-size:50px;}
         .sec-new h4,
         .sec-intro h4{
             line-height: 30px;
@@ -421,12 +409,10 @@ footer .row{
     .sec-bg .swx-logo{
         width: 600px;
         height: 124px;
-        margin-top: -18%;
+        margin-top: -20%;
         margin-left: -310px;
     }
-    .sec-bg h1{
-        font-size:80px;
-    }
+    .sec-bg h1{font-size:80px;}
     .sec-bg p{
         font-size:25px;
         line-height: 35px;
@@ -436,9 +422,7 @@ footer .row{
     .sec-subbg {
     min-height: 300px;
     }
-    .sec-prods h2, .sec-hawk h2{
-        font-size:30px;
-    }
+    .sec-prods h2, .sec-hawk h2{font-size:30px;}
     .prods-box p{
         font-size:14px;
         line-height:24px;
@@ -452,11 +436,15 @@ footer .row{
     .prods-box h2 {
         font-size: 24px;
     }
+    .sec-bg .swx-logo{
+        width: 500px;
+        height: 102px;
+        margin-top: -30%;
+        margin-left: -310px;
+    }
 }
 @media only screen and (max-width: 768px){
-    #simple-menu{
-        float:right;
-    }
+    #simple-menu{float:right;}
     .sec-bg .btn,
     .sec-subbg .btn,
     .sec-prods .btn,
@@ -484,17 +472,11 @@ footer .row{
         padding:0 22%;
 
     }
-    .sec-bg .front-buttons{
-        padding:2%;
-    }
-    .sec-bg .part{
-        margin-top:4%;
-    }    
+    .sec-bg .front-buttons{padding:2%;}
+    .sec-bg .part{margin-top:14%;}    
 }
 @media only screen and (min-height: 800px) and (max-height:1000px){
-    .sec-bg .part{
-        margin-top:16%;
-    }    
+    .sec-bg .part{margin-top:25%;}    
 }
 @media only screen and (max-width: 480px), only screen and (max-device-width: 480px){
 
@@ -810,9 +792,9 @@ body{
 }
 
 /* make keyframes that tell the start state and the end state of our object */
-@-webkit-keyframes fadeIn { from { opacity:0; } to { opacity:1; } }
-@-moz-keyframes fadeIn { from { opacity:0; } to { opacity:1; } }
-@keyframes fadeIn { from { opacity:0; } to { opacity:1; } }
+@-webkit-keyframes fadeIn { from {opacity:0;} to {opacity:1;} }
+@-moz-keyframes fadeIn { from {opacity:0;} to {opacity:1;} }
+@keyframes fadeIn { from {opacity:0;} to {opacity:1;} }
  
 .fade-in {
     opacity:0;  /* make things invisible upon start */
@@ -1003,4 +985,10 @@ body{
 }
 .sidr input[type=button]:hover, .sidr input[type=submit]:hover {
     background: rgba(51, 51, 51, 0.9);
+}
+.row-eq-height {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display:         flex;
 }
