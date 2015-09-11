@@ -251,12 +251,12 @@ footer .row{
     .sec-prods .prods-5{background-image:url('http://www.hawkridgesys.com/image/solidworks-2016/swx-products-5.jpg');}
     .sec-prods .prods-6{background-image:url('http://www.hawkridgesys.com/image/solidworks-2016/swx-products-6.jpg');}*/
 
-    .sec-prods .prods-1{background-image:url('../images/solidworks-2016/prods-1.jpg');}
-    .sec-prods .prods-2{background-image:url('../images/solidworks-2016/prods-2.jpg');}
-    .sec-prods .prods-3{background-image:url('../images/solidworks-2016/prods-3.jpg');}
-    .sec-prods .prods-4{background-image:url('../images/solidworks-2016/prods-4.jpg');}
-    .sec-prods .prods-5{background-image:url('../images/solidworks-2016/prods-5.jpg');}
-    .sec-prods .prods-6{background-image:url('../images/solidworks-2016/prods-6.jpg');}
+    .sec-prods .prods-1{background-image:url('http://www.hawkridgesys.com/image/solidworks-2016/prods-1.jpg');}
+    .sec-prods .prods-2{background-image:url('http://www.hawkridgesys.com/image/solidworks-2016/prods-2.jpg');}
+    .sec-prods .prods-3{background-image:url('http://www.hawkridgesys.com/image/solidworks-2016/prods-3.jpg');}
+    .sec-prods .prods-4{background-image:url('http://www.hawkridgesys.com/image/solidworks-2016/prods-4.jpg');}
+    .sec-prods .prods-5{background-image:url('http://www.hawkridgesys.com/image/solidworks-2016/prods-5.jpg');}
+    .sec-prods .prods-6{background-image:url('http://www.hawkridgesys.com/image/solidworks-2016/prods-6.jpg');}
     .sec-prods a{
         
     }
