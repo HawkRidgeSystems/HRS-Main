@@ -592,11 +592,17 @@ footer .row div:nth-child(5) ul li a {
 
 @media only screen and (max-width: 480px),
 only screen and (max-device-width: 480px) {
-    body {
+    /*body {
         -o-background-size: 400% 400% !important;
         -webkit-background-size: 400% 400% !important;
         -moz-background-size: 400% 400% !important;
         background-size: 400% 400% !important;
+    }*/
+    body {
+        -o-background-size: cover !important;
+        -webkit-background-size: cover !important;
+        -moz-background-size: cover !important;
+        background-size: cover !important;
     }
     .sec-bg {
         -o-background-size: 247% auto !important;
