@@ -90,8 +90,17 @@ footer .row{
     background-color: rgba(79,128,158,.7);
     padding: 10px;
 }
-.panel-default > .panel-heading {
-  background-color: background-color: rgba(79,128,158,.7);
+
+.panel-transparent {
+    background: none;
+}
+
+.panel-transparent .panel-heading{
+    background: rgba(122, 130, 136, 0.2)!important;
+}
+
+.panel-transparent .panel-body{
+    background: rgba(79,128,158,.7)!important;
 }
 
 /*------------------------------------*\
