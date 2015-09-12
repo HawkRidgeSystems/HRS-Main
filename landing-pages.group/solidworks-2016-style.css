@@ -95,11 +95,11 @@ footer .row{
     background: none;
 }
 
-.panel-transparent .panel-heading{
+/*.panel-transparent .panel-heading{
     background: rgba(122, 130, 136, 0.2)!important;
-}
+}*/
 
-.panel-transparent .panel-body{
+.panel-transparent .panel-body, .panel-transparent .panel-heading {
     background: rgba(79,128,158,.7)!important;
 }
 
