@@ -1,5 +1,5 @@
-body{
-    background-image:url(http://www.hawkridgesys.com/image/solidworks-2016/swx2016-bg-new.jpg);
+body {
+    background-image: url(http://www.hawkridgesys.com/image/solidworks-2016/swx2016-bg-new.jpg);
     background-repeat: repeat;
     background-attachment: fixed;
     background-size: cover !important;
@@ -11,83 +11,85 @@ body{
     height: 100vh;
 }
 
+
 /*------------------------------------*\
     $FONTS
 \*------------------------------------*/
+
 @font-face {
     font-family: '3dssemibold';
     src: url('/fonts/3ds_semibold-webfont.eot');
-    src: url('/fonts/3ds_semibold-webfont.eot?#iefix') format('embedded-opentype'),
-         url('/fonts/3ds_semibold-webfont.woff') format('woff'),
-         url('/fonts/3ds_semibold-webfont.ttf') format('truetype'),
-         url('/fonts/3ds_semibold-webfont.svg#3dssemibold') format('svg');
+    src: url('/fonts/3ds_semibold-webfont.eot?#iefix') format('embedded-opentype'), url('/fonts/3ds_semibold-webfont.woff') format('woff'), url('/fonts/3ds_semibold-webfont.ttf') format('truetype'), url('/fonts/3ds_semibold-webfont.svg#3dssemibold') format('svg');
     font-weight: normal;
     font-style: normal;
-
 }
+
 @font-face {
     font-family: '3dsbold';
     src: url('/fonts/3ds_bold-webfont.eot');
-    src: url('/fonts/3ds_bold-webfont.eot?#iefix') format('embedded-opentype'),
-         url('/fonts/3ds_bold-webfont.woff') format('woff'),
-         url('/fonts/3ds_bold-webfont.ttf') format('truetype'),
-         url('/fonts/3ds_bold-webfont.svg#3dsbold') format('svg');
+    src: url('/fonts/3ds_bold-webfont.eot?#iefix') format('embedded-opentype'), url('/fonts/3ds_bold-webfont.woff') format('woff'), url('/fonts/3ds_bold-webfont.ttf') format('truetype'), url('/fonts/3ds_bold-webfont.svg#3dsbold') format('svg');
     font-weight: normal;
     font-style: normal;
-
 }
+
 @font-face {
     font-family: '3dslight';
     src: url('/fonts/3ds_light-webfont.eot');
-    src: url('/fonts/3ds_light-webfont.eot?#iefix') format('embedded-opentype'),
-         url('/fonts/3ds_light-webfont.woff') format('woff'),
-         url('/fonts/3ds_light-webfont.ttf') format('truetype'),
-         url('/fonts/3ds_light-webfont.svg#3dslight') format('svg');
+    src: url('/fonts/3ds_light-webfont.eot?#iefix') format('embedded-opentype'), url('/fonts/3ds_light-webfont.woff') format('woff'), url('/fonts/3ds_light-webfont.ttf') format('truetype'), url('/fonts/3ds_light-webfont.svg#3dslight') format('svg');
     font-weight: normal;
     font-style: normal;
-
 }
 
-nav{
+nav {
     position: absolute;
     right: 0;
     left: 0;
     z-index: 1030;
     padding: 2% !important;
 }
-    .navigation{
-        margin:0;
-    float:none;
-    }
-    .front-page.navigation{
-        -webkit-animation: fade 5000ms ease;
-        -moz-animation: fade 5000ms ease;
-        -o-animation: fade 5000ms ease;
-        -ms-animation: fade 5000ms ease;
-        animation: fade 5000ms ease;
-        transition: transform 600ms cubic-bezier(0.645, 0.045, 0.355, 1), top 600ms cubic-bezier(0.77, 0, 0.175, 1);
-    }
 
-footer .row{
-    padding:4% 0;
-    color:white;
+.navigation {
+    margin: 0;
+    float: none;
 }
-    footer .row div:nth-child(3){
-        text-align:right;
-        font-weight:bolder;
-    }
-    footer .row div:nth-child(3) a{color:white;}
-    footer .row div:nth-child(2) p{
-        font-size:11px;
-        line-height:13px;
-    }
-    footer .row div:nth-child(5) ul li a{
-        margin-bottom: 5px;
-    }
+
+.front-page.navigation {
+    -webkit-animation: fade 5000ms ease;
+    -moz-animation: fade 5000ms ease;
+    -o-animation: fade 5000ms ease;
+    -ms-animation: fade 5000ms ease;
+    animation: fade 5000ms ease;
+    transition: transform 600ms cubic-bezier(0.645, 0.045, 0.355, 1), top 600ms cubic-bezier(0.77, 0, 0.175, 1);
+}
+
+footer .row {
+    padding: 4% 0;
+    color: white;
+}
+
+footer .row div:nth-child(3) {
+    text-align: right;
+    font-weight: bolder;
+}
+
+footer .row div:nth-child(3) a {
+    color: white;
+}
+
+footer .row div:nth-child(2) p {
+    font-size: 11px;
+    line-height: 13px;
+}
+
+footer .row div:nth-child(5) ul li a {
+    margin-bottom: 5px;
+}
+
 
 /*TEXT*/
-.readable{
-    background-color: rgba(79,128,158,.7);
+
+.readable {
+    background-color: rgba(79, 128, 158, .7);
     padding: 10px;
 }
 
@@ -100,26 +102,30 @@ footer .row{
     color: white;
 }
 
-.panel-transparent .panel-body, .panel-transparent .panel-heading {
-    background: rgba(79,128,158,.7)!important;
+.panel-transparent .panel-body,
+.panel-transparent .panel-heading {
+    background: rgba(79, 128, 158, .7)!important;
 }
+
 
 /*------------------------------------*\
     $FADES
 \*------------------------------------*/
-.fader{
+
+.fader {
     -webkit-animation: fade 5000ms ease;
     -moz-animation: fade 5000ms ease;
     -o-animation: fade 5000ms ease;
     -ms-animation: fade 5000ms ease;
-    animation: fade 5000ms ease;    
+    animation: fade 5000ms ease;
 }
-.q-fader{
+
+.q-fader {
     -webkit-animation: fade 100ms ease;
     -moz-animation: fade 100ms ease;
     -o-animation: fade 100ms ease;
     -ms-animation: fade 100ms ease;
-    animation: fade 100ms ease;    
+    animation: fade 100ms ease;
 }
 
 
@@ -127,9 +133,11 @@ footer .row{
     $SECTIONS
 \*------------------------------------*/
 
+
 /*----- $FRONT-SECTION BACKGROUND -----*/
+
 .sec-bg {
-    background-image:url(http://www.hawkridgesys.com/image/solidworks-2016/swx2016-bg-new.jpg);
+    background-image: url(http://www.hawkridgesys.com/image/solidworks-2016/swx2016-bg-new.jpg);
     background-repeat: repeat;
     background-attachment: fixed;
     background-size: cover !important;
@@ -138,121 +146,140 @@ footer .row{
     max-width: 1920px;
     position: relative;
 }
-    .sec-bg{
-        min-height: 600px;
-        height: 100vh;
-        text-align: center;
-    }
-   /* .sec-bg .container,
+
+.sec-bg {
+    min-height: 600px;
+    height: 100vh;
+    text-align: center;
+}
+
+
+/* .sec-bg .container,
     .sec-prods .container{text-align:center;}*/
-    .sec-bg .part{
-        background-image:url(/image/solidworks-2016/swx-2016-part.png);
-        height:150px;
-        margin-top: 25%;
-        position: relative;
-        z-index:1;
-        -webkit-background-size:59%;
-        -moz-background-size:59%;
-        background-size:59%;
-        -webkit-animation: fade 3600ms ease;
-        -moz-animation: fade 3600ms ease;
-        -o-animation: fade 3600ms ease;
-        -ms-animation: fade 3600ms ease;
-        animation: fade 3600ms ease;    
-    }
 
-    .sec-bg .swx-logo{
-        -webkit-animation: slideUp 2000ms ease;
-        -moz-animation: slideUp 2000ms ease;
-        -o-animation: slideUp 2000ms ease;
-        -ms-animation: slideUp 2000ms ease;
-        animation: slideUp 2000ms ease;
-        position: absolute;
-        top: 50%;
-        left: 50%;
-        width:250px;
-        height:50px;
-        
-        margin-top:-45%;
-        margin-left:-20%;
-        
+.sec-bg .part {
+    background-image: url(/image/solidworks-2016/swx-2016-part.png);
+    height: 150px;
+    margin-top: 25%;
+    position: relative;
+    z-index: 1;
+    -webkit-background-size: 59%;
+    -moz-background-size: 59%;
+    background-size: 59%;
+    -webkit-animation: fade 3600ms ease;
+    -moz-animation: fade 3600ms ease;
+    -o-animation: fade 3600ms ease;
+    -ms-animation: fade 3600ms ease;
+    animation: fade 3600ms ease;
+}
 
-        z-index:999;
-    }
-    .sec-bg h1{
-        font-family: '3dssemibold' !important;
-        color:white;
-        font-size:37px;
-        text-align: center;
-        position:relative;
-        margin-top:-7%;
-        -webkit-animation: fade 2800ms ease;
-        -moz-animation: fade 2800ms ease;
-        -o-animation: fade 2800ms ease;
-        -ms-animation: fade 2800ms ease;
-        animation: fade 2800ms ease;
-    } 
+.sec-bg .swx-logo {
+    -webkit-animation: slideUp 2000ms ease;
+    -moz-animation: slideUp 2000ms ease;
+    -o-animation: slideUp 2000ms ease;
+    -ms-animation: slideUp 2000ms ease;
+    animation: slideUp 2000ms ease;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 250px;
+    height: 50px;
+    margin-top: -45%;
+    margin-left: -20%;
+    z-index: 999;
+}
 
-    .sec-bg p{
-        font-family: '3dslight' !important;
-        color:white;
-        font-size:14px;        
-        line-height:21px;
-        text-align: center;
-        position:relative;
-        padding:0 6%;
-        -webkit-animation: fade 4000ms ease;
-        -moz-animation: fade 4000ms ease;
-        -o-animation: fade 4000ms ease;
-        -ms-animation: fade 4000ms ease;
-        animation: fade 4000ms ease;
-    }
-    .sec-bg .front-buttons{
-        padding: 1%;
-        -webkit-animation: fade 4400ms ease;
-        -moz-animation: fade 4400ms ease;
-        -o-animation: fade 4400ms ease;
-        -ms-animation: fade 4400ms ease;
-        animation: fade 4400ms ease;    
-    }
-    .part, .swx-logo{
-        background-position: center center;
-        background-repeat: no-repeat;
-        margin: 0 auto;
-    }
+.sec-bg h1 {
+    font-family: '3dssemibold' !important;
+    color: white;
+    font-size: 37px;
+    text-align: center;
+    position: relative;
+    margin-top: -7%;
+    -webkit-animation: fade 2800ms ease;
+    -moz-animation: fade 2800ms ease;
+    -o-animation: fade 2800ms ease;
+    -ms-animation: fade 2800ms ease;
+    animation: fade 2800ms ease;
+}
+
+.sec-bg p {
+    font-family: '3dslight' !important;
+    color: white;
+    font-size: 14px;
+    line-height: 21px;
+    text-align: center;
+    position: relative;
+    padding: 0 6%;
+    -webkit-animation: fade 4000ms ease;
+    -moz-animation: fade 4000ms ease;
+    -o-animation: fade 4000ms ease;
+    -ms-animation: fade 4000ms ease;
+    animation: fade 4000ms ease;
+}
+
+.sec-bg .front-buttons {
+    padding: 1%;
+    -webkit-animation: fade 4400ms ease;
+    -moz-animation: fade 4400ms ease;
+    -o-animation: fade 4400ms ease;
+    -ms-animation: fade 4400ms ease;
+    animation: fade 4400ms ease;
+}
+
+.part,
+.swx-logo {
+    background-position: center center;
+    background-repeat: no-repeat;
+    margin: 0 auto;
+}
+
 
 /*----- $SUB-SECTION BACKGROUND -----*/
+
 .sec-subbg {
     min-height: 200px;
 }
 
+
 /*----- $SECTION INTRO -----*/
-.sec-intro{
-    margin: 70 0 0 0; /* auto;*/
-    text-align: center;  
-    padding: 0;    
+
+.sec-intro {
+    margin: 70 0 0 0;
+    /* auto;*/
+    text-align: center;
+    padding: 0;
 }
-    .sec-intro p{
-        font-size: 16px;
-        color: #a2a2a2;
-        font-weight: 100;
-        font-family: "Helvetica Neue", sans-serif !important;
-    }
-    .sec-intro h1{
-        font-size:30px;
-        font-family: '3dsbold' !important;
-        text-transform: uppercase;
-        margin-top:0;
-    }
-    .sec-intro h4{
-        padding: 0 14%;
-    }
+
+.sec-intro p {
+    font-size: 16px;
+    color: #a2a2a2;
+    font-weight: 100;
+    font-family: "Helvetica Neue", sans-serif !important;
+}
+
+.sec-intro h1 {
+    font-size: 30px;
+    font-family: '3dsbold' !important;
+    text-transform: uppercase;
+    margin-top: 0;
+}
+
+.sec-intro h4 {
+    padding: 0 14%;
+}
+
+
 /*----- $SECTION PRODUCTS -----*/
-.sec-prods, .sec-subprods{
-    background-color:white;
-    position:relative;
+
+.sec-prods,
+.sec-subprods {
+    background-color: white;
+    position: relative;
     z-index: 999;
 }
+
+
 /*    .sec-prods .prods-1{background-image:url('http://www.hawkridgesys.com/images/solidworks-2016/swx-prods-1.jpg');}
     .sec-prods .prods-2{background-image:url('http://www.hawkridgesys.com/images/solidworks-2016/swx-products-2.jpg');}
     .sec-prods .prods-3{background-image:url('http://www.hawkridgesys.com/images/solidworks-2016/swx-products-3.jpg');}
@@ -260,272 +287,345 @@ footer .row{
     .sec-prods .prods-5{background-image:url('http://www.hawkridgesys.com/images/solidworks-2016/swx-products-5.jpg');}
     .sec-prods .prods-6{background-image:url('http://www.hawkridgesys.com/images/solidworks-2016/swx-products-6.jpg');}*/
 
-    .sec-prods .prods-1{background-image:url('http://www.hawkridgesys.com/image/solidworks-2016/prods-1.jpg');}
-    .sec-prods .prods-2{background-image:url('http://www.hawkridgesys.com/image/solidworks-2016/prods-2.jpg');}
-    .sec-prods .prods-3{background-image:url('http://www.hawkridgesys.com/image/solidworks-2016/prods-3.jpg');}
-    .sec-prods .prods-4{background-image:url('http://www.hawkridgesys.com/image/solidworks-2016/prods-4.jpg');}
-    .sec-prods .prods-5{background-image:url('http://www.hawkridgesys.com/image/solidworks-2016/prods-5.jpg');}
-    .sec-prods .prods-6{background-image:url('http://www.hawkridgesys.com/image/solidworks-2016/prods-6.jpg');}
+.sec-prods .prods-1 {
+    background-image: url('http://www.hawkridgesys.com/image/solidworks-2016/prods-1.jpg');
+}
 
-    .sec-prods a{
-        
-    }
-        .sec-prods a:hover{color:black;}
-    .sec-prods h2, .sec-subprods h2{
-        padding-top: 86%;
-        font-family: '3dsbold' !important;
-        margin: 0;
-        text-transform: uppercase;
-    }
-    .sec-prods h2{font-size:9px;}
+.sec-prods .prods-2 {
+    background-image: url('http://www.hawkridgesys.com/image/solidworks-2016/prods-2.jpg');
+}
+
+.sec-prods .prods-3 {
+    background-image: url('http://www.hawkridgesys.com/image/solidworks-2016/prods-3.jpg');
+}
+
+.sec-prods .prods-4 {
+    background-image: url('http://www.hawkridgesys.com/image/solidworks-2016/prods-4.jpg');
+}
+
+.sec-prods .prods-5 {
+    background-image: url('http://www.hawkridgesys.com/image/solidworks-2016/prods-5.jpg');
+}
+
+.sec-prods .prods-6 {
+    background-image: url('http://www.hawkridgesys.com/image/solidworks-2016/prods-6.jpg');
+}
+
+.sec-prods a {}
+
+.sec-prods a:hover {
+    color: black;
+}
+
+.sec-prods h2,
+.sec-subprods h2 {
+    padding-top: 86%;
+    font-family: '3dsbold' !important;
+    margin: 0;
+    text-transform: uppercase;
+}
+
+.sec-prods h2 {
+    font-size: 9px;
+}
+
+
 /*    .sec-subprods{
         font-size: 30px;
     }*/
-    .sec-subprods ul li {
-        font-size: 17px;
-        line-height: 22px;
-        margin-bottom: 10px;
-        font-weight:bolder;
-    }
-    .prods-box p{
-        font-size:8px;
-        line-height:9px;
-    }
-    
-    .prods-box{
-        position: relative;
-        float: left;
-        cursor: pointer;
-        overflow: hidden;
-        background: #fff;
-        padding:0;
-        text-align:center;
-    }
-    .prods-box:hover .prods-img{
-        -webkit-transform: scale(1.05);
-        -moz-transform: scale(1.05);
-        -o-transform: scale(1.05);
-        -ms-transform: scale(1.05);
-        transform: scale(1.05);
-        -webkit-box-shadow: inset 0 0 0 1000px rgba(255, 255, 255, 0.81);
-        box-shadow: inset 0 0 0 1000px rgba(255, 255, 255, 0.81);
-    }
-    .prods-box a{
-        position:relative;
-        z-index: 999;
-        display:block;
-        padding: 0 15px;
-        color:white;
-    }
-    .prods-img{
-        position: absolute;
-        width: 100%;
-        height: 100%;
-        -webkit-background-size: cover;
-        -moz-background-size: cover;
-        background-size: cover;
-        background-position: center center;
-        background-repeat: no-repeat;
-        -webkit-transition: all 300ms ease;
-        -moz-transition: all 300ms ease;
-        -o-transition: all 300ms ease;
-        -ms-transition: all 300ms ease;
-        transition: all 300ms ease;
-        -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=80)";
-        filter: alpha(opacity=80);
-        -webkit-box-shadow: inset 0 0 0 1000px rgba(0,0,0,0);
-        box-shadow: inset 0 0 0 1000px rgba(0,0,0,0);
-        z-index:1;
-    }
-.sec-features .row{
-    color:white;
-    padding:4% 0;
-}
-    .sec-features .sec-intro{color:white;}
-    .sec-features h2{font-weight:bolder;}
 
-.sec-hawk{
-    background-color:white;
-    padding:4% 0;
+.sec-subprods ul li {
+    font-size: 17px;
+    line-height: 22px;
+    margin-bottom: 10px;
+    font-weight: bolder;
 }
-    .sec-hawk h2{font-size:15px;}
 
-.sec-subprods .row{
-    padding:4% 0;
+.prods-box p {
+    font-size: 8px;
+    line-height: 9px;
 }
-    .sec-subprods h4{
-        line-height:24px;
-        padding:0;
-    }
+
+.prods-box {
+    position: relative;
+    float: left;
+    cursor: pointer;
+    overflow: hidden;
+    background: #fff;
+    padding: 0;
+    text-align: center;
+}
+
+.prods-box:hover .prods-img {
+    -webkit-transform: scale(1.05);
+    -moz-transform: scale(1.05);
+    -o-transform: scale(1.05);
+    -ms-transform: scale(1.05);
+    transform: scale(1.05);
+    -webkit-box-shadow: inset 0 0 0 1000px rgba(255, 255, 255, 0.81);
+    box-shadow: inset 0 0 0 1000px rgba(255, 255, 255, 0.81);
+}
+
+.prods-box a {
+    position: relative;
+    z-index: 999;
+    display: block;
+    padding: 0 15px;
+    color: white;
+}
+
+.prods-img {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat;
+    -webkit-transition: all 300ms ease;
+    -moz-transition: all 300ms ease;
+    -o-transition: all 300ms ease;
+    -ms-transition: all 300ms ease;
+    transition: all 300ms ease;
+    -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=80)";
+    filter: alpha(opacity=80);
+    -webkit-box-shadow: inset 0 0 0 1000px rgba(0, 0, 0, 0);
+    box-shadow: inset 0 0 0 1000px rgba(0, 0, 0, 0);
+    z-index: 1;
+}
+
+.sec-features {
+    padding: 4%;
+}
+
+.sec-features .row {
+    color: white;
+    padding: 4% 0;
+}
+
+.sec-features .sec-intro {
+    color: white;
+}
+
+.sec-features h2 {
+    font-weight: bolder;
+}
+
+.sec-hawk {
+    background-color: white;
+    padding: 4% 0;
+}
+
+.sec-hawk h2 {
+    font-size: 15px;
+}
+
+.sec-subprods .row {
+    padding: 4% 0;
+}
+
+.sec-subprods h4 {
+    line-height: 24px;
+    padding: 0;
+}
 
 .sec-features,
+
 /*.sec-prods,*/
-.sec-subprods*/{
+
+.sec-subprods*/ {
     padding: 6% 0;
 }
 
 .sec-new h4,
-.sec-intro h4{
+.sec-intro h4 {
     line-height: 18px;
-    font-size:15px;
+    font-size: 15px;
 }
-    .sec-new a{color:white;}
-    .sec-new a:hover{color:#545454;}
-    .sec-new h5{
-        font-weight: bolder;
-    }
-.btn-link, .btn-link:hover, .btn-link:focus{
+
+.sec-new a {
+    color: white;
+}
+
+.sec-new a:hover {
+    color: #545454;
+}
+
+.sec-new h5 {
+    font-weight: bolder;
+}
+
+.btn-link,
+.btn-link:hover,
+.btn-link:focus {
     border: 1px solid #CCCCCC;
 }
+
 
 /*------------------------------------*\
     $MEDIA-QUERIES
 \*------------------------------------*/
 
-@media screen and (min-width: 1500px){
-    .sec-bg .part{
+@media screen and (min-width: 1500px) {
+    .sec-bg .part {
         margin-top: 15% !important;
     }
 }
-@media screen and (min-width: 1280px){
-    .sec-bg .part{
+
+@media screen and (min-width: 1280px) {
+    .sec-bg .part {
         margin-top: 15%;
     }
 }
-@media screen and (min-width: 768px){
 
-    #events .modal-dialog{
-        width:890px !important;
+@media screen and (min-width: 768px) {
+    #events .modal-dialog {
+        width: 890px !important;
     }
-    .sec-intro{ 
+    .sec-intro {
         padding: 0 18% 4% 18%;
-        margin: 70 0 0 0;
     }
-        .sec-intro p{
-            font-size: 27px;
-            line-height: 35px;
-        }
-        .sec-intro h1{font-size:50px;}
-        .sec-new h4,
-        .sec-intro h4{
-            line-height: 30px;
-            font-size:18px;
-        }
-    .sec-bg .part{
-       -webkit-background-size: 350px;
+    .sec-intro p {
+        font-size: 27px;
+        line-height: 35px;
+    }
+    .sec-intro h1 {
+        font-size: 50px;
+    }
+    .sec-new h4,
+    .sec-intro h4 {
+        line-height: 30px;
+        font-size: 18px;
+    }
+    .sec-bg .part {
+        -webkit-background-size: 350px;
         -moz-background-size: 350px;
         background-size: 600px;
         height: 338px;
     }
-    .sec-bg .swx-logo{
+    .sec-bg .swx-logo {
         width: 600px;
         height: 124px;
         margin-top: -20%;
         margin-left: -310px;
     }
-    .sec-bg h1{font-size:80px;}
-    .sec-bg p{
-        font-size:25px;
+    .sec-bg h1 {
+        font-size: 80px;
+    }
+    .sec-bg p {
+        font-size: 25px;
         line-height: 35px;
         padding: 0 22% 0 22%;
-
     }
     .sec-subbg {
-    min-height: 300px;
+        min-height: 300px;
     }
-    .sec-prods h2, .sec-hawk h2{font-size:30px;}
-    .prods-box p{
-        font-size:14px;
-        line-height:24px;
+    .sec-prods h2,
+    .sec-hawk h2 {
+        font-size: 30px;
+    }
+    .prods-box p {
+        font-size: 14px;
+        line-height: 24px;
     }
 }
-@media only screen and (min-width: 768px) and (max-width:1199px){
-    .prods-box p{
-        font-size:12px;
-        line-height:16px;
+
+@media only screen and (min-width: 768px) and (max-width:1199px) {
+    .prods-box p {
+        font-size: 12px;
+        line-height: 16px;
     }
     .prods-box h2 {
         font-size: 24px;
     }
-    .sec-bg .swx-logo{
+    .sec-bg .swx-logo {
         width: 500px;
         height: 102px;
         margin-top: -30%;
         margin-left: -310px;
     }
 }
-@media only screen and (max-width: 768px){
-    #simple-menu{float:right;}
+
+@media only screen and (max-width: 768px) {
+    #simple-menu {
+        float: right;
+    }
     .sec-bg .btn,
     .sec-subbg .btn,
     .sec-prods .btn,
     .sec-subprods .btn,
     .sec-features .btn,
-    .sec-hawk .btn{
-        padding:4px;
-        font-size:14px;
+    .sec-hawk .btn {
+        padding: 4px;
+        font-size: 14px;
     }
-    .sec-bg p{
+    .sec-bg p {
         font-size: 14px;
         line-height: 21px;
-
     }
-    footer .btn{
-        padding:2px;
-        font-size:10px;
+    footer .btn {
+        padding: 2px;
+        font-size: 10px;
     }
-
 }
-@media only screen and (min-width:1199px) and (max-width: 1366px){
-  .sec-bg p{
-        font-size:25px;
+
+@media only screen and (min-width:1199px) and (max-width: 1366px) {
+    .sec-bg p {
+        font-size: 25px;
         line-height: 35px;
-        padding:0 22%;
-
+        padding: 0 22%;
     }
-    .sec-bg .front-buttons{padding:2%;}
-    .sec-bg .part{margin-top:14%;}    
-}
-@media only screen and (min-height: 800px) and (max-height:1000px){
-    .sec-bg .part{margin-top:25%;}    
-}
-@media only screen and (max-width: 480px), only screen and (max-device-width: 480px){
-
-body{
-     -o-background-size: 400% 400% !important;
-    -webkit-background-size: 400% 400% !important;
-    -moz-background-size: 400% 400% !important;
-    background-size: 400% 400% !important;
-}
-
-.sec-bg{
-    -o-background-size: 247% auto !important;
-    -webkit-background-size: 247% auto !important;
-    -moz-background-size: 247% auto !important;
-    background-size: 247% auto !important;
-    height: 440px !important;
-    min-height:440px !important;
+    .sec-bg .front-buttons {
+        padding: 2%;
+    }
+    .sec-bg .part {
+        margin-top: 14%;
     }
 }
 
+@media only screen and (min-height: 800px) and (max-height:1000px) {
+    .sec-bg .part {
+        margin-top: 25%;
+    }
+}
 
+@media only screen and (max-width: 480px),
+only screen and (max-device-width: 480px) {
+    body {
+        -o-background-size: 400% 400% !important;
+        -webkit-background-size: 400% 400% !important;
+        -moz-background-size: 400% 400% !important;
+        background-size: 400% 400% !important;
+    }
+    .sec-bg {
+        -o-background-size: 247% auto !important;
+        -webkit-background-size: 247% auto !important;
+        -moz-background-size: 247% auto !important;
+        background-size: 247% auto !important;
+        height: 440px !important;
+        min-height: 440px !important;
+    }
+}
 
 
 /*------------------------------------*\
     $ANIMATIONS
 \*------------------------------------*/
 
+
 /****** $SLIDEUP ******/
+
 @-moz-keyframes slideUp {
     0% {
-    -webkit-transform: translateY(100px);
-    -moz-transform: translateY(100px);
-    -o-transform: translateY(100px);
-    -ms-transform: translateY(100px);
-    transform: translateY(100px);
-    opacity: 0;
-    -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=0)";
-    filter: alpha(opacity=0);
+        -webkit-transform: translateY(100px);
+        -moz-transform: translateY(100px);
+        -o-transform: translateY(100px);
+        -ms-transform: translateY(100px);
+        transform: translateY(100px);
+        opacity: 0;
+        -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=0)";
+        filter: alpha(opacity=0);
     }
     60% {
         -webkit-transform: translateY(100px);
@@ -548,301 +648,350 @@ body{
         filter: none;
     }
 }
+
 @-webkit-keyframes slideUp {
     0% {
-    -webkit-transform: translateY(100px);
-    -moz-transform: translateY(100px);
-    -o-transform: translateY(100px);
-    -ms-transform: translateY(100px);
-    transform: translateY(100px);
-    opacity: 0;
-    -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=0)";
-    filter: alpha(opacity=0);
-}
-60% {
-    -webkit-transform: translateY(100px);
-    -moz-transform: translateY(100px);
-    -o-transform: translateY(100px);
-    -ms-transform: translateY(100px);
-    transform: translateY(100px);
-    opacity: 1;
-    -ms-filter: none;
-    filter: none;
-}
-100% {
-    -webkit-transform: translateY(0);
-    -moz-transform: translateY(0);
-    -o-transform: translateY(0);
-    -ms-transform: translateY(0);
-    transform: translateY(0);
-    opacity: 1;
-    -ms-filter: none;
-    filter: none;
-}
-}@-o-keyframes slideUp {
-    0% {
-    -webkit-transform: translateY(100px);
-    -moz-transform: translateY(100px);
-    -o-transform: translateY(100px);
-    -ms-transform: translateY(100px);
-    transform: translateY(100px);
-    opacity: 0;
-    -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=0)";
-    filter: alpha(opacity=0);
-}
-60% {
-    -webkit-transform: translateY(100px);
-    -moz-transform: translateY(100px);
-    -o-transform: translateY(100px);
-    -ms-transform: translateY(100px);
-    transform: translateY(100px);
-    opacity: 1;
-    -ms-filter: none;
-    filter: none;
-}
-100% {
-    -webkit-transform: translateY(0);
-    -moz-transform: translateY(0);
-    -o-transform: translateY(0);
-    -ms-transform: translateY(0);
-    transform: translateY(0);
-    opacity: 1;
-    -ms-filter: none;
-    filter: none;
-}
-}@keyframes slideUp {
-    0% {
-    -webkit-transform: translateY(100px);
-    -moz-transform: translateY(100px);
-    -o-transform: translateY(100px);
-    -ms-transform: translateY(100px);
-    transform: translateY(100px);
-    opacity: 0;
-    -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=0)";
-    filter: alpha(opacity=0);
-}
-60% {
-    -webkit-transform: translateY(100px);
-    -moz-transform: translateY(100px);
-    -o-transform: translateY(100px);
-    -ms-transform: translateY(100px);
-    transform: translateY(100px);
-    opacity: 1;
-    -ms-filter: none;
-    filter: none;
-}
-100% {
-    -webkit-transform: translateY(0);
-    -moz-transform: translateY(0);
-    -o-transform: translateY(0);
-    -ms-transform: translateY(0);
-    transform: translateY(0);
-    opacity: 1;
-    -ms-filter: none;
-    filter: none;
-}
+        -webkit-transform: translateY(100px);
+        -moz-transform: translateY(100px);
+        -o-transform: translateY(100px);
+        -ms-transform: translateY(100px);
+        transform: translateY(100px);
+        opacity: 0;
+        -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=0)";
+        filter: alpha(opacity=0);
+    }
+    60% {
+        -webkit-transform: translateY(100px);
+        -moz-transform: translateY(100px);
+        -o-transform: translateY(100px);
+        -ms-transform: translateY(100px);
+        transform: translateY(100px);
+        opacity: 1;
+        -ms-filter: none;
+        filter: none;
+    }
+    100% {
+        -webkit-transform: translateY(0);
+        -moz-transform: translateY(0);
+        -o-transform: translateY(0);
+        -ms-transform: translateY(0);
+        transform: translateY(0);
+        opacity: 1;
+        -ms-filter: none;
+        filter: none;
+    }
 }
 
+@-o-keyframes slideUp {
+    0% {
+        -webkit-transform: translateY(100px);
+        -moz-transform: translateY(100px);
+        -o-transform: translateY(100px);
+        -ms-transform: translateY(100px);
+        transform: translateY(100px);
+        opacity: 0;
+        -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=0)";
+        filter: alpha(opacity=0);
+    }
+    60% {
+        -webkit-transform: translateY(100px);
+        -moz-transform: translateY(100px);
+        -o-transform: translateY(100px);
+        -ms-transform: translateY(100px);
+        transform: translateY(100px);
+        opacity: 1;
+        -ms-filter: none;
+        filter: none;
+    }
+    100% {
+        -webkit-transform: translateY(0);
+        -moz-transform: translateY(0);
+        -o-transform: translateY(0);
+        -ms-transform: translateY(0);
+        transform: translateY(0);
+        opacity: 1;
+        -ms-filter: none;
+        filter: none;
+    }
+}
+
+@keyframes slideUp {
+    0% {
+        -webkit-transform: translateY(100px);
+        -moz-transform: translateY(100px);
+        -o-transform: translateY(100px);
+        -ms-transform: translateY(100px);
+        transform: translateY(100px);
+        opacity: 0;
+        -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=0)";
+        filter: alpha(opacity=0);
+    }
+    60% {
+        -webkit-transform: translateY(100px);
+        -moz-transform: translateY(100px);
+        -o-transform: translateY(100px);
+        -ms-transform: translateY(100px);
+        transform: translateY(100px);
+        opacity: 1;
+        -ms-filter: none;
+        filter: none;
+    }
+    100% {
+        -webkit-transform: translateY(0);
+        -moz-transform: translateY(0);
+        -o-transform: translateY(0);
+        -ms-transform: translateY(0);
+        transform: translateY(0);
+        opacity: 1;
+        -ms-filter: none;
+        filter: none;
+    }
+}
+
+
 /****** $FADE ******/
+
 @-moz-keyframes fade {
     0% {
-    opacity: 0;
-    -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=0)";
-    filter: alpha(opacity=0);
+        opacity: 0;
+        -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=0)";
+        filter: alpha(opacity=0);
+    }
+    80% {
+        opacity: 0;
+        -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=0)";
+        filter: alpha(opacity=0);
+    }
+    100% {
+        opacity: 1;
+        -ms-filter: none;
+        filter: none;
+    }
 }
-80% {
-    opacity: 0;
-    -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=0)";
-    filter: alpha(opacity=0);
-}
-100% {
-    opacity: 1;
-    -ms-filter: none;
-    filter: none;
-}
-}@-webkit-keyframes fade {
+
+@-webkit-keyframes fade {
     0% {
-    opacity: 0;
-    -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=0)";
-    filter: alpha(opacity=0);
+        opacity: 0;
+        -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=0)";
+        filter: alpha(opacity=0);
+    }
+    80% {
+        opacity: 0;
+        -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=0)";
+        filter: alpha(opacity=0);
+    }
+    100% {
+        opacity: 1;
+        -ms-filter: none;
+        filter: none;
+    }
 }
-80% {
-    opacity: 0;
-    -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=0)";
-    filter: alpha(opacity=0);
-}
-100% {
-    opacity: 1;
-    -ms-filter: none;
-    filter: none;
-}
-}@-o-keyframes fade {
+
+@-o-keyframes fade {
     0% {
-    opacity: 0;
-    -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=0)";
-    filter: alpha(opacity=0);
+        opacity: 0;
+        -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=0)";
+        filter: alpha(opacity=0);
+    }
+    80% {
+        opacity: 0;
+        -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=0)";
+        filter: alpha(opacity=0);
+    }
+    100% {
+        opacity: 1;
+        -ms-filter: none;
+        filter: none;
+    }
 }
-80% {
-    opacity: 0;
-    -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=0)";
-    filter: alpha(opacity=0);
-}
-100% {
-    opacity: 1;
-    -ms-filter: none;
-    filter: none;
-}
-}@keyframes fade {
+
+@keyframes fade {
     0% {
-    opacity: 0;
-    -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=0)";
-    filter: alpha(opacity=0);
+        opacity: 0;
+        -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=0)";
+        filter: alpha(opacity=0);
+    }
+    80% {
+        opacity: 0;
+        -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=0)";
+        filter: alpha(opacity=0);
+    }
+    100% {
+        opacity: 1;
+        -ms-filter: none;
+        filter: none;
+    }
 }
-80% {
-    opacity: 0;
-    -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=0)";
-    filter: alpha(opacity=0);
-}
-100% {
-    opacity: 1;
-    -ms-filter: none;
-    filter: none;
-}
-}
+
+
 /*------------------------------------*\
     $ARROW
 \*------------------------------------*/
 
 @-webkit-keyframes bounce {
-  0%, 20%, 50%, 80%, 100% {
-    -webkit-transform: translateY(0);
-    -moz-transform: translateY(0);
-    -ms-transform: translateY(0);
-    transform: translateY(0);
-  }
-
-  40% {
-    -webkit-transform: translateY(-30px);
-    -moz-transform: translateY(-30px);
-    -ms-transform: translateY(-30px);
-    transform: translateY(-30px);
-  }
-
-  60% {
-    -webkit-transform: translateY(-15px);
-    -moz-transform: translateY(-15px);
-    -ms-transform: translateY(-15px);
-    transform: translateY(-15px);
-  }
+    0%,
+    20%,
+    50%,
+    80%,
+    100% {
+        -webkit-transform: translateY(0);
+        -moz-transform: translateY(0);
+        -ms-transform: translateY(0);
+        transform: translateY(0);
+    }
+    40% {
+        -webkit-transform: translateY(-30px);
+        -moz-transform: translateY(-30px);
+        -ms-transform: translateY(-30px);
+        transform: translateY(-30px);
+    }
+    60% {
+        -webkit-transform: translateY(-15px);
+        -moz-transform: translateY(-15px);
+        -ms-transform: translateY(-15px);
+        transform: translateY(-15px);
+    }
 }
+
 @-moz-keyframes bounce {
-  0%, 20%, 50%, 80%, 100% {
-    -webkit-transform: translateY(0);
-    -moz-transform: translateY(0);
-    -ms-transform: translateY(0);
-    transform: translateY(0);
-  }
-
-  40% {
-    -webkit-transform: translateY(-30px);
-    -moz-transform: translateY(-30px);
-    -ms-transform: translateY(-30px);
-    transform: translateY(-30px);
-  }
-
-  60% {
-    -webkit-transform: translateY(-15px);
-    -moz-transform: translateY(-15px);
-    -ms-transform: translateY(-15px);
-    transform: translateY(-15px);
-  }
+    0%,
+    20%,
+    50%,
+    80%,
+    100% {
+        -webkit-transform: translateY(0);
+        -moz-transform: translateY(0);
+        -ms-transform: translateY(0);
+        transform: translateY(0);
+    }
+    40% {
+        -webkit-transform: translateY(-30px);
+        -moz-transform: translateY(-30px);
+        -ms-transform: translateY(-30px);
+        transform: translateY(-30px);
+    }
+    60% {
+        -webkit-transform: translateY(-15px);
+        -moz-transform: translateY(-15px);
+        -ms-transform: translateY(-15px);
+        transform: translateY(-15px);
+    }
 }
+
 @-ms-keyframes bounce {
-  0%, 20%, 50%, 80%, 100% {
-    -webkit-transform: translateY(0);
-    -moz-transform: translateY(0);
-    -ms-transform: translateY(0);
-    transform: translateY(0);
-  }
-
-  40% {
-    -webkit-transform: translateY(-30px);
-    -moz-transform: translateY(-30px);
-    -ms-transform: translateY(-30px);
-    transform: translateY(-30px);
-  }
-
-  60% {
-    -webkit-transform: translateY(-15px);
-    -moz-transform: translateY(-15px);
-    -ms-transform: translateY(-15px);
-    transform: translateY(-15px);
-  }
+    0%,
+    20%,
+    50%,
+    80%,
+    100% {
+        -webkit-transform: translateY(0);
+        -moz-transform: translateY(0);
+        -ms-transform: translateY(0);
+        transform: translateY(0);
+    }
+    40% {
+        -webkit-transform: translateY(-30px);
+        -moz-transform: translateY(-30px);
+        -ms-transform: translateY(-30px);
+        transform: translateY(-30px);
+    }
+    60% {
+        -webkit-transform: translateY(-15px);
+        -moz-transform: translateY(-15px);
+        -ms-transform: translateY(-15px);
+        transform: translateY(-15px);
+    }
 }
+
 @keyframes bounce {
-  0%, 20%, 50%, 80%, 100% {
-    -webkit-transform: translateY(0);
-    -moz-transform: translateY(0);
-    -ms-transform: translateY(0);
-    transform: translateY(0);
-  }
-
-  40% {
-    -webkit-transform: translateY(-30px);
-    -moz-transform: translateY(-30px);
-    -ms-transform: translateY(-30px);
-    transform: translateY(-30px);
-  }
-
-  60% {
-    -webkit-transform: translateY(-15px);
-    -moz-transform: translateY(-15px);
-    -ms-transform: translateY(-15px);
-    transform: translateY(-15px);
-  }
+    0%,
+    20%,
+    50%,
+    80%,
+    100% {
+        -webkit-transform: translateY(0);
+        -moz-transform: translateY(0);
+        -ms-transform: translateY(0);
+        transform: translateY(0);
+    }
+    40% {
+        -webkit-transform: translateY(-30px);
+        -moz-transform: translateY(-30px);
+        -ms-transform: translateY(-30px);
+        transform: translateY(-30px);
+    }
+    60% {
+        -webkit-transform: translateY(-15px);
+        -moz-transform: translateY(-15px);
+        -ms-transform: translateY(-15px);
+        transform: translateY(-15px);
+    }
 }
+
 
 /* make keyframes that tell the start state and the end state of our object */
-@-webkit-keyframes fadeIn { from {opacity:0;} to {opacity:1;} }
-@-moz-keyframes fadeIn { from {opacity:0;} to {opacity:1;} }
-@keyframes fadeIn { from {opacity:0;} to {opacity:1;} }
- 
-.fade-in {
-    opacity:0;  /* make things invisible upon start */
-    -webkit-animation:fadeIn ease-in 1;  /* call our keyframe named fadeIn, use animattion ease-in and repeat it only 1 time */
-    -moz-animation:fadeIn ease-in 1;
-    animation:fadeIn ease-in 1;
- 
-    -webkit-animation-fill-mode:forwards;  /* this makes sure that after animation is done we remain at the last keyframe value (opacity: 1)*/
-    -moz-animation-fill-mode:forwards;
-    animation-fill-mode:forwards;
- 
-    -webkit-animation-duration:1ms;
-    -moz-animation-duration:1ms;
-    animation-duration:1ms;
-}
- 
 
+@-webkit-keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+@-moz-keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+.fade-in {
+    opacity: 0;
+    /* make things invisible upon start */
+    -webkit-animation: fadeIn ease-in 1;
+    /* call our keyframe named fadeIn, use animattion ease-in and repeat it only 1 time */
+    -moz-animation: fadeIn ease-in 1;
+    animation: fadeIn ease-in 1;
+    -webkit-animation-fill-mode: forwards;
+    /* this makes sure that after animation is done we remain at the last keyframe value (opacity: 1)*/
+    -moz-animation-fill-mode: forwards;
+    animation-fill-mode: forwards;
+    -webkit-animation-duration: 1ms;
+    -moz-animation-duration: 1ms;
+    animation-duration: 1ms;
+}
 
 .arrow {
-  position: fixed;
-  z-index:1;
-  bottom: 0;
-  left: 50%;
-  margin-left: -20px;
-  width: 40px;
-  height: 40px;  
-  background-image: url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iVVRGLTgiPz4NCjwhLS0gR2VuZXJhdG9yOiBBZG9iZSBJbGx1c3RyYXRvciAxNi4wLjAsIFNWRyBFeHBvcnQgUGx1Zy1JbiAuIFNWRyBWZXJzaW9uOiA2LjAwIEJ1aWxkIDApICAtLT4NCjwhRE9DVFlQRSBzdmcgUFVCTElDICItLy9XM0MvL0RURCBTVkcgMS4xLy9FTiIgImh0dHA6Ly93d3cudzMub3JnL0dyYXBoaWNzL1NWRy8xLjEvRFREL3N2ZzExLmR0ZCI+DQo8c3ZnIHZlcnNpb249IjEuMSIgaWQ9IkxheWVyXzEiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgeG1sbnM6eGxpbms9Imh0dHA6Ly93d3cudzMub3JnLzE5OTkveGxpbmsiIHg9IjBweCIgeT0iMHB4IiB3aWR0aD0iNTEycHgiIGhlaWdodD0iNTEycHgiIHZpZXdCb3g9IjAgMCA1MTIgNTEyIiBlbmFibGUtYmFja2dyb3VuZD0ibmV3IDAgMCA1MTIgNTEyIiB4bWw6c3BhY2U9InByZXNlcnZlIj4NCjxwYXRoIGZpbGw9IiNGRkZGRkYiIGQ9Ik0yOTMuNzUxLDQ1NS44NjhjLTIwLjE4MSwyMC4xNzktNTMuMTY1LDE5LjkxMy03My42NzMtMC41OTVsMCwwYy0yMC41MDgtMjAuNTA4LTIwLjc3My01My40OTMtMC41OTQtNzMuNjcyICBsMTg5Ljk5OS0xOTBjMjAuMTc4LTIwLjE3OCw1My4xNjQtMTkuOTEzLDczLjY3MiwwLjU5NWwwLDBjMjAuNTA4LDIwLjUwOSwyMC43NzIsNTMuNDkyLDAuNTk1LDczLjY3MUwyOTMuNzUxLDQ1NS44Njh6Ii8+DQo8cGF0aCBmaWxsPSIjRkZGRkZGIiBkPSJNMjIwLjI0OSw0NTUuODY4YzIwLjE4LDIwLjE3OSw1My4xNjQsMTkuOTEzLDczLjY3Mi0wLjU5NWwwLDBjMjAuNTA5LTIwLjUwOCwyMC43NzQtNTMuNDkzLDAuNTk2LTczLjY3MiAgbC0xOTAtMTkwYy0yMC4xNzgtMjAuMTc4LTUzLjE2NC0xOS45MTMtNzMuNjcxLDAuNTk1bDAsMGMtMjAuNTA4LDIwLjUwOS0yMC43NzIsNTMuNDkyLTAuNTk1LDczLjY3MUwyMjAuMjQ5LDQ1NS44Njh6Ii8+DQo8L3N2Zz4=);
-  background-size: contain;
-  color: grey;
-
+    position: fixed;
+    z-index: 1;
+    bottom: 0;
+    left: 50%;
+    margin-left: -20px;
+    width: 40px;
+    height: 40px;
+    background-image: url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iVVRGLTgiPz4NCjwhLS0gR2VuZXJhdG9yOiBBZG9iZSBJbGx1c3RyYXRvciAxNi4wLjAsIFNWRyBFeHBvcnQgUGx1Zy1JbiAuIFNWRyBWZXJzaW9uOiA2LjAwIEJ1aWxkIDApICAtLT4NCjwhRE9DVFlQRSBzdmcgUFVCTElDICItLy9XM0MvL0RURCBTVkcgMS4xLy9FTiIgImh0dHA6Ly93d3cudzMub3JnL0dyYXBoaWNzL1NWRy8xLjEvRFREL3N2ZzExLmR0ZCI+DQo8c3ZnIHZlcnNpb249IjEuMSIgaWQ9IkxheWVyXzEiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgeG1sbnM6eGxpbms9Imh0dHA6Ly93d3cudzMub3JnLzE5OTkveGxpbmsiIHg9IjBweCIgeT0iMHB4IiB3aWR0aD0iNTEycHgiIGhlaWdodD0iNTEycHgiIHZpZXdCb3g9IjAgMCA1MTIgNTEyIiBlbmFibGUtYmFja2dyb3VuZD0ibmV3IDAgMCA1MTIgNTEyIiB4bWw6c3BhY2U9InByZXNlcnZlIj4NCjxwYXRoIGZpbGw9IiNGRkZGRkYiIGQ9Ik0yOTMuNzUxLDQ1NS44NjhjLTIwLjE4MSwyMC4xNzktNTMuMTY1LDE5LjkxMy03My42NzMtMC41OTVsMCwwYy0yMC41MDgtMjAuNTA4LTIwLjc3My01My40OTMtMC41OTQtNzMuNjcyICBsMTg5Ljk5OS0xOTBjMjAuMTc4LTIwLjE3OCw1My4xNjQtMTkuOTEzLDczLjY3MiwwLjU5NWwwLDBjMjAuNTA4LDIwLjUwOSwyMC43NzIsNTMuNDkyLDAuNTk1LDczLjY3MUwyOTMuNzUxLDQ1NS44Njh6Ii8+DQo8cGF0aCBmaWxsPSIjRkZGRkZGIiBkPSJNMjIwLjI0OSw0NTUuODY4YzIwLjE4LDIwLjE3OSw1My4xNjQsMTkuOTEzLDczLjY3Mi0wLjU5NWwwLDBjMjAuNTA5LTIwLjUwOCwyMC43NzQtNTMuNDkzLDAuNTk2LTczLjY3MiAgbC0xOTAtMTkwYy0yMC4xNzgtMjAuMTc4LTUzLjE2NC0xOS45MTMtNzMuNjcxLDAuNTk1bDAsMGMtMjAuNTA4LDIwLjUwOS0yMC43NzIsNTMuNDkyLTAuNTk1LDczLjY3MUwyMjAuMjQ5LDQ1NS44Njh6Ii8+DQo8L3N2Zz4=);
+    background-size: contain;
+    color: grey;
 }
 
 .bounce {
-  -webkit-animation: bounce 2s infinite;
-  -moz-animation: bounce 2s infinite;
-  -ms-animation: bounce 2s infinite;
-  animation: bounce 2s infinite;
+    -webkit-animation: bounce 2s infinite;
+    -moz-animation: bounce 2s infinite;
+    -ms-animation: bounce 2s infinite;
+    animation: bounce 2s infinite;
 }
 
 
@@ -863,31 +1012,41 @@ body{
     font-size: 15px;
     background: #f8f8f8;
     color: #333;
-     border-left: 1px solid #ddd;
+    border-left: 1px solid #ddd;
 }
+
 .sidr .sidr-inner {
     padding: 0 0 15px;
 }
+
 .sidr .sidr-inner>p {
     margin-left: 15px;
     margin-right: 15px;
 }
+
 .sidr.right {
     left: auto;
     right: -260px;
 }
+
 .sidr.left {
     left: -260px;
     right: auto;
 }
-.sidr h1, .sidr h2, .sidr h3, .sidr h4, .sidr h5, .sidr h6 {
+
+.sidr h1,
+.sidr h2,
+.sidr h3,
+.sidr h4,
+.sidr h5,
+.sidr h6 {
     font-size: 11px;
     font-weight: normal;
     padding: 0 15px;
     margin: 0 0 5px;
     color: #333;
     line-height: 24px;
-    background-image: -webkit-gradient(linear,  50% 0%,  50% 100%,  color-stop(0%,  #ffffff),  color-stop(100%,  #dfdfdf));
+    background-image: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, #ffffff), color-stop(100%, #dfdfdf));
     background-image: -webkit-linear-gradient(#ffffff, #dfdfdf);
     background-image: -moz-linear-gradient(#ffffff, #dfdfdf);
     background-image: -o-linear-gradient(#ffffff, #dfdfdf);
@@ -896,17 +1055,21 @@ body{
     -moz-box-shadow: 0 5px 5px 3px rgba(0, 0, 0, 0.2);
     box-shadow: 0 5px 5px 3px rgba(0, 0, 0, 0.2);
 }
+
 .sidr p {
     font-size: 13px;
     margin: 0 0 12px;
 }
+
 .sidr p a {
     color: rgba(51, 51, 51, 0.9);
 }
+
 .sidr>p {
     margin-left: 15px;
     margin-right: 15px;
 }
+
 .sidr ul {
     display: block;
     margin: 0 0 15px;
@@ -914,6 +1077,7 @@ body{
     border-top: 1px solid #dfdfdf;
     border-bottom: 1px solid #fff;
 }
+
 .sidr ul li {
     display: block;
     margin: 0;
@@ -921,52 +1085,91 @@ body{
     border-top: 1px solid #fff;
     border-bottom: 1px solid #dfdfdf;
 }
-.sidr ul li:hover, .sidr ul li.active, .sidr ul li.sidr-class-active {
+
+.sidr ul li:hover,
+.sidr ul li.active,
+.sidr ul li.sidr-class-active {
     border-top: none;
     line-height: 49px;
 }
-.sidr ul li:hover>a, .sidr ul li:hover>span, .sidr ul li.active>a, .sidr ul li.active>span, .sidr ul li.sidr-class-active>a, .sidr ul li.sidr-class-active>span {
+
+.sidr ul li:hover>a,
+.sidr ul li:hover>span,
+.sidr ul li.active>a,
+.sidr ul li.active>span,
+.sidr ul li.sidr-class-active>a,
+.sidr ul li.sidr-class-active>span {
     -webkit-box-shadow: inset 0 0 15px 3px #ebebeb;
     -moz-box-shadow: inset 0 0 15px 3px #ebebeb;
     box-shadow: inset 0 0 15px 3px #ebebeb;
 }
-.sidr ul li a, .sidr ul li span {
+
+.sidr ul li a,
+.sidr ul li span {
     padding: 0 15px;
     display: block;
     text-decoration: none;
     color: #333;
 }
+
 .sidr ul li ul {
     border-bottom: none;
     margin: 0;
 }
+
 .sidr ul li ul li {
     line-height: 40px;
     font-size: 13px;
 }
+
 .sidr ul li ul li:last-child {
     border-bottom: none;
 }
-.sidr ul li ul li:hover, .sidr ul li ul li.active, .sidr ul li ul li.sidr-class-active {
+
+.sidr ul li ul li:hover,
+.sidr ul li ul li.active,
+.sidr ul li ul li.sidr-class-active {
     border-top: none;
     line-height: 41px;
 }
-.sidr ul li ul li:hover>a, .sidr ul li ul li:hover>span, .sidr ul li ul li.active>a, .sidr ul li ul li.active>span, .sidr ul li ul li.sidr-class-active>a, .sidr ul li ul li.sidr-class-active>span {
+
+.sidr ul li ul li:hover>a,
+.sidr ul li ul li:hover>span,
+.sidr ul li ul li.active>a,
+.sidr ul li ul li.active>span,
+.sidr ul li ul li.sidr-class-active>a,
+.sidr ul li ul li.sidr-class-active>span {
     -webkit-box-shadow: inset 0 0 15px 3px #ebebeb;
     -moz-box-shadow: inset 0 0 15px 3px #ebebeb;
     box-shadow: inset 0 0 15px 3px #ebebeb;
 }
-.sidr ul li ul li a, .sidr ul li ul li span {
+
+.sidr ul li ul li a,
+.sidr ul li ul li span {
     color: rgba(51, 51, 51, 0.8);
     padding-left: 30px;
 }
+
 .sidr form {
     margin: 0 15px;
 }
+
 .sidr label {
     font-size: 13px;
 }
-.sidr input[type="text"], .sidr input[type="password"], .sidr input[type="date"], .sidr input[type="datetime"], .sidr input[type="email"], .sidr input[type="number"], .sidr input[type="search"], .sidr input[type="tel"], .sidr input[type="time"], .sidr input[type="url"], .sidr textarea, .sidr select {
+
+.sidr input[type="text"],
+.sidr input[type="password"],
+.sidr input[type="date"],
+.sidr input[type="datetime"],
+.sidr input[type="email"],
+.sidr input[type="number"],
+.sidr input[type="search"],
+.sidr input[type="tel"],
+.sidr input[type="time"],
+.sidr input[type="url"],
+.sidr textarea,
+.sidr select {
     width: 100%;
     font-size: 13px;
     padding: 5px;
@@ -985,21 +1188,27 @@ body{
     display: block;
     clear: both;
 }
+
 .sidr input[type=checkbox] {
     width: auto;
     display: inline;
     clear: none;
 }
-.sidr input[type=button], .sidr input[type=submit] {
+
+.sidr input[type=button],
+.sidr input[type=submit] {
     color: #f8f8f8;
     background: #333;
 }
-.sidr input[type=button]:hover, .sidr input[type=submit]:hover {
+
+.sidr input[type=button]:hover,
+.sidr input[type=submit]:hover {
     background: rgba(51, 51, 51, 0.9);
 }
+
 .row-eq-height {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display:         flex;
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
 }
