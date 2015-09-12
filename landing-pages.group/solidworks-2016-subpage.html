@@ -1,163 +1,131 @@
-{!-- $HEADER--}
-{embed="landing-pages/.solidworks-2016-nav"}
-{embed="_/.header-no_nav"}
-
-
-
-{exp:stash:set parse_tags="yes"}
-	{exp:channel:entries  channel="landing_pages" disable="categories|category_fields|member_data|pagination|trackbacks" dynamic="no" url_title="{segment_2}" }
-		{stash:title} {title}{/stash:title}
-		{stash:meta-desc}{description}{/stash:meta-desc}
-		{stash:tag-title}{tagtitle}{/stash:tag-title}
-		{stash:tag-line}{tagline}{/stash:tag-line}
-		{stash:tag-url}{segment_2}{/stash:tag-url}
-		{stash:tag-description}{tagdescription}{/stash:tag-description}
-		{stash:tag-heading}{heading}{/stash:tag-heading}
-		{stash:tag-body}{body}{/stash:tag-body}
-	{/exp:channel:entries}
-{/exp:stash:set}
-
-
-{!--$BACKGROUND--}
+{!-- $HEADER--} {embed="landing-pages/.solidworks-2016-nav"} {embed="_/.header-no_nav"} {exp:stash:set parse_tags="yes"} {exp:channel:entries channel="landing_pages" disable="categories|category_fields|member_data|pagination|trackbacks" dynamic="no" url_title="{segment_2}" } {stash:title} {title}{/stash:title} {stash:meta-desc}{description}{/stash:meta-desc} {stash:tag-title}{tagtitle}{/stash:tag-title} {stash:tag-line}{tagline}{/stash:tag-line} {stash:tag-url}{segment_2}{/stash:tag-url} {stash:tag-description}{tagdescription}{/stash:tag-description} {stash:tag-heading}{heading}{/stash:tag-heading} {stash:tag-body}{body}{/stash:tag-body} {/exp:channel:entries} {/exp:stash:set} {!--$BACKGROUND--}
 <section class="sec-subbg">
-	<div class="container">
-			<div class="center" style="padding:6% 0 4% 0;">
-            	<img src="http://www.hawkridgesys.com/image/solidworks-2016/swx-2016-sublogo.png" class="img-responsive center" >
-            </div>
-	</div>
+    <div class="container">
+        <div class="center" style="padding:6% 0 4% 0;">
+            <img src="http://www.hawkridgesys.com/image/solidworks-2016/swx-2016-sublogo.png" class="img-responsive center">
+        </div>
+    </div>
 </section>
-{!--/BACKGROUND--}
-{!--$INTRO--}
+{!--/BACKGROUND--} {!--$INTRO--}
 <section class="sec-subprods" id="sec-subprods">
-	<div class="container"> 
-		<div class="sec-intro">
-			<p> {exp:stash:tag-line}</p>
-			<h1>{exp:stash:tag-title}</h1>
-			<h4>{exp:stash:tag-description}</h4>
-			<div class="inline">
-			  <a href="#" class="btn btn-link btn-lg" data-toggle="modal" data-target="#form-1" onclick="ga('send', 'event', 'SWX-2016', 'Click', '{exp:stash:tag-url}-ContactUs-1')" > <span class="glyphicon glyphicon-chevron-right" > </span> Contact Us</a>
-			  	<a href="{exp:stash:tag-heading}" class="btn btn-link btn-lg" target="_blank" onclick="ga('send', 'event', 'SWX-2016', 'Click', '{exp:stash:tag-url}-DataSheet-1')" > <span class="glyphicon glyphicon-chevron-right" > </span> 
-			  		Download Datasheet</a>
-			  	<a href="/products/solidworks/top-10-favorite-new-features/" class="btn btn-link btn-lg" onclick="ga('send', 'event', 'SWX-2016', 'Click', '{exp:stash:tag-url}-Register-1')" > <span class="glyphicon glyphicon-chevron-right" > </span> Our Top 10 New Features</a>
+    <div class="container">
+        <div class="sec-intro">
+            <p> {exp:stash:tag-line}</p>
+            <h1>{exp:stash:tag-title}</h1>
+            <h4>{exp:stash:tag-description}</h4>
+            <div class="inline">
+                <a href="#" class="btn btn-link btn-lg" data-toggle="modal" data-target="#form-1" onclick="ga('send', 'event', 'SWX-2016', 'Click', '{exp:stash:tag-url}-ContactUs-1')"> <span class="glyphicon glyphicon-chevron-right"> </span> Contact Us</a>
+                <a href="{exp:stash:tag-heading}" class="btn btn-link btn-lg" target="_blank" onclick="ga('send', 'event', 'SWX-2016', 'Click', '{exp:stash:tag-url}-DataSheet-1')"> <span class="glyphicon glyphicon-chevron-right"> </span> Download Datasheet</a>
+                <a href="/products/solidworks/top-10-favorite-new-features/" class="btn btn-link btn-lg" onclick="ga('send', 'event', 'SWX-2016', 'Click', '{exp:stash:tag-url}-Register-1')"> <span class="glyphicon glyphicon-chevron-right"> </span> Our Top 10 New Features</a>
             </div>
-		</div>
-		{exp:stash:tag-body}
-	</div>
+        </div>
+        {exp:stash:tag-body}
+    </div>
 </section>
 <section class="sec-features" id="sec-features">
-	<div class="container">
-		<div class="sec-intro">
-			<p>Inspiration + Innovation = SOLIDWORKS 2016</p>
-			<h1>Why SOLIDWORKS 2016</h1>
-			<h4>From Concept to Manufacturing, SOLIDWORKS delivers 3D design tools to drive your business</h4>
-			<br>
-			<div class="inline">
-                <a href="#" class="btn btn-default btn-lg" data-toggle="modal" data-target="#form-2" onclick="ga('send', 'event', 'SWX-2016', 'Click', '{exp:stash:tag-url}-Request-2')" ><span class="glyphicon glyphicon-chevron-right" > </span> Request a Quote</a>
+    <div class="container">
+        <div class="sec-intro">
+            <p>Inspiration + Innovation = SOLIDWORKS 2016</p>
+            <h1>Why SOLIDWORKS 2016</h1>
+            <h4>From Concept to Manufacturing, SOLIDWORKS delivers 3D design tools to drive your business</h4>
+            <br>
+            <div class="inline">
+                <a href="#" class="btn btn-default btn-lg" data-toggle="modal" data-target="#form-2" onclick="ga('send', 'event', 'SWX-2016', 'Click', '{exp:stash:tag-url}-Request-2')"><span class="glyphicon glyphicon-chevron-right" > </span> Request a Quote</a>
                 <a href="/solidworks-2016/top-10-whats-new/" class="btn btn-default btn-lg"><span class="glyphicon glyphicon-chevron-right" > </span> What's New</a>
             </div>
-		</div>
-		<div class="sec-new">
-			<div class="row">
-				<div class="col-md-3 col-xs-6">
-					<a href="/solidworks-2016/improve-productivity/">
-						<img src="http://www.hawkridgesys.com/image/solidworks-2016/swx-2016-prods-1.png" alt="" class="img-responsive">
-					</a>
-					<div class="readable">
-					<h5>Improve Your Everyday Productivity</h5>
-					<p class="hidden-xs">SOLIDWORKS 2016 is packed with engineering and design performance boosts to help you get your work done faster and easier. The user experience puts your focus on design, not “CAD overhead” 	to get you the information you need, in record time.
-					</p>
-					<a href="/solidworks-2016/improve-productivity/" class="btn btn-trans">
-						<span class="glyphicon glyphicon-chevron-right"></span> Learn More
-					</a>
-					</div>
-				</div>
-				<div class="col-md-3 col-xs-6">
-					<a href="/solidworks-2016/work-process/">
-						<img src="http://www.hawkridgesys.com/image/solidworks-2016/swx-2016-prods-2.png" alt="" class="img-responsive">
-					</a>
-
-					<div class="readable">
-					<h5>Optimize Your Work Process</h5>
-					<p class="hidden-xs">Share project information across your global team with minimal effort. Easily manage product structures up front in the design process, and then quickly document designs for manufacturing and assembly and with access to information from everywhere.</p>
-					<a href="/solidworks-2016/work-process/" class="btn btn-trans">
-						<span class="glyphicon glyphicon-chevron-right"></span> 
-						Learn More
-					</a>
-					</div>
-				</div>
-				<div class="col-md-3 col-xs-6">
-					<a href="/solidworks-2016/operations-costs/">
-						<img src="http://www.hawkridgesys.com/image/solidworks-2016/swx-2016-prods-3.png" alt="" class="img-responsive">
-					</a>
-
-					<div class="readable">
-					<h5>Reduce Operations Costs</h5>
-					<p class="hidden-xs">SOLIDWORKS 2016 helps speed up your production, integrate design processes with downstream manufacturing, lower costs, accelerate time-to-market and estimate costs across many manufacturing methods including 3D Printing.</p>
-					<a href="/solidworks-2016/operations-costs/" class="btn btn-trans"><span class="glyphicon glyphicon-chevron-right"></span> Learn More</a>
-					</div>
-				</div>
-				<div class="col-md-3 col-xs-6">
-					<a href="/solidworks-2016/design-challenges/">
-						<img src="http://www.hawkridgesys.com/image/solidworks-2016/swx-2016-prods-4.png" alt="" class="img-responsive">
-					</a>
-					<div class="readable">
-					<h5>Solve More Design Challenges </h5>
-					<p class="hidden-xs">SOLIDWORKS 2016 delivers new technical capabilities that support a wide array of industries and markets. These tailored solutions help you overcome the industry-specific engineering and design challenges that your company faces on a daily basis.</p>
-					<a href="/solidworks-2016/design-challenges/" class="btn btn-trans">
-						<span class="glyphicon glyphicon-chevron-right"></span>
-						Learn More
-					</a>
-					</div>
-				</div>			
-			</div>
-		</div>
-	</div>
+        </div>
+        <div class="sec-new">
+            <div class="row">
+                <div class="col-md-3 col-xs-6">
+                    <a href="/solidworks-2016/improve-productivity/">
+                        <img src="http://www.hawkridgesys.com/image/solidworks-2016/swx-2016-prods-1.png" alt="" class="img-responsive">
+                    </a>
+                    <div class="readable">
+                        <h5>Improve Your Everyday Productivity</h5>
+                        <p class="hidden-xs">SOLIDWORKS 2016 is packed with engineering and design performance boosts to help you get your work done faster and easier. The user experience puts your focus on design, not “CAD overhead” to get you the information you need, in record time.
+                        </p>
+                        <a href="/solidworks-2016/improve-productivity/" class="btn btn-trans">
+                            <span class="glyphicon glyphicon-chevron-right"></span> Learn More
+                        </a>
+                    </div>
+                </div>
+                <div class="col-md-3 col-xs-6">
+                    <a href="/solidworks-2016/work-process/">
+                        <img src="http://www.hawkridgesys.com/image/solidworks-2016/swx-2016-prods-2.png" alt="" class="img-responsive">
+                    </a>
+                    <div class="readable">
+                        <h5>Optimize Your Work Process</h5>
+                        <p class="hidden-xs">Share project information across your global team with minimal effort. Easily manage product structures up front in the design process, and then quickly document designs for manufacturing and assembly and with access to information from everywhere.</p>
+                        <a href="/solidworks-2016/work-process/" class="btn btn-trans">
+                            <span class="glyphicon glyphicon-chevron-right"></span> Learn More
+                        </a>
+                    </div>
+                </div>
+                <div class="col-md-3 col-xs-6">
+                    <a href="/solidworks-2016/operations-costs/">
+                        <img src="http://www.hawkridgesys.com/image/solidworks-2016/collaborate-72ppi-372w.png" alt="" class="img-responsive">
+                    </a>
+                    <div class="readable">
+                        <h5>Reduce Operations Costs</h5>
+                        <p class="hidden-xs">SOLIDWORKS 2016 helps speed up your production, integrate design processes with downstream manufacturing, lower costs, accelerate time-to-market and estimate costs across many manufacturing methods including 3D Printing.</p>
+                        <a href="/solidworks-2016/operations-costs/" class="btn btn-trans"><span class="glyphicon glyphicon-chevron-right"></span> Learn More</a>
+                    </div>
+                </div>
+                <div class="col-md-3 col-xs-6">
+                    <a href="/solidworks-2016/design-challenges/">
+                        <img src="http://www.hawkridgesys.com/image/solidworks-2016/swx-2016-prods-4.png" alt="" class="img-responsive">
+                    </a>
+                    <div class="readable">
+                        <h5>Solve More Design Challenges </h5>
+                        <p class="hidden-xs">SOLIDWORKS 2016 delivers new technical capabilities that support a wide array of industries and markets. These tailored solutions help you overcome the industry-specific engineering and design challenges that your company faces on a daily basis.</p>
+                        <a href="/solidworks-2016/design-challenges/" class="btn btn-trans">
+                            <span class="glyphicon glyphicon-chevron-right"></span> Learn More
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
 </section>
 <section class="sec-hawk" id="sec-hawk">
-	<div class="container">
-		<div class="sec-intro">
-			<p>Innovative engineering design and product realization solutions from the #1 SOLIDWORKS reseller</p>
-			<h1>Why Hawk Ridge Systems</h1>
-			<h4>From engineering design to manufacturing production, Hawk Ridge Systems has the team and the expertise to deliver the solutions you need.</h4>
-			<br>
-			<div class="inline">
-			  <a href="#" class="btn btn-link btn-lg" data-toggle="modal" data-target="#form-1" onclick="ga('send', 'event', 'SWX-2016', 'Click', '{exp:stash:tag-url}-Contact-3')"> <span class="glyphicon glyphicon-chevron-right" > </span> Contact Us</a>
-			  	<a href="#" class="btn btn-link btn-lg" data-toggle="modal" data-target="#form-2" onclick="ga('send', 'event', 'SWX-2016', 'Click', '{exp:stash:tag-url}-Request-3')"> <span class="glyphicon glyphicon-chevron-right" > </span> Request a Quote</a>
+    <div class="container">
+        <div class="sec-intro">
+            <p>Innovative engineering design and product realization solutions from the #1 SOLIDWORKS reseller</p>
+            <h1>Why Hawk Ridge Systems</h1>
+            <h4>From engineering design to manufacturing production, Hawk Ridge Systems has the team and the expertise to deliver the solutions you need.</h4>
+            <br>
+            <div class="inline">
+                <a href="#" class="btn btn-link btn-lg" data-toggle="modal" data-target="#form-1" onclick="ga('send', 'event', 'SWX-2016', 'Click', '{exp:stash:tag-url}-Contact-3')"> <span class="glyphicon glyphicon-chevron-right"> </span> Contact Us</a>
+                <a href="#" class="btn btn-link btn-lg" data-toggle="modal" data-target="#form-2" onclick="ga('send', 'event', 'SWX-2016', 'Click', '{exp:stash:tag-url}-Request-3')"> <span class="glyphicon glyphicon-chevron-right"> </span> Request a Quote</a>
             </div>
-		</div>
-		<div class="row">
-			<div class="col-xs-6">
-				<img class="img-responsive" src="http://www.hawkridgesys.com/image/solidworks-2016/hrs-2016-1.jpg" alt="">
-			</div>
-			<div class="col-xs-6">
-				<img class="img-responsive" src="http://www.hawkridgesys.com/image/solidworks-2016/hrs-2016-2.jpg" alt="">
-			</div>
-		</div>
-
-		
-		<div class="row">
-			<div class="col-md-3 col-xs-6">
-				<h2>Our Mission</h2>
-				<p>Hawk Ridge Systems builds trusted relationships with our customers by solving their critical problems with solutions that radically improve the way they design, develop, and manage their product development life cycle. 
-				 By delivering exceptional sales, support, and service, we help our customers reach business objectives faster and more cost-effectively.
-				</p>
-			</div>
-			<div class="col-md-3 hidden-xs">
-				<h2>Our Commitment</h2>
-				<p>We know that when you design a product or a part, you need to carry that design from concept to production – and you need the best tools to get there. Hawk Ridge Systems is committed to understanding your unique business challenges and bringing you the right solutions for the job.</p>
-			</div>
-			<div class="col-md-3 col-xs-6">
-				<h2>Our Team</h2>
-				<p>With almost 20 years of experience implementing 3D design systems, our team has an unsurpassed level of proficiency in the industry. We’re an engineering-intensive organization, with the most Certified SOLIDWORKS and CAMWorks professionals in North America. That means you get answers when you need them, from a knowledgeable, dedicated team.</p>
-			</div>
-			<div class="col-md-3 hidden-xs">
-				<h2>Our Training</h2>
-				<p>Training from our experts goes a long way to help you create better designs. Whether you’re online or in a classroom, our instructors teach you how to succeed. From introductory classes to advanced courses, we’ll show you the best way to leverage your design and manufacturing tools so that you get the most out of your engineering software.</p>
-			</div>
-		</div>
-
-	</div>
+        </div>
+        <div class="row">
+            <div class="col-xs-6">
+                <img class="img-responsive" src="http://www.hawkridgesys.com/image/solidworks-2016/hrs-2016-1.jpg" alt="">
+            </div>
+            <div class="col-xs-6">
+                <img class="img-responsive" src="http://www.hawkridgesys.com/image/solidworks-2016/hrs-2016-2.jpg" alt="">
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-3 col-xs-6">
+                <h2>Our Mission</h2>
+                <p>Hawk Ridge Systems builds trusted relationships with our customers by solving their critical problems with solutions that radically improve the way they design, develop, and manage their product development life cycle. By delivering exceptional sales, support, and service, we help our customers reach business objectives faster and more cost-effectively.
+                </p>
+            </div>
+            <div class="col-md-3 hidden-xs">
+                <h2>Our Commitment</h2>
+                <p>We know that when you design a product or a part, you need to carry that design from concept to production – and you need the best tools to get there. Hawk Ridge Systems is committed to understanding your unique business challenges and bringing you the right solutions for the job.</p>
+            </div>
+            <div class="col-md-3 col-xs-6">
+                <h2>Our Team</h2>
+                <p>With almost 20 years of experience implementing 3D design systems, our team has an unsurpassed level of proficiency in the industry. We’re an engineering-intensive organization, with the most Certified SOLIDWORKS and CAMWorks professionals in North America. That means you get answers when you need them, from a knowledgeable, dedicated team.</p>
+            </div>
+            <div class="col-md-3 hidden-xs">
+                <h2>Our Training</h2>
+                <p>Training from our experts goes a long way to help you create better designs. Whether you’re online or in a classroom, our instructors teach you how to succeed. From introductory classes to advanced courses, we’ll show you the best way to leverage your design and manufacturing tools so that you get the most out of your engineering software.</p>
+            </div>
+        </div>
+    </div>
 </section>
-
-{!-- $HEADER--}
-{embed="_/.footer-no_nav"}
+{!-- $HEADER--} {embed="_/.footer-no_nav"}
