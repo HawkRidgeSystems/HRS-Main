@@ -599,10 +599,10 @@ only screen and (max-device-width: 480px) {
         background-size: 400% 400% !important;
     }*/
     body {
-        -o-background-size: 100% !important;
-        -webkit-background-size: 100% !important;
-        -moz-background-size: 100% !important;
-        background-size: 100% !important;
+        -o-background-size: cover !important;
+        -webkit-background-size: cover !important;
+        -moz-background-size: cover !important;
+        background-size: cover !important;
     }
     .sec-bg {
         -o-background-size: 247% auto !important;
