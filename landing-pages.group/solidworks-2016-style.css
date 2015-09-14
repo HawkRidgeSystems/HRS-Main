@@ -1219,9 +1219,3 @@ only screen and (max-device-width: 480px) {
     display: flex;
 }
 
-.row {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display:         flex;
-}
