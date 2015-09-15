@@ -320,6 +320,7 @@ footer .row div:nth-child(5) ul li a {
 .sec-prods h2,
 .sec-subprods h2 {
     padding-top: 20%;
+    padding-bottom: 20%;
     font-family: '3dsbold' !important;
     margin: 0;
     text-transform: uppercase;
