@@ -15,8 +15,14 @@
             <h4>{exp:stash:tag-description}</h4>
             <div class="inline">
                 <a href="#" class="btn btn-link btn-lg" data-toggle="modal" data-target="#form-1" onclick="ga('send', 'event', 'SWX-2016', 'Click', '{exp:stash:tag-url}-ContactUs-1')"> <span class="glyphicon glyphicon-chevron-right"> </span> Contact Us</a>
+
+                {if last_segment !== 'top-10-whats-new'}
+
                 <a href="{exp:stash:tag-heading}" class="btn btn-link btn-lg" target="_blank" onclick="ga('send', 'event', 'SWX-2016', 'Click', '{exp:stash:tag-url}-DataSheet-1')"> <span class="glyphicon glyphicon-chevron-right"> </span> Download Datasheet</a>
                 <a href="/solidworks-2016/top-10-whats-new/" class="btn btn-link btn-lg" onclick="ga('send', 'event', 'SWX-2016', 'Click', '{exp:stash:tag-url}-Register-1')"> <span class="glyphicon glyphicon-chevron-right"> </span> Our Top 10 New Features</a>
+
+                {/if}
+
             </div>
         </div>
         {exp:stash:tag-body}
