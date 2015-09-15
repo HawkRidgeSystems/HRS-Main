@@ -325,8 +325,8 @@ footer .row div:nth-child(5) ul li a {
     text-transform: uppercase;
 }
 
-.spacer {
-    padding-bottom: 20%;
+.sec-prods .spacer {
+    padding-bottom: 100px;
 }
 .sec-prods h2 {
     font-size: 9px;
