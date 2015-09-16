@@ -398,6 +398,23 @@ footer .row div:nth-child(5) ul li a {
     z-index: 1;
 }
 
+.sec-prods {
+    padding: 4%;
+}
+
+.sec-prods h2 {
+    font-weight: bolder;
+}
+
+.sec-subprods .row {
+    padding: 4% 0;
+}
+
+.sec-subprods h4 {
+    line-height: 24px;
+    padding: 0;
+}
+
 .sec-features {
     padding: 4%;
 }
