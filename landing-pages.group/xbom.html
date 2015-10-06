@@ -2,17 +2,18 @@
 {embed="_/.header-products"}
 
 
-{exp:stash:set parse_tags="yes"}
+
 	{exp:channel:entries  channel="landing_pages" disable="categories|category_fields|member_data|pagination|trackbacks" dynamic="no" url_title="{segment_1}" }
+	{exp:stash:set parse_tags="yes"}
 		{stash:title}{h1}{/stash:title}
 		{stash:meta-desc}{description}{/stash:meta-desc}
 		{stash:page-class}front-page{/stash:page-class}
-	{/exp:channel:entries}
 {/exp:stash:set}
 
 	<div class="container">
 		{exp:allow_eecode embed="y"}{body}{/exp:allow_eecode}
 	</div>
+{/exp:channel:entries} 
 
 
 {embed="_/.footer"}
