@@ -1,10 +1,10 @@
-{exp:channel:entries  channel="edate" category="{embed:ctgs}"  show_future_entries="no"  order_by="event_date"  sort="desc" show_expired="yes" dynamic="off" limit="{embed:lim}"}
+{exp:channel:entries  channel="recorded" category="{embed:ctgs}"  show_future_entries="no"  order_by="entry_date"  sort="desc" show_expired="yes" dynamic="off" limit="{embed:lim}"}
 
 	{if evweb !=""}
 	<tr>
 	{evevent}{if evevent:title == "{embed:ev_title}"}       
 	<td>
-		<a href="{evweb}" target="_blank" >{event_date format='%l, %F %j, %Y'}</a>
+		<a href="{evweb}" target="_blank" >{entry_date format='%l, %F %j, %Y'}</a>
 	</td>
 	<td>
 		<a href="{evweb}" target="_blank" >{evtime}</a>
@@ -22,7 +22,7 @@
 {evevent}{if evevent:title == "{embed:ev_title}"}   
 	<tr>    
 	<td>
-		<a href="{title_permalink=events/registration}">{event_date format='%l, %F %j, %Y'}</a>
+		<a href="{title_permalink=events/registration}">{entry_date format='%l, %F %j, %Y'}</a>
 	</td>
 	<td>
 		<a href="{title_permalink=events/registration}">{evtime}</a>
