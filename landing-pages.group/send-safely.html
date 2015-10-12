@@ -47,7 +47,8 @@
     <div class="container">
         {exp:allow_eecode embed="y"} {body} 
         {exp:freeform:form form_id="31" 
-        form:id="send_safely_form"}
+        form:id="send_safely_form"
+        form:onsubmit="$.fancybox.close();"}
 
         <!-- form:onsubmit="return closeSelf(this);" -->
         <p>
