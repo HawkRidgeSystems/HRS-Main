@@ -45,8 +45,9 @@
     {exp:channel:entries channel="static | CTA | landing_pages | support" disable="member_data|categories|trackbacks|pagination" limit="1"} {exp:stash:set parse_tags="yes" parse_conditionals="yes"} {stash:title}{h1}{/stash:title} {stash:meta-desc}{description}{/stash:meta-desc} {stash:bread-class}{breadclass}{/stash:bread-class} {stash:extra-head-data}{styles}{/stash:extra-head-data} {stash:tag-bg}{tagbg}{/stash:tag-bg} {stash:heading}{heading}{/stash:heading} {stash:heading-type}{headingtype}{/stash:heading-type} {stash:col-left}{colleft}{/stash:col-left} {stash:col-right}{colright}{/stash:col-right} {stash:tag-title}{tagtitle}{/stash:tag-title} {stash:tag-line}{tagline}{/stash:tag-line} {stash:tag-description}{tagdescription}{/stash:tag-description}  {/exp:stash:set}
     <div class="container">
         {exp:allow_eecode embed="y"} {body} 
-        {exp:freeform:form:onsubmit="return closeSelf(this);"
-form_id="31"
+        {exp:freeform:form
+            onsubmit="return closeSelf(this);"
+            form_id="31"
         }
         <p>
             <label>{freeform:label:first_name}</label>
@@ -68,6 +69,7 @@ form_id="31"
             <label>{freeform:label:product_interest}</label>
             {freeform:field:product_interest}
         </p>
+        <p>{freeform:submit}</p>
         {/exp:freeform:form} {/exp:allow_eecode}
     </div>
     {scripts} {/exp:channel:entries}
