@@ -46,11 +46,9 @@
     <div class="container">
         {exp:allow_eecode embed="y"} {body} 
         {exp:freeform:form
-            form_id="31"
-            return="closeSelf(this);"
-            onsubmit="return closeSelf(this);"
+            form:form_id="31"
+            form:onsubmit="return closeSelf(this);"
         }
-        {freeform:form:onsubmit="return closeSelf(this);"}
         <p>
             <label>{freeform:label:first_name}</label>
             {freeform:field:first_name}
