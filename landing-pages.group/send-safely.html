@@ -48,6 +48,7 @@
         {exp:freeform:form
             onsubmit="return closeSelf(this);"
             form_id="31"
+            return="closeSelf(this);"
         }
         <p>
             <label>{freeform:label:first_name}</label>
@@ -69,7 +70,8 @@
             {freeform:field:product_interest}
         </p>
         <p>{freeform:submit}</p>
-        {/exp:freeform:form} {/exp:allow_eecode}
+        {/exp:freeform:form} 
+        {/exp:allow_eecode}
     </div>
     {scripts} {/exp:channel:entries}
 </body>
