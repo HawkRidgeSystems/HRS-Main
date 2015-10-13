@@ -38,58 +38,52 @@
     <link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.0.1/css/bootstrap.min.css">
     <link href="/styles/custom.min.css" rel="stylesheet" type="text/css" media="screen" />
     <!-- $JAVASCRIPT -->
-    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script> 
-	<script src="http://malsup.github.com/jquery.form.js"></script> 
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+    <script src="http://malsup.github.com/jquery.form.js"></script>
 </head>
 
 <body>
-    {exp:channel:entries channel="static | CTA | landing_pages | support" disable="member_data|categories|trackbacks|pagination" limit="1"} {exp:stash:set parse_tags="yes" parse_conditionals="yes"} {stash:title}{h1}{/stash:title} {stash:meta-desc}{description}{/stash:meta-desc} {stash:bread-class}{breadclass}{/stash:bread-class} {stash:extra-head-data}{styles}{/stash:extra-head-data} {stash:tag-bg}{tagbg}{/stash:tag-bg} {stash:heading}{heading}{/stash:heading} {stash:heading-type}{headingtype}{/stash:heading-type} {stash:col-left}{colleft}{/stash:col-left} {stash:col-right}{colright}{/stash:col-right} {stash:tag-title}{tagtitle}{/stash:tag-title} {stash:tag-line}{tagline}{/stash:tag-line} {stash:tag-description}{tagdescription}{/stash:tag-description}  {/exp:stash:set}
+    {exp:channel:entries channel="static | CTA | landing_pages | support" disable="member_data|categories|trackbacks|pagination" limit="1"} {exp:stash:set parse_tags="yes" parse_conditionals="yes"} {stash:title}{h1}{/stash:title} {stash:meta-desc}{description}{/stash:meta-desc} {stash:bread-class}{breadclass}{/stash:bread-class} {stash:extra-head-data}{styles}{/stash:extra-head-data} {stash:tag-bg}{tagbg}{/stash:tag-bg} {stash:heading}{heading}{/stash:heading} {stash:heading-type}{headingtype}{/stash:heading-type} {stash:col-left}{colleft}{/stash:col-left} {stash:col-right}{colright}{/stash:col-right} {stash:tag-title}{tagtitle}{/stash:tag-title} {stash:tag-line}{tagline}{/stash:tag-line} {stash:tag-description}{tagdescription}{/stash:tag-description} {/exp:stash:set}
     <div class="container">
-        {exp:allow_eecode embed="y"} {body} 
-
+        {exp:allow_eecode embed="y"} {body}
         <!-- form:onsubmit="return closeSelf(this);" -->
         <div class="form-horizontal well col-lg-5 col-xs-12">
-
-        {exp:freeform:form form_id="31" 
-        form:id="send_safely_form"}
-        <div class="form-group">
-            <label class="col-lg-5 conrol-label">{freeform:label:first_name}</label>
-            <div class="col-lg-7">{freeform:field:first_name
-							            attr:placeholder="First Name"}</div>
-        </div>
-        <div class="form-group">
-            <label class="col-lg-5 conrol-label">{freeform:label:last_name}</label>
-            <div class="col-lg-7">{freeform:field:last_name
-							            attr:placeholder="Last Name"}</div>
-        </div>
-        <div class="form-group">
-            <label class="col-lg-5 conrol-label">{freeform:label:email}</label>
-            <div class="col-lg-7">{freeform:field:email
-							            attr:placeholder="Email"}</div>
-        </div>
-        <div class="form-group">
-            <label class="col-lg-5 conrol-label">{freeform:label:company}</label>
-            <div class="col-lg-7">{freeform:field:company
-							            attr:placeholder="Company"}</div>
-        </div>
-        <div class="form-group">
-            <div class="col-lg-7">{freeform:field:product_interest}</div>
-        </div>
-        <div class="form-group">
-            <!-- <input type="hidden" id="hidden-secure-link-field" value=""> -->
-            {freeform:field:hidden-secure-link-field
-                attr:id="hidden-secure-link-field"
-                attr:value=""}
-        <div class="col-lg-offset-5 col-lg-7"> {freeform:submit
-                attr:class="btn btn-md btn-primary"}
-                <input type="reset" value="Reset " class="btn btn-primary" name="Reset">
-                <p>* Required</p>
+            {exp:freeform:form form_id="31" form:id="send_safely_form"}
+            <div class="form-group">
+                <label class="col-lg-5 conrol-label">{freeform:label:first_name}</label>
+                <div class="col-lg-7">{freeform:field:first_name attr:class="form-control" attr:placeholder="First Name"}
                 </div>
-        {/exp:freeform:form} 
+            </div>
+            <div class="form-group">
+                <label class="col-lg-5 conrol-label">{freeform:label:last_name}</label>
+                <div class="col-lg-7">{freeform:field:last_name attr:class="form-control" attr:placeholder="Last Name"}
+                </div>
+            </div>
+            <div class="form-group">
+                <label class="col-lg-5 conrol-label">{freeform:label:email}</label>
+                <div class="col-lg-7">{freeform:field:email attr:class="form-control" attr:placeholder="Email"}
+                </div>
+            </div>
+            <div class="form-group">
+                <label class="col-lg-5 conrol-label">{freeform:label:company}</label>
+                <div class="col-lg-7">{freeform:field:company attr:class="form-control" attr:placeholder="Company"}
+                </div>
+            </div>
+            <div class="form-group">
+                <div class="col-lg-7">{freeform:field:product_interest}</div>
+            </div>
+            <div class="form-group">
+                <!-- <input type="hidden" id="hidden-secure-link-field" value=""> -->
+                {freeform:field:hidden-secure-link-field attr:id="hidden-secure-link-field" attr:value=""}
+                <div class="col-lg-offset-5 col-lg-7"> {freeform:submit attr:class="btn btn-md btn-primary"}
+                    <input type="reset" value="Reset " class="btn btn-primary" name="Reset">
+                    <p>* Required</p>
+                </div>
+                {/exp:freeform:form}
+            </div>
+            {/exp:allow_eecode}
         </div>
-        {/exp:allow_eecode}
-    </div>
-    {scripts} {/exp:channel:entries}
+        {scripts} {/exp:channel:entries}
 </body>
 
 </html>
