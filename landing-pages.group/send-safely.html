@@ -51,22 +51,22 @@
             {exp:freeform:form form_id="31" return="support/sendsafely-thanks" required="first_name|last_name|email" inline_errors="yes" form:id="send_safely_form"}
             <div class="form-group">
                 <label class="col-lg-5 conrol-label">{freeform:label:first_name}</label>
-                <div class="col-lg-7">{freeform:field:first_name attr:class="form-control" attr:placeholder="First Name"}
+                <div class="col-lg-7">{freeform:field:first_name attr:class="form-control" attr:placeholder="First Name"} <strong style="color:#ff0033;">{freeform:error:first_name}</strong>
                 </div>
             </div>
             <div class="form-group">
                 <label class="col-lg-5 conrol-label">{freeform:label:last_name}</label>
-                <div class="col-lg-7">{freeform:field:last_name attr:class="form-control" attr:placeholder="Last Name"}
+                <div class="col-lg-7">{freeform:field:last_name attr:class="form-control" attr:placeholder="Last Name"}<strong style="color:#ff0033;">{freeform:error:last_name}</strong>
                 </div>
             </div>
             <div class="form-group">
                 <label class="col-lg-5 conrol-label">{freeform:label:email}</label>
-                <div class="col-lg-7">{freeform:field:email attr:class="form-control" attr:placeholder="Email"}
+                <div class="col-lg-7">{freeform:field:email attr:class="form-control" attr:placeholder="Email"}<strong style="color:#ff0033;">{freeform:error:email}</strong>
                 </div>
             </div>
             <div class="form-group">
                 <label class="col-lg-5 conrol-label">{freeform:label:company}</label>
-                <div class="col-lg-7">{freeform:field:company attr:class="form-control" attr:placeholder="Company"}
+                <div class="col-lg-7">{freeform:field:company attr:class="form-control" attr:placeholder="Company"}<strong style="color:#ff0033;">{freeform:error:company}</strong>
                 </div>
             </div>
             <div class="form-group">
