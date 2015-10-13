@@ -48,7 +48,7 @@
         {exp:allow_eecode embed="y"} {body}
         <!-- form:onsubmit="return closeSelf(this);" -->
         <div class="form-horizontal well col-lg-5 col-xs-12">
-            {exp:freeform:form form_id="31" return="support/sendsafely-thanks" form:id="send_safely_form"}
+            {exp:freeform:form form_id="31" return="support/sendsafely-thanks" inline_errors="yes" form:id="send_safely_form"}
             <div class="form-group">
                 <label class="col-lg-5 conrol-label">{freeform:label:first_name}</label>
                 <div class="col-lg-7">{freeform:field:first_name attr:class="form-control" attr:placeholder="First Name"}
