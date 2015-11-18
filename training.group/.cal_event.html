@@ -1,5 +1,5 @@
 {exp:calendar:events event_id="{embed:event_id}"}
-<div class="cal-event {categories}{category_url_title}{/categories}" style="background:{calendar_color}">
+<div class="cal-event {categories}{category_url_title}{/categories}" style="background:{if current_time < '{event_last_date format="%U"}'}{calendar_color}{if:else}#838383{/if}">
 {if current_time < '{event_last_date format="%U"}'}
 <a href="{path='{segment_1}/class'}/{url_title}/" >{class_course}{class_course:title}{/class_course}</a>
 {if:else}{class_course}{class_course:title}{/class_course}{/if}
