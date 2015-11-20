@@ -1,63 +1,71 @@
-{preload_replace:my_channel="events"}
-{preload_replace:my_template_group="{segment_1}/webinar-wednesdays"}
+{preload_replace:my_channel="events"} {preload_replace:my_template_group="{segment_1}/webinar-wednesdays"}
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-{exp:channel:entries channel="{my_channel}" limit="1" category="61"}
-<title>SOLIDWORKS Events - Webinar Wednesday™ | Hawk Ridge Systems </title>
-<meta name="keywords" content="{exp:xml_encode}{ekeywords}{/exp:xml_encode}" />
-<meta name="description" content="{exp:xml_encode}{edescription}{/exp:xml_encode}" />
-{embed="_includes/.html-head"}
+    {exp:channel:entries channel="{my_channel}" limit="1" category="61"}
+    <title>SOLIDWORKS Events - Webinar Wednesday™ | Hawk Ridge Systems </title>
+    <meta name="keywords" content="{exp:xml_encode}{ekeywords}{/exp:xml_encode}" />
+    <meta name="description" content="{exp:xml_encode}{edescription}{/exp:xml_encode}" /> {embed="_includes/.html-head"}
+    <style type="text/css">
+    .no-panel-padding {
+    	padding-bottom: 0;
+    	border-bottom-width: 0;
+    }
+    </style>
 </head>
+
 <body>
-{embed="_includes/.nav"}
-		<div class="no-bg">
-						{breadcrumbs}
-			<div class="container main">		
-				<section class="allsection">					
-						<p class="bold">Hawk Ridge Systems Events</p>
-						<h1>{title} </h1>
-						<p>Solutions for SOLIDWORKS and CAMWorks. Every Wednesday.</p>
-				</section>
-			</div>
-		</div>
-<div class="container main">
-	<div class="row">
-		<div class="col-md-10">
-			<section class="section">
-				{edesc}
-			</section>
-			<section class="section">
-			<h3>Upcoming Dates</h3>
-				<table class="table table-striped">
-				<thead>
-				<tr>
-				<th>Date</th>
-				<th>Time</th>
-				<th>Name</th>
-				</tr>
-				</thead>
-				{embed="events/.dates" ctgs="61" ev_title="{title}"}
-				</table>
-			</section>
-			<!-- <section class="section">
-			<h3>Archive</h3>
-				<table class="table table-striped">
-				<thead>
-				<tr>
-				<th>Date</th>
-				<th>Time</th>
-				<th>Name</th>
-				</tr>
-				</thead>
-				{embed="events/.exdates" ctgs="61" ev_title="{title}"}
-				</table>
-			</section> -->
-		</div>
+    {embed="_includes/.nav"}
+    <div class="no-bg">
+        {breadcrumbs}
+        <div class="container main">
+            <section class="allsection">
+                <p class="bold">Hawk Ridge Systems Events</p>
+                <h1>{title} </h1>
+                <p>Solutions for SOLIDWORKS and CAMWorks. Every Wednesday.</p>
+            </section>
+        </div>
+    </div>
+    <div class="container">
+        <div class="row">
+            <div class="col-md-10">
+                <section class="section">
+                    {edesc}
+                </section>
+                <div class="panel with-nav-tabs panel-default">
+                    <div class="panel-heading no-panel-padding">
+                        <ul class="nav nav-tabs">
+                            <li class="active"><a href="#tab1default" data-toggle="tab">Upcoming Webinars</a></li>
+                            <li class="disabled"><a href="#tab2default" data-toggle="tab">Archive</a></li>
+                        </ul>
+                    </div>
+                    <div class="panel-body">
+                        <div class="tab-content">
+                            <div class="tab-pane fade in active" id="tab1default">
+                                <table class="table table-striped table-responsive">
+                                    <thead>
+                                        <tr>
+                                            <th>Date</th>
+                                            <th>Time</th>
+                                            <th>Name</th>
+                                        </tr>
+                                    </thead>
+                                    {embed="events/.dates" ctgs="61" ev_title="{title}"}
+                                </table>
+                            </div>
+                            <div class="tab-pane fade" id="tab2default">
+                                <p>Date Sorted List Coming Soon!</p>
+                                <p>For now please check the <a href="http://www.hawkridgesys.com/tutorials/">Tutorials</a> section.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
 				{embed="_sidebar/.events"}
-	</div>
-</div>
-{/exp:channel:entries}
-{embed="_includes/.footer"}
+        </div>
+    </div>
+    {/exp:channel:entries} {embed="_includes/.footer"}
 </body>
+
 </html>

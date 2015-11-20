@@ -1,40 +1,15 @@
-{exp:channel:entries  channel="recorded" category="{embed:ctgs}"  show_future_entries="no"  order_by="entry_date"  sort="desc" show_expired="yes" dynamic="off" limit="{embed:lim}"}
+{exp:channel:entries  channel="recorded"  show_future_entries="no"  order_by="entry_date"  sort="desc" show_expired="no" dynamic="off" limit="15"}
 
-	{if evweb !=""}
+	
 	<tr>
-	{evevent}{if evevent:title == "{embed:ev_title}"}       
 	<td>
-		<a href="{evweb}" target="_blank" >{entry_date format='%l, %F %j, %Y'}</a>
+		<a href="#" target="_blank" >{entry_date format='%l, %F %j, %Y'}</a>
 	</td>
 	<td>
-		<a href="{evweb}" target="_blank" >{evtime}</a>
-	</td>
-	<td>
-		<a href="{evweb}" target="_blank" >
-		{if long_title != ""} {long_title }{if:else} {title}{/if}	
+		<a href="#" target="_blank" >
+		{title}	
 		</a>
 	</td>
-		{/if}
 	</tr>
-	{/evevent}
-	{if:else}
-
-{evevent}{if evevent:title == "{embed:ev_title}"}   
-	<tr>    
-	<td>
-		<a href="{title_permalink=events/registration}">{entry_date format='%l, %F %j, %Y'}</a>
-	</td>
-	<td>
-		<a href="{title_permalink=events/registration}">{evtime}</a>
-	</td>
-	<td>
-		<a href="{title_permalink=events/registration}">
-			{evlocation} {evlocation:title}{/evlocation}
-		</a>
-	</td>
-	{/if}
-	</tr>
-	{/evevent}
-{/if}
 
 {/exp:channel:entries}
