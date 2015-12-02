@@ -234,9 +234,13 @@
 			<div class="container main">
 			<div class="row">
 				<div class="col-md-10">
+					
+
 					<section class="section hidden-xs" style="padding:2%">
+
+
 					<div class="row video-categories-wrapper">	
-						{exp:stash:get_list name="video-selection"}
+						{exp:stash:get_list name="video-selection" sort="asc"}
 							<div class="col-md-3 video-categories">										
 								<a href="#{cat-url}">
 									<img src="{cat-img}" class="img-responsive center">
@@ -246,8 +250,12 @@
 							</div>
 						{/exp:stash:get_list}
 					</div>
+
+
 					</section>
-					{exp:stash:get_list name="video-selection"} 
+
+
+					{exp:stash:get_list name="video-selection" sort="asc"} 
 						<section class="section video-selection" id="{cat-url}">
 							<div class="page-header">
 							<h3 class="bold">{cat-name}</h3>
