@@ -3,6 +3,7 @@
 {if current_time < '{event_last_date format="%U"}'}
 <a href="{path='{segment_1}/class'}/{url_title}/" >{class_course}{class_course:title}{/class_course}</a>
 {if:else}{class_course}{class_course:title}{/class_course}{/if}
+	<p>{event_last_date format="%U"}</p>
     <p>
         {occurrences}
             {if "{occurrence_start_date format='%Y%m%d'}" == "{embed:cal_date}"}
