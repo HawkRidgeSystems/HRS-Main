@@ -22,7 +22,7 @@
                 <?php 
 			$result ="";
 			$query = $this->EE->db->query("SELECT parent_id AS entry FROM exp_relationships WHERE child_id IN (SELECT entry_id AS entry FROM exp_channel_titles WHERE url_title = '{segment_3}')");
-			$num_rows = mysql_num_rows($result);
+			$num_rows = mysql_num_rows($query);
 			if(empty($num_rows)) {
 		        echo "empty";
 		    }
