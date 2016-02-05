@@ -1,32 +1,100 @@
-{!-- - - - - - - - - - - --} {!-- $HEADERS--} {!-- - - - - - - - - - - --} {embed="_/.header-products"} {!-- - - - - - - - - - - --} {!-- $CTA PAGE STASH --} {!-- - - - - - - - - - - --} {exp:stash:set parse_tags="yes" parse_conditionals="yes"} {!-- $CHANNEL-INFO--} {exp:channel:entries channel="courses" limit="1" disable="member_data|trackbacks|pagination" url_title="{segment_3}"} {stash:title} {if segment_3} {ch1} {if:else} SOLIDWORKS Training - 3D CAD Training Courses | Hawk Ridge Systems {/if} {/stash:title} {stash:meta-desc} {if segment_3} {cdescription} {if:else} Hawk Ridge Systems provides best in class SOLIDWORKS &amnp; 3D CAD training courses to students which helps them to maximize their professional development during class and give them the shortest learning curve possible. {/if} {/stash:meta-desc} {stash:bread-class}no-bg{/stash:bread-class} {stash:heading-type}heading-1{/stash:heading-type} {stash:heading} {if segment_3} {categories}{category_name} {/categories} {if:else} Training {/if} {/stash:heading} {stash:tag-title} {if segment_3} {title} {if:else} Training Courses {/if} {/stash:tag-title} {stash:tag-line} {if segment_3} {cdesc} {if:else} Training from Hawk Ridge Systems gives you the tools you need to make the most out of your engineering design and manufacturing solutions. Let our Training Advisors help you plan a roadmap to success with SOLIDWORKS and CAMWorks courses that range from introductory to advanced, available online or at one of our state-of-the-art training centers. {/if} {/stash:tag-line} {stash:tag-description} {if segment_3}
-<img src="{course_image}" class="img-responsive"> {/if} {/stash:tag-description} {stash:col-left}9{/stash:col-left} {stash:col-right}3{/stash:col-right} {stash:extra-head-data}{styles}{/stash:extra-head-data} {stash:netsuite}{netsuite}{/stash:netsuite} {stash:duration}{duration}{/stash:duration} {stash:prerequisite}{prerequisites}{/stash:prerequisite} {stash:topics}{topics}{/stash:topics} {stash:tag-body}
-<div class="container main">
-    {exp:allow_eecode embed='y'} {body} {/exp:allow_eecode}
-</div>
-{/stash:tag-body} {/exp:channel:entries} {/exp:stash:set} {if segment_3}
-<div class="container main">
-    <div class="row">
-        <div class="col-md-6 col-xs-12">
-            <section class="section">
-                <h4>
+{!-- - - - - - - - - - - --}
+{!-- $HEADERS--}
+{!-- - - - - - - - - - - --}
+{embed="_/.header-products"}
+
+{!-- - - - - - - - - - - --}
+{!-- $CTA PAGE STASH 	 --}
+{!-- - - - - - - - - - - --}
+{exp:stash:set 
+	parse_tags="yes" 
+	parse_conditionals="yes"}
+	{!-- $CHANNEL-INFO--}
+	{exp:channel:entries 
+		channel="courses" 
+		limit="1" 
+		disable="member_data|trackbacks|pagination" 
+		url_title="{segment_3}"}
+
+		{stash:title}
+			{if segment_3}
+				{ch1}
+			{if:else}
+				SOLIDWORKS Training - 3D CAD Training Courses | Hawk Ridge Systems
+			{/if}
+		{/stash:title}
+		{stash:meta-desc}
+			{if segment_3}
+				{cdescription}
+			{if:else}
+				Hawk Ridge Systems provides best in class SOLIDWORKS &amnp; 3D CAD training courses to students which helps them to maximize their professional development during class and give them the shortest learning curve possible.
+			{/if}
+		{/stash:meta-desc}
+		{stash:bread-class}no-bg{/stash:bread-class}
+		{stash:heading-type}heading-1{/stash:heading-type}
+		{stash:heading}
+			{if segment_3}
+				{categories}{category_name} {/categories}
+			{if:else}
+				Training
+			{/if}
+		{/stash:heading}
+		{stash:tag-title}
+			{if segment_3}
+				{title}
+			{if:else}
+				Training Courses
+			{/if}
+		{/stash:tag-title}
+		{stash:tag-line}
+			{if segment_3}
+				{cdesc}
+			{if:else}
+				Training from Hawk Ridge Systems gives you the tools you need to make the most out of your engineering design and manufacturing solutions. Let our Training Advisors help you plan a roadmap to success with SOLIDWORKS and CAMWorks courses that range from introductory to advanced, available online or at one of our state-of-the-art training centers.
+			{/if}
+		{/stash:tag-line}
+		{stash:tag-description}
+			{if segment_3}
+				<img src="{course_image}" class="img-responsive">
+			{/if}
+		{/stash:tag-description}
+		{stash:col-left}9{/stash:col-left}
+		{stash:col-right}3{/stash:col-right}
+		{stash:extra-head-data}{styles}{/stash:extra-head-data}
+		{stash:netsuite}{netsuite}{/stash:netsuite}
+		{stash:duration}{duration}{/stash:duration}
+		{stash:prerequisite}{prerequisites}{/stash:prerequisite}
+		{stash:topics}{topics}{/stash:topics}
+		{stash:tag-body}
+			<div  class="container main">
+				{exp:allow_eecode embed='y'}
+					{body}
+				{/exp:allow_eecode}
+			</div>
+		{/stash:tag-body}
+	{/exp:channel:entries}
+{/exp:stash:set}
+{if segment_3}
+	<div class="container main">
+		<div class="row">
+		<div class="col-md-6 col-xs-12">
+			<section class="section">
+					<h4>
 						<span class="label label-success">Price: <script src='http://shopping.netsuite.com/app/site/query/getitemprice.nl?c=677900&n=1&id={exp:stash:netsuite}'></script></span>
 					</h4>
-                <p><strong>Class Duration:</strong>{exp:stash:duration}</p>
-                <strong>Recommended Pre-Reqs:</strong> {exp:stash:prerequisite}
-                <strong>Main Topics Covered:</strong> {exp:stash:topics}
-            </section>
-        </div>
-        <div class="col-md-6 col-xs-12">
-            <section class="section">
-                {embed="{segment_1}/.courses-dates" class_ids="
-                <?php 
+					<p><strong>Class Duration:</strong>{exp:stash:duration}</p>
+					<strong>Recommended Pre-Reqs:</strong>
+					{exp:stash:prerequisite}
+					<strong>Main Topics Covered:</strong>
+					{exp:stash:topics}
+			</section>
+		</div>
+		<div class="col-md-6 col-xs-12">
+			<section class="section">
+			{embed="{segment_1}/.courses-dates" class_ids="
+			<?php 
 			$result ="";
 			$query = $this->EE->db->query("SELECT parent_id AS entry FROM exp_relationships WHERE child_id IN (SELECT entry_id AS entry FROM exp_channel_titles WHERE url_title = '{segment_3}')");
-			$num_rows = mysql_num_rows($query);
-			if(empty($num_rows)) {
-		        echo "empty";
-		    }
-			else {
 			foreach ($query->result() as $row)
 			{
 			$result .= $row->entry;
@@ -35,124 +103,128 @@
 			$result = substr($result,0,-1);
 			if ($result == "")
 			{echo "0";}
-			else {
-			echo $result;} }
+			else
+			{echo $result;} 
 			?>"}
-            </section>
-        </div>
-    </div>
-</div>
+			</section>
+		</div>
+		</div>
+	</div>
 {if:else}
 <div class="container main">
-    <div class="row">
-        <div class="col-md-10">
-            <section class="section">
-                <ul class="row list-unstyled" style="text-align:center">
-                    <li class="col-lg-4 col-md-4 col-sm-12 col-xs-12">
-                        <div class="thumbnail well well-sm feature-main">
-                            <img alt="SOLIDWORKS 3D CAD Training" class="img-thumbnail" src="/image/training/solidworks.png" />
-                            <h4>SOLIDWORKS 3D CAD Training</h4>
-                            <p>
-                                SOLIDWORKS 3D CAD solutions enable you and your team to quickly transform new ideas into great products.
-                            </p>
-                            <p>
-                                <a class="btn btn-sm btn-primary" href="/training/solidworks/">More Info</a>
-                            </p>
-                        </div>
-                    </li>
-                    <li class="col-lg-4 col-md-4 col-sm-12 col-xs-12">
-                        <div class="thumbnail well well-sm feature-main">
-                            <img alt="Online Training" class="img-thumbnail" src="/image/training/solidworks-online.png" />
-                            <h4>Online Training</h4>
-                            <p>
-                                SOLIDWORKS Online Training offers comprehensive web-based training on 3D Design and Analysis.
-                            </p>
-                            <p>
-                                <a class="btn btn-sm btn-primary" href="/training/solidworks-online-training/">More Info</a>
-                            </p>
-                        </div>
-                    </li>
-                    <li class="col-lg-4 col-md-4 col-sm-12 col-xs-12">
-                        <div class="thumbnail well well-sm feature-main">
-                            <img alt="Simulation Training" class="img-thumbnail" src="/image/training/solidworks-simulation.png" />
-                            <h4>SOLIDWORKS Simulation Training</h4>
-                            <p>
-                                With SOLIDWORKS Simulation, you can easily subject your designs to the same conditions that they will experience in the real world.
-                            </p>
-                            <p>
-                                <a class="btn btn-sm btn-primary" href="/training/solidworks-simulation/">More Info</a>
-                            </p>
-                        </div>
-                    </li>
-                </ul>
-                <ul class="row list-unstyled" style="text-align:center">
-                    <li class="col-lg-4 col-md-4 col-sm-12 col-xs-12">
-                        <div class="thumbnail well well-sm feature-main">
-                            <img alt="SOLIDWORKS Composer Training" class="img-thumbnail" src="/image/training/solidworks-composer.png" />
-                            <h4>SOLIDWORKS Composer Training</h4>
-                            <p>
-                                SOLIDWORKS Composer helps you integrate your CAD designs in your technical documentation for professional and marketing materials.
-                            </p>
-                            <br />
-                            <p>
-                                <a class="btn btn-sm btn-primary" href="/training/solidworks-composer/">More Info</a>
-                            </p>
-                        </div>
-                    </li>
-                    <li class="col-lg-4 col-md-4 col-sm-12 col-xs-12">
-                        <div class="thumbnail well well-sm feature-main">
-                            <img alt="SOLIDWORKS PDM Training" class="img-thumbnail" src="/image/training/solidworks-pdm.png" />
-                            <h4>SOLIDWORKS PDM Training</h4>
-                            <p>
-                                SOLIDWORKS PDM helps you easily share design information, automate workflows and manage version control for manufacturing.
-                            </p>
-                            <br />
-                            <p>
-                                <a class="btn btn-sm btn-primary" href="/training/solidworks-pdm/">More Info</a>
-                            </p>
-                        </div>
-                    </li>
-                    <li class="col-lg-4 col-md-4 col-sm-12 col-xs-12">
-                        <div class="thumbnail well well-sm feature-main">
-                            <img alt="SOLIDWORKS Electrical Training" class="img-thumbnail" src="/image/training/solidworks-electrical.png" />
-                            <h4>SOLIDWORKS Electrical Training</h4>
-                            <p>
-                                Simplify&nbsp;electrical system design with&nbsp;intelligent design tools, comprehensive parts database, and real-time integration of your 2D schematics and 3D models.
-                            </p>
-                            <p>
-                                <a class="btn btn-sm btn-primary" href="/training/solidworks-electrical/">More Info</a>
-                            </p>
-                        </div>
-                    </li>
-                </ul>
-                <ul class="row list-unstyled" style="text-align:center">
-                    <li class="col-lg-4 col-md-4 col-sm-12 col-xs-12">
-                        <div class="thumbnail well well-sm feature-main">
-                            <img alt="CAMWorks Training Logo" class="img-thumbnail" src="/image/training/camworks.png" />
-                            <h4>CAMWorks</h4>
-                            <p>
-                                CAMWorks was the first fully integrated CAM solution designed exclusively to operate in SOLIDWORKS. CAMWorks uses the familiar SOLIDWORKS interface, so it is easy to learn and easy to use.
-                            </p>
-                            <p>
-                                <a class="btn btn-sm btn-primary" href="/training/camworks/">More Info</a>
-                            </p>
-                        </div>
-                    </li>
-                </ul>
-            </section>
-        </div>
-        {embed="_sidebar/.training"}
-    </div>
+	<div class="row">
+		<div class="col-md-10">
+			<section class="section">
+				<ul class="row list-unstyled" style="text-align:center">
+					<li class="col-lg-4 col-md-4 col-sm-12 col-xs-12">
+						<div class="thumbnail well well-sm feature-main">
+							<img alt="SOLIDWORKS 3D CAD Training" class="img-thumbnail" src="/image/training/solidworks.png" />
+							<h4>SOLIDWORKS 3D CAD Training</h4>
+							<p>
+								SOLIDWORKS 3D CAD solutions enable you and your team to quickly transform new ideas into great products.
+							</p>
+							<p>
+								<a class="btn btn-sm btn-primary" href="/training/solidworks/">More Info</a>
+							</p>
+						</div>
+					</li>
+					<li class="col-lg-4 col-md-4 col-sm-12 col-xs-12">
+						<div class="thumbnail well well-sm feature-main">
+							<img alt="Online Training" class="img-thumbnail" src="/image/training/solidworks-online.png" />
+							<h4>Online Training</h4>
+							<p>
+								SOLIDWORKS Online Training offers comprehensive web-based training on 3D Design and Analysis.
+							</p>
+							<p>
+								<a class="btn btn-sm btn-primary" href="/training/solidworks-online-training/">More Info</a>
+							</p>
+						</div>
+					</li>
+					<li class="col-lg-4 col-md-4 col-sm-12 col-xs-12">
+						<div class="thumbnail well well-sm feature-main">
+							<img alt="Simulation Training" class="img-thumbnail" src="/image/training/solidworks-simulation.png" />
+							<h4>SOLIDWORKS Simulation Training</h4>
+							<p>
+								With SOLIDWORKS Simulation, you can easily subject your designs to the same conditions that they will experience in the real world.
+							</p>
+							<p>
+								<a class="btn btn-sm btn-primary" href="/training/solidworks-simulation/">More Info</a>
+							</p>
+						</div>
+					</li>
+				</ul>
+				<ul class="row list-unstyled" style="text-align:center">
+					<li class="col-lg-4 col-md-4 col-sm-12 col-xs-12">
+						<div class="thumbnail well well-sm feature-main">
+							<img alt="SOLIDWORKS Composer Training" class="img-thumbnail" src="/image/training/solidworks-composer.png" />
+							<h4>SOLIDWORKS Composer Training</h4>
+							<p>
+								SOLIDWORKS Composer helps you integrate your CAD designs in your technical documentation for professional and marketing materials.
+							</p>
+							<br />
+							<p>
+								<a class="btn btn-sm btn-primary" href="/training/solidworks-composer/">More Info</a>
+							</p>
+						</div>
+					</li>
+					<li class="col-lg-4 col-md-4 col-sm-12 col-xs-12">
+						<div class="thumbnail well well-sm feature-main">
+							<img alt="SOLIDWORKS PDM Training" class="img-thumbnail" src="/image/training/solidworks-pdm.png" />
+							<h4>SOLIDWORKS PDM Training</h4>
+							<p>
+								SOLIDWORKS PDM helps you easily share design information, automate workflows and manage version control for manufacturing.
+							</p>
+							<br />
+							<p>
+								<a class="btn btn-sm btn-primary" href="/training/solidworks-pdm/">More Info</a>
+							</p>
+						</div>
+					</li>
+					<li class="col-lg-4 col-md-4 col-sm-12 col-xs-12">
+						<div class="thumbnail well well-sm feature-main">
+							<img alt="SOLIDWORKS Electrical Training" class="img-thumbnail" src="/image/training/solidworks-electrical.png" />
+							<h4>SOLIDWORKS Electrical Training</h4>
+							<p>
+								Simplify&nbsp;electrical system design with&nbsp;intelligent design tools, comprehensive parts database, and real-time integration of your 2D schematics and 3D models.
+							</p>
+							<p>
+								<a class="btn btn-sm btn-primary" href="/training/solidworks-electrical/">More Info</a>
+							</p>
+						</div>
+					</li>
+				</ul>
+				<ul class="row list-unstyled" style="text-align:center">
+					<li class="col-lg-4 col-md-4 col-sm-12 col-xs-12">
+						<div class="thumbnail well well-sm feature-main">
+							<img alt="CAMWorks Training Logo" class="img-thumbnail" src="/image/training/camworks.png" />
+							<h4>CAMWorks</h4>
+							<p>
+								CAMWorks was the first fully integrated CAM solution designed exclusively to operate in SOLIDWORKS. CAMWorks uses the familiar SOLIDWORKS interface, so it is easy to learn and easy to use.
+							</p>
+							<p>
+								<a class="btn btn-sm btn-primary" href="/training/camworks/">More Info</a>
+							</p>
+						</div>
+					</li>
+				</ul>
+			</section>
+		</div>
+		{embed="_sidebar/.training"}
+	</div>
 </div>
-{/if} {exp:stash:set} {stash:extra-footer-data}
-<script type="text/javascript">
-var counter = 1;
-while (counter <= 3) {
-    var tbody = $("#table-" + counter + " tbody");
-    if (tbody.children().length == 0) {
-        $("#table-" + counter + " thead").html("<tr><td>If you do not see the class schedule please contact us at <a href='mailto:training@hawkridgesys.com'>training@hawkridgesys.com</a>, or via phone at:<br/><strong>US:</strong> 877-266-4469 | <strong>Canada:</strong> 866-587-6803</td></tr>");
-    }
-    counter++
-}
-</script>
-{/stash:extra-footer-data} {/exp:stash:set} {embed="_/.footer"}
+{/if}
+{exp:stash:set}
+	{stash:extra-footer-data}
+		<script type="text/javascript">
+			var counter = 1;
+			while (counter <= 3){
+				var tbody = $("#table-" + counter + " tbody");
+				if (tbody.children().length == 0 ) {
+					$("#table-" + counter + " thead").html("<tr><td>If you do not see the class schedule please contact us at <a href='mailto:training@hawkridgesys.com'>training@hawkridgesys.com</a>, or via phone at:<br/><strong>US:</strong> 877-266-4469 | <strong>Canada:</strong> 866-587-6803</td></tr>");
+				}
+				counter++
+			}
+		</script>
+	{/stash:extra-footer-data}
+{/exp:stash:set}
+{embed="_/.footer"}
