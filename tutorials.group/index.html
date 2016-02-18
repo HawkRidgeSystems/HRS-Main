@@ -135,7 +135,7 @@
 
 {!-- $VIDEO CATEGORY--}
 {exp:stash:set_list name="tutorial-selection" parse_tags="yes" parse_conditionals="yes" }
-	{exp:channel:category_archive channel="recorded" show="not {segment_2_category_id}" style="linear" show_empty="no"  dynamic="off"}
+	{exp:channel:category_archive channel="recorded" show="not {segment_2_category_id}" style="linear" show_empty="no"}
 	    {categories}
 	    	{if segment_2_category_id == parent_id}
 	    	    {stash:cat-name}{category_name}{/stash:cat-name}
