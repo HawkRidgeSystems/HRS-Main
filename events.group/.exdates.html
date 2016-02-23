@@ -1,4 +1,4 @@
-{exp:channel:entries  channel="recorded"  show_future_entries="no"  order_by="entry_date"  sort="desc" show_expired="no" dynamic="off" limit="15" paginate="bottom"}
+{exp:channel:entries  channel="recorded"  show_future_entries="no" limit="15" order_by="entry_date"  sort="desc" show_expired="yes" dynamic="off" paginate="bottom"}
 
 	
 	<tr>
@@ -11,5 +11,7 @@
 		</a>
 	</td>
 	</tr>
-
+{paginate}
+        <p>Page {current_page} of {total_pages} pages {pagination_links}</p>
+    {/paginate}
 {/exp:channel:entries}
