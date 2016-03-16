@@ -1,423 +1,386 @@
-{!-- $HEADER--}
-{embed="_/.header"}
+{!-- $HEADER--} {embed="_/.header"} {!-- $BREAD CLASS --} {exp:stash:set name="bread-class"}no-bg{/exp:stash:set} {!-- $EXTRA HEADER--} {exp:stash:set name="extra-head-data"}
+<link href="//cdnjs.cloudflare.com/ajax/libs/fancybox/2.1.5/jquery.fancybox.min.css" rel="stylesheet">
+<style type="text/css">
+.various {
+    font-size: 18px;
+}
 
-{!-- $BREAD CLASS --}
-{exp:stash:set name="bread-class"}no-bg{/exp:stash:set}
-{!-- $EXTRA HEADER--}
-{exp:stash:set name="extra-head-data"}
-    <link href="//cdnjs.cloudflare.com/ajax/libs/fancybox/2.1.5/jquery.fancybox.min.css" rel="stylesheet">
-    <style type="text/css">
-    .various{ 
-      font-size:18px;
-    }
-    .btn-gray{
-      margin-bottom:5px;
-    }
-    .tuts{
-      overflow: hidden;
-      max-height:217px;
-      position:relative;
-    }
-    .tuts img {
-      -webkit-transition: top 0.5s ease-in-out;
-      -moz-transition: top 0.5s ease-in-out;
-      -ms-transition: top 0.5s ease-in-out;
-      -o-transition: top 0.5s ease-in-out;
-      transition: top 0.5s ease-in-out;
-      position:relative;
-      top:0;
-    }
-      .tuts:hover img{
-        -webkit-transition: top 0.5s ease-in-out; 
-        -moz-transition: top 0.5s ease-in-out; 
-        -ms-transition: top 0.5s ease-in-out; 
-        -o-transition: top 0.5s ease-in-out; 
-        transition: top 0.5s ease-in-out;         
-        position:relative;
-        top:-49px;
-      }
-    .tuts span{
-      -webkit-transition: all 0.5s ease-in-out;  
-      -moz-transition: all 0.5s ease-in-out;  
-      -ms-transition: all 0.5s ease-in-out;  
-      -o-transition: all 0.5s ease-in-out;  
-      transition: all 0.5s ease-in-out;  
-      opacity: 0; 
-      position:relative;
-      top:0;
-      background-color: rgba(0, 0, 0, 0.43);
-      float: left;
-      color: white;
-      padding: 0 5px;
-      text-shadow: 1px 1px 0px black;
-    } 
-    .tuts:hover span{
-        -webkit-transition: top 0.5s ease-in-out;
-        -moz-transition: top 0.5s ease-in-out;
-        -ms-transition: top 0.5s ease-in-out;
-        -o-transition: top 0.5s ease-in-out;
-        transition: top 0.5s ease-in-out;
-        position:relative;
-        opacity:1;
-        top:-108px;
-    }   
-    .tuts-1{background-image: url('/image/tutorials/swx-tuts.jpg');}
-    .tuts-2{background-image: url('/image/tutorials/swx-sim.jpg');}
-    .tuts-3{background-image: url('/image/tutorials/swx-epdm.jpg');}
-    .tuts-4{background-image: url('/image/tutorials/swx-composer.jpg');}
-    .tuts-5{background-image: url('/image/tutorials/swx-elec.jpg');}
-    .tuts-6{background-image: url('/image/tutorials/swx-camworks.jpg');}
-    .tuts-7{background-image: url('/image/tutorials/swx-hawk-logo.jpg');}
-    .tuts-9{background-image: url('/image/tutorials/swx-hp.jpg');}
-    .tuts-10{background-image: url('/image/tutorials/simulia-tutorials2.png');}
-    .tuts-11{background-image: url('/image/tutorials/visualize-tuts.png');}
+.btn-gray {
+    margin-bottom: 5px;
+}
 
-  .video-player{
-    margin-top:-20px;
-  }
-  .video-player iframe{
-    border: 1px solid #dddddd; 
-    background-color: white; 
-    padding:10px
-  }
-  .video-scroll{
-    max-height:600px; 
-    overflow-y:scroll;
-  }
-  .row.video > .col-md-4{
-    margin-bottom:5%;
-  }
-    /*Align videos left, incase of height difference*/
-    .row.video > .col-md-6:nth-child(2n+1){
-      clear:left;
-    }
-  .video-categories-wrapper > div:nth-child(5){
-    clear:left;
-  }
-  .video-categories {
+.tuts {
+    overflow: hidden;
+    max-height: 217px;
+    position: relative;
+}
+
+.tuts img {
+    -webkit-transition: top 0.5s ease-in-out;
+    -moz-transition: top 0.5s ease-in-out;
+    -ms-transition: top 0.5s ease-in-out;
+    -o-transition: top 0.5s ease-in-out;
+    transition: top 0.5s ease-in-out;
+    position: relative;
+    top: 0;
+}
+
+.tuts:hover img {
+    -webkit-transition: top 0.5s ease-in-out;
+    -moz-transition: top 0.5s ease-in-out;
+    -ms-transition: top 0.5s ease-in-out;
+    -o-transition: top 0.5s ease-in-out;
+    transition: top 0.5s ease-in-out;
+    position: relative;
+    top: -49px;
+}
+
+.tuts span {
+    -webkit-transition: all 0.5s ease-in-out;
+    -moz-transition: all 0.5s ease-in-out;
+    -ms-transition: all 0.5s ease-in-out;
+    -o-transition: all 0.5s ease-in-out;
+    transition: all 0.5s ease-in-out;
+    opacity: 0;
+    position: relative;
+    top: 0;
+    background-color: rgba(0, 0, 0, 0.43);
+    float: left;
+    color: white;
+    padding: 0 5px;
+    text-shadow: 1px 1px 0px black;
+}
+
+.tuts:hover span {
+    -webkit-transition: top 0.5s ease-in-out;
+    -moz-transition: top 0.5s ease-in-out;
+    -ms-transition: top 0.5s ease-in-out;
+    -o-transition: top 0.5s ease-in-out;
+    transition: top 0.5s ease-in-out;
+    position: relative;
+    opacity: 1;
+    top: -108px;
+}
+
+.tuts-1 {
+    background-image: url('/image/tutorials/swx-tuts.jpg');
+}
+
+.tuts-2 {
+    background-image: url('/image/tutorials/swx-sim.jpg');
+}
+
+.tuts-3 {
+    background-image: url('/image/tutorials/swx-epdm.jpg');
+}
+
+.tuts-4 {
+    background-image: url('/image/tutorials/swx-composer.jpg');
+}
+
+.tuts-5 {
+    background-image: url('/image/tutorials/swx-elec.jpg');
+}
+
+.tuts-6 {
+    background-image: url('/image/tutorials/swx-camworks.jpg');
+}
+
+.tuts-7 {
+    background-image: url('/image/tutorials/swx-hawk-logo.jpg');
+}
+
+.tuts-9 {
+    background-image: url('/image/tutorials/swx-hp.jpg');
+}
+
+.tuts-10 {
+    background-image: url('/image/tutorials/simulia-tutorials2.png');
+}
+
+.tuts-11 {
+    background-image: url('/image/tutorials/visualize-tuts.png');
+}
+
+.video-player {
+    margin-top: -20px;
+}
+
+.video-player iframe {
+    border: 1px solid #dddddd;
+    background-color: white;
+    padding: 10px
+}
+
+.video-scroll {
+    max-height: 600px;
+    overflow-y: scroll;
+}
+
+.row.video > .col-md-4 {
+    margin-bottom: 5%;
+}
+
+
+/*Align videos left, incase of height difference*/
+
+.row.video > .col-md-6:nth-child(2n+1) {
+    clear: left;
+}
+
+.video-categories-wrapper > div:nth-child(5) {
+    clear: left;
+}
+
+.video-categories {
     padding: 24px 0;
     text-align: center;
-  }
-    .video-categories a{
-      display:block;              
-      color: #333;
-    }
-    .video-categories a:hover img{
-      top: -10px;
-      position: relative;
-      -webkit-transition: all 0.3s ease-in-out;
-      -moz-transition: all 0.3s ease-in-out;
-      -o-transition: all 0.3s ease-in-out;
-      transition: all 0.3s ease-in-out;
-    }
-    .video-categories a:hover span{
-      color:#545454;
-    }
-    .video-categories span{
-      color: #0089cf;
-    }
-    .video-categories img{
-      top:0;
-      position:relative;
-      -webkit-transition: all 0.3s ease-in-out;
-      -moz-transition: all 0.3s ease-in-out;
-      -o-transition: all 0.3s ease-in-out;
-      transition: all 0.3s ease-in-out;
-      display: block;
-    }
-@media (min-width: 992px){
-  .wistia_embed{
-    height:550px;
-  }
 }
-  </style>
-{/exp:stash:set}
 
+.video-categories a {
+    display: block;
+    color: #333;
+}
 
-{!-- $VIDEO CATEGORY--}
-{exp:stash:set_list name="tutorial-selection" parse_tags="yes" parse_conditionals="yes" }
-  {exp:channel:category_archive channel="recorded" show="not {segment_2_category_id}" style="linear" show_empty="no"}
-      {categories}
-        {if segment_2_category_id == parent_id}
-            {stash:cat-name}{category_name}{/stash:cat-name}
-            {stash:cat-description}{category_description}{/stash:cat-description}
-            {stash:cat-url}{category_url_title}{/stash:cat-url}
-            {stash:cat-img}{category_image}{/stash:cat-img}
-            {stash:cat-id}{category_id}{/stash:cat-id}
-          {/if}
-    {/categories}
-  {/exp:channel:category_archive}
-{/exp:stash:set_list}
+.video-categories a:hover img {
+    top: -10px;
+    position: relative;
+    -webkit-transition: all 0.3s ease-in-out;
+    -moz-transition: all 0.3s ease-in-out;
+    -o-transition: all 0.3s ease-in-out;
+    transition: all 0.3s ease-in-out;
+}
 
-  {if segment_4}
-   <?php
+.video-categories a:hover span {
+    color: #545454;
+}
+
+.video-categories span {
+    color: #0089cf;
+}
+
+.video-categories img {
+    top: 0;
+    position: relative;
+    -webkit-transition: all 0.3s ease-in-out;
+    -moz-transition: all 0.3s ease-in-out;
+    -o-transition: all 0.3s ease-in-out;
+    transition: all 0.3s ease-in-out;
+    display: block;
+}
+
+@media (min-width: 992px) {
+    .wistia_embed {
+        height: 550px;
+    }
+}
+</style>
+{/exp:stash:set} {!-- $VIDEO CATEGORY--} {exp:stash:set_list name="tutorial-selection" parse_tags="yes" parse_conditionals="yes" } {exp:channel:category_archive channel="recorded" show="not {segment_2_category_id}" style="linear" show_empty="no"} {categories} {if segment_2_category_id == parent_id} {stash:cat-name}{category_name}{/stash:cat-name} {stash:cat-description}{category_description}{/stash:cat-description} {stash:cat-url}{category_url_title}{/stash:cat-url} {stash:cat-img}{category_image}{/stash:cat-img} {stash:cat-id}{category_id}{/stash:cat-id} {/if} {/categories} {/exp:channel:category_archive} {/exp:stash:set_list} {if segment_4}
+<?php
         header("HTTP/1.0 404 Not Found");
           Header( "Location: /404" );
           die();
-    ?> 
-  {/if}
-
-
-  {if segment_3}
-  {exp:channel:entries channel="recorded" category="{segment_2_category_id}" dynamic="off" url_title="{segment_3}"}
-  {if no_results} {redirect="404"}{/if}
-  {!-- $TUTORIAL VIDEO PLAYER --}
-  {exp:stash:set parse_tags="yes"}
-        {!-- $META--}
-          {stash:alt-title} {segment_2_category_name} - {title} | SOLIDWORKS Tutorials{/stash:alt-title}
-          {stash:alt-meta-desc}{rbody}{/stash:alt-meta-desc}
-          {!-- $BODY--}
-          {stash:short-title}{segment_2_category_name} - {title}{/stash:short-title}
-          {stash:video-link}{video_link}{/stash:video-link}
-    
-  {/exp:stash:set}
-
-  {exp:stash:category}{categories limit="1"}{category_url_title}{/categories}{/exp:stash:category}
-  {if "/{segment_1}/{exp:stash:category}/{url_title}/" == "/{segment_1}/{segment_2}/{segment_3}/"}
+    ?>
+    {/if} {if segment_3} {exp:channel:entries channel="recorded" category="{segment_2_category_id}" dynamic="off" url_title="{segment_3}"} {if no_results} {redirect="404"}{/if} {!-- $TUTORIAL VIDEO PLAYER --} {exp:stash:set parse_tags="yes"} {!-- $META--} {stash:alt-title} {segment_2_category_name} - {title} | SOLIDWORKS Tutorials{/stash:alt-title} {stash:alt-meta-desc}{rbody}{/stash:alt-meta-desc} {!-- $BODY--} {stash:short-title}{segment_2_category_name} - {title}{/stash:short-title} {stash:video-link}{video_link}{/stash:video-link} {/exp:stash:set} {exp:stash:category}{categories limit="1"}{category_url_title}{/categories}{/exp:stash:category} {if "/{segment_1}/{exp:stash:category}/{url_title}/" == "/{segment_1}/{segment_2}/{segment_3}/"}
     <div class="container main video-player">
-    <div class="row">
-      <div class="col-md-10">
-        <section style="margin:21px 0 -7px 0;">
-          <iframe src="http://fast.wistia.net/embed/iframe/{exp:stash:video-link}" allowtransparency="true" frameborder="0" scrolling="no" class="wistia_embed" name="wistia_embed" width="100%" allowfullscreen mozallowfullscreen webkitallowfullscreen oallowfullscreen msallowfullscreen></iframe>
-        </section>
-        <section class="midsection" style="padding:2% 4%; margin:0">
-          <h1 style="font-size:25px;">{exp:stash:short-title}</h1>
-          <p>{exp:stash:alt-meta-desc}</p>
-        </section>
-        <section class="section video-scroll">
-        {embed="tutorials/.tutorials-selection-logged"}
-        </section>
-      </div>
-      {embed="_sidebar/.tutorials"}
-    </div>
-    </div>
-      
-  {/if}
-  {/exp:channel:entries}
-  {/if}
-
-
-  {if segment_2 AND segment_3 == ""}
-  {exp:channel:entries channel="recorded" category="{segment_2_category_id}" dynamic="off" sort="asc" limit="1"}
-  {!-- $TUTORIAL CATEGORY SELECTION --}
-  {exp:stash:category}{categories limit="1"}{category_url_title}{/categories}{/exp:stash:category}
-  
-  {if "/{segment_1}/{exp:stash:category}/" == "/{segment_1}/{segment_2}/"}  
-
-      {exp:stash:set parse_tags="yes"}
-          {stash:title}{segment_2_category_name} Tutorials | Watch Informational Webinars{/stash:title}
-          {stash:meta-desc}Hawk Ridge Systems regularly presents informational webinars to demonstrate the power of {segment_2_category_name} to provide tips and tricks for users. Click the links below to access webinars recorded from previous presentations.{/stash:meta-desc}
-      {/exp:stash:set}
-
-    <div class="container main">
-
-      <section class="allsection">
-        <p class="bold">Tutorials</p>
-        <h1>{segment_2_category_name} Tutorials</h1>
-        <p>
-          Hawk Ridge Systems regularly presents informational webinars to demonstrate the power of {segment_2_category_name} to provide tips and tricks for users. Click the links below to access webinars recorded from previous presentations.
-        </p>
-        
-
-      </section>
-    </div>
-
-    <div class="container main">
-      <div class="row">
-        <div class="col-md-10">
-        <section class="section hidden-xs" style="padding:2%">
-          <div class="row video-categories-wrapper">  
-            {exp:stash:get_list name="tutorial-selection"}
-              <div class="col-md-3 video-categories">                   
-                <a href="#{cat-url}">
-                  <img src="{cat-img}" class="img-responsive center">
-                  <span>{cat-name}</span> 
-                </a>
-              </div>
-            {/exp:stash:get_list}
-          </div>
-          </section>
-          
-          {embed="tutorials/.tutorials-selection"}
-
-            {!-- $CLASS-MODAL --}
-            <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
-              <div class="modal-dialog">
-                <div class="modal-content">
-                  <div class="modal-header">
-                    <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
-                    <h4 class="modal-title" id="myModalLabel">Tutorial Registration</h4>
-                  </div>
-                  <div class="modal-body">
-                    <script src="//app-ab02.marketo.com/js/forms2/js/forms2.js"></script>
-                <form id="mktoForm_1052"></form>
-                  </div>
-                </div>
-              </div>
+        <div class="row">
+            <div class="col-md-10">
+                <section style="margin:21px 0 -7px 0;">
+                    <iframe src="http://fast.wistia.net/embed/iframe/{exp:stash:video-link}" allowtransparency="true" frameborder="0" scrolling="no" class="wistia_embed" name="wistia_embed" width="100%" allowfullscreen mozallowfullscreen webkitallowfullscreen oallowfullscreen msallowfullscreen></iframe>
+                </section>
+                <section class="midsection" style="padding:2% 4%; margin:0">
+                    <h1 style="font-size:25px;">{exp:stash:short-title}</h1>
+                    <p>{exp:stash:alt-meta-desc}</p>
+                </section>
+                <section class="section video-scroll">
+                    {embed="tutorials/.tutorials-selection-logged"}
+                </section>
             </div>
-            {!-- /CLASS-MODAL --}
+            {embed="_sidebar/.tutorials"}
         </div>
-        {embed="_sidebar/.tutorials"}
-      </div>
-
     </div>
-    {!-- /TUTORIAL CATEGORY SELECTION --}
-    {if:else}
-      {redirect="404"}
-    {/if}
-  {/exp:channel:entries}
-  {/if}
-
-  
-  {if segment_1 == "tutorials" AND segment_2 == "" AND segment_3 == ""}
-      {!-- $TUTORIAL OVERVIEW --}
-    {exp:stash:set parse_tags="yes"}
-        {stash:title}Engineering Design Tutorials | SOLIDWORKS Tutorials{/stash:title}
-        {stash:meta-desc}Hawk Ridge Systems regularly presents informational webinars to demonstrate the power of SOLIDWORKS, Simulation, Enterprise PDM and SOLIDWORKS Composer, and to provide tips and tricks for users of these software tools.{/stash:meta-desc}
-    {/exp:stash:set}
-      <div class="container main">
+    {/if} {/exp:channel:entries} {/if} {if segment_2 AND segment_3 == ""} {exp:channel:entries channel="recorded" category="{segment_2_category_id}" dynamic="off" sort="asc" limit="1"} {!-- $TUTORIAL CATEGORY SELECTION --} {exp:stash:category}{categories limit="1"}{category_url_title}{/categories}{/exp:stash:category} {if "/{segment_1}/{exp:stash:category}/" == "/{segment_1}/{segment_2}/"} {exp:stash:set parse_tags="yes"} {stash:title}{segment_2_category_name} Tutorials | Watch Informational Webinars{/stash:title} {stash:meta-desc}Hawk Ridge Systems regularly presents informational webinars to demonstrate the power of {segment_2_category_name} to provide tips and tricks for users. Click the links below to access webinars recorded from previous presentations.{/stash:meta-desc} {/exp:stash:set}
+    <div class="container main">
         <section class="allsection">
-          <p class="bold">Tutorials</p>
-          <h1>Video Tutorials</h1>
-          <p>
-            Hawk Ridge Systems regularly presents informational webinars to demonstrate the power of SOLIDWORKS 3D CAD, Simulation Design Analysis, Enterprise PDM, SOLIDWORKS Composer, and CAMWorks to provide tips and tricks for users. Click the links below to access webinars recorded from previous presentations.
-          </p>
+            <p class="bold">Tutorials</p>
+            <h1>{segment_2_category_name} Tutorials</h1>
+            <p>
+                Hawk Ridge Systems regularly presents informational webinars to demonstrate the power of {segment_2_category_name} to provide tips and tricks for users. Click the links below to access webinars recorded from previous presentations.
+            </p>
         </section>
-      </div>
-    <div class="container main">
-      <div class="row">
-        <div class="col-md-10 col-sm-10">
-          <section class="topsection">
-            <div class="row">
-              <div class="col-md-4">
-                <div class="tuts tuts-1 img-thumbnail">
-                  <a href="/tutorials/solidworks/">
-                  <img class="img-responsive" src="http://www.hawkridgesys.com/image/tutorials/swx-logo.png">
-                  <span class="tuls">Learn more about SOLIDWORKS 3D CAD with these educational tutorials created by the experts at Hawk Ridge Systems. Learn more about how the pros use SOLIDWORKS.</span>
-                </a>
-                </div>
-              </div>
-              <div class="col-md-4">
-                <div class="tuts tuts-2 img-thumbnail">
-                  <a href="/tutorials/solidworks-simulation/">
-                  <img class="img-responsive" src="/image/tutorials/swx-sim-logo.png">
-                  <span class="tuls">Find out more about SOLIDWORKS Simulation and design analysis with these informational videos created by the product management team and applications engineers.</span>
-                </a>
-                </div>
-              </div>
-              <div class="col-md-4">
-                <div class="tuts tuts-3 img-thumbnail"> 
-                  <a href="/tutorials/solidworks-enterprise-pdm/">
-                  <img class="img-responsive" src="/image/tutorials/swx-epdm-logo.png">
-                  <span class="tuls">Don’t get caught up in data management challenges with your CAD files when the engineers at Hawk Ridge Systems can help you out. Best practices and workarounds</span>
-                </a>
-                </div>
-              </div>
-            </div>
-            <br>
-            <hr>
-            <br>
-            <div class="row">
-              <div class="col-md-4">
-                <div class="tuts tuts-4 img-thumbnail">
-                  <a href="/tutorials/solidworks-composer/">
-                  <img class="img-responsive" src="/image/tutorials/swx-composer-logo.png">
-                  <span class="tuls">Make technical documentation a natural part of your design output with these tutorials on SOLIDWORKS Composer. Learn tips and tricks and get workarounds.</span>
-                </a>
-                </div>
-              </div>
-              <div class="col-md-4">
-                <div class="tuts tuts-5 img-thumbnail">
-                  <a href="/tutorials/solidworks-electrical/">
-                  <img class="img-responsive" src="/image/tutorials/swx-elec-logo.png">
-                  <span class="tuls">Looking for ways to improve your schematics, harness wiring or 3D electrical design? Check out these helpful tutorials on 2D and 3D electrical applications.</span>
-                </a>
-                </div>
-              </div>
-              <div class="col-md-4">
-                <div class="tuts tuts-10 img-thumbnail">
-                  <a href="/tutorials/simulia/">
-                  <img class="img-responsive" src="/image/tutorials/simulia-tutorials.png">
-                  <span class="tuls">CHANGE.</span>
-                </a>
-                </div>
-              </div>
-            </div>
-            <br>
-            <hr>
-            <br>
-            <div class="row">
-
-            <div class="col-md-4">
-              <div class="tuts tuts-10 img-thumbnail">
-                <a href="/tutorials/simulia/">
-                <img class="img-responsive" src="/image/tutorials/simulia-tutorials.png">
-                <span class="tuls">SIMULIA Abaqus is a powerful and complete Finite Element Analysis and Computational Fluid Dynamics solution for performing virtual tests with realistic simulation.</span>
-              </a>
-              </div>
-            </div>
-
-            <div class="col-md-4">
-              <div class="tuts tuts-6 img-thumbnail">
-                <a href="/tutorials/camworks/">
-                <img class="img-responsive" src="/image/tutorials/swx-camworks-logo.png">
-                <span class="tuls">Learn how to simplify programming of complex multi-tasking machines with these educational tutorials on CAMWorks. Learn more about CNC machining.</span>
-              </a>
-              </div>
-            </div>
-              <div class="col-md-4">
-                <div class="tuts tuts-7 img-thumbnail">
-                  <a href="/tutorials/hawkware/">
-                  <img class="img-responsive" src="/image/tutorials/swx-hawk.png">
-                  <span class="tuls">HawkWare is a full suite of productivity applications from Hawk Ridge Systems to enhance the functionality and usability of SOLIDWORKS design tools.</span>
-                </a>
-                </div>
-              </div>
-              </div>
-
-            <div class="row">
-
-              <div class="col-md-4">
-                <div class="tuts tuts-9 img-thumbnail">
-                  <a href="/tutorials/hp-workstation/">
-                  <img class="img-responsive" src="/image/tutorials/swx-hp-logo.png">
-                  <span class="tuls">SOLIDWORKS software solutions enable companies like yours to speed up product development, reduce manufacturing costs, and improve product quality.</span>
-                </a>
-                </div>
-              </div>
-            </div>
-            </div>
-          </section>
-        </div>
-        {embed="_sidebar/.tutorials"}
-      </div>
     </div>
-  {/if}
-  {exp:stash:set name="extra-footer-data"}
-  <script src="//fast.wistia.net/assets/external/iframe-api-v1.js"></script>
-  <script>
-      MktoForms2.loadForm("//app-ab02.marketo.com", "499-VQL-975", 1052, function(form){
-        
-        $('.tutorial-video').click(function() {
-          var tutorialRedirect = $(this).attr('id');
-          var tutorialTitle = $(this).attr('alt');
-          //Set the Hidden Values
-          form.setValues({ 
-            "redirectURL": tutorialRedirect,
-            "webinarRequested": tutorialTitle,
+    <div class="container main">
+        <div class="row">
+            <div class="col-md-10">
+                <section class="section hidden-xs" style="padding:2%">
+                    <div class="row video-categories-wrapper">
+                        {exp:stash:get_list name="tutorial-selection"}
+                        <div class="col-md-3 video-categories">
+                            <a href="#{cat-url}">
+                                <img src="{cat-img}" class="img-responsive center">
+                                <span>{cat-name}</span>
+                            </a>
+                        </div>
+                        {/exp:stash:get_list}
+                    </div>
+                </section>
+                {embed="tutorials/.tutorials-selection"} {!-- $CLASS-MODAL --}
+                <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+                    <div class="modal-dialog">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+                                <h4 class="modal-title" id="myModalLabel">Tutorial Registration</h4>
+                            </div>
+                            <div class="modal-body">
+                                <script src="//app-ab02.marketo.com/js/forms2/js/forms2.js"></script>
+                                <form id="mktoForm_1052"></form>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                {!-- /CLASS-MODAL --}
+            </div>
+            {embed="_sidebar/.tutorials"}
+        </div>
+    </div>
+    {!-- /TUTORIAL CATEGORY SELECTION --} {if:else} {redirect="404"} {/if} {/exp:channel:entries} {/if} {if segment_1 == "tutorials" AND segment_2 == "" AND segment_3 == ""} {!-- $TUTORIAL OVERVIEW --} {exp:stash:set parse_tags="yes"} {stash:title}Engineering Design Tutorials | SOLIDWORKS Tutorials{/stash:title} {stash:meta-desc}Hawk Ridge Systems regularly presents informational webinars to demonstrate the power of SOLIDWORKS, Simulation, Enterprise PDM and SOLIDWORKS Composer, and to provide tips and tricks for users of these software tools.{/stash:meta-desc} {/exp:stash:set}
+    <div class="container main">
+        <section class="allsection">
+            <p class="bold">Tutorials</p>
+            <h1>Video Tutorials</h1>
+            <p>
+                Hawk Ridge Systems regularly presents informational webinars to demonstrate the power of SOLIDWORKS 3D CAD, Simulation Design Analysis, Enterprise PDM, SOLIDWORKS Composer, and CAMWorks to provide tips and tricks for users. Click the links below to access webinars recorded from previous presentations.
+            </p>
+        </section>
+    </div>
+    <div class="container main">
+        <div class="row">
+            <div class="col-md-10 col-sm-10">
+                <section class="topsection">
+                    <div class="row">
+                        <div class="col-md-4">
+                            <div class="tuts tuts-1 img-thumbnail">
+                                <a href="/tutorials/solidworks/">
+                                    <img class="img-responsive" src="http://www.hawkridgesys.com/image/tutorials/swx-logo.png">
+                                    <span class="tuls">Learn more about SOLIDWORKS 3D CAD with these educational tutorials created by the experts at Hawk Ridge Systems. Learn more about how the pros use SOLIDWORKS.</span>
+                                </a>
+                            </div>
+                        </div>
+                        <div class="col-md-4">
+                            <div class="tuts tuts-2 img-thumbnail">
+                                <a href="/tutorials/solidworks-simulation/">
+                                    <img class="img-responsive" src="/image/tutorials/swx-sim-logo.png">
+                                    <span class="tuls">Find out more about SOLIDWORKS Simulation and design analysis with these informational videos created by the product management team and applications engineers.</span>
+                                </a>
+                            </div>
+                        </div>
+                        <div class="col-md-4">
+                            <div class="tuts tuts-3 img-thumbnail">
+                                <a href="/tutorials/solidworks-enterprise-pdm/">
+                                    <img class="img-responsive" src="/image/tutorials/swx-epdm-logo.png">
+                                    <span class="tuls">Don’t get caught up in data management challenges with your CAD files when the engineers at Hawk Ridge Systems can help you out. Best practices and workarounds</span>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <br>
+                    <hr>
+                    <br>
+                    <div class="row">
+                        <div class="col-md-4">
+                            <div class="tuts tuts-4 img-thumbnail">
+                                <a href="/tutorials/solidworks-composer/">
+                                    <img class="img-responsive" src="/image/tutorials/swx-composer-logo.png">
+                                    <span class="tuls">Make technical documentation a natural part of your design output with these tutorials on SOLIDWORKS Composer. Learn tips and tricks and get workarounds.</span>
+                                </a>
+                            </div>
+                        </div>
+                        <div class="col-md-4">
+                            <div class="tuts tuts-5 img-thumbnail">
+                                <a href="/tutorials/solidworks-electrical/">
+                                    <img class="img-responsive" src="/image/tutorials/swx-elec-logo.png">
+                                    <span class="tuls">Looking for ways to improve your schematics, harness wiring or 3D electrical design? Check out these helpful tutorials on 2D and 3D electrical applications.</span>
+                                </a>
+                            </div>
+                        </div>
+                        <div class="col-md-4">
+                            <div class="tuts tuts-10 img-thumbnail">
+                                <a href="/tutorials/simulia/">
+                                    <img class="img-responsive" src="/image/tutorials/simulia-tutorials.png">
+                                    <span class="tuls">CHANGE.</span>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <br>
+                    <hr>
+                    <br>
+                    <div class="row">
+                        <div class="col-md-4">
+                            <div class="tuts tuts-10 img-thumbnail">
+                                <a href="/tutorials/simulia/">
+                                    <img class="img-responsive" src="/image/tutorials/simulia-tutorials.png">
+                                    <span class="tuls">SIMULIA Abaqus is a powerful and complete Finite Element Analysis and Computational Fluid Dynamics solution for performing virtual tests with realistic simulation.</span>
+                                </a>
+                            </div>
+                        </div>
+                        <div class="col-md-4">
+                            <div class="tuts tuts-6 img-thumbnail">
+                                <a href="/tutorials/camworks/">
+                                    <img class="img-responsive" src="/image/tutorials/swx-camworks-logo.png">
+                                    <span class="tuls">Learn how to simplify programming of complex multi-tasking machines with these educational tutorials on CAMWorks. Learn more about CNC machining.</span>
+                                </a>
+                            </div>
+                        </div>
+                        <div class="col-md-4">
+                            <div class="tuts tuts-7 img-thumbnail">
+                                <a href="/tutorials/hawkware/">
+                                    <img class="img-responsive" src="/image/tutorials/swx-hawk.png">
+                                    <span class="tuls">HawkWare is a full suite of productivity applications from Hawk Ridge Systems to enhance the functionality and usability of SOLIDWORKS design tools.</span>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-4">
+                            <div class="tuts tuts-9 img-thumbnail">
+                                <a href="/tutorials/hp-workstation/">
+                                    <img class="img-responsive" src="/image/tutorials/swx-hp-logo.png">
+                                    <span class="tuls">SOLIDWORKS software solutions enable companies like yours to speed up product development, reduce manufacturing costs, and improve product quality.</span>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+            </section>
+            </div>
+        {embed="_sidebar/.tutorials"}
+        </div>
+    </div>
+    </div>
+    {/if} {exp:stash:set name="extra-footer-data"}
+    <script src="//fast.wistia.net/assets/external/iframe-api-v1.js"></script>
+    <script>
+    MktoForms2.loadForm("//app-ab02.marketo.com", "499-VQL-975", 1052, function(form) {
 
-          });
+        $('.tutorial-video').click(function() {
+            var tutorialRedirect = $(this).attr('id');
+            var tutorialTitle = $(this).attr('alt');
+            //Set the Hidden Values
+            form.setValues({
+                "redirectURL": tutorialRedirect,
+                "webinarRequested": tutorialTitle,
+
+            });
         });
         //Add an onSuccess handler
-        form.onSuccess(function(values, followUpUrl){
-          var tutorialSuccess = $( "input[name='redirectURL']" ).val();
+        form.onSuccess(function(values, followUpUrl) {
+            var tutorialSuccess = $("input[name='redirectURL']").val();
             //Take the lead to a different page on successful submit, ignoring the form's configured followUpUrl.
             location.href = tutorialSuccess;
             //return false to prevent the submission handler continuing with its own processing
             return false;
         });
-      });
-  </script>
-{/exp:stash:set}
-{!-- $FOOTER--}
-{embed="_/.footer"}
+    });
+    </script>
+    {/exp:stash:set} {!-- $FOOTER--} {embed="_/.footer"}
