@@ -57,6 +57,17 @@
 			    {case value="heading-3"}
 					{exp:stash:heading}
 			    {/case}
+				 {case value="heading-4" default="Yes"}
+						<section class="allsection">
+							<div class="row">
+								<div class="col-md-{exp:stash:col-left}">
+									<p class="bold">{exp:stash:heading}</p>
+									<h1>{exp:stash:tag-title}</h1>
+									<p>{exp:stash:tag-line}</p>
+								</div>
+							</div>
+						</section>
+			    {/case}
 			{/exp:switchee}
 		</div>
 	</div>
