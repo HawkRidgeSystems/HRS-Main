@@ -1,0 +1,50 @@
+{preload_replace:my_channel="events"}
+{preload_replace:my_template_group="{segment_1}/night-school"}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+{exp:channel:entries channel="{my_channel}" limit="1" category="235"}
+<title>SOLIDWORKS Events - Night School | Hawk Ridge Systems </title>
+<meta name="keywords" content="{exp:xml_encode}{ekeywords}{/exp:xml_encode}" />
+<meta name="description" content="{exp:xml_encode}{edescription}{/exp:xml_encode}" />
+{embed="_includes/.html-head"}
+</head>
+<body>
+{embed="_includes/.nav"}
+		<div class="no-bg">
+						{breadcrumbs}
+			<div class="container main">		
+				<section class="allsection">					
+						<p class="bold">Hawk Ridge Systems Events</p>
+						<h1>{title} </h1>
+						<p>Hand-On Training with SOLIDWORKS Experts.</p>
+				</section>
+			</div>
+		</div>
+<div class="container main">
+	<div class="row">
+		<div class="col-md-10">
+			<section class="section">
+				{edesc}
+			</section>
+			<section class="section">
+			<h3>Upcoming Dates</h3>
+				<table class="table table-striped">
+				<thead>
+				<tr>
+				<th>Date</th>
+				<th>Time</th>
+				<th>Name</th>
+				</tr>
+				</thead>
+				{embed="events/.dates" ctgs="235" ev_title="{title}"}
+				</table>
+			</section>
+		</div>
+				{embed="_sidebar/.events"}
+	</div>
+</div>
+{/exp:channel:entries}
+{embed="_includes/.footer"}
+</body>
+</html>
