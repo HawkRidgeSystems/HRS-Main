@@ -57,6 +57,7 @@
 			    {case value="heading-3"}
 					{exp:stash:heading}
 			    {/case}
+<<<<<<< HEAD
 	    		{case value="heading-5"}
 					<div class="row">
 						<div class="tag col-md-{exp:stash:col-left}">
@@ -64,6 +65,18 @@
 							{exp:stash:tag-line}
 						</div>
 					</div>
+=======
+				 {case value="heading-4" default="Yes"}
+						<section class="allsection">
+							<div class="row">
+								<div class="col-md-{exp:stash:col-left}">
+									<p class="bold">{exp:stash:heading}</p>
+									<h1>{exp:stash:tag-title}</h1>
+									<p>{exp:stash:tag-line}</p>
+								</div>
+							</div>
+						</section>
+>>>>>>> 141d06103cb3114e5c2b48907fea808cc1113052
 			    {/case}
 			{/exp:switchee}
 		</div>
